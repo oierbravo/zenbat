@@ -243,6 +243,14 @@ function loadComponentesFromFile(){
 			return componentes;
 }
 exports.loadComponentesFromFile = loadComponentesFromFile;
+function loadComponenteKeyssFromFile(){
+	var workbook = XLSX.readFileSync(zenbatConfig.basePath + 'productos.xlsx');
+			exports.workbook = workbook;
+			var componentesRaw = XLSX.utils.sheet_to_json(workbook.Sheets.componentes,{header:headerProductos,range:1});
+			var componentes = componentesRaw.filter(loadComponentesFilter);
+			return componentes;
+}
+exports.loadComponentesFromFile = loadComponentesFromFile;
 /**
  * List of Articles
  */
@@ -374,6 +382,12 @@ function setPedido(componente,pedidoId,qty){
 		return componente;
 	}
 
+}
+function deleteNonXLSComponentes(){
+	var keys = dbProductos.keys();
+	keys.forEach(function(element,index){
+		var exists = dbProductos.has(element)
+	});
 }
 function getPedidosComponenteById(componenteId){
 	var pedidosComponente = dbProductosReservados.get(componenteId);
@@ -645,4 +659,3 @@ exports.nuLoad = function(reload) {
 	
 	
 }
-ç

@@ -41,7 +41,7 @@ function loadPedidosProveedores(){
 	
 }
 function setPedidodProveedoresComponente(pedidoProveedorId,pedidoId){
-var pedidosProveedoresComponente = dbPedidosComponente.get(componenteId);
+var pedidosProveedoresComponente = dbPedidosProveedoresComponentes.get(componenteId);
 		if(!pedidosProveedoresComponente){
 			pedidosProveedoresComponente = [];
 	}
@@ -49,17 +49,16 @@ var pedidosProveedoresComponente = dbPedidosComponente.get(componenteId);
 		if(index > 0){
 			//found, update
 			pedidosProveedoresComponente[index] = {pedidoProveedorId:pedidoProveedorId,qty:qty};
-		}
-	} else {
+		} else {
 			//no found, add
-			pedidosComponente.push({pedidoId:pedidoId,qty:qty);
+			dbPedidosProveedoresComponentes.push({pedidoId:pedidoId,qty:qty});
 	}
 	
-	dbPedidosProveedoresComponentesz.put(componenteId,pedidosComponente);
+	dbPedidosProveedoresComponentes.put(componenteId,pedidosComponente);
 }
 
 function getPedidodProveedoresComponente(componenteId){
-	retur ndbPedidosComponente.get(componenteId);;
+	return dbPedidosProveedoresComponentes.get(componenteId);;
 }
 
 

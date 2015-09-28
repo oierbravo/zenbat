@@ -100,7 +100,7 @@ function loadPedidosFromFile(save){
 
 
 			var pedidoDb = dbPedidos.get(element.pedidoId)
-			var pedido = _.extend(element, req.body);
+			var pedido = _.extend(element,pedidoDb);
 			pedidos[index] = pedido;
 			if(save){
 				dbPedidos.put(pedido.pedidoId,pedido);
@@ -140,7 +140,7 @@ function setPedidosComponente(componenteId,pedidoId,qty){
 	
 	dbPedidosComponente.put(componenteId,pedidosComponente);
 }
-function setPedidosComponentesArmario(armario,,pedidoId){
+function setPedidosComponentesArmario(armario,pedidoId){
 	armario.componentes.forEach(function(element,index){
 		var qty = element.Cantidad * armario.porEntregar;
 		setPedidosComponente(componente.Codigo,pedidoId,qty);
