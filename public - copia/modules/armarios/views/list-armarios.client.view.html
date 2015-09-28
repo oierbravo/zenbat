@@ -1,0 +1,54 @@
+<section data-ng-controller="ArmariosController"  data-ng-init="find()">
+	<div class="page-header">
+		<h1>Armarios</h1>
+	</div>
+    <div class="page-content">
+
+     <div class="alert alert-info devel-output" >
+    <p>Sort predicate: {{ predicate }}</p>
+    <p>Sort reverse: {{ reverse }}</p>
+    <p>Search Query: {{ searchString }}</p>
+  </div>
+   <form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+
+        <input type="text" class="form-control" placeholder="Buscador" ng-model="searchString">
+
+      </div>      
+    </div>
+  </form>
+	<table data-toggle="table"  data-height="299" class=" table-stripped table table-hover" data-search="true"  data-show-columns="true">
+	 <thead>
+        <tr>
+
+            <td>
+            <a href="" ng-click="order('Codigo')">Codigo</a>
+            <span class="sortorder" ng-show="predicate === 'Codigo'" ng-class="{reverse:reverse}"></span>
+            	</td>
+
+
+            <td>
+            <a href="" ng-click="order('Denominacion')">Nombre</a>
+            <span class="sortorder" ng-show="predicate === 'Denominacion'" ng-class="{reverse:reverse}"></span>
+            </td>
+
+
+                    
+
+        </tr>
+    </thead>
+    <tbody>
+<tr data-ng-repeat="armario in armarios | orderBy:predicate:reverse | filter:searchString" data-ng-href="#!/armarios/{{armario.id}}" class="table-condensed table-stripped" >
+			
+			<td><a href="#!/armarios/{{armario.id}}" ><strong>{{armario.id}}</p></strong></a></td>
+			<td>{{armario.nombre}}</p></td>
+
+		</tr>
+
+    </tbody>
+    </table>
+		</div>
+
+</section>

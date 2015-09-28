@@ -1,0 +1,120 @@
+<section data-ng-controller="PedidosController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Pedidos</h1>
+    </div>
+      <div class="page-content">
+
+     <div class="alert alert-info devel-output" >
+    <p>Sort predicate: {{ predicate }}</p>
+    <p>Sort reverse: {{ reverse }}</p>
+    <p>Search Query: {{ searchString }}</p>
+  </div>
+   <form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+
+        <input type="text" class="form-control" placeholder="Buscador" ng-model="searchString">
+
+      </div>      
+    </div>
+  </form>
+    <table data-toggle="table"  data-height="299" class=" table-stripped table table-hover" data-search="true"  data-show-columns="true">
+     <thead>
+        <tr>
+        <td>
+               
+             Ver
+                </td>
+            <td>
+                <a href="" ng-click="order('fecha')">Fecha entrega</a>
+             <span class="sortorder" ng-show="predicate === 'fecha'" ng-class="{reverse:reverse}"></span>
+                </td>
+
+
+            <td>
+                <a href="" ng-click="order('codigo')">Codigo</a>
+                <span class="sortorder" ng-show="predicate === 'codigo'" ng-class="{reverse:reverse}"></span>
+            </td>
+            <td>
+              Rev.
+            </td>
+            <td>
+                <a href="" ng-click="order('cantidad')">Cantidad</a>
+                <span class="sortorder" ng-show="predicate === 'cantidad'" ng-class="{reverse:reverse}"></span>
+            </td>
+
+             <td>
+                <a href="" ng-click="order('PC')">PC</a>
+                <span class="sortorder" ng-show="predicate === 'PC'" ng-class="{reverse:reverse}"></span>
+            </td>
+
+             <td>
+                <a href="" ng-click="order('PT')">PT</a>
+                <span class="sortorder" ng-show="predicate === 'PT'" ng-class="{reverse:reverse}"></span>
+            </td>
+            <td>
+                <a href="" ng-click="order('Notas')">Notas</a>
+                <span class="sortorder" ng-show="predicate === 'Notas'" ng-class="{reverse:reverse}"></span>
+            </td>
+            <td>
+                Entregados
+            </td>
+            <td>
+                Acciones
+            </td>
+            <td>
+                
+             
+            </td>
+
+
+                    
+
+        </tr>
+    </thead>
+    <tbody>
+<tr data-ng-repeat="pedido in pedidos | orderBy:predicate:reverse | filter:searchString" class="table-condensed table-stripped" >
+            <td><a href="#!/pedidos/{{pedido.pedidoId}}"> Ver</a></td>
+            <td>{{pedido.fecha | date:'mediumDate' }}</td>
+            <td>{{pedido.codigo}}</td>
+            <td>{{pedido.rev}}</td>
+            <td>{{pedido.cantidad}}</td>
+            <td>{{pedido.PC}}</td>
+            <td>{{pedido.PT}}</td>
+            <td>{{pedido.Notas}}</td>
+            <td>{{pedido.entregados}}</td>
+            <td data-ng-controller="VerificarStockController"><button ng-click="verificar('{{pedido.codigo}}-{{pedido.rev}}',{{pedido.cantidad}})">Verificar</button>Status:{{pedido.stock.status}}<button class="ver-pedido" ng-click="open('lg')" ng-class="{statusPedido:pedido.stock.status}"> VER</button>
+
+            </td>
+            
+
+        </tr>
+
+    </tbody>
+    </table>
+        </div>
+
+
+</section>
+<div ng-controller="VerificarStockController">
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Resultado del estado de los componentes</h3>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li ng-repeat="item in pedido.stock.componentes">
+                    {{ item.codigo }} : {{item.stock}}
+                </li>
+            </ul>
+         
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+
+   
+</div>

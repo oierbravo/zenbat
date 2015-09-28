@@ -1,0 +1,153 @@
+.content {
+	margin-top: 50px;
+}
+.undecorated-link:hover {
+	text-decoration: none;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+.ng-invalid.ng-dirty {
+	border-color: #FA787E;
+}
+.ng-valid.ng-dirty {
+	border-color: #78FA89;
+}
+.devel-output {
+	display: none;
+}
+
+
+.ver-pedido {
+	display: none;
+}
+.statusPedido {
+	display: block;
+}
+.entregar-pedido {
+	display: block;
+}
+.pedidoEntregable {
+	display: block;
+}
+
+.bajoMinimos {
+	background-color: #FFC3C3;
+}
+.falta {
+	background-color:#F89090;
+}
+.fa-truck {
+	color:orange;
+}
+.fa-times {
+	color:red;
+}
+.fa-check {
+	color:green;
+}
+.table-hover > tbody > tr:hover {
+  background-color: #ddd;
+}
+.componente-level-1 {
+	margin-left:inherit;
+}
+.componente-level-2 {
+	margin-left:20px;
+}
+.componente-level-3 {
+	margin-left:40px;
+}
+.componente-level-4 {
+	margin-left:60px;
+}
+.componente-list-element:hover {
+	background-color: #ddd;
+}
+div#pluswrap {
+    position: fixed;
+    width: 100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    background: rgba(256, 256, 256, 0.91);
+    top: 0;
+
+}
+
+
+
+.plus {
+    display: flex;
+    margin: 0 auto;
+}
+.compsCargados {
+	display:none;
+}
+.sortorder:after {
+    content: '\25b2';
+  }
+  .sortorder.reverse:after {
+    content: '\25bc';
+  }
+.disponible {
+	display:none;
+}
+tr.showDisponibles {
+	display:table-row;
+}
+tr.disponible {
+	background-color: #00dd00;
+	background-color: rgba(0, 200, 0, 0.50);;
+}
+
+tr.oculatarBajoMinimos {
+	display:none;
+}
+tr.oculatarNegatibos {
+	display:none;
+}
+tr.disponible.oculatarOk {
+	display:none;
+}
+
+tr.componente-status-OK {
+	background-color: #ffffff;
+}
+tr.componente-status-negatibo {
+	background-color: #ff0000;
+	background-color: rgba(255, 0, 0, 0.50);;
+}
+tr.componente-status-negatiboConReserva {
+	background-color: #ff0000;
+	background-color: rgba(255, 0, 0, 0.90);;
+}
+tr.componente-status-bajoMinimos {
+	background-color: #ff0000;
+	background-color: rgba(255, 200, 100, 0.40);;
+}
+tr.componente-status-bajoMinimosConReserva {
+	background-color: #ff0000;
+	background-color: rgba(255, 200, 100, 0.8);;
+}
+tr.componente-status-negatiboFuturo {
+	background-color: #ff0000;
+	background-color: rgba(0, 0, 255, 0.50);;
+}
+tr.componente-status-negatiboFuturoConReserva {
+	background-color: #ff0000;
+	background-color: rgba(0, 0, 255, 0.80);;
+}
+tr.componente-status-bajoMinimosFuturo {
+	background-color: #ff0000;
+	background-color: rgba(0, 200, 255, 0.40);;
+}
+tr.componente-status-bajoMinimosFuturoConReserva {
+	background-color: #ff0000;
+	background-color: rgba(0, 200, 255, 0.8);;
+}
+.modal-body table {
+	height: 300px;
+	overflow: scroll;
+	display: block;
+}

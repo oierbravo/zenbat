@@ -1,0 +1,17 @@
+<section data-ng-controller="ComponentesImporterController">
+<div class="page-header">
+		<h1>Importar componentes</h1>
+
+ <data-alertas></data-alertas>
+ </div>
+</div>
+	<div class="page-content">
+		  <button ngf-select="upload($file)">Seleccionar</button>
+      
+  		  <div class="progress">
+ 		 <div class="progress-bar" role="progressbar" aria-valuenow="{{percent}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percent}}%;">
+ 		   <span class="sr-only">{{percent}}% completado</span>
+ 		 </div> 
+		</div>
+	</div>
+</section>

@@ -1,0 +1,85 @@
+
+<section data-ng-controller="ComponentesController" data-ng-init="find()">
+	<div class="page-header">
+		<h1>Stock</h1>
+        <div class="botones">
+             <a class="btn btn-success" href="/export-componentes"><i class="fa fa-download fa-2x"></i> Exportar</a>
+             <a class="btn btn-warning" href="/#!/importar-componentes"><i class="fa fa-upload fa-2x"></i> Importar</a>
+        </div>
+	  </div>
+	  <div class="page-content">
+      <data-alertas></data-alertas>
+      <div class="alert alert-info devel-output" >
+        <p>Sort predicate: {{ predicate }}</p>
+        <p>Sort reverse: {{ reverse }}</p>
+        <p>Search Query: {{ searchString }}</p>
+      </div>
+      <form class="animate-show" ng-show="compsCargados">
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon"><i class="fa fa-search"></i></div>
+
+            <input type="text" class="form-control" placeholder="Buscador" ng-model="searchString">
+          </div>      
+        </div>
+      </form>
+    <!--   <div class="botones-ver">
+         <button ng-click="toggleBajoMinimos()" class="btn btn-sm" ng-class="{'btn-primary':showBajoMinimos}">
+          <i class="fa fa-eye"></i> Bajo minimos</button>
+          <button ng-click="toggleNegatibos()" class="btn btn-sm"  ng-class="{'btn-primary':showNegatibos}">
+          <i class="fa fa-eye"></i> Faltan</button>
+          <button ng-click="toggleOk()" class="btn btn-sm" ng-class="{'btn-primary':showOk}">
+          <i class="fa fa-eye"></i> Ok</button>
+      </div>-->
+      <span us-spinner="{radius:30, width:8, length: 16}" spinner-key="cargador" spinner-start-active="true"></span>
+	    <table data-toggle="table"  data-height="299" class=" table-stripped table table-hover animate-show" ng-show="compsCargados" data-search="true"  data-show-columns="true" >
+	      <thead>
+          <tr>
+
+          <td>
+            <a href="" ng-click="order('codigo')">Codigo</a>
+            <span class="sortorder" ng-show="predicate === 'codigo'" ng-class="{reverse:reverse}"></span>
+          </td>
+          <td>
+            <a href="" ng-click="order('denominacion')">Denominacion</a>
+            <span class="sortorder" ng-show="predicate === 'denominacion'" ng-class="{reverse:reverse}"></span>
+          </td>
+          <td>
+            <a href="" ng-click="order('cantidad')">Cantidad</a>
+            <span class="sortorder" ng-show="predicate === 'cantidad'" ng-class="{reverse:reverse}"></span>
+          </td>
+          <td>
+            <a href="" ng-click="order('cantidadReservada')">Cant. en Pedidos</a>
+            <span class="sortorder" ng-show="predicate === 'cantidadReservada'" ng-class="{reverse:reverse}"></span></td>
+          <td>
+            <a href="" ng-click="order('stockSeguridad')">Stock Minimo</a>
+            <span class="sortorder" ng-show="predicate === 'stockSeguridad'" ng-class="{reverse:reverse}"></span></td>
+          <td>Acciones</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-ng-repeat="componente in componentes | orderBy:predicate:reverse   | filter:searchString " class="table-condensed table-stripped componente-status-{{componente.status}}" data-ng-controller="RowComponenteController" id="{{componente.codigo}}">
+    			<td><a href="/#!/componentes/{{componente.codigo}}">{{componente.codigo}}</a></td>
+    			<td>{{componente.denominacion}}</td>
+          <td>{{componente.cantidad}}</td>
+          <td>{{componente.totalReservas}}</td>
+          <td>{{componente.stockSeguridad}}</td>
+          <td>
+            <button ng-click="stockChange('{{componente.codigo}}',-100)">-100</button>
+            <button ng-click="stockChange('{{componente.codigo}}',-10)">-10</button>
+            <button ng-click="stockChange('{{componente.codigo}}',-1)">-1</button>
+            <button ng-click="stockChange('{{componente.codigo}}',1)">+1</button>
+            <button ng-click="stockChange('{{componente.codigo}}',+10)">+10</button>
+            <button ng-click="stockChange('{{componente.codigo}}',+100)">+100</button>
+           
+            <input type="number" name="stockPreciseQty" ng-model="stockPreciseQty"  ngEnter="stockPrecise()" ng-keypress="keyPressEvent($event)" value="0"/>
+            <button ng-click="stockPrecise('{{componente.codigo}}','{{stockPreciseQty}}')">+</button>
+            <button ng-click="stockPreciseMinus('{{componente.codigo}}','{{stockPreciseQty}}')">-</button>
+          </td>
+	      </tr>
+      </tbody>
+    </table>
+		
+	</div>
+	
+</section>

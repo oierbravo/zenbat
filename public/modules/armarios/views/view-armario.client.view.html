@@ -1,0 +1,45 @@
+<section data-ng-controller="ArmariosController"  data-ng-init="findOne()">
+	<div class="page-header">
+   	<h1>{{armario.id}}</h1>
+    <a class="btn btn-success" href="/armarios/{{armario.id}}/exportar"><i class="fa fa-download fa-2x"></i> Exportar</a>
+  </div>
+  <div class="page-content">
+    <data-alertas></data-alertas>
+    <form class="animate-show" ng-show="compsCargados">
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-search"></i></div>
+
+          <input type="text" class="form-control" placeholder="Buscador" ng-model="searchString">
+
+        </div>      
+      </div>
+    </form>
+    <span us-spinner="{radius:30, width:8, length: 16}" spinner-key="cargador" spinner-start-active="true"></span>
+  	<table data-toggle="table"  data-height="299" class=" table-stripped table table-hover" data-search="true"  data-show-columns="true">
+      <thead>
+        <tr>
+          <td>
+            <a href="" ng-click="order('Codigo')">Codigo</a>
+            <span class="sortorder" ng-show="predicate === 'Codigo'" ng-class="{reverse:reverse}"></span>
+          </td>
+          <td>
+            <a href="" ng-click="order('Denominacion')">Nombre</a>
+            <span class="sortorder" ng-show="predicate === 'Denominacion'" ng-class="{reverse:reverse}"></span>
+          </td>
+          <td>
+             <a href="" ng-click="order('Cantidad')">Qty</a>
+            <span class="sortorder" ng-show="predicate === 'Cantidad'" ng-class="{reverse:reverse}"></span>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-ng-repeat="componente in armario.componentes | orderBy:predicate:reverse   | filter:searchString" class="table-condensed table-stripped" >	
+    			<td ng-class="{'text-danger':componente.faltaID}"><i class="fa" ng-class="{'fa-times':componente.faltaID}"></i> {{componente.Codigo}}</td>
+    			<td>{{componente.Denominacion}}</td>
+    			<td>{{componente.Cantidad}}</td>
+    		</tr>
+      </tbody>
+    </table>
+  </div>
+</section>

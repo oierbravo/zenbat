@@ -1,0 +1,48 @@
+
+<section data-ng-controller="ArmarioGeneratorController">
+	<div class="page-header">
+		<h1>Generador de armarios</h1>
+	    <div class="alerts" data-ng-controller="AlertsController">
+	 		<alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+	 	</div>
+	</div>
+	<div class="page-content">
+		<form name="generatorForm" id="generatorForm" data-ng-controller="ArmarioGeneratorFormController">
+			<div class="container col-md-3  " data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+				<div class="form-group">
+					<label class="control-label" for="nombreArchivo">Copy & Paste</label>
+					<textarea  class="form-control"  id="copypaster" name="copypaster" data-ng-model="copypaster"  ng-list="/\n/" ></textarea>
+					</div>
+				<div class="form-group">
+					<button name="leer"  class="form-control btn-primary"  ng-click="generarTree()">Leer</button>
+
+				</div>
+				<div class="form-group" ng-show="exportable">
+					<div class="form-group" ng-show="exportable">
+						<label class="control-label" for="nombreArchivo">Nombre para el archivo:</label>
+						<input type="text" name="nombreArchivo" class="form-control" id="nombreArchivo" placeholder="Codigo-Revision" data-ng-model="nombreArchivo"/>
+				
+					</div>
+					<div class="form-group" ng-show="exportable">
+							<button name="exportar"  class="form-control btn-success"  ng-click="generarFile()"  >Exportar</button>
+						</div>
+						
+				</div>
+
+			
+			</div>
+			<div class="container componentesParseados col-md-8 pull-right" >
+				<div class="form-group" >
+					<div class="list-group">
+						<div class="componente-list-element list-group-item  componente-level-{{componente.level}}" ng-repeat="componente in componentes">
+							<span class="badge">{{componente.cantidad}}</span>
+							 <input class="" type="checkbox"  data-ng-model="componente.exportar">{{componente.codigo}} - {{componente.denominacion}}
+						</div>
+					</ul>
+				</div>
+			</div>
+		</form>
+		
+	</div>
+	
+</section>

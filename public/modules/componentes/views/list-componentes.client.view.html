@@ -1,0 +1,113 @@
+
+<section data-ng-controller="ComponentesController" data-ng-init="find()">
+	<div class="page-header">
+		<h1>Componentes</h1>
+        <a class="btn btn-success" href="/export-componentes"><i class="fa fa-download fa-2x"></i> Exportar</a>
+	</div>
+	<div class="page-content">
+
+<data-alertas></data-alertas>
+
+
+    <div class="alert alert-info devel-output" >
+    <p>Sort predicate: {{ predicate }}</p>
+    <p>Sort reverse: {{ reverse }}</p>
+    <p>Search Query: {{ searchString }}</p>
+  </div>
+   <form class="animate-show" ng-show="compsCargados">
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+
+        <input type="text" class="form-control" placeholder="Buscador" ng-model="searchString">
+
+      </div>      
+    </div>
+  </form>
+  <span us-spinner="{radius:30, width:8, length: 16}" spinner-key="cargador" spinner-start-active="true"></span>
+	<table data-toggle="table"  data-height="299" class=" table-stripped table table-hover animate-show" ng-show="compsCargados"  data-search="true"  data-show-columns="true" >
+	 <thead>
+        <tr>
+          
+            <td   >
+            <a href="" ng-click="order('codigo')">Codigo</a>
+            <span class="sortorder" ng-show="predicate === 'codigo'" ng-class="{reverse:reverse}"></span>
+            	</td>
+
+
+            <td  >
+            <a href="" ng-click="order('denominacion')">Denominacion</a>
+            <span class="sortorder" ng-show="predicate === 'denominacion'" ng-class="{reverse:reverse}"></span>
+            </td>
+            <td> <a href="" ng-click="order('cantidad')">Cantidad</a>
+            <span class="sortorder" ng-show="predicate === 'Cantidad'" ng-class="{reverse:reverse}"></span></td>
+            <td> <a href="" ng-click="order('cantidadReservada')">Cant.en pedidos</a>
+            <span class="sortorder" ng-show="predicate === 'cantidadReservada'" ng-class="{reverse:reverse}"></span></td>
+            <td>StockSeguridad</td>
+
+            <td> <a href="" ng-click="order('totalPedidosProveedores')">Stock pendiente</a>
+            <span class="sortorder" ng-show="predicate === 'totalPedidosProveedores'" ng-class="{reverse:reverse}"></span></td>
+
+            <td>
+            <a href="" ng-click="order('proveedor')">Proveedor</a>
+            <span class="sortorder" ng-show="predicate === 'Proveedor'" ng-class="{reverse:reverse}"></span>
+            </td>
+            <td>CodigoProv.</td>
+            <td>Año del precio</td>
+            <td>PrecioUnidad</td>
+            <td>Notas</td>
+   
+            <td>Proveedor 2</td>
+            <td>CodigoProv. 2</td>
+            <td>Año del precio 2</td>
+            <td>PrecioUnidad 2</td>
+            <td>Notas</td>
+
+             <td>Proveedor 3</td>
+            <td>CodigoProv. 3</td>
+            <td>Año del precio 3</td>
+            <td>PrecioUnidad 3</td>
+            <td>Notas 3</td>
+      
+
+            
+
+        </tr>
+    </thead>
+    <tbody>
+<tr data-ng-repeat="componente in componentes | orderBy:predicate:reverse   | filter:searchString " class="table-condensed table-stripped componente-status-{{componente.status}}" data-ng-controller="RowComponenteController" id="{{componente.codigo}}">
+		
+			<td ><a href="/#!/componentes/{{componente.codigo}}">{{componente.codigo}}</a></td>
+			<td>{{componente.denominacion}}</td>
+            <td>{{componente.cantidad}}</td>
+            <td>{{componente.totalReservas}}</td>
+            <td>{{componente.stockSeguridad}}</td>
+            <td>{{componente.totalPedidosProveedores}}</td>
+
+
+			<td>{{componente.proveedor}}</td>
+			<td>{{componente.codProveedor}}</td>
+            <td>{{componente.yearPrecio}}</td>
+            <td>{{componente.precioUnit}}</td>
+            <td>{{componente.notas}}</td>
+
+
+            <td>{{componente.proveedor2}}</td>
+            <td>{{componente.codProveedor2}}</td>
+            <td>{{componente.yearPrecio2}}</td>
+            <td>{{componente.precioUnit2}}</td>
+            <td>{{componente.notas2}}</td>
+
+             <td>{{componente.proveedor3}}</td>
+            <td>{{componente.codProveedor3}}</td>
+            <td>{{componente.yearPrecio3}}</td>
+            <td>{{componente.precioUnit3}}</td>
+            <td>{{componente.notas3}}</td>
+		</tr>
+
+    </tbody>
+    </table>
+		
+	</div>
+	
+</section>

@@ -1,0 +1,171 @@
+T 163.17.600 Conj. armario electrico punta torre J300 A
+
+1 T 161.17.105 Canaleta armario punta torre 1 UN 2,1 1,67 0 0 0 161.17.105 0 No
+2 M 100.07.613 Canaleta TEHALIT BA7 80060 2,225 M 0,75 0 10 0 0 No
+2 M 100.07.615 Canaleta TEHALIT BA7 80040 2,35 M 0 0 0 0 0 No
+1 T 202.07.153 Perfil simetrico perf. 35x7,5 GOUL 45520 1 UN 0 0 0,125 0 0 NP 4620 No
+2 M 100.07.601 Perfil simetrico perf. 35x7,5 GOUL 45520 -REF. QUIOP- 0,125 M 0,38 0 0 0 0 No
+1 T 202.07.157 Perfil simetrico perf. 35x7,5 GOUL 45520 1 UN 0,1 0,09 0,225 0 0 NP 4620 0 No
+2 M 100.07.601 Perfil simetrico perf. 35x7,5 GOUL 45520 -REF. QUIOP- 0,225 M 0,38 0 0 0 0 No
+1 T 202.07.165 Perfil simetrico perf. 35x7,5 GOUL 45520 1 UN 0 00,425 0 0 NP 46200 No
+2 M 100.07.601 Perfil simetrico perf. 35x7,5 GOUL 45520 -REF. QUIOP- 0,425 M 0,38 0 0 0 0 No
+1 T 202.07.172 Perfil simetrico 3 UN 0 0 0,6 0 0 NP 4620 No
+2 M 100.07.601 Perfil simetrico perf. 35x7,5 GOUL 45520 -REF. QUIOP- 0,6 M 0,38 0 0 0 0 No
+1 T 202.07.258 Perfil simetrico perf. 35x15 GOUL 45555 1 UN 0,12 0,12 0,25 0 0 NP 4630 0 No
+2 M 100.07.602 Perfil simetrico perf. 35x15 GOUL 45555 /QUIORP 0,25 M 0,49 0 0 0 0 No
+1 T 149.14.050 Tarjeta ralentizador para gruas con variador 1 UN 0,15 0 0 0 0 149.14.050B Sí
+1 T 160.07.111 Trafo 3000VA + Autotrafo 1500VA. 0-220-400-480±15V / 0-48V 1 UN 18,5 0 0 0 0 160.07.1110 Sí
+1 T 163.17.135 Placa de montaje punta torre J300 1 UN 16,9 16,9 0 0 0 163.17.135 A No
+2 M 100.03.002 Chapa 2 S 275 JR EN 10029 EN 10025 1,076 M2 15,7 0 2 0 0 No
+1 T 204.17.111 Tarjeta Krenel para célula de carga ref.CEL40 (4-20mA) 1 UN 0 0 0 0 0 204.17.111 Sí
+1 T 204.17.112 Tarjeta Krenel para PT1000 Ref.PTMIL40 s(4-20mA) 1 UN 0 0 0 0 0 204.17.112 Sí
+1 T 208.07.106 Pegatina PLC BYPASS 1 UN 0,01 0 0 0 0 208.07.1060 No
+2 M 100.07.090 AMOPOL SR SK 0,002 M2 0 0 0,297 0,42 0 F No
+1 T 100.10.144 Remache Al/Ac 4x14 BRALO 010101014 28 UN 0,01 0 0 0 0 No
+1 T 100.10.158 Remache Al/Ac 5x8 d2 14 BRALO 010305008 18 UN 0,01 0 0 0 0 No
+1 T 100.11.157 Tornillo cil. DIN 84-88 M5x20 5.8 BC 4 UN 0,01 0 0 0 0 No
+1 T 100.16.028 Tornillo hexagonal DIN 933-87 -M 8X 16 - 8.8 BC 8 UN 0,01 0 0 0 0 No
+1 T 100.16.061 Tornillo hexagonal DIN 933-87 -M10x 60 - 8.8 BC 4 UN 0,04 0 0 0 0 No
+1 T 100.18.030 Varilla roscada AM 8x40 DIN 913 14.9 DELTA-TONE 2 UN 0,01 0 0 0 0 No
+1 T 100.20.108 Tuerca exagonal DIN 934-87 - M8 - 8 BC 4 UN 0,01 0 0 0 0 No
+1 T 100.20.110 Tuerca exagonal DIN 934-87 - M10 - 8 BC 8 UN 0,01 0 0 0 0 No
+1 T 100.30.105 Arandela 5,3 DIN 125-68 - StBC 4 UN 0,01 0 0 0 0 No
+1 T 100.30.108 Arandela 8,4 DIN 125-68 - StBC 10 UN 0,01 0 0 0 0 No
+1 T 100.31.108 Arandela elástica DIN 128-87-A 8 - FSt DELTA-TONE 10 UN 0,01 0 0 0 0 No
+1 T 100.31.110 Arandela elastica DIN 128-87-A10 - FSt DELTA-TONE 4 UN 0,01 0 0 0 0 No
+1 T 100.40.005 Remache aluminiuo 5x8 GESIPA DIN 660-77 2 UN 0 0 0 0 0 No
+1 T 100.40.008 Remache UNEX 1305 24 UN 0,01 0 0 0 0 No
+1 T 100.90.060 Rele enchufable TEE RXN4A06B1E7 // MY4IN 4850ACS 14 UN 0,34 0 0 0 0 No
+1 T 100.90.061 Zocalo para Rele TEE RXZE1S114M // PYF 14-ESS 14 UN 0,06 0 0 0 0 No
+1 T 100.90.062 Estribo de mantenimiento TEE RXZ-R235 // PYC35B 14 UN 0,05 0 0 0 0 No
+1 T 100.90.512 Base 16+T 16A 400V ( nº 1-16 ) 77,5x27 Conex. por muelle 5 UN 0,1 0 0 0 0 No
+1 T 100.90.515 Clavija 16+T 16A 400V ( nº 1-16 ) 77,5x27 Conex. por muelle 1 UN 0,1 0 0 0 0 No
+1 T 100.90.516 Zocalo 120860 / 09 30 016 0301 / 70.320.1628.0 1 UN 0,3 0 0 0 0 No
+1 T 100.90.517 Tapa ILME CHC-16 / 09 30 016 5425 / 07.409.7256.0 1 UN 0 0 0 0 0 No
+1 T 100.90.535 Base 24+T 16A 400V 104x27 Conex. por muelle 1 UN 0,1 0 0 0 0 No
+1 T 100.90.541 Clavija 6+T 16A 400V 44x27 Conex. por muelle 1 UN 0,04 0 0 0 0 No
+1 T 100.90.584 Borna de conexion 4/6 de 2E/2S ref.WDK 4NV 104191 2 UN 0,05 0 0 0 0 No
+1 T 100.90.588 Borna de conexion 4/6T de 1E-2S 2 UN 0,05 0 0 0 0 No
+1 T 100.90.598 Prensa LAP SKINTOP ST 7 POLIAMIDA 1 UN 0,05 0 0 0 0 No
+1 T 100.90.613 Tapon plastico PG - 16 4 UN 0,05 0 0 0 0 No
+1 T 100.90.615 Tapon plastico PG-29 1 UN 0,05 0 0 0 0 No
+1 T 100.90.618 Tuerca LAP SKINTOP GMP-GL 7 1 UN 0,02 0 0 0 0 No
+1 T 100.90.622 Tuerca LAP SKINTOP GMP-GL 16 4 UN 0,02 0 0 0 0 No
+1 T 100.90.691 Borna de conexion 4/6 2E-2S indep. WK 4/D EU 57.504.5255.0 1 UN 0 0 0 0 0 No
+1 T 100.90.766 Terminal amar. de 4a6 horq. de 4,5 AMP165015-0 20 UN 0,02 0 0 0 0 No
+1 T 100.90.767 Terminal para 0,75mm² 902123 /06.6002127.0 80 UN 0,02 0 0 0 0 No
+1 T 100.90.780 Terminal azul de 1a2,5 horq. de 4 AMP165012-1 4 UN 0,02 0 0 0 0 No
+1 T 100.90.784 Terminal amar. de 4a6 horq. de 6 AMP 735456-0 1 UN 0,02 0 0 0 0 No
+1 T 100.90.788 Termi. presion de 16 aguj. de 8 (AMP 33466) 1 UN 0,05 0 0 0 0 No
+1 T 100.90.790 Terminal negro corto 06.600.2327.0/DZ5-CE015/901943 400 UN 0,02 0 0 0 0 No
+1 T 100.90.791 Terminal negro largo 06.600.2427.0/DZ5-CE0153/9019150000 5 UN 0,02 0 0 0 0 No
+1 T 100.90.792 Terminal 2,5mm² corto 06.600.2527.0/DZ5-CE025/902124 26 UN 0,02 0 0 0 0 No
+1 T 100.90.794 Terminal gris corto 06.600.2727.0/DZ5-CE042/902125 32 UN 0,02 0 0 0 0 No
+1 T 100.90.796 Terminal amarillo corto 06.600.2927.0/DZ5-CA062/902113 6 UN 0,02 0 0 0 0 No
+1 T 100.90.825 Zócalo + base 5 polos negro ref. Wieland 96.051.5053.1 1 UN 0,02 0 0 0 0 No
+1 T 100.90.827 Tapón conector 5 polos hembra negro Wieland 99.530.0000.7 2 UN 0,05 0 0 0 0 No
+1 T 100.90.835 Zocalo ILME CHI 32 / 093 0032 0301/70.320.3228.0 1 UN 0,29 0 0 0 0 No
+1 T 100.90.836 Base 16+T 16A 400V ( nº 16-32 ) 77,5x27 Conex.por muelle 1 UN 0,08 0 0 0 0 No
+1 T 100.90.840 Clavija 16+T 16A 400V ( nº 16-32 ) 77,5x27 Conex. muelle 1 UN 0,2 0 0 0 0 No
+1 T 100.90.844 Zocalo 166406 / 09 30 010 0303 / 71.325.1028.0 1 UN 0,15 0 0 0 0 No
+1 T 100.90.846 Clavija 10+T 16A 400V 57x27 Conex. por muelle 1 UN 0,5 0 0 0 0 No
+1 T 100.90.874 Cubierta ILME CHV32 PG29 / 0930 032 0421/70.352.3228.0 1 UN 0,45 0 0 0 0 No
+1 T 100.90.876 Zocalo 120250 / 09 30 006 0302 / 70.325.0628.0 1 UN 0,15 0 0 0 0 No
+1 T 100.90.877 Zocalo 1210100000 / 09 30 016 0306 / 71.325.1628.0 3 UN 0,2 0 0 0 0 No
+1 T 100.90.896 Zocalo y tapa(24) 09 30 024 0304 / 71.325.2428.0 1 UN 0,18 0 0 0 0 No
+1 T 100.91.862 Zócalo + base 4 polos negro ref. Wieland 96.041.5053.1 1 UN 0,2 0 0 0 0 No
+1 T 100.91.872 Zócalo + base 5 polos gris ref. Wieland 96.051.5053.0 1 UN 0,2 0 0 0 0 No
+1 T 100.91.884 Tapón conector 5 polos hembra gris ref.Wieland 99.529.000.7 1 UN 0,05 0 0 0 0 No
+1 T 163.17.681 Material eléctrico Elektra para 163.17.600 1 UN 0 13,61 0 0 0 Sí
+2 T 100.90.003 Relé seguridad PILZ 777302 PNOZ X2.8P 24-240vac/dc 3NA+1NC 2 UN 0,25 0 0 0 0 Sí
+2 T 100.90.015 Contactor TEE-CAD32 E7 13 UN 0,58 0 0 0 0 Sí
+2 T 100.90.023 Contactor TEE-LC1-D09 E7 2 UN 0,32 0 0 0 0 Sí
+2 T 100.90.025 Contactor TEE-LC1-D18 E7 1 UN 0,33 0 0 0 0 Sí
+2 T 100.90.077 Contactor TEE-LC1-D 65-E7 1 UN 1,15 0 0 0 0 Sí
+2 T 100.90.181 Interruptor diferencial 2P 25A 30mA ref. MGA9R60225 1 UN 0,15 0 0 0 0 Sí
+2 T 100.90.183 Int. automatico MG C60N ref. 24662 25A curva D 1 UN 0 0 0 0 0 Sí
+2 T 100.90.250 Cabeza selector llave 455/ 2 pos. TEE ZB4BG4 1 UN 0 0 0 0 0 Sí
+2 T 100.90.252 Adaptador carril DIN Legrand 004405 LEXIC precortado 22,5 mm 1 UN 0 0 0 0 0 Sí
+2 T 100.90.370 Contacto completo para pulsador NA TEE ZB4 BZ101 1 UN 0,02 0 0 0 0 Sí
+2 T 100.90.388 Disyuntor magnetot. TEE GV2-ME06 (1-1,6A) 1 UN 0 0 0 0 0 Sí
+2 T 100.90.415 Interruptor Automatico MG C60N''C'' 3P 40A 1 UN 0,34 0 0 0 0 Sí
+2 T 100.90.432 Disyuntor magnetot. TEE GV2-ME14 (6-10A) 1 UN 0,26 0 0 0 0 Sí
+2 T 100.90.434 Disyuntor magnetot.TEE GV3-P65 1 UN 0,7 0 0 0 0 Sí
+2 T 100.90.438 Disyuntor magnetot. TEE GV2-ME08 (2,5-4A) 1 UN 0,26 0 0 0 0 Sí
+2 T 100.90.439 Disyuntor magnético TEE GV2-L22 1 UN 0,26 0 0 0 0 Sí
+2 T 100.90.715 Disyuntor magnetot. TEE GV2-RT14 (6-10A) 1 UN 0,26 0 0 0 0 Sí
+2 T 100.90.721 Interruptor automatico MG 1 polo 6A ref. MGA9F79106 2 UN 0,3 0 0 0 0 Sí
+2 T 100.90.726 Interruptor automatico MG 1 polo 32A ref. MGA9F79132 1 UN 0,3 0 0 0 0 Sí
+2 T 100.90.739 Bloque de contactos TEE-GV-AE20 2 UN 0 0 0 0 0 Sí
+2 T 100.90.745 Bloque de contactos TEE LA1-DN22 1 UN 0,03 0 0 0 0 Sí
+2 T 100.90.746 Bloque de contactos TEE LA1-DN20 2 UN 0,03 0 0 0 0 Sí
+2 T 100.90.747 Bloque de contactos TEE LA1-DN40 (TEE LA1-D40) 6 UN 0,03 0 0 0 0 Sí
+2 T 100.90.750 Bloque de contactos TEE LAD8N11 1 UN 0,03 0 0 0 0 Sí
+1 T 163.17.682 Material eléctrico Aelvasa para 163.17.600 1 UN 0 1,39 0 0 0 Sí
+2 T 100.90.368 Kit protección IP20 NH23P ref.325046 1 UN 0 0 0 0 0 Sí
+2 T 100.90.377 Eje prolongado GE 400 mm para DILOS 1/2 (Ref.730258) 1 UN 0 0 0 0 0 Sí
+2 T 100.90.378 Interruptor seccionador GE DILOS2 3P 200A ref.730097 1 UN 0 0 0 0 0 Sí
+2 T 100.90.379 Cubrebornes GE para DILOS2 ref.730263 1 UN 0 0 0 0 0 Sí
+2 T 100.90.413 Base portafusibles 3 P NH 2 DIN/TORN ref.353400 1 UN 0 0 0 0 0 Sí
+2 T 100.91.416 Rejilla Himel FS56.// Lotec PF12CRG-000.01009 1 UN 0,13 0 0 0 0 Sí
+2 T 100.91.809 Latiguillo cruzado para Ethernet 1 metro Cat 5E 1 UN 0 0 0 0 0 Sí
+2 T 100.91.911 Lampara fluorescente Lotec 12W CLG-T2312 1 UN 0,36 0 0 0 0 Sí
+2 T 100.91.949 Sonda termica PT1000 1 UN 0 0 0 0 0 Sí
+2 T 101.90.950 Termostato Stego (1NC+1NO) Ref.STGZR01172 1 UN 0,3 0 0 0 0 Sí
+2 T 101.90.953 Termostato Stego (-20º + 30º) Ref.STGFZK01170 1 UN 0,1 0 0 0 0 Sí
+2 T 101.90.954 Termoventilador Stego ref. CSL028-400W 230VAC-CLIP 1 UN 0,5 0 0 0 0 Sí
+1 T 163.17.683 Material eléctrico Mega para 163.17.600 1 UN 0 0 0 0 0 Sí
+2 T 100.91.930 Zócalo ethernet PHOENIX CONTACT ref. 1657494 1 UN 0 0 0 0 0 Sí
+2 T 100.91.936 Capuchon ethernet PHOENIX CONTACT ref. 1430899 1 UN 0 0 0 0 0 Sí
+1 T 163.17.684 Material eléctrico Omron para 163.17.600 1 UN 0 1,35 0 0 0 Sí
+2 T 100.90.004 Relé de tensión Omron mod. K8AV//K8AK-VS2 100-240 VAC 1 UN 0 0 0 0 0 Sí
+2 T 100.90.056 Zocalo OMRON para G7SA ref. P7SA-10F 2 UN 0,05 0 0 0 0 Sí
+2 T 100.90.057 Rele OMRON G7SA-2A2B 24VDC 4 polos 6A. 2 UN 0,3 0 0 0 0 Sí
+2 T 100.90.092 Rele control fases K8AK-PH1//FANOX S4 3x440V 1 UN 0,17 0 0 0 0 Sí
+2 T 100.90.812 Temporizador OMRON H3DK-M2AC DC 24 240 4 UN 0,12 0 0 0 0 Sí
+2 T 100.91.560 V.F. OMRON V1000 mod. VZA47P5FAA 1 UN 0 0 0 0 0 Sí
+2 T 100.91.677 Fuente de alimentacion OMRON S8VK-G06024 1 UN 0 0 0 0 0 Sí
+1 T 163.17.685 Material eléctrico Mitsubishi para 163.17.600 1 UN 0 14,6 0 0 0 Sí
+2 T 160.17.415 V.F. Mitsubishi orient. 25 CV 3 vel + parám 60 Hz 1 UN 14,4 13,01 0 0 0 160.17.415 E Sí
+3 T 155.09.101 AMOPOL SR SK 1 UN 0,01 0 0 0 0 155.09.101A No
+4 M 100.07.090 AMOPOL SR SK 0,008 M2 0 0 0,297 0,42 0 F No
+3 T 100.91.556 V.F. Mitsubishi FR-A740/840-00470 (18,5 KW) 1 UN 13 0 0 0 0 Sí
+2 T 161.17.145 Automata MITSUBISHI FX3GE-24MR/S 1 UN 0,2 0 0 0 0 161.17.145A Sí
+3 T 100.91.664 Autómata Mitsubishi ref. FX3GE-24MR/S (con ethernet) 1 UN 0 0 0 0 0 Sí
+3 T 100.91.669 Batería para autómata Mitsubishi ref. FX3U-32BL 1 UN 0 0 0 0 0 Sí
+3 T 100.91.670 Tarjeta de entradas analógicas Mitsubishi FX3G-2AD-BD 1 UN 0 0 0 0 0 Sí
+1 T 161.17.120 Conjunto regletero punta torre J160 1 UN 5 3,03 0 0 0 161.17.120 0 No
+2 T 100.11.152 Tornillo cil. DIN 84-88 - M5x12 - 5.8 BC 3 UN 0,01 0 0 0 0 No
+2 T 100.31.105 Arandela elástica DIN 128-87-A 5 - FSt DELTA-TONE 3 UN 0,01 0 0 0 0 No
+2 T 100.90.554 Borna de conexion 6mm2 1E/1S Weidmuller (Paso: 8mm) 9 UN 0,05 0 0 0 0 No
+2 T 100.90.555 Borna de conexion 10mm2 1E/1S Weidmuller (Paso: 10mm) 12 UN 0,05 0 0 0 0 No
+2 T 100.90.558 Borna de conexion 35/16 de 1E-1S 3 UN 0,13 0 0 0 0 No
+2 T 100.90.559 Borna de conexion ENTRELEC 70mm² 115 216.13 3 UN 0,05 0 0 0 0 No
+2 T 100.90.561 Borna de tierra 4/6T de 1E-1S 2 UN 0,05 0 0 0 0 No
+2 T 100.90.562 Borna de tierra 6/8T de 1E-1S 1 UN 0,05 0 0 0 0 No
+2 T 100.90.565 Borna de tierra ENTRELEC 35mm² 165 111.14 2 UN 0,05 0 0 0 0 No
+2 T 100.90.568 Borna 95mm² WDU-95N/120N Weidmuller 1820550000 3 UN 0 0 0 0 0 No
+2 T 100.90.570 Apoyo SIEMENS 8WA-746 3 UN 0,05 0 0 0 0 No
+2 T 100.90.578 Barreta interconexion 3P paso 6 // Z7.282.2327.0 3 UN 0 0 0 0 0 No
+2 T 100.90.584 Borna de conexion 4/6 de 2E/2S ref.WDK 4NV 104191 11 UN 0,05 0 0 0 0 No
+2 T 100.90.588 Borna de conexion 4/6T de 1E-2S 2 UN 0,05 0 0 0 0 No
+2 T 100.90.597 Tapa separadora para 4/6 de 2E-2S 1 UN 0,02 0 0 0 0 No
+2 T 100.90.691 Borna de conexion 4/6 2E-2S indep. WK 4/D EU 57.504.5255.0 45 UN 0 0 0 0 0 No
+2 M 100.07.601 Perfil simetrico perf. 35x7,5 GOUL 45520 -REF. QUIOP- 0,81 M 0,38 0 0 0 0 No
+1 T 163.17.180 Armario equipo electrico J300 1 UN 25 70 0 0 0 163.17.180 0 Parcial
+2 T 163.17.130 Armario chapa laminada en frío 1250x1000x320. Ral 9006 1 UN 70 0 0 0 0 163.17.130A Sí
+1 M 100.07.304 Cable azul 1x0,75 mm2 H07V-KUNE 21031-83 32 M 0,02 0 0 0 0 No
+1 M 100.07.316 Cable am/verde 1x1,5 mm2 H07V-K UNE 21031-83 1 M 0,04 0 0 0 0 No
+1 M 100.07.317 Cable am/verde 1x2,5 mm2 H07V-K UNE 21031-83 1 M 0,06 0 0 0 0 No
+1 M 100.07.318 Cable am/verde 1x4 mm2 H07V-K UNE 21031-83 1 M 0,07 0 0 0 0 No
+1 M 100.07.319 Cable am/verde 1x6 mm2 H07V-K UNE 21031-83 3 M 0,1 0 0 0 0 No
+1 M 100.07.321 Cable am/verde 1x16 mm2 H07V-K UNE 21031-83 1 M 0,2 0 0 0 0 No
+1 M 100.07.404 Cable rojo 1x1,5 mm2 H07V-K UNE 21031-83 133 M 0,04 0 0 0 0 No
+1 M 100.07.504 Cable negro 1x1,5 mm2 H07V-KUNE 21031-83 45 M 0,04 0 0 0 0 No
+1 M 100.07.505 Cable negro 1x2,5 mm2 H07V-KUNE 21031-83 13 M 0,07 0 0 0 0 No
+1 M 100.07.506 Cable negro 1x4 mm2 H07V-KUNE 21031-83 11 M 0,07 0 0 0 0 No
+1 M 100.07.507 Cable negro 1x6 mm2 H07V-KUNE 21031-83 8 M 0,1 0 0 0 0 No
+1 M 100.07.508 Cable negro 1x10 mm2 H07V-KUNE 21031-83 1 M 0,15 0 0 0 0 No
+1 M 100.07.509 Cable negro 1x16 mm2 H07V-KUNE 21031-83 1 M 0,2 0 0 0 0 No
+1 M 100.07.511 Cable negro 1x35 mm2 H07V-KUNE 21031-83 4 M 0,41 0 0 0 0 No
+1 M 100.07.512 Cable negro 1x50 mm2 H07V-KUNE 21031-83 6 M 0,57 0 0 0 0 No

@@ -1,0 +1,50 @@
+<section data-ng-controller="PedidosController" data-ng-init="findOne()">
+	<div class="page-header">
+		<h1 data-ng-bind="pedido.id"></h1>
+		<h2 data-ng-bind="pedido.fecha"></h2>
+
+		<p>Armario:<strong>{{pedido.codigo}}</strong> Rev: <strong>{{pedido.rev}}</strong> </p>
+		<p>Cantidad:<strong>{{pedido.cantidad}}</strong> - Entregados:<strong>{{pedido.entregados}}</strong> - Pendientes:<strong>{{pedido.pendientes}}</strong></p>
+	</div>
+	<button  class="btn" ng-class="{'btn-success':showDisponibles}"ng-click="toggleShowDisponibles()" ><i class="fa fa-eye fa-lg"></i> Ver disponibles</button>
+	<div class="page-content">
+		<data-alertas></data-alertas>
+		<span us-spinner="{radius:30, width:8, length: 16}" spinner-key="cargador" spinner-start-active="true"></span>
+		<table data-toggle="table"  data-height="299" class=" table-stripped table table-hover animate-show" ng-show="elCargados"   data-show-columns="true" >
+			<thead>
+		        <tr>
+		        	<td>
+		            	<a href="" ng-click="order('codigo')">Codigo</a>
+		            	<span class="sortorder" ng-show="predicate === 'codigo'" ng-class="{reverse:reverse}"></span>
+		            </td>
+		 			<td>
+		            	<a href="" ng-click="order('stockSinReservas')" >Stock</a>
+		            	<span class="sortorder" ng-show="predicate === 'stockSinReservas'" ng-class="{reverse:reverse}"></span>
+		            </td>
+		            <td>
+		            	<a href="" ng-click="order('cantidadReservadaSinPedido')">Reservas</a>
+		            	<span class="sortorder" ng-show="predicate === 'cantidadReservadaSinPedido'" ng-class="{reverse:reverse}"></span>
+		            </td>  
+		            <td>
+		            	<a href="" ng-click="order('stock')">Faltan</a>
+		            	<span class="sortorder" ng-show="predicate === 'stock'" ng-class="{reverse:reverse}"></span></td>
+		            <td>
+		            	<a href="" ng-click="order('denominacion')">Denominacion</a>
+		            	<span class="sortorder" ng-show="predicate === 'denominacion'" ng-class="{reverse:reverse}"></span>
+		            </td>           
+		  			<td>Necesarios</td>
+		        </tr>
+		    </thead>
+		    <tbody>
+				<tr data-ng-repeat="componente in pedido.stock.componentes  | orderBy:predicate:reverse " class="table-condensed table-stripped" ng-class="{disponible:componente.disponible,showDisponibles:showDisponibles}">
+					<td><a href="/#!/componentes/{{componente.codigo}}">{{componente.codigo}}</a></td>
+					<td>{{componente.stockSinReservas}}</td>
+					<td>{{componente.cantidadReservadaSinPedido}}</td>
+					<td>{{componente.stock}}</td>
+					<td>{{componente.denominacion}}</td>
+		            <td>{{componente.necesarios*pedido.pendientes}} <small>({{componente.necesarios}}x{{pedido.pendientes}}) </small></td> 
+				</tr>
+		    </tbody>
+	    </table>
+	</div>	
+</section>
