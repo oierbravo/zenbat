@@ -169,6 +169,7 @@ function loadComponentesFromFile(){
 }
 exports.loadComponentesFromFile = loadComponentesFromFile;
 function calcularCosas(componente){
+	console.log(componente);
 	componente.status = '';
 	componente.status = 'ok';
 
@@ -179,7 +180,7 @@ function calcularCosas(componente){
     var usableFuturo = usable + totalPedidosProveedores;
     var cantReservas = componente.pedidos.length;
     var cantPedidosProveedores = componente.pedidosProveedores.length;
-    console.log(componente);
+    //console.log(componente);
     componente.totalReservas = totalReservas;
     componente.totalPedidosProveedores = totalPedidosProveedores;
     componente.usable = usable;

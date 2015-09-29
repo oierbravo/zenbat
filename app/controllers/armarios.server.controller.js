@@ -171,6 +171,7 @@ function entregar(idArmario,qtyArmarios,pedidoId){
 	var armario = getArmario(idArmario);
 	var result = [];
 	var status = 'OK';
+	console.log('entregando armario');
 	armario.componentes.forEach(function(element,index){
 		if(element.Codigo){
 			var takeComponente = Componentes.takeComponente(element.Codigo,element.Cantidad * qtyArmarios,pedidoId);

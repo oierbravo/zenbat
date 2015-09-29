@@ -9,6 +9,9 @@ var Pedidos = require('./pedidos.server.controller.js');
 var PedidosProveedores =  require('./pedidos-proveedores.server.controller');
 
 exports.index = function(req, res) {
+	Pedidos.load();
+	PedidosProveedores.load();
+	Componentes.load();
 	res.render('index', {
 		user: req.user || null,
 		request: req

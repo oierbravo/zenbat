@@ -67,7 +67,7 @@ function entregar(pedido){
 	//console.log('por entregar',pedido.porEntregar);
 
 	var entregados = Armarios.entregar(pedido.armarioId,pedido.porEntregar,pedido.pedidoId);
-	console.log('result-entregar',entregados);
+	//console.log('result-entregar',entregados);
 	
 	
 	dbPedidos.put(pedido.pedidoId,{lastEntregados:pedido.entregados});
@@ -124,6 +124,7 @@ function getPedidosComponente(componenteId){
 exports.getPedidosComponente = getPedidosComponente;
 	
 function setPedidosComponente(componenteId,pedidoId,qty){
+	console.log('setPedidosComponente',pedidoId,componenteId);
 	var pedidosComponente = dbPedidosComponente.get(componenteId);
 	if(!pedidosComponente){
 		pedidosComponente = [];
@@ -178,10 +179,10 @@ function loadPedidosForEach(element,index){
 			element.armarioId = armarioId;
 
 			var marcarReserva = true;
-			console.log('VERIFICANDO');
+			//console.log('VERIFICANDO');
 			if(element.lastEntregados !== element.entregados){
 				var o = element.entregados - element.lastEntregados;
-				console.log('por entregar',o);
+				//console.log('por entregar',o);
 				element.porEntregar = o;
 				entregar(element);
 			}
