@@ -89,7 +89,7 @@ function loadPedidosFromFile(save){
 
 		var pedidosSheet = workbook.Sheets[sheetName];
 		var pedidos = XLSX.utils.sheet_to_json(pedidosSheet,{header:zenbatConfig.pedidos.header,range:1});
-	
+		var xlsKeys = [];
 		pedidos.forEach(function(element,index){
 			if(element.fecha){
 				element.fechaUnix = moment(element.fecha).format('x');
@@ -105,10 +105,11 @@ function loadPedidosFromFile(save){
 			if(save){
 				dbPedidos.put(pedido.pedidoId,pedido);
 			}
+			xlsKeys.push(pedido.pedidoId);
 		});
 
 		var sortedPedidos = _.sortBy(pedidos,'fechaUnix');
-
+		exports.xlsKeys = xlsKeys;
 		
 		return sortedPedidos;
 }
@@ -147,7 +148,7 @@ function setPedidosComponentesArmario(armario,pedidoId){
 	});
 }
 function loadPedidosForEachNu(element,index){
-
+	//element.pedidos = 
 }
 function loadPedidosForEach(element,index){
 
@@ -205,7 +206,24 @@ function loadPedidosForEach(element,index){
 				}
 			}
 			exports.pedidos[index] = element;
+			cache.put(element.pedidoId,element);
 		
+}
+function cleanPedidos(){
+	var dbKeys = dbPedidos.keys();
+	var xlsKeys = getPedidosIds();
+	dbKeys.forEach(function(element,index){
+		var index = _.findIndex(xlsKeys,element);
+		if(index > 0){
+			//existe, nothing to do.
+		} else {
+			//no existe
+			dbPedidos.del(element);
+		}
+	});
+}
+function getPedidosIds(){
+	return exports.xlsKeys;
 }
 function loadPedidosNu(){
 	//if(exports.pedidos.length === 0){
@@ -218,6 +236,7 @@ function loadPedidosNu(){
 			exports.pedidos.push(pedido)
 		}
 	});
+	cleanPedidos();
 }
 function loadPedidos(){
 	if(_.isEmpty(Componentes.componentes)){
@@ -236,8 +255,9 @@ function loadPedidos(){
 		deleteOldPedidos();
 		exports.pedidos = pedidos;
 		cache.put('pedidos-cargados',true);
-	
+		
 	}
+	cleanPedidos();
 }
 
 exports.loadPedidos = loadPedidos;
@@ -311,4 +331,10 @@ exports.reload = function(){
 	reloadPedidos = true;
 	loadPedidos();
 };
-
+exports.load = function(){
+	//exports.pedidos = [];
+	var pedidos = loadPedidosFromFile(true);
+	pedidos.forEach(loadPedidosForEach);
+	deleteOldPedidos();
+	cleanPedidos();
+}

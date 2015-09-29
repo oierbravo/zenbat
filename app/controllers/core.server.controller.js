@@ -6,6 +6,7 @@
 var Armarios = require('./armarios.server.controller.js');
 var Componentes = require('./componentes.server.controller.js');
 var Pedidos = require('./pedidos.server.controller.js');
+var PedidosProveedores =  require('./pedidos-proveedores.server.controller');
 
 exports.index = function(req, res) {
 	res.render('index', {
@@ -13,7 +14,7 @@ exports.index = function(req, res) {
 		request: req
 	});
 };
-exports.reload = function(req, res){
+exports.reloadold = function(req, res){
 	Componentes.reload();
 	Armarios.reload();
 	Pedidos.reload();
@@ -22,4 +23,13 @@ exports.reload = function(req, res){
 		user: req.user || null,
 		request: req
 	});
+}
+exports.reload = function(req, res){
+	console.log("reloading all");
+	Pedidos.load();
+	PedidosProveedores.load();
+	Componentes.load();
+	res.status(200);
+	res.send({message:'Todos cargadao'});
+	
 }

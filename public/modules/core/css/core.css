@@ -151,3 +151,22 @@ tr.componente-status-bajoMinimosFuturoConReserva {
 	overflow: scroll;
 	display: block;
 }
+
+@media print {
+	body {
+    width: 100%;
+    background-color: #fff;
+  }
+  
+h1 {
+	font-size:18pt;
+}
+h2 {
+	font-size:16pt;
+}
+h3 {
+	font-size:14pt;
+}
+h4 {
+	font-size:12pt;
+}

@@ -15,7 +15,8 @@ module.exports = {
 			css: [
 				'public/lib/bootstrap/dist/css/bootstrap.css',
 				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
-				'public/lib/fontawesome/css/font-awesome.css'
+				'public/lib/fontawesome/css/font-awesome.css',
+				'public/lib/ngprogress/ngProgress.css',
 			],
 			js: [
 				'public/lib/ng-file-upload/FileAPI.min.js', 
@@ -34,7 +35,8 @@ module.exports = {
 				'public/lib/file-saver/FileSaver.min.js',
 				'public/lib/js-xlsd/dist/xlsx.full.min.js',
 				'public/lib/spin.js/spin.min.js',
-				'public/lib/angular-spinner/angular-spinner.js'
+				'public/lib/angular-spinner/angular-spinner.js',
+				'public/lib/ngprogress/build/ngprogress.js'
 			]
 		},
 		css: [

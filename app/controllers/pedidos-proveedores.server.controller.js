@@ -38,6 +38,7 @@ function loadPedidosProveedores(){
 		
 		exports.pedidosProveedores.push(pedido);
 	});
+	return exports.pedidos;
 	
 }
 function setPedidodProveedoresComponente(pedidoProveedorId,pedidoId){
@@ -73,6 +74,7 @@ function loadById(id){
 	} else {
 		return false;
 	}
+
 
 }
 function preparePedidoProveedorData(pedidoProveedor){
@@ -176,3 +178,11 @@ exports.hasAuthorization = function(req, res, next) {
 	}
 	next();
 };
+function loadPedidosProveedoresForEach(element,index){
+	cache.put(element.pedidoProveedorId,element);
+}
+exports.load = function(){
+	var pedidosProveedores = loadPedidosProveedores();
+	//pedidosProveedores.forEach(loadPedidosProveedoresForEach);
+}
+

@@ -87,12 +87,12 @@
 					<td>{{componente.denominacion}}</td>
 					<td>{{componente.pedidoMinimo}}</td>
 					<td>{{componente.precioUnit}}</td>
-					<td><input name="qty" type="text" data-ng-model="componente.qty" class="form-control" placeholder="" ng-init="0" ></td>
+					<td><input name="qty" type="number" data-ng-model="componente.qty" class="form-control" placeholder="" ng-init="0" ></td>
 					<td>{{componente.precioUnit * componente.qty}}</td>	
-					<td><input name="qtyRec" type="text" data-ng-model="componente.qtyRec" class="form-control" placeholder="" ng-init="0" ></td>
-					<td><button class="btn btn-warning" data-ng-click="removeComponente(componente.codigo,true);">
+					<td><input name="qtyRec" type="number" data-ng-model="componente.qtyRec" class="form-control" placeholder="" ng-init="0" ></td>
+					<td><a class="btn btn-warning" data-ng-click="removeComponente(componente.codigo,true);">
 			<i class="glyphicon glyphicon-trash"></i>
-		</button></td>
+		</a></td>
 				</tr>
 				<tr>
 					<td></td>

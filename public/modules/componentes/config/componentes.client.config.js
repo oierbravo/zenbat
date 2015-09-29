@@ -8,6 +8,8 @@ angular.module('componentes').run(['Menus',
 		//Menus.addSubMenuItem('topbar', 'componentes', 'Ver componentes', 'componentes');
 		Menus.addSubMenuItem('topbar', 'componentes', 'Importar', '/importar-componentes');
 		Menus.addMenuItem('topbar', 'Stock', 'stock', '/stock');
+
+		Menus.addMenuItem('topbar', 'Recargar', 'reload', 'reload', '/reload');
 		
 	}
 ]);

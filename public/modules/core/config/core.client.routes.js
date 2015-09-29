@@ -11,6 +11,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		state('home', {
 			url: '/',
 			templateUrl: 'modules/core/views/home.client.view.html'
+		}).
+		state('reload', {
+			url: '/reload',
+			templateUrl: 'modules/core/views/reload-all.client.view.html'
 		});
 	}
 ]);
