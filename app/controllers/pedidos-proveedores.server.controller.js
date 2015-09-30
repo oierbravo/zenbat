@@ -38,7 +38,7 @@ function loadPedidosProveedores(){
 		
 		exports.pedidosProveedores.push(pedido);
 	});
-	return exports.pedidos;
+	return exports.pedidosProveedores;
 	
 }
 function setPedidodProveedoresComponente(pedidoProveedorId,pedidoId){
@@ -100,7 +100,7 @@ exports.pedidoProveedorExists = function(pedidoProveedorId){
 exports.pedidoProveedorByID = function(req, res, next, id) {
 	var pedidoProveedor = loadById(id);
 	console.log('pedidoProveedorByID-id',id);
-	console.log('pedidoProveedorByID-pedidoProveedor',pedidoProveedor);
+	//console.log('pedidoProveedorByID-pedidoProveedor',pedidoProveedor);
 	if(!pedidoProveedor){
 		return res.status(404).send('Pedido no encontrado'
 				);		
@@ -148,9 +148,9 @@ exports.update = function(req, res) {
  * Delete an Pedidos proveedore
  */
 exports.delete = function(req, res) {
-	console.log('req.params.pedidoProveedorId',req.params.pedidoProveedorId);
-	console.log('req.pedidoProveedor',req.pedidoProveedor);
-	console.log('Deleting ' + req.pedidoProveedor.nPedido);
+	//console.log('req.params.pedidoProveedorId',req.params.pedidoProveedorId);
+	//console.log('req.pedidoProveedor',req.pedidoProveedor);
+	//console.log('Deleting ' + req.pedidoProveedor.nPedido);
 	dbPedidosProveedores.del(req.pedidoProveedor.nPedido);
 	res.status(200).send({message:"Deleted " + req.pedidoProveedor.nPedido});
 };
@@ -183,6 +183,7 @@ function loadPedidosProveedoresForEach(element,index){
 }
 exports.load = function(){
 	var pedidosProveedores = loadPedidosProveedores();
+	return pedidosProveedores.length;
 	//pedidosProveedores.forEach(loadPedidosProveedoresForEach);
 }
 

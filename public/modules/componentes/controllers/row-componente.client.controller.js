@@ -49,7 +49,7 @@ angular.module('componentes').controller('RowComponenteController', ['$scope','C
 			var cantidadNecesaria = parseFloat($scope.componente.cantidadReservada);
 			var cantidadSeguridad = parseFloat($scope.componente.stockSeguridad);
 			var usableStock = cantidad -cantidadNecesaria;
-			if(usableStock < cantidadSeguridad){
+			/*if(usableStock < cantidadSeguridad){
 				$scope.componente.bajoMinimos = true;
 			} else {
 				$scope.componente.bajoMinimos = false;
@@ -58,7 +58,7 @@ angular.module('componentes').controller('RowComponenteController', ['$scope','C
 				$scope.componente.falta = true;
 			} else {
 				$scope.componente.falta = false;
-			}
+			}*/
 		}
 		$scope.revisarStock() ;
 	}

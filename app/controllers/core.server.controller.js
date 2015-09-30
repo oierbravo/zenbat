@@ -8,6 +8,8 @@ var Componentes = require('./componentes.server.controller.js');
 var Pedidos = require('./pedidos.server.controller.js');
 var PedidosProveedores =  require('./pedidos-proveedores.server.controller');
 
+var cache = require('memory-cache');
+
 exports.index = function(req, res) {
 	Pedidos.load();
 	PedidosProveedores.load();
@@ -28,11 +30,24 @@ exports.reloadold = function(req, res){
 	});
 }
 exports.reload = function(req, res){
-	console.log("reloading all");
-	Pedidos.load();
-	PedidosProveedores.load();
-	Componentes.load();
+	//console.log("reloading all");
+	//Pedidos.load();
+	//PedidosProveedores.load();
+	//Componentes.load();
 	res.status(200);
-	res.send({message:'Todos cargadao'});
+	//res.status(200);
+	//res.send({message:'Todos cargadao'});
+	
+}
+exports.reloadCli = function(req, res){
+	console.log("reloading all");
+	var numPedidos = Pedidos.load();
+	var numPedidosProveedores = PedidosProveedores.load();
+	var numComponentes = Componentes.load();
+	
+	res.status(200);
+	var str ='Cargados: ' + numComponentes + ' componentes, ' + numPedidos + ' pedidos y ' + numPedidosProveedores +' pedidos a proveedores.';
+	var componentesKeys = cache.get('componentes-keys');
+	res.send({message:str,componentesKeys:componentesKeys});
 	
 }

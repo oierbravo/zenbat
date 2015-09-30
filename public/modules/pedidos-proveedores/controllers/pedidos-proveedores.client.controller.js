@@ -66,7 +66,7 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 			});
 			
 			pedidoProveedor.$save(function(response) {
-				console.log(response);
+				//console.log(response);
 				$location.path('pedidos-proveedores/' + response.pedidoProveedorId);
 
 				$scope.nPedido = '';
@@ -147,13 +147,13 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 	    $scope.animationsEnabled = !$scope.animationsEnabled;
 	  };
 	  $scope.update = function() {
-	  	console.log(this);
-	  	console.log($scope);
+	  	//console.log(this);
+	  	//console.log($scope);
 	  	//console.log(this.almacen);
 			var pedidoProveedor = $scope.pedidoProveedor;
 			//pedidoProveedor.almacen = pedidoProveedor.almacen;
 			//pedidoProveedor.proveedor = pedidoProveedor.proveedor;
-			console.log(pedidoProveedor);
+			//console.log(pedidoProveedor);
 			pedidoProveedor.$update(function() {
 				$location.path('pedidos-proveedores/' + pedidoProveedor.pedidoProveedorId);
 			}, function(errorResponse) {
@@ -204,7 +204,7 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 				
 
 					$scope.pedidoProveedor.$remove(function(data) {
-						console.log(data);
+					//	console.log(data);
 						$location.path('pedidos-proveedores');
 					});
 				

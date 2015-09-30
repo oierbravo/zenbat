@@ -174,3 +174,4 @@ tr.componente-status-bajoMinimosFuturoConReserva {
 		margin: 0;
 	}
 }
+.panel-body .btn:not(.btn-block) { width:120px;margin-bottom:10px; }

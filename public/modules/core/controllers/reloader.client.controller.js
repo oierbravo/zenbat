@@ -7,14 +7,15 @@ angular.module('core').controller('ReloaderController', ['$scope','$http','usSpi
 		$scope.reload = function(){
 			console.log('reloading');
 			usSpinnerService.spin('cargador');
-			$http.get('/reload').then(function(success){
+			$http.get('/reload-cli').then(function(success){
 				usSpinnerService.stop('cargador');
-				AlertasFactory.show(success);
+				console.log(success);
+				AlertasFactory.show({message:success.data.message,type:'success'});
 
 			},function(rejected){
 			usSpinnerService.stop('cargador');
-			console.log(reject);
-				AlertasFactory.showRejected(reject);
+			console.log(rejected);
+				AlertasFactory.showRejected(rejected);
 
 			});
 		}

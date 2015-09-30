@@ -151,7 +151,84 @@ function setPedidosComponentesArmario(armario,pedidoId){
 function loadPedidosForEachNu(element,index){
 	//element.pedidos = 
 }
+function varificarEntrega(pedido){
+
+}
+function verificarStatus(pedido){
+
+}
+function getDbFields(pedido){
+	var dbFields;
+	if(dbPedidos.has(pedido.pedidoId )){
+				dbFields = dbPedidos.get(pedido.pedidoId);
+			 
+			} else {
+				dbFields = {
+					lastEntregados: pedido.entregados,
+					
+				}
+				
+			}
+			return dbFields;
+}
 function loadPedidosForEach(element,index){
+
+		
+			var output;
+			var fecha = moment(element.fecha).format('YYYY-MM-DD');
+			element.fecha = fecha;
+			element.pedidoId =  makePedidoID(element);
+			if(_.isUndefined(element.entregados)){
+				element.entregados = 0;
+			}
+			var dbFields = getDbFields(element);
+			
+			output = _.extend(element,dbFields);
+			element = output;
+			
+			var armarioId = element.codigo + '-' + element.rev;
+			element.armarioId = armarioId;
+
+			var marcarReserva = true;
+			//console.log('VERIFICANDO');
+			if(element.lastEntregados !== element.entregados){
+				var o = element.entregados - element.lastEntregados;
+				//console.log('por entregar',o);
+				element.porEntregar = o;
+				entregar(element);
+			}
+			if(element.entregados === element.cantidad) {
+				element.stock = {
+					status: 'FINALIZADO'
+				};
+				element.entregado = true;
+				element.cssClass = 'truck';
+			} else if(element.cantidad > element.entregados){
+				element.pendientes = element.cantidad - element.entregados;
+				element.stock =  Armarios.verificarStock(armarioId,element.pendientes,element.pedidoId );
+				
+				if(element.stock.status === 'OK'){
+					element.entregable = true;
+					element.fallo = false;
+					element.cssClass = 'check';
+				} else {
+					element.entregable = false;
+					element.fallo = true;
+						element.cssClass = 'times';
+				}
+			}
+			exports.pedidos[index] = element;
+			cache.put(element.pedidoId,element);
+		
+}
+
+exports.calcularStock = function(pedido){
+	var stock;
+	pedido.stock.status = 'OK';
+	return stock;
+}
+
+function loadPedidosForEachOld(element,index){
 
 		
 			var output;
@@ -259,6 +336,7 @@ function loadPedidos(){
 		
 	}
 	cleanPedidos();
+
 }
 
 exports.loadPedidos = loadPedidos;
@@ -338,4 +416,6 @@ exports.load = function(){
 	pedidos.forEach(loadPedidosForEach);
 	deleteOldPedidos();
 	cleanPedidos();
+	cache.put('pedidos-loaded',true);
+	return pedidos.length;
 }

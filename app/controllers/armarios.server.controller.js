@@ -17,7 +17,7 @@ var mongoose = require('mongoose'),
 function getArmario(id){
 	var filepath = zenbatConfig.basePath + zenbatConfig.armarios.folder + '\\' + id + '.xlsx';
     if (fs.existsSync(filepath)) {
-    console.log('Found file',filepath);
+  //  console.log('Found file',filepath);
     var workbook = XLSX.readFileSync(filepath);
 
  	var componentesRaw = XLSX.utils.sheet_to_json(workbook.Sheets.componentes,{header:zenbatConfig.armarios.header,range:3});
@@ -98,7 +98,7 @@ function getComponentesArmario(armarioId){
 }
 
 function verificarStock(armarioId,qtyArmarios,pedidoId){
-	console.log('verificarStock-qtyArmarios',qtyArmarios);
+//	console.log('verificarStock-qtyArmarios',qtyArmarios);
 	var armario = getArmario(armarioId);
 	var result = [];
 		var status = 'OK';
@@ -108,7 +108,7 @@ function verificarStock(armarioId,qtyArmarios,pedidoId){
 			if(element.Codigo){
 				element.Cantidad = parseFloat(element.Cantidad);
 				var gotComponente = Componentes.verificarStock(element.Codigo,element.Cantidad * qtyArmarios,pedidoId);
-				console.log('gotComponente',gotComponente);
+//				console.log('gotComponente',gotComponente);
 				element.stockSinReservas = Componentes.getComponenteQtyById(element.Codigo);
 				element.cantidadReservada = Componentes.getComponenteReservasById(element.Codigo);
 				element.cantidadReservadaSinPedido =element.cantidadReservada - element.Cantidad * qtyArmarios;
@@ -224,6 +224,6 @@ exports.exportar = function(req,res){
   		}
  	  armarioExport.componentes.push(componenteExport);
     });
-    console.log('exportar-armario',armarioExport);
+//    console.log('exportar-armario',armarioExport);
 	res.xls(armarioId + '.xlsx',armarioExport.componentes,options);
 }
