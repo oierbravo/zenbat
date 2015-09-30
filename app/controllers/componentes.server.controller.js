@@ -102,12 +102,21 @@ function loadComponenteDb(componente){
 function loadComponentesFilter(element,index){
 	//Necesita stockSeguridad y codigo valido
 		var result = false;
+
+		if(element.codigo === '100.90.515'){
+
+			console.log(element);
+		}
+
+
 		if(element.stockSeguridad){
 			result = true;
+			//if(element.stockSeguridad)
 		} else {
 			result = false;
 		}
 		if(element.codigo){
+
 			if(element.codigo === '0'){
 			
 				result = false;
@@ -126,9 +135,10 @@ function loadComponentesFilter(element,index){
 			if(_.isEmpty(element.codigo)){
 				result = false;
 			}
+
 		}
-		if(result === false){
-			//console.log(element);
+		if(result === true){
+	//		console.log("true",element);
 		}
   	return result;
 	    
@@ -171,9 +181,12 @@ function loadComponentesForEach(element,index){
 function loadComponentesFromFile(){
 	var workbook = XLSX.readFileSync(zenbatConfig.basePath + 'productos.xlsx');
 	exports.workbook = workbook;
+	//console.log(workbook);
 	//var componentesRaw = XLSX.utils.sheet_to_json(workbook.Sheets.componentes,{header:headerProductos,range:1});
 	var componentesRaw = XLSX.utils.sheet_to_json(workbook.Sheets.componentes);
+//	console.log(componentesRaw.length);
 	var componentes = componentesRaw.filter(loadComponentesFilter);
+	//console.log(componentes.length);
 	return componentes;
 }
 exports.loadComponentesFromFile = loadComponentesFromFile;
@@ -182,7 +195,7 @@ function calcularCosas(componente){
 //	console.log(componente);
 	componente.status = '';
 	componente.status = 'ok';
-console.log('calcularCosas',componente);
+//console.log('calcularCosas',componente);
 	var totalReservas = getReservaTotal(componente);
 	var totalPedidosProveedores = getProveedoresTotal(componente);
     var usable = parseFloat(componente.cantidad) - totalReservas ;
@@ -338,7 +351,12 @@ exports.verificarId = function(componenteId){
 	return comp ? true: false;
 }
 function updateComponente(componente){
-	dbProductos.put(componente.codigo,componente);
+	dbObj = {
+		codigo:componente.componenteId,
+		componenteId,componente.componenteId,
+		cantidad:componente.cantidad
+	}
+	dbProductos.put(componente.codigo,dbObj);
 	exports.componentes[componente.idx] = componente;
 	return componente;
 }
@@ -526,7 +544,7 @@ var cantidadReservada = 0;
 	return cantidadReservada;
 }
 function getReservaTotal(componente){
-	console.log('getReservaTotal',componente);
+	//console.log('getReservaTotal',componente);
 	var cantidadReservadaTotal = 0;
 	_(componente.pedidos).forEach(function(element,index) {
 
@@ -569,6 +587,9 @@ exports.verificarStock = function(id,qty,pedidoId){
 		//console.log('verificar-stockUsable',stockUsable);
 		console.log('verificar-cantidad',cantidad);
 		console.log('verificar-componente-cantidad',componente.cantidad);
+		if(_.isNaN(componente.cantidad)){
+			componente.cantidad = 0;
+		}
 		//console.log('verificar-cantidadReservada',cantidadReservada);
 		if(stockUsable < cantidad){
 			if(stockUsable < 0){
@@ -584,6 +605,9 @@ exports.verificarStock = function(id,qty,pedidoId){
 	return output;
 
 };
+exports.descontarComponente = function(componentId,cantidad){
+
+}
 function checkMinimos(componente){
 	var output = false;
 		var usableStock = parseFloat(componente.cantidad) - parseFloat(componente.cantidadReservada);
@@ -721,21 +745,21 @@ exports.load = function(){
 exports.getKeys = function(){
 	return cache.get('componentes-keys');
 }
-function loadComponentesForEachNu(element,index,keys){
+function loadComponentesForEachNu(element,index){
 		//console.log('before',element);
 		var data = dbProductos.get(element.codigo);
-		console.log('loadComponentesForEachNu',data);
+		//console.log('loadComponentesForEachNu',data);
 		if(data){
 			element = _.extend(data,element);
 		}
 		//console.log('after',element);
 	
-		var pedidos = dbProductosReservados.get(element.codigo);
-		if(!pedidos){
+		element.pedidos = dbProductosReservados.get(element.codigo);
+		if(!element.pedidos){
 			element.pedidos = [];
 		}
-		var pedidosProveedores = dbProductosPendientes.get(element.codigo);
-		if(!pedidosProveedores){
+		element.pedidosProveedores = dbProductosPendientes.get(element.codigo);
+		if(!element.pedidosProveedores){
 			element.pedidosProveedores = [];
 		} 
 
@@ -750,7 +774,7 @@ function loadComponentesForEachNu(element,index,keys){
 		if(_.isNull(element.cantidad)) {
 			element.cantidad = 0;
 		} */
-		keys.push(element.codigo);
+		exports.keys.push(element.codigo);
 		element = calcularCosas(element);
 		cache.put(element.codigo,element);
 		exports.componentes[index] = element;

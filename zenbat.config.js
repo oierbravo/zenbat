@@ -2,7 +2,7 @@
 
 
 module.exports = {
-	basePath: 'C:\\Ezarri\\Zenbat\\',
+	basePath: 'data/',
 	componentes: {
 		file: 'productos.xlsx'
 		,header: ['codigo','denominacion','stockSeguridad','proveedor','codProveedor','pedidoMinimo','yearPrecio','precioUnit','notas','proveedor2','codProveedor2','pedidoMinimo2','yearPrecio2','precioUnit2','notas2','proveedor3','codProveedor3','pedidoMinimo3','yearPrecio3','precioUnit3','notas3']
@@ -24,11 +24,11 @@ module.exports = {
 		header:['Nombre','Direccion','CP','Poblacion','Tlf','Fax','Email','Notas']
 	},
 	pedidosProveedores: {
-		dbFile: 'db\\pedidosProveedores.db',
-		dbFileComponetes: 'db\\pedidosProveedoresComponentes.db'
+		dbFile: 'db/pedidosProveedores.db',
+		dbFileComponetes: 'db/pedidosProveedoresComponentes.db'
 	},
 	config: {
-		dbFile: 'db\\config.db'
+		dbFile: 'db/config.db'
 	}
 	
 }; 
