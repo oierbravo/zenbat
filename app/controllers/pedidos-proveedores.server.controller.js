@@ -19,7 +19,7 @@ var zenbatConfig = require('../../zenbat.config.js');
 var flatfile = require('flat-file-db');
 var dbPedidosProveedores = flatfile.sync(zenbatConfig.basePath + zenbatConfig.pedidosProveedores.dbFile);
 var dbPedidosProveedoresComponentes = flatfile.sync(zenbatConfig.basePath + zenbatConfig.pedidosProveedores.dbFile);
-
+var cachePedidosComponente = cache;
 
 
 exports.pedidosProveedores = [];
@@ -42,7 +42,8 @@ function loadPedidosProveedores(){
 	
 }
 function setPedidodProveedoresComponente(pedidoProveedorId,pedidoId){
-var pedidosProveedoresComponente = dbPedidosProveedoresComponentes.get(componenteId);
+//var pedidosProveedoresComponente = dbPedidosProveedoresComponentes.get(componenteId);
+var pedidosProveedoresComponente = cachePedidosComponente.get(componenteId + '-pedidosProveedores');
 		if(!pedidosProveedoresComponente){
 			pedidosProveedoresComponente = [];
 	}
@@ -52,14 +53,16 @@ var pedidosProveedoresComponente = dbPedidosProveedoresComponentes.get(component
 			pedidosProveedoresComponente[index] = {pedidoProveedorId:pedidoProveedorId,qty:qty};
 		} else {
 			//no found, add
-			dbPedidosProveedoresComponentes.push({pedidoId:pedidoId,qty:qty});
+
+			pedidosProveedoresComponente.push({pedidoId:pedidoId,qty:qty});
 	}
-	
-	dbPedidosProveedoresComponentes.put(componenteId,pedidosComponente);
+	cachePedidosComponente.put(componenteId + '-pedidosProveedores',pedidosProveedoresComponente);
+	//dbPedidosProveedoresComponentes.put(componenteId,pedidosComponente);
 }
 
 function getPedidodProveedoresComponente(componenteId){
-	return dbPedidosProveedoresComponentes.get(componenteId);;
+	return cachePedidosComponente.get(componenteId + '-pedidosProveedores');
+	///return dbPedidosProveedoresComponentes.get(componenteId);;
 }
 
 

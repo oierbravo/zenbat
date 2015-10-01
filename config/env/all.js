@@ -6,7 +6,7 @@ module.exports = {
 		description: 'Zenbat, inventory and manufacturing.',
 		keywords: 'mrp,inventory,manufacturing'
 	},
-	port: process.env.PORT || 80,
+	port: process.env.PORT || 8090,
 	templateEngine: 'swig',
 	sessionSecret: 'MEAN',
 	sessionCollection: 'sessions',

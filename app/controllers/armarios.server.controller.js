@@ -16,6 +16,7 @@ var mongoose = require('mongoose'),
 
 function getArmario(id){
 	var filepath = zenbatConfig.basePath + zenbatConfig.armarios.folder + '\\' + id + '.xlsx';
+	var filepath = zenbatConfig.basePath + zenbatConfig.armarios.folder + '/' + id + '.xlsx';
     if (fs.existsSync(filepath)) {
   //  console.log('Found file',filepath);
     var workbook = XLSX.readFileSync(filepath);
@@ -94,9 +95,9 @@ function getComponentesArmario(armarioId){
 	} else {
 		componentes = false;
 	}
-	return componenetes;
+	return componentes;
 }
-
+exports.getComponentes =getComponentesArmario;
 function verificarStock(armarioId,qtyArmarios,pedidoId){
 //	console.log('verificarStock-qtyArmarios',qtyArmarios);
 	var armario = getArmario(armarioId);
