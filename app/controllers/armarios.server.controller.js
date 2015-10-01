@@ -95,9 +95,9 @@ function getComponentesArmario(armarioId){
 	} else {
 		componentes = false;
 	}
-	return componenetes;
+	return componentes;
 }
-
+exports.getComponentes =getComponentesArmario;
 function verificarStock(armarioId,qtyArmarios,pedidoId){
 //	console.log('verificarStock-qtyArmarios',qtyArmarios);
 	var armario = getArmario(armarioId);

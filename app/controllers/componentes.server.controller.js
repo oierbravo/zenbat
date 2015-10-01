@@ -19,8 +19,11 @@ var zenbatConfig = require('../../zenbat.config.js');
 
 var flatfile = require('flat-file-db');
 var dbProductos = flatfile.sync(zenbatConfig.basePath + 'db\\productos.db');
-var dbProductosReservados = flatfile.sync(zenbatConfig.basePath + 'db\\productos-reservados.db');
-var dbProductosPendientes = flatfile.sync(zenbatConfig.basePath + 'db\\productos-pendientes.db');
+//var dbProductosReservados = flatfile.sync(zenbatConfig.basePath + 'db\\pedidosComponente.db');
+var cachePedidosComponente = cache;
+
+//var dbProductosPendientes = flatfile.sync(zenbatConfig.basePath + 'db\\productos-pendientes.db');
+var cachePedidosComponente = cache;
 
 var headerProductos = zenbatConfig.componentes.header;
 var headerStock = zenbatConfig.stock.header;
@@ -102,12 +105,6 @@ function loadComponenteDb(componente){
 function loadComponentesFilter(element,index){
 	//Necesita stockSeguridad y codigo valido
 		var result = false;
-
-		if(element.codigo === '100.90.515'){
-
-			console.log(element);
-		}
-
 
 		if(element.stockSeguridad){
 			result = true;
@@ -241,7 +238,7 @@ function calcularCosas(componente){
 	    }
 	}
 
-
+console.log(componente);
 	return updateComponente(componente);
 }
 
@@ -351,9 +348,9 @@ exports.verificarId = function(componenteId){
 	return comp ? true: false;
 }
 function updateComponente(componente){
-	dbObj = {
+	var dbObj = {
 		codigo:componente.componenteId,
-		componenteId,componente.componenteId,
+		componenteId:componente.componenteId,
 		cantidad:componente.cantidad
 	}
 	dbProductos.put(componente.codigo,dbObj);
@@ -451,7 +448,8 @@ function deleteNonXLSComponentes(){
 	});
 }
 function getPedidosComponenteById(componenteId){
-	var pedidosComponente = dbProductosReservados.get(componenteId);
+
+	var pedidosComponente = cachePedidosComponente.get(componenteId + '-pedidos');
 	if(pedidosComponente){
 		pedidosComponente.codigo = componenteId;
 		return pedidosComponente;
@@ -494,7 +492,10 @@ function setPedidoNu(componenteId,pedidoId,qty){
 }
 exports.setPedido = setPedidoNu;
 function updateComponentePedidos(componente){
-	dbProductosReservados.put(componente.codigo,componente);
+	var cached = cachePedidosComponente.get(componenteId + '-pedidos');
+	cached.pedido = componente.pedidos;
+	cachePedidosComponente.put(componenteId + '-pedidos',cached);
+	//dbProductosReservados.put(componente.codigo,componente);
 }
 function setPedidoProveedor(componente,pedidoProveedorId,qty){
 	if(_.isString(componente)){
@@ -544,7 +545,7 @@ var cantidadReservada = 0;
 	return cantidadReservada;
 }
 function getReservaTotal(componente){
-	//console.log('getReservaTotal',componente);
+	console.log('getReservaTotal',componente);
 	var cantidadReservadaTotal = 0;
 	_(componente.pedidos).forEach(function(element,index) {
 
@@ -754,11 +755,12 @@ function loadComponentesForEachNu(element,index){
 		}
 		//console.log('after',element);
 	
-		element.pedidos = dbProductosReservados.get(element.codigo);
+		element.pedidos = cachePedidosComponente.get(element.codigo + '-pedidos');
 		if(!element.pedidos){
 			element.pedidos = [];
 		}
-		element.pedidosProveedores = dbProductosPendientes.get(element.codigo);
+		element.pedidosProveedores = cachePedidosComponente.get(element.codigo + '-pedidosProveedores');
+		//element.pedidosProveedores = dbProductosPendientes.get(element.codigo);
 		if(!element.pedidosProveedores){
 			element.pedidosProveedores = [];
 		} 

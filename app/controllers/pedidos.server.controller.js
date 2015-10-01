@@ -31,8 +31,8 @@ cache.put('reloadPedidos',true);
 
 var flatfile = require('flat-file-db');
 var dbPedidos = flatfile.sync(zenbatConfig.basePath + 'db\\pedidos.db');
-var dbPedidosComponente = flatfile.sync(zenbatConfig.basePath + 'db\\pedidosComponente.db');
-
+//var dbPedidosComponente = flatfile.sync(zenbatConfig.basePath + 'db\\pedidosComponente.db');
+var cachePedidosComponente = cache;
 /*var chokidar = require('chokidar');
 var watcher = chokidar.watch(zenbatConfig.basePath , {
   ignored: /[\/\\]\./,
@@ -118,14 +118,15 @@ function getPedido(pedidoId){
 }
 exports.getPedidosComponente = getPedidosComponente;
 function getPedidosComponente(componenteId){
-	return  dbPedidosComponente.get(componenteId);
+	return cachePedidosComponente.get(componenteId + '-pedidos');
+	//return  dbPedidosComponente.get(componenteId);
 }
 
 exports.getPedidosComponente = getPedidosComponente;
 	
 function setPedidosComponente(componenteId,pedidoId,qty){
 	console.log('setPedidosComponente',pedidoId,componenteId);
-	var pedidosComponente = dbPedidosComponente.get(componenteId);
+	var pedidosComponente = cachePedidosComponente.get(componenteId + '-pedidos');
 	if(!pedidosComponente){
 		pedidosComponente = [];
 	}
@@ -139,8 +140,8 @@ function setPedidosComponente(componenteId,pedidoId,qty){
 			//no found, add
 			pedidosComponente.push({pedidoId:pedidoId,qty:qty});
 	}
-	
-	dbPedidosComponente.put(componenteId,pedidosComponente);
+	cachePedidosComponente.put(componenteId + '-pedidos',pedidosComponente);
+//	dbPedidosComponente.put(componenteId,pedidosComponente);
 }
 function setPedidosComponentesArmario(armario,pedidoId){
 	armario.componentes.forEach(function(element,index){
@@ -171,6 +172,28 @@ function getDbFields(pedido){
 			}
 			return dbFields;
 }
+function checkStock(status,stocks){
+	var result = false;
+	var oks = 0;
+	var others = [];
+	stocks.forEach(function(element,index){
+		if(element === 'OK'){
+			oks++;
+		} else {
+			//if()
+			others.push(element);
+		}
+	});
+	if(stocks.length === oks){
+		result = 'OK';
+	} else {
+
+	}
+	return {
+		status: result,
+		componentes:[]
+	}
+}
 function loadPedidosForEach(element,index){
 
 		
@@ -179,6 +202,7 @@ function loadPedidosForEach(element,index){
 			element.fecha = fecha;
 			element.pedidoId =  makePedidoID(element);
 			if(_.isUndefined(element.entregados)){
+				element.lastEntregados = 0;
 				element.entregados = 0;
 			}
 			var dbFields = getDbFields(element);
@@ -205,7 +229,68 @@ function loadPedidosForEach(element,index){
 				element.cssClass = 'truck';
 			} else if(element.cantidad > element.entregados){
 				element.pendientes = element.cantidad - element.entregados;
-				element.stock =  Armarios.verificarStock(armarioId,element.pendientes,element.pedidoId );
+				var componentes = Armarios.getComponentes(armarioId);
+				var stocks = [];
+				var  stockComponentes = [];
+				var foundFalse = false;
+				var status = 'OK';
+				componentes.forEach(function(componente,compIndex){
+						if(componente.Codigo){
+						var qty = element.pendientes * parseFloat(componente.Cantidad);
+						//Componentes.setPedido(componente.Codigo,pedidoId,qty);
+						//verificarStock = function(id,qty,pedidoId)
+						var gotComponente = Componentes.verificarStock(componente.Codigo,qty,element.pedidoId);
+						//element.Cantidad = parseFloat(element.Cantidad);
+				//var gotComponente = Componentes.verificarStock(element.Codigo,element.Cantidad * qtyArmarios,pedidoId);
+//				console.log('gotComponente',gotComponente);
+				componente.stockSinReservas = Componentes.getComponenteQtyById(element.Codigo);
+				componente.cantidadReservada = Componentes.getComponenteReservasById(element.Codigo);
+				componente.cantidadReservadaSinPedido =componente.cantidadReservada - qty;
+				
+				if(gotComponente){
+					if(gotComponente === true){
+						//status = 'ok';
+					} else {
+						if(!foundFalse){
+							status = 'FALTAN COMPONENTES';
+						}
+					}
+				} else if(gotComponente === false) {
+					status = 'FALTAN IDS';
+					foundFalse = true;
+				}
+				if(gotComponente === false){
+					stocks.push({
+						codigo:element.Codigo,
+						denominacion:element.Denominacion,
+						necesarios: false,
+						stock: false
+					});
+				} else {
+					var disponible = false;
+					if(gotComponente === true){
+						gotComponente = 0;
+						disponible = true;
+					}
+					stocks.push({
+						codigo:element.Codigo,
+						denominacion:element.Denominacion,
+						necesarios: parseFloat(element.Cantidad),
+						stockSinReservas: element.stockSinReservas,
+						cantidadReservada: element.cantidadReservada,
+						cantidadReservadaSinPedido: element.cantidadReservada,
+						disponible: disponible,
+						stock: gotComponente
+					});
+				}
+
+
+						//stocks.push(stock);
+					}
+				});
+				element.stock = checkStock(status,stocks);
+
+				//element.stock =  Armarios.verificarStock(armarioId,element.pendientes,element.pedidoId );
 				
 				if(element.stock.status === 'OK'){
 					element.entregable = true;
