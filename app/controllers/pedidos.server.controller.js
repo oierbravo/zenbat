@@ -188,7 +188,9 @@ function checkStock(status,stocks){
 	}
 	return {
 		status: result,
+
 		componentes:others
+
 	}
 }
 function loadPedidosForEach(element,index){
@@ -231,13 +233,14 @@ function loadPedidosForEach(element,index){
 				var  stockComponentes = [];
 				var foundFalse = false;
 				var status = 'OK';
-				console.log('armario-componentes',componentes);
+
+				/*console.log('armario-componentes',componentes);
 				componentes.forEach(function(componente,compIndex){
 						if(componente.Codigo){
 						var qty = element.pendientes * parseFloat(componente.Cantidad);
 						Componentes.setPedido(componente.Codigo,element.pedidoId,qty);
 						var gotComponente = Componentes.checkDisponiblePedido(componente,element.pedidoId,qty);
-						
+						*/
 						//verificarStock = function(id,qty,pedidoId)
 						//var gotComponente = Componentes.verificarStock(componente.Codigo,qty,element.pedidoId);
 						//element.Cantidad = parseFloat(element.Cantidad);
@@ -246,7 +249,20 @@ function loadPedidosForEach(element,index){
 				//componente.stockSinReservas = Componentes.getComponenteQtyById(element.Codigo);
 				//componente.cantidadReservada = Componentes.getComponenteReservasById(element.Codigo);
 				//componente.cantidadReservadaSinPedido =componente.cantidadReservada - qty;
-				
+
+				componentes.forEach(function(componente,compIndex){
+						if(componente.Codigo){
+						var qty = element.pendientes * parseFloat(componente.Cantidad);
+						//Componentes.setPedido(componente.Codigo,pedidoId,qty);
+						//verificarStock = function(id,qty,pedidoId)
+						var gotComponente = Componentes.verificarStock(componente.Codigo,qty,element.pedidoId);
+						//element.Cantidad = parseFloat(element.Cantidad);
+				//var gotComponente = Componentes.verificarStock(element.Codigo,element.Cantidad * qtyArmarios,pedidoId);
+//				console.log('gotComponente',gotComponente);
+				componente.stockSinReservas = Componentes.getComponenteQtyById(element.Codigo);
+				componente.cantidadReservada = Componentes.getComponenteReservasById(element.Codigo);
+				componente.cantidadReservadaSinPedido =componente.cantidadReservada - qty;
+
 				if(gotComponente){
 					if(gotComponente === true){
 						//status = 'ok';
@@ -256,10 +272,17 @@ function loadPedidosForEach(element,index){
 						}
 					}
 				} else if(gotComponente === false) {
+
 					status = 'disponible IDS';
 					foundFalse = true;
 				}
 				if(disponible === false){
+
+					status = 'FALTAN IDS';
+					foundFalse = true;
+				}
+				if(gotComponente === false){
+
 					stocks.push({
 						codigo:element.Codigo,
 						denominacion:element.Denominacion,
@@ -288,9 +311,10 @@ function loadPedidosForEach(element,index){
 						//stocks.push(stock);
 					}
 				});
-				console.log('element.stock-b',element.stock);
+
 				element.stock = checkStock(status,stocks);
-				console.log('element.stock-a',element.stock);
+
+
 				//element.stock =  Armarios.verificarStock(armarioId,element.pendientes,element.pedidoId );
 				
 				if(element.stock.status === 'OK'){

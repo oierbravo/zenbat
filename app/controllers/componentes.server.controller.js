@@ -23,7 +23,8 @@ var dbProductos = flatfile.sync(zenbatConfig.basePath + 'db\\productos.db');
 var cachePedidosComponente = cache;
 
 //var dbProductosPendientes = flatfile.sync(zenbatConfig.basePath + 'db\\productos-pendientes.db');
-var cachePedidosProveedores = cache;
+
+var cachePedidosComponente = cache;
 
 var headerProductos = zenbatConfig.componentes.header;
 var headerStock = zenbatConfig.stock.header;
@@ -183,7 +184,9 @@ function calcularCosas(componente){
 	componente.status = '';
 	componente.status = 'ok';
 //console.log('calcularCosas',componente);
-	var totalReservas = componente.cantidadReservada;// getReservaTotal(componente);
+
+	var totalReservas = getReservaTotal(componente);
+
 	var totalPedidosProveedores = getProveedoresTotal(componente);
     var usable = parseFloat(componente.cantidad) - totalReservas ;
     var stockMinimo = parseFloat(componente.stockSeguridad);
@@ -228,7 +231,7 @@ function calcularCosas(componente){
 	    }
 	}
 
-//console.log('calcularCosas-end',componente);
+
 	return updateComponente(componente);
 }
 
@@ -326,8 +329,10 @@ function updateComponente(componente){
 		componenteId:componente.componenteId,
 		cantidad:componente.cantidad
 	}
+
 	cache.put(componente.codigo,componente);
 	dbProductos.put(componente.codigo,componente);
+
 	exports.componentes[componente.idx] = componente;
 	return componente;
 }
@@ -722,6 +727,7 @@ function loadComponentesForEachNu(element,index){
 			element.pedidos = [];
 		}
 
+
 		element.pedidosSums = [];
 		var sum = 0;
 		element.pedidos.forEach(function(pedido,index){
@@ -748,7 +754,11 @@ function loadComponentesForEachNu(element,index){
 		if(_.isNull(element.cantidad)) {
 			element.cantidad = 0;
 		} */
+
 		exports.xlsKeys.push(element.codigo);
+
+		exports.keys.push(element.codigo);
+
 		element = calcularCosas(element);
 		cache.put(element.codigo,element);
 		exports.componentes[index] = element;
