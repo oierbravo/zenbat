@@ -23,10 +23,12 @@ angular.module('pedidos').controller('PedidosController', ['$scope', '$statePara
 		$scope.find = function() {
 			console.log('pedidos find');
 			usSpinnerService.spin('cargador');
+
 			$scope.pedidos = Pedidos.query().$promise.then(function(data){
 				usSpinnerService.stop('cargador');
 				$scope.pedidos = data;
 				$scope.elCargados = true;
+				console.log($scope.pedidos);
 			},function(reject){
 				usSpinnerService.stop('cargador');
 		
@@ -43,7 +45,8 @@ angular.module('pedidos').controller('PedidosController', ['$scope', '$statePara
 			}).$promise.then(function(data){		
 					usSpinnerService.stop('cargador');
 					$scope.pedido = data;
-					$scope.elCargados = true;				
+					$scope.elCargados = true;
+					console.log(' pedidos findone',data);				
 
 			},function(reject){
 				usSpinnerService.stop('cargador');

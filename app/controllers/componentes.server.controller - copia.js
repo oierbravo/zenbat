@@ -41,10 +41,42 @@ var fileProductosChanged = true;
 var firstLoad = true;
 exports.xlsKeys = [];
 
+/*var chokidar = require('chokidar');
+var watcher = chokidar.watch(zenbatConfig.basePath , {
+  ignored: /[\/\\]\./,
+  persistent: true
+});
+*/
+/*watcher.on('change',function(path){
+  if(path.indexOf('productos.xlsx') !== -1){
+ 	console.log('cambios en productos.xlsx');
+ 	fileProductosChanged = true;
+ 	cache.put('componentes-changed',true);
+  }
+});*/
+
+function updateComponentesFromFile(){
+	var componentesFromFile = loadComponentesFromFile();
+	componentesFromFile.forEach(function(element,index){
+		var dbComp = getComponenteById(element.codigo);
+		var result = _.extend(dbComp,element);
+		dbProductos.put(element.codigo,result);
+		exports.componentes[index] = output;
+	});
+
+}
 exports.reloadComponentesFromFile = function(req,res){
 	updateComponentesFromFile();
 	res.status(200);
 
+}
+function mergeArrays(arr1,arr2){
+	var result = [];
+	arr1.forEach(function(element,index){
+		_.merge(element, arr2[index]);
+		result.push(element);
+	});
+	return result;
 }
 
 function loadComponenteDb(componente){
@@ -71,14 +103,14 @@ function loadComponenteDb(componente){
 	
 }
 function loadComponenteElements(componente){
-	//console.log('loadComponenteElements',componente);
+	console.log('loadComponenteElements',componente);
 	if(!componente){
 		return componente;
 	}
 	componente = loadComponenteDb(componente);
 	var pedidos = cachePedidosComponente.get(componente.codigo + '-pedidos');
 	var pedidosProveedores = cachePedidosProveedores.get(componente.codigo + '-pedidosProveedores');
-//	console.log('cachePedidosComponente',pedidos);
+
 	
 	//_.extend(componente,dbFields);
 	if(!pedidos){
@@ -248,6 +280,30 @@ function cleanComponentes(componentesXLS){
 	});
 }
 
+function loadComponentesOld(clearCache){
+	if(typeof clearCache === undefined){
+		clearCache = false;
+	}
+	exports.compIDs = [];
+	var componentes = [];
+	var dbKeys = dbProductos.keys();
+	dbKeys.forEach(function(element,index){
+		var dbComp = getComponenteById(element);
+		componentes.push(dbComp);
+	});
+	console.log('dbKeys',dbKeys);
+    componentes.forEach(loadComponentesForEach);
+    cache.put('componentes-cargados',true);
+    if(!cache.get('pedidos-cargados')){
+	//	Pedidos.reload();
+	}
+	
+	if(firstLoad){
+		firstLoad = false;
+	}
+	
+	//Pedidos.loadPedidos();
+}
 
 function loadComponenteKeysFromFile(){
 	var workbook = XLSX.readFileSync(zenbatConfig.basePath + 'productos.xlsx');
@@ -370,7 +426,45 @@ exports.componenteByID = function(req, res, next, id) {
 	req.componente = componente;
 	next();
 };
+function setPedidoOld(componente,pedidoId,qty){
+	if(_.isString(componente)){
+		componente = getComponenteById(componenteId);
+	}
+	if(!componente){
+		output =  false;
+	} else {
+		if(!componente.pedidos){
+			componente.pedidos = [];
+		}
 
+		if(componente.pedidos){
+			var index = _.findIndex(componente.pedidos, { 'pedidoId': pedidoId });
+			if(index > -1){
+				console.log('componente ya  indexado',pedidoId);
+			} else {
+				console.log('qty',qty);
+				componente.pedidos.push({pedidoId:pedidoId,qty:qty});	
+			}
+			var usableStock = parseFloat(componente.cantidad) - parseFloat(componente.cantidadReservada);
+			if(usableStock <= componente.stockSeguridad){
+				componente.bajoMinimos = true;
+			} else {
+				componente.bajoMinimos = false;
+			}	
+		}
+		componente.pedidos = componente.pedidos.filter(function(element,index){
+			var pedido = Pedidos.pedidoExists(element.pedidoId);
+			if(pedido){
+				return true;
+			} else {
+				return false;
+			}
+		});
+		updateComponente(componente);
+		return componente;
+	}
+
+}
 function deleteNonXLSComponentes(){
 	var keys = dbProductos.keys();
 	keys.forEach(function(element,index){
@@ -393,12 +487,12 @@ function getPedidosComponenteById(componenteId){
 		return false
 	}
 }
-function setPedido(componente,pedidoId,qty){
+function setPedidoNu(componenteId,pedidoId,qty){
 	var output;
-	//var cached = cachePedidosComponente.get(componenteId + '-pedidos');
-//	console.log('cached',cached);
+	var cached = cachePedidosComponente.get(componenteId + '-pedidos');
+	console.log('cached',cached);
 	//var	componente = getPedidosComponenteById(componenteId);
-//	var componente = cached;
+	var componente = cached;
 	if(!componente || _.isNull(componente)){
 		output =  false;
 		console.log('componente null or false');
@@ -431,15 +525,13 @@ function setPedido(componente,pedidoId,qty){
 			cantidadReservada += el.qty;
 		});
 		componente.pedidosSums = pedidosSums;
-		componente.cantidadReservada =cantidadReservada;
-		componente.cantidadReservadaTotal = cantidadReservada;
 		console.log('fin-setPedido',componente);
-		//updateComponentePedidos(componente);
+		updateComponentePedidos(componente);
 		return updateComponente(componente);
 	}
 
 }
-exports.setPedido = setPedido;
+exports.setPedido = setPedidoNu;
 function updateComponentePedidos(componente){
 	var cached = cachePedidosComponente.get(componenteId + '-pedidos');
 	cached.pedidos = componente.pedidos;

@@ -429,13 +429,12 @@ function loadPedidos(){
 function getPedidoFromID(pedidoID){
 	var splitted = pedidoID.split('_');
 	var nuFecha =splitted[0];
-	/*if(_.isEmpty(exports.pedidos)){
+	if(_.isEmpty(exports.pedidos)){
 		console.log('pedidos empty CARGANDO');
 		loadPedidos();
-	}*/
-	//var pedido = _.find(exports.pedidos,{pedidoId:pedidoID});
-	//return pedido;
-	return cache.get(pedidoID);
+	}
+	var pedido = _.find(exports.pedidos,{pedidoId:pedidoID});
+	return pedido;
 
 }
 exports.getPedidoFromID = getPedidoFromID;
@@ -456,27 +455,11 @@ function checkStatus(pedido){
 }
 function updatePedido(pedido){
 	cache.put(pedido.pedidoId,pedido);
-	return pedido;
 
 }
-function calcularCosas(pedido,index){
-	var pedidoStatus = 'UNDEF';
-	var oks = 0;
-	var stockComponentes = [];
-	console.log('calcularCosas',pedido);
-	pedido.componentesNecesarios.forEach(function(element,index){
-		var componente = Componentes.getComponenteById(element.codigo);
-		componente = Componentes.setPedido(componente,pedido.pedidoId,element.qty);
-		var disponible = Componentes.checkDisponiblePedido(componente,pedido.pedidoId,element.qty);
-		console.log('disponible',disponible);
-	});
-	pedido.stock = {
-		status:pedidoStatus
-		,componentes:stockComponentes
-	}
-	return updatePedido(pedido);
+function calcularCosasPedidos(pedidos){
+
 }
-exports.calcularCosas = calcularCosas;
 function listPedidosForEach(pedido,index){
 	var componentes = Armarios.getComponentes(pedido.armarioId);
 	var result = [];
@@ -514,22 +497,21 @@ function listPedidosForEach(pedido,index){
 			result.push(componente);
 		}
 	});
-	console.log(result);
 	pedido.stock = {
 		status:pedidoStatus,
 		componentes: result
 	};
-	//console.log('pedido-calculado',pedido);
+	updatePedido(pedido);
 	exports.pedidos[index] = pedido;
-	return updatePedido(pedido);
 }
 /**
  * List of Pedidos
  */
 exports.list = function(req, res) { 
 	//loadPedidos();
-	//exports.pedidos.forEach(function(element,index){
+	exports.pedidos.forEach(function(element,index){
 		exports.pedidos.forEach(listPedidosForEach);
+	});
 	res.jsonp(exports.pedidos);
 };
 
@@ -568,9 +550,6 @@ exports.reload = function(){
 	reloadPedidos = true;
 	loadPedidos();
 };
-function preparePedido(pedido,index){
-	return pedido;
-}
 function cargarPedidosForEach(element,index){
 	var output;
 	var fecha = moment(element.fecha).format('YYYY-MM-DD');
@@ -579,7 +558,6 @@ function cargarPedidosForEach(element,index){
 	if(_.isUndefined(element.entregados)){
 		element.lastEntregados = 0;
 		element.entregados = 0;
-		element.porEntregar = 0;
 	}
 	var dbFields = getDbFields(element);
 	
@@ -588,24 +566,10 @@ function cargarPedidosForEach(element,index){
 
 	var armarioId = element.codigo + '-' + element.rev;
 	element.armarioId = armarioId;
-	element.pendientes = element.cantidad - element.entregados;
-
-	element.componentesNecesarios = [];
-		var componentes = Armarios.getComponentes(armarioId);
-		componentes.forEach(function(componente,compIndex){
-			if(componente.Codigo){
-				var qty = element.pendientes * parseFloat(componente.Cantidad);
-				//Componentes.setPedido(componente.Codigo,element.pedidoId,qty);
-				element.componentesNecesarios.push({codigo:componente.Codigo,qty:qty});
-			}
-		});
-
-
 	if(element.lastEntregados !== element.entregados){
 		var o = element.entregados - element.lastEntregados;
 		//console.log('por entregar',o);
 		element.porEntregar = o;
-
 		entregar(element);
 	}
 	if(element.entregados === element.cantidad) {
@@ -616,10 +580,15 @@ function cargarPedidosForEach(element,index){
 		element.cssClass = 'truck';
 	} else if(element.cantidad > element.entregados){
 		element.pendientes = element.cantidad - element.entregados;
-		
+		var componentes = Armarios.getComponentes(armarioId);
+		componentes.forEach(function(componente,compIndex){
+			if(componente.Codigo){
+				var qty = element.pendientes * parseFloat(componente.Cantidad);
+				Componentes.setPedido(componente.Codigo,element.pedidoId,qty);
+			}
+		});
 	}
 	exports.pedidos[index] = element;
-	console.log(element);
     cache.put(element.pedidoId,element);
 
 }
@@ -630,7 +599,7 @@ exports.load = function(){
 	deleteOldPedidos();
 	cleanPedidos();
 	cache.put('pedidos-loaded',true);
-	return pedidos;
+	return pedidos.length;
 }
 function loadPedidosForEach2(element,index){
 
