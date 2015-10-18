@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('pedidos-proveedores').controller('PedidosProveedoresController', ['$scope', '$stateParams', '$location', 'Authentication','AlertasFactory','$modal','$log','PedidosProveedores','Proveedores','Almacenes','usSpinnerService',
-	function($scope, $stateParams, $location, Authentication, AlertasFactory, $modal, $log,PedidosProveedores,Proveedores,Almacenes,usSpinnerService) {
+angular.module('pedidos-proveedores').controller('PedidosProveedoresController', ['$scope', '$stateParams', '$location', 'Authentication','AlertasFactory','$modal','$log','PedidosProveedores','Proveedores','Almacenes','usSpinnerService','$http',
+	function($scope, $stateParams, $location, Authentication, AlertasFactory, $modal, $log,PedidosProveedores,Proveedores,Almacenes,usSpinnerService,$http) {
 		// Pedidos proveedores controller logic
 		$scope.authentication = Authentication;
 		
@@ -16,6 +16,7 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 		$scope.listProveedores = Proveedores.getAll();
 		$scope.listAlmacenes = Almacenes.getAll();
 		$scope.totalPedido = 0;
+
 		$scope.removeComponente = function(componenteId,update){
 			var index;
 			if(!update){
@@ -23,25 +24,30 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 				$scope.componentes.splice(index,1);
 			} else {
 				index  = _.findIndex($scope.pedidoProveedor.componentes,{codigo:componenteId});
-				$scope.pedidoProveedor.componentes.splice(index,1);
+				
+				
+				//$scope.pedidoProveedor.componentes.splice(index,1);
+				$scope.pedidoProveedor.componentes[index].removed = true;
+
 			}
 		}
-		$scope.calcularTotal = function(componentes){
-			if(!componentes){
+		$scope.calcularTotal = function(){
+			if(!$scope.pedidoProveedor.componentes){
 				return 0;
 			}
 			var total = 0;
-			componentes.forEach(function(element,index){
+			$scope.pedidoProveedor.componentes.forEach(function(element,index){
 				if(element.precioUnit){
 					var sub_total = parseFloat(element.precioUnit) * parseFloat(element.qty);
-					if(_.isNumber(sub_total)){
-						total += sub_total;
-					}
+					//if(_.isNumber(sub_total)){
+						total += parseFloat(sub_total);
+					//}
 				}
 			});
 			$scope.totalPedido = total;
-			return total;
+			//return total;
 		};
+		
 		$scope.create = function(){
 			//$log.log($scope);
 			var self = this;
@@ -62,7 +68,8 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 				proveedor: this.proveedor,
 				almacen: this.almacen,
 				componentes:this.componentes,
-				observaciones:this.observaciones
+				observaciones:this.observaciones,
+				complatado:false
 			});
 			
 			pedidoProveedor.$save(function(response) {
@@ -100,6 +107,7 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 		      var selected = selectedItem;
 		      //console.log(selected);
 		      selected.forEach(function(element,index){
+		      	element.removed = false;
 		      	var compExist = _.findIndex($scope.componentes,'codigo',element.codigo);
 		      	//$scope.componentes.push(element);
 		      	if(compExist === -1){
@@ -130,13 +138,18 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 		    modalInstance.result.then(function (selectedItem) {
 		      var selected = selectedItem;
 		      //console.log(selected);
+
 		      selected.forEach(function(element,index){
+		      	
 		      	var compExist = _.findIndex($scope.pedidoProveedor.componentes,'codigo',element.codigo);
 		      	//$scope.componentes.push(element);
+
 		      	if(compExist === -1){
 
 		      		$scope.pedidoProveedor.componentes.push(element);
 		      		$scope.totalPedido = $scope.calcularTotal($scope.pedidoProveedor.componentes);
+		      	} else {
+		      		$scope.pedidoProveedor.componentes[compExist].removed = false;
 		      	}
 		      });
 		    }, function () {
@@ -151,6 +164,7 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 	  	//console.log($scope);
 	  	//console.log(this.almacen);
 			var pedidoProveedor = $scope.pedidoProveedor;
+			$scope.pedidoProveedor.completado = false;
 			//pedidoProveedor.almacen = pedidoProveedor.almacen;
 			//pedidoProveedor.proveedor = pedidoProveedor.proveedor;
 			//console.log(pedidoProveedor);
@@ -169,6 +183,7 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 			$scope.pedidosProveedores = PedidosProveedores.query().$promise.then(function(data){
 				usSpinnerService.stop('cargador');
 				$scope.pedidosProveedores = data;
+				console.log('pedidosProveedores',data);
 				$scope.elCargados = true;
 			},function(reject){
 				usSpinnerService.stop('cargador');
@@ -181,6 +196,7 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
         	$scope.pedidoProveedor =  PedidosProveedores.get(
         		{pedidoProveedorId:$stateParams.pedidoProveedorId}
         		);
+        	$scope.calcularTotal();
         	/*$scope.pedidoProveedor = PedidosProveedores.get(
         		{pedidoProveedorId:$stateParams.pedidoProveedorId}
         		).$promise.then(function(data){
@@ -194,11 +210,11 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
         			AlertasFactory.showRejected(reject);
         		});*/
         		
-        //console.log($scope.pedidoProveedor);
-        }
+        console.log($scope.pedidoProveedor);
+        };
         $scope.remove = function() {
         	//console.log(pedidoProveedor);
-        	if(confirm('Are you sure?')) { 
+        	if(confirm('Se eliminara el pedido ¿Estas seguro?')) { 
 	        	//console.log($scope.pedidoProveedor);
 	        	$scope.pedidoProveedor.pedidoProveedorId = $scope.pedidoProveedor.nPedido;
 				
@@ -207,6 +223,24 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 					//	console.log(data);
 						$location.path('pedidos-proveedores');
 					});
+				
+			}
+		};
+		$scope.completar = function(){
+			if(confirm('Se va a marcar como completado ¿Estas seguro?')) { 
+	        	console.log($scope.pedidoProveedor);
+	        	$scope.pedidoProveedor.$completar(function(success){
+	        		console.log(success);
+	        		$location.path('pedidos-proveedores');
+	        		AlertasFactory.show({message:'Pedido completado',type:'success'});
+	        	});
+	        	/*$scope.pedidoProveedor.pedidoProveedorId = $scope.pedidoProveedor.nPedido;
+					$http.get('/pedidos-proveedores/' + $scope.pedidoProveedor.nPedido + '/completar').success(function(data){
+						AlertasFactory.show({message:'Pedido completado',type:'success'});
+						$location.path('pedidos-proveedores');
+					});
+				*/
+					
 				
 			}
 		};

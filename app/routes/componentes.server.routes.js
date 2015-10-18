@@ -4,8 +4,8 @@
  * Module dependencies.
  */
 var users = require('../../app/controllers/users.server.controller'),
-	componentes = require('../../app/controllers/componentes.server.controller');
-
+	componentes = require('../../app/controllers/componentes.server.controller'),
+	database = require('../../app/controllers/database.server.controller');
 var _ = require('lodash');
 
 
@@ -13,7 +13,7 @@ var json2xls = require('json2xls');
 var moment = require('moment');
 
 module.exports = function(app) {
-	// Article Routes
+
 	app.route('/componentes-reload')
 		.get(componentes.reloadFromFile);
 	app.route('/stock')
@@ -27,7 +27,7 @@ module.exports = function(app) {
 	app.route('/componentes/:componenteId/verificar')
 		.get(componentes.read);
 	app.route('/componentes/:componenteId/stock')
-		.get(componentes.stock);
+		.get(database.stock);
 	app.route('/importar-componentes')
 		.get(componentes.importarComponentes);
 		
@@ -36,7 +36,7 @@ module.exports = function(app) {
 	app.get('/export-componentes',function(req,res) {
 		//console.log(res);
 	   
-	   var componentesJSON = componentes.componentesToJson();
+	   var componentesJSON = database.componentesToJson();
 	   //console.log(componentesJSON);
 	   var options = {
 	   		fields:{
@@ -61,5 +61,5 @@ module.exports = function(app) {
 
 
 	// Finish by binding the article middleware
-	app.param('componenteId', componentes.componenteByID);
+	app.param('componenteId', database.getComponenteById);
 };

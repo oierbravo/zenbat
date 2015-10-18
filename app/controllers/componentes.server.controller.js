@@ -10,21 +10,15 @@ var mongoose = require('mongoose'),
 
 require('array.prototype.find');
 var XLSX = require('xlsx');
-
+var cache = require('memory-cache');
 var Pedidos =  require('./pedidos.server.controller');
 var PedidosProveedores =  require('./pedidos-proveedores.server.controller');
 
-var cache = require('memory-cache');
+//var cache = require('memory-cache');
 var zenbatConfig = require('../../zenbat.config.js');
 
 var flatfile = require('flat-file-db');
 var dbProductos = flatfile.sync(zenbatConfig.basePath + 'db\\productos.db');
-//var dbProductosReservados = flatfile.sync(zenbatConfig.basePath + 'db\\pedidosComponente.db');
-var cachePedidosComponente = cache;
-
-//var dbProductosPendientes = flatfile.sync(zenbatConfig.basePath + 'db\\productos-pendientes.db');
-
-var cachePedidosComponente = cache;
 
 var headerProductos = zenbatConfig.componentes.header;
 var headerStock = zenbatConfig.stock.header;
@@ -48,89 +42,7 @@ exports.reloadComponentesFromFile = function(req,res){
 
 }
 
-function loadComponenteDb(componente){
-	if(!componente){
-		return componente;
-	}
-	var output;
-	var dbFields;
-	if(dbProductos.has(componente.codigo)){
-		dbFields = dbProductos.get(componente.codigo);
-		
-			dbFields = {
-				cantidad:dbFields.cantidad
-				,cantidadReservada:dbFields.cantidadReservada
-			}
-	
-	} else {
-		dbFields = {
-			cantidad: 0,
-			cantidadReservada: 0
-		};
-	}
-	return _.extend(componente,dbFields);
-	
-}
-function loadComponenteElements(componente){
-	//console.log('loadComponenteElements',componente);
-	if(!componente){
-		return componente;
-	}
-	componente = loadComponenteDb(componente);
-	var pedidos = cachePedidosComponente.get(componente.codigo + '-pedidos');
-	var pedidosProveedores = cachePedidosProveedores.get(componente.codigo + '-pedidosProveedores');
-//	console.log('cachePedidosComponente',pedidos);
-	
-	//_.extend(componente,dbFields);
-	if(!pedidos){
-		pedidos = [];
-	}
-	componente.pedidos = pedidos;
 
-	if(!pedidosProveedores){
-		pedidosProveedores = [];
-	}
-	componente.pedidosProveedores = pedidosProveedores;
-	return componente;
-}
-function loadComponentesFilter(element,index){
-	//Necesita stockSeguridad y codigo valido
-		var result = false;
-
-		if(element.stockSeguridad){
-			result = true;
-			//if(element.stockSeguridad)
-		} else {
-			result = false;
-		}
-		if(element.codigo){
-
-			if(element.codigo === '0'){
-			
-				result = false;
-			}
-			if(element.codigo === ''){
-
-				result =  false;
-			}
-			if(element.codigo === ' '){
-
-				result =  false;
-			}
-			if(element.codigo === null){
-				result = false;
-			}
-			if(_.isEmpty(element.codigo)){
-				result = false;
-			}
-
-		}
-		if(result === true){
-	//		console.log("true",element);
-		}
-  	return result;
-	    
-}
 function loadComponentesForEach(element,index){
 	if(element !== null){
 		var cached = dbProductos.get(element.codigo);
@@ -165,19 +77,6 @@ function loadComponentesForEach(element,index){
 		}    
 	}
 }
-
-function loadComponentesFromFile(){
-	var workbook = XLSX.readFileSync(zenbatConfig.basePath + 'productos.xlsx');
-	exports.workbook = workbook;
-	//console.log(workbook);
-	//var componentesRaw = XLSX.utils.sheet_to_json(workbook.Sheets.componentes,{header:headerProductos,range:1});
-	var componentesRaw = XLSX.utils.sheet_to_json(workbook.Sheets.componentes);
-//	console.log(componentesRaw.length);
-	var componentes = componentesRaw.filter(loadComponentesFilter);
-	//console.log(componentes.length);
-	return componentes;
-}
-exports.loadComponentesFromFile = loadComponentesFromFile;
 
 function calcularCosas(componente){
 //	console.log(componente);
@@ -265,23 +164,15 @@ function loadComponenteKeysFromFile(){
 	exports.xlsKeys = keys;
 	return keys;
 }
-exports.loadComponentesFromFile = loadComponentesFromFile;
 /**
  * List of Articles
  */
 exports.list = function(req, res) {
-	/*if(_.isEmpty(exports.componentes)){
-		//loadComponentes();
-		exports.componentes = getComponentes();
-	}*/
-	var componentes = [];
-	exports.xlsKeys.forEach(function(element,index){
-		var componente = getComponenteById(element);
-		componente = loadComponenteElements(componente);
-		componentes.push(componente);
-	});
-	exports.componentes = componentes;
-	res.jsonp(exports.componentes );
+	//console.log(req.app.pedidosProveedores);
+	//console.log(req.app.locals);
+	//console.log('req.app.locals.database.componentes',req.app.locals.database.componentes);
+	req.app.locals.database.calculos();
+	res.jsonp(req.app.locals.database.componentes)
 };
 function getComponentes(){
 	if(_.isEmpty(exports.componentes)){
@@ -313,15 +204,36 @@ function getComponenteDbById(id){
 	return  (comp) ? comp : false;
 }
 
-function getComponenteById(id,clearCache){
-	var componente = cache.get(id);
+function getComponenteById(req,res,next,id){
+	//var componente = cache.get(id);
 	//componente = loadComponenteElements(componente);
-	return componente;
+//var index = _.findIndex(exports.componentes,{codigo:id});
+var index = _.findIndex(req.app.locals.database.componentes,{codigo:id});
+	//console.log('pedProdInd',index);
+	if(index > -1){
+		req.componente = req.app.locals.database.componentes[index];
+		next();
+	} else {
+		return next(new Error('Failed to load componente ' + id));
+	}
+
+	//return componente;
 }
 
 exports.verificarId = function(componenteId){
-	var comp = getComponenteById(componenteId);
-	return comp ? true: false;
+	//var index = _.findIndex(req.app.locals.database.componentes,{codigo:id});
+	//var exists = cache.has(componenteId);
+	var exists = false;
+	if(exists){
+		return true;
+	} else {
+		return false;
+	}
+	if(index > -1){
+		return true;
+	} else {
+		return false;
+	}
 }
 function updateComponente(componente){
 	var dbObj = {
@@ -589,19 +501,19 @@ function checkMinimos(componente){
 /**
  * Show the current componente
  */
+
 exports.stock = function(req, res) {
-	var qty = parseFloat(req.query.qty);
-	var nowQty = parseFloat(req.componente.cantidad);
-	req.componente.cantidad = nowQty + qty;
-	req.componente.bajoMinimos = checkMinimos(req.componente);
-	req.componente = calcularCosas(req.componente);
-	//updateComponente(req.componente);
-	res.jsonp(req.componente);
+	req.app.locals.database.stock(req,res);
 };
 /**
  * Show the current componente
  */
 exports.read = function(req, res) {
+	//console.log(req.params);
+	//var index = _.findIndex(req.app.locals.database.componentes, { 'codigo': req.params.componenteId });
+	//var componente = req.app.locals.database.getComponente(req.params.componenteId);
+	//res.json(req.componente);
+	//req.app.locals.database.calculos();
 	res.json(req.componente);
 };
 
@@ -757,7 +669,7 @@ function loadComponentesForEachNu(element,index){
 
 		exports.xlsKeys.push(element.codigo);
 
-		exports.keys.push(element.codigo);
+		//exports.keys.push(element.codigo);
 
 		element = calcularCosas(element);
 		cache.put(element.codigo,element);

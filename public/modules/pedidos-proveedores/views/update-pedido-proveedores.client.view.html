@@ -16,7 +16,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="control-label" for="fechaEntrega">Fecha entreda</label>
+					<label class="control-label" for="fechaEntrega">Fecha entrega</label>
 					<div class="controls">
 						<input name="fechaEntrega" type="date" data-ng-model="pedidoProveedor.fechaEntrega" id="fechaEntrega" class="form-control" placeholder="27-07-2015" required>
 					</div>
@@ -82,14 +82,14 @@
 		        </tr>
 		    </thead>
 		    <tbody>
-				<tr data-ng-repeat="componente in pedidoProveedor.componentes  | orderBy:predicate:reverse " class="table-condensed table-stripped" >
+				<tr data-ng-repeat="componente in pedidoProveedor.componentes  | orderBy:predicate:reverse " class="table-condensed table-stripped" ng-show="!componente.removed">
 					<td>{{componente.codigo}}</td>
 					<td>{{componente.denominacion}}</td>
 					<td>{{componente.pedidoMinimo}}</td>
 					<td>{{componente.precioUnit}}</td>
-					<td><input name="qty" type="number" data-ng-model="componente.qty" class="form-control" placeholder="" ng-init="0" ></td>
+					<td><input name="qty" type="text" data-ng-model="componente.qty" class="form-control" placeholder="" ng-init="0"  ng-change="calcularTotal()" ></td>
 					<td>{{componente.precioUnit * componente.qty}}</td>	
-					<td><input name="qtyRec" type="number" data-ng-model="componente.qtyRec" class="form-control" placeholder="" ng-init="0" ></td>
+					<td><input name="recibidos" data-ng-model="componente.recibidos" class="form-control" placeholder="" ng-init="0" ></td>
 					<td><a class="btn btn-warning" data-ng-click="removeComponente(componente.codigo,true);">
 			<i class="glyphicon glyphicon-trash"></i>
 		</a></td>

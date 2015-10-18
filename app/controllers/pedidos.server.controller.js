@@ -6,7 +6,7 @@
 var chalk = require('chalk');
 var mongoose = require('mongoose'),
 	errorHandler = require('./errors.server.controller'),
-	Pedido = mongoose.model('Pedido'),
+	
 	_ = require('lodash');
 
 	var XLSX = require('xlsx');
@@ -61,7 +61,7 @@ function makePedidoID(pedido){
 
 	return output;
 }
-
+exports.makePedidoID = makePedidoID;
 function entregar(pedido){
 	//console.log('entregar',pedido);
 	//console.log('por entregar',pedido.porEntregar);
@@ -428,7 +428,7 @@ function loadPedidosNu(){
 }
 function loadPedidos(){
 	if(_.isEmpty(Componentes.componentes)){
-		//Componentes.getComponentes();
+	Componentes.getComponentes();
 	}
 	if(reloadPedidos){
 		if(exports.pedidos.length === 0){
@@ -449,7 +449,7 @@ function loadPedidos(){
 
 }
 
-//exports.loadPedidos = loadPedidos;
+exports.loadPedidos = loadPedidos;
 function getPedidoFromID(pedidoID){
 	var splitted = pedidoID.split('_');
 	var nuFecha =splitted[0];
@@ -459,7 +459,15 @@ function getPedidoFromID(pedidoID){
 	}*/
 	//var pedido = _.find(exports.pedidos,{pedidoId:pedidoID});
 	//return pedido;
-	return cache.get(pedidoID);
+	var index = _.findIndex(req.app.locals.database.pedidos,{pedidoId:id});
+	//console.log('pedProdInd',index);
+	if(index > -1){
+		req.pedido = req.app.locals.database.pedidos[index];
+		next();
+	} else {
+		return next(new Error('Failed to load Pedido ' + id));
+	}
+	//return cache.get(pedidoID);
 
 }
 exports.getPedidoFromID = getPedidoFromID;
@@ -553,8 +561,8 @@ function listPedidosForEach(pedido,index){
 exports.list = function(req, res) { 
 	//loadPedidos();
 	//exports.pedidos.forEach(function(element,index){
-		exports.pedidos.forEach(listPedidosForEach);
-	res.jsonp(exports.pedidos);
+		//exports.pedidos.forEach(listPedidosForEach);
+	res.jsonp(req.app.locals.database.pedidos);
 };
 
 /**
@@ -562,10 +570,14 @@ exports.list = function(req, res) {
  */
 exports.pedidoByID = function(req, res, next, id) { 
 	//loadPedidos();
-	var pedido = getPedidoFromID(id);
-		if (! pedido) return next(new Error('Failed to load Pedido ' + id));
-		req.pedido = pedido ;
+	var index = _.findIndex(req.app.locals.database.pedidos,{pedidoId:id});
+	if(index > -1){
+		req.pedido = req.app.locals.database.pedidos[index];
 		next();
+	} else {
+		return next(new Error('Failed to load Pedido ' + id));
+	}
+	
 
 };
 

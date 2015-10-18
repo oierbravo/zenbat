@@ -24,7 +24,7 @@ var fs = require('fs'),
 	path = require('path'),
 	json2xls = require('json2xls');
 
- 
+ var database = require('../app/controllers/database.server.controller.js');
 
 
 module.exports = function(db) {
@@ -43,6 +43,8 @@ module.exports = function(db) {
 	app.locals.facebookAppId = config.facebook.clientID;
 	app.locals.jsFiles = config.getJavaScriptAssets();
 	app.locals.cssFiles = config.getCSSAssets();
+	
+	app.locals.database = database;
 
 	// Passing the request url to environment locals
 	app.use(function(req, res, next) {

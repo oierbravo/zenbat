@@ -6,7 +6,12 @@ angular.module('pedidos-proveedores').factory('PedidosProveedores', ['$resource'
 		}, {
 			update: {
 				method: 'PUT'
-			}
+			},
+			completar: {
+				method: 'GET',
+				url:'pedidos-proveedores/:pedidoProveedorId/completar',
+				params:{pedidoProveedorId:'@pedidoProveedorId'}
+			},
 		});
 	}
 ]);

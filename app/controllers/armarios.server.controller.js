@@ -11,10 +11,11 @@ var XLSX = require('xlsx');
 var moment = require('moment');
 var Componentes = require('./componentes.server.controller.js');
 var json2xls = require('json2xls');
-var mongoose = require('mongoose'),
-    _ = require('lodash');
+var _ = require('lodash');
 
-function getArmario(id){
+var cache = require('memory-cache');
+
+function getArmarioold(id){
 	var filepath = zenbatConfig.basePath + zenbatConfig.armarios.folder + '\\' + id + '.xlsx';
     if (fs.existsSync(filepath)) {
   //  console.log('Found file',filepath);
@@ -29,7 +30,7 @@ function getArmario(id){
   	element.faltaID = !Componentes.verificarId(element.Codigo);
   	
     });
- 
+ console.log('arm-comps',componentes);
     return {
   		id: id,
   		componentes:componentes
@@ -44,8 +45,8 @@ function getArmario(id){
  * Show the current Armario
  */
 exports.read = function(req, res) {
-
-  req.armario = getArmario(req.armario.id);
+  req.armario = req.app.locals.database.getArmario(req.armario.id);
+  //req.armario = getArmario();
   res.json(req.armario);
 };
 
@@ -198,7 +199,7 @@ exports.getComponentesList = function(armarioId){
 
 exports.exportar = function(req,res){
     var armarioId = req.armario.id;
-    var armario = getArmario(armarioId);
+    var armario = req.app.locals.database.getArmario(armarioId);
     //console.log('exportar-armarioId',armarioId);
     var options = {
    		fields:{

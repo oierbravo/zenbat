@@ -8,7 +8,6 @@ module.exports = function(grunt) {
 		clientViews: ['public/modules/**/views/**/*.html'],
 		clientJS: ['public/js/*.js', 'public/modules/**/*.js'],
 		clientCSS: ['public/modules/**/*.css'],
-		xlsxData: ['data/*.xlsx'],
 		configEzarri: ['zenbat.config.js'],
 		mochaTests: ['app/tests/**/*.js']
 	};
@@ -176,8 +175,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('secure', ['env:secure', 'lint', 'concurrent:default']);
 
 	// Lint task(s).
-	grunt.registerTask('lint', ['jshint', 'csslint']);
-
+	//grunt.registerTask('lint', ['jshint', 'csslint']);
+grunt.registerTask('lint', []);
 	// Build task(s).
 	grunt.registerTask('build', ['lint', 'loadConfig', 'ngAnnotate', 'uglify', 'cssmin']);
 

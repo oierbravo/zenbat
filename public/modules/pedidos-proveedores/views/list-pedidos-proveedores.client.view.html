@@ -42,8 +42,8 @@
                         <span class="sortorder" ng-show="predicate === 'almacen'" ng-class="{reverse:reverse}"></span>
                     </td>
                     <td>
-                        <a href="" ng-click="order('estado')">Estado</a>
-                        <span class="sortorder" ng-show="predicate === 'estado'" ng-class="{reverse:reverse}"></span>
+                        <a href="" ng-click="order('status')">Estado</a>
+                        <span class="sortorder" ng-show="predicate === 'status'" ng-class="{reverse:reverse}"></span>
                     </td>
                     <td>Acciones</td>
                 </tr>
@@ -54,7 +54,7 @@
                     <td>{{pedido.pedidoProveedorId}}</td>
                     <td>{{pedido.proveedorData.Nombre}}</td>
                     <td>{{pedido.almacenData.Nombre}}</td>
-                    <td>{{pedido.estado}}</td>
+                    <td>{{pedido.status}}</td>
                     <td><a href="#!/pedidos-proveedores/{{pedido.nPedido}}"> Ver</a> | <a href="#!/pedidos-proveedores/{{pedido.nPedido}}/edit"> Editar</a></td>
                 </tr>
             </tbody>

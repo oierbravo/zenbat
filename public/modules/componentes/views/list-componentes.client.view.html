@@ -45,8 +45,8 @@
             <span class="sortorder" ng-show="predicate === 'cantidadReservada'" ng-class="{reverse:reverse}"></span></td>
             <td>StockSeguridad</td>
 
-            <td> <a href="" ng-click="order('totalPedidosProveedores')">Stock pendiente</a>
-            <span class="sortorder" ng-show="predicate === 'totalPedidosProveedores'" ng-class="{reverse:reverse}"></span></td>
+            <td> <a href="" ng-click="order('cantidadProveedores')">Stock pendiente</a>
+            <span class="sortorder" ng-show="predicate === 'cantidadProveedores'" ng-class="{reverse:reverse}"></span></td>
 
             <td>
             <a href="" ng-click="order('proveedor')">Proveedor</a>
@@ -80,26 +80,27 @@
 			<td ><a href="/#!/componentes/{{componente.codigo}}">{{componente.codigo}}</a></td>
 			<td>{{componente.denominacion}}</td>
             <td>{{componente.cantidad}}</td>
-            <td>{{componente.totalReservas}}</td>
+            <td>{{componente.cantidadReservada}}</td>
             <td>{{componente.stockSeguridad}}</td>
-            <td>{{componente.totalPedidosProveedores}}</td>
+            <td>{{componente.cantidadProveedores}}  (<span class="text-success">{{componente.cantidadRecibida}}</span>:<span class="text-warning">{{componente.cantidadNoRecibida}}</span>)</td>
+          
 
 
 			<td>{{componente.proveedor}}</td>
-			<td>{{componente.codProveedor}}</td>
+			<td>{{componente.codigoProveedor}}</td>
             <td>{{componente.yearPrecio}}</td>
             <td>{{componente.precioUnit}}</td>
             <td>{{componente.notas}}</td>
 
 
             <td>{{componente.proveedor2}}</td>
-            <td>{{componente.codProveedor2}}</td>
+            <td>{{componente.codigoProveedor2}}</td>
             <td>{{componente.yearPrecio2}}</td>
             <td>{{componente.precioUnit2}}</td>
             <td>{{componente.notas2}}</td>
 
              <td>{{componente.proveedor3}}</td>
-            <td>{{componente.codProveedor3}}</td>
+            <td>{{componente.codigoProveedor3}}</td>
             <td>{{componente.yearPrecio3}}</td>
             <td>{{componente.precioUnit3}}</td>
             <td>{{componente.notas3}}</td>

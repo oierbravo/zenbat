@@ -32,6 +32,7 @@ angular.module('armarios').controller('ArmariosController', ['$scope', '$statePa
 				usSpinnerService.stop('cargador');
 				$scope.armario = data;
 				$scope.elCargados = true;
+				console.log(data);
 			},function(reject){
 				usSpinnerService.stop('cargador');
 		

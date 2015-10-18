@@ -101,7 +101,18 @@ exports.pedidoProveedorExists = function(pedidoProveedorId){
  * Article middleware
  */
 exports.pedidoProveedorByID = function(req, res, next, id) {
-	var pedidoProveedor = loadById(id);
+	console.log(req.app.locals.database.pedidosProveedores);
+	var index = _.findIndex(req.app.locals.database.pedidosProveedores,{pedidoProveedorId:id});
+	//console.log('pedProdInd',index);
+	if(index > -1){
+		req.pedidoProveedor = req.app.locals.database.pedidosProveedores[index];
+		next();
+	} else {
+		return next(new Error('Failed to load Pedido ' + id));
+	}
+
+
+	/*var pedidoProveedor = loadById(id);
 	console.log('pedidoProveedorByID-id',id);
 	//console.log('pedidoProveedorByID-pedidoProveedor',pedidoProveedor);
 	if(!pedidoProveedor){
@@ -110,27 +121,32 @@ exports.pedidoProveedorByID = function(req, res, next, id) {
 	}	else {
 		req.pedidoProveedor = pedidoProveedor;
 	}
-	next();
+	next();*/
 };
 /**
  * Create a Pedidos proveedore
  */
 exports.create = function(req, res) {
 	//console.log(req.body);
-	var pedido = req.body;
+	/*var pedido = req.body;
 	pedido.pedidoProveedorId = pedido.nPedido;
 	dbPedidosProveedores.put(pedido.pedidoProveedorId,pedido,pedido.qty);
 	pedido = preparePedidoProveedorData(pedido);
 	console.log(pedido);
-	res.json(pedido);
+	res.json(pedido);*/
+	req.app.locals.database.createPedidoProveedor(req,res);
 
 };
+exports.completar = function(req, res){
+	req.app.locals.database.completarPedidoProveedor(req,res);
+}
 
 /**
  * Show the current Pedidos proveedore
  */
 exports.read = function(req, res) {
 	console.log('Pedidos proveedores Read');
+	req.pedidoProveedor = preparePedidoProveedorData(req.pedidoProveedor);
 	res.json(req.pedidoProveedor);
 };
 
@@ -138,24 +154,27 @@ exports.read = function(req, res) {
  * Update a Pedidos proveedore
  */
 exports.update = function(req, res) {
-	console.log('updating')
+	/*console.log('updating')
 	var pedidoProveedor = req.pedidoProveedor;
 
 	pedidoProveedor = _.extend(pedidoProveedor, req.body);
 
 	dbPedidosProveedores.put(pedidoProveedor.pedidoProveedorId,pedidoProveedor);
-	res.json(pedidoProveedor);
+	res.json(pedidoProveedor);*/
+	req.app.locals.database.updatePedidoProveedor(req,res);
 };
 
 /**
  * Delete an Pedidos proveedore
  */
 exports.delete = function(req, res) {
+	/*
 	//console.log('req.params.pedidoProveedorId',req.params.pedidoProveedorId);
 	//console.log('req.pedidoProveedor',req.pedidoProveedor);
 	//console.log('Deleting ' + req.pedidoProveedor.nPedido);
 	dbPedidosProveedores.del(req.pedidoProveedor.nPedido);
-	res.status(200).send({message:"Deleted " + req.pedidoProveedor.nPedido});
+	res.status(200).send({message:"Deleted " + req.pedidoProveedor.nPedido});*/
+	req.app.locals.database.deletePedidoProveedor(req,res);
 };
 
 /**
@@ -165,10 +184,10 @@ exports.list = function(req, res) {
 	//loadComponentes();
 	//Pedidos.loadPedidos();
 	//if(_.isEmpty(exports.pedidosProveedores)){
-		loadPedidosProveedores();
+	//	loadPedidosProveedores();
 //	}
-	//console.log(exports.pedidosProveedores);
-	res.jsonp(exports.pedidosProveedores );
+	console.log(req.app.locals.database.pedidosProveedores);
+	res.jsonp(req.app.locals.database.pedidosProveedores );
 };
 /**
  * Article authorization middleware

@@ -18,16 +18,16 @@
 		            	<span class="sortorder" ng-show="predicate === 'codigo'" ng-class="{reverse:reverse}"></span>
 		            </td>
 		 			<td>
-		            	<a href="" ng-click="order('stockSinReservas')" >Stock</a>
-		            	<span class="sortorder" ng-show="predicate === 'stockSinReservas'" ng-class="{reverse:reverse}"></span>
+		            	<a href="" ng-click="order('stock')" >Stock</a>
+		            	<span class="sortorder" ng-show="predicate === 'stock'" ng-class="{reverse:reverse}"></span>
 		            </td>
 		            <td>
 		            	<a href="" ng-click="order('cantidadReservadaSinPedido')">Reservas</a>
 		            	<span class="sortorder" ng-show="predicate === 'cantidadReservadaSinPedido'" ng-class="{reverse:reverse}"></span>
 		            </td>  
 		            <td>
-		            	<a href="" ng-click="order('stock')">Faltan</a>
-		            	<span class="sortorder" ng-show="predicate === 'stock'" ng-class="{reverse:reverse}"></span></td>
+		            	<a href="" ng-click="order('faltan')">Faltan</a>
+		            	<span class="sortorder" ng-show="predicate === 'faltan'" ng-class="{reverse:reverse}"></span></td>
 		            <td>
 		            	<a href="" ng-click="order('denominacion')">Denominacion</a>
 		            	<span class="sortorder" ng-show="predicate === 'denominacion'" ng-class="{reverse:reverse}"></span>
@@ -36,11 +36,11 @@
 		        </tr>
 		    </thead>
 		    <tbody>
-				<tr data-ng-repeat="componente in pedido.stock.componentes  | orderBy:predicate:reverse " class="table-condensed table-stripped" ng-class="{disponible:componente.disponible,showDisponibles:showDisponibles}">
+				<tr data-ng-repeat="componente in pedido.stock  | orderBy:predicate:reverse " class="table-condensed table-stripped" ng-class="{disponible:componente.disponible,showDisponibles:showDisponibles}">
 					<td><a href="/#!/componentes/{{componente.codigo}}">{{componente.codigo}}</a></td>
-					<td>{{componente.stockSinReservas}}</td>
-					<td>{{componente.cantidadReservadaSinPedido}}</td>
 					<td>{{componente.stock}}</td>
+					<td>{{componente.sumPedidoActual}}</td>
+					<td>{{componente.faltan}}</td>
 					<td>{{componente.denominacion}}</td>
 		            <td>{{componente.necesarios*pedido.pendientes}} <small>({{componente.necesarios}}x{{pedido.pendientes}}) </small></td> 
 				</tr>

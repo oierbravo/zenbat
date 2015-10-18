@@ -20,7 +20,7 @@ angular.module('componentes').controller('RowComponenteController', ['$scope','C
 				componenteId: id,
 				qty: qty
 			});
-			//console.log('nucomp',nucomp);
+			console.log('nucomp',nucomp);
 			$scope.componente = nucomp;
 			$scope.revisarStock() ;
 		};
