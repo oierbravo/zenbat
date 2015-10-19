@@ -17,7 +17,10 @@ angular.module('pedidos-proveedores').controller('ModalInstanceCtrlController', 
  		$scope.predicate = '';
         $scope.reverse = false;
 
-
+        $scope.order = function(predicate) {
+        	$scope.reverse = ($scope.predicate === predicate) ? !$scope.reverse : false;
+       	 	$scope.predicate = predicate;
+        };
 	  $scope.ok = function () {
 	  	var output = [];
 	  	var componentesSeleccionados = _.filter($scope.componentes, 'seleccionado');

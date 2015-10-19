@@ -171,7 +171,7 @@ exports.list = function(req, res) {
 	//console.log(req.app.pedidosProveedores);
 	//console.log(req.app.locals);
 	//console.log('req.app.locals.database.componentes',req.app.locals.database.componentes);
-	req.app.locals.database.calculos();
+	//req.app.locals.database.calculos();
 	res.jsonp(req.app.locals.database.componentes)
 };
 function getComponentes(){

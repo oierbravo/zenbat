@@ -135,7 +135,10 @@
 	          <tr>
 	          <th></th>
 	            <th>
-	              Codigo
+	               
+            <a href="" ng-click="order('codigo')">Codigo</a>
+            <span class="sortorder" ng-show="predicate === 'codigo'" ng-class="{reverse:reverse}"></span>
+         
 	            </th>
 	            <th>
 	              Denominacion
@@ -150,14 +153,16 @@
 	              StockMin.
 	            </th>
 	            <th>
-	            	Status
+	            	         
+            <a href="" ng-click="order('status')">Estado</a>
+            <span class="sortorder" ng-show="predicate === 'status'" ng-class="{reverse:reverse}"></span>
 	            	</th>
 	 
 	        
 	          </tr>
 	        </thead>
 	        <tbody>
-	        <tr data-ng-repeat="componente in componentes | filter:searchString" class="table-condensed table-stripped componente-status-{{componente.status}}" >
+	        <tr data-ng-repeat="componente in componentes |  orderBy:predicate:reverse   | filter:searchString" class="table-condensed table-stripped componente-status-{{componente.status}}" >
 	            <td><input class="" type="checkbox"  data-ng-model="componente.seleccionado"></td>
 	            <td>{{componente.codigo}}</td>
 	            <td>{{componente.denominacion}}</td>

@@ -48,6 +48,9 @@
             <td> <a href="" ng-click="order('cantidadProveedores')">Stock pendiente</a>
             <span class="sortorder" ng-show="predicate === 'cantidadProveedores'" ng-class="{reverse:reverse}"></span></td>
 
+            <td> <a href="" ng-click="order('status')">Stock pendiente</a>
+            <span class="sortorder" ng-show="predicate === 'status'" ng-class="{reverse:reverse}"></span></td>
+
             <td>
             <a href="" ng-click="order('proveedor')">Proveedor</a>
             <span class="sortorder" ng-show="predicate === 'Proveedor'" ng-class="{reverse:reverse}"></span>
@@ -84,7 +87,7 @@
             <td>{{componente.stockSeguridad}}</td>
             <td>{{componente.cantidadProveedores}}  (<span class="text-success">{{componente.cantidadRecibida}}</span>:<span class="text-warning">{{componente.cantidadNoRecibida}}</span>)</td>
           
-
+            <td>{{componente.status}}</td>
 
 			<td>{{componente.proveedor}}</td>
 			<td>{{componente.codigoProveedor}}</td>
