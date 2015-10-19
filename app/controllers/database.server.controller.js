@@ -348,7 +348,7 @@ function entregarPedido(pedido){
 }
 exports.entragarPedido = entregarPedido;
 function loadPedidosProveedores(){
-	console.log('loadPedidosProveedores.dbPedidosProveedores',dbPedidosProveedores);
+	//console.log('loadPedidosProveedores.dbPedidosProveedores',dbPedidosProveedores);
 	exports.pedidosProveedores = [];
 	var keys = dbPedidosProveedores.keys();
 	keys.forEach(function(element,index){
