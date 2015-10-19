@@ -3,6 +3,7 @@ var uuid = require('uuid'); // https://github.com/defunctzombie/node-uuid
 var multiparty = require('multiparty'); // https://github.com/andrewrk/node-multiparty
 
 var componentes = require('../../app/controllers/componentes.server.controller');
+var database = require('../../app/controllers/database.server.controller');
 var XLSX = require('xlsx');
 var _ = require('lodash');
 var json2xls = require('json2xls');
@@ -23,7 +24,7 @@ module.exports = function(app) {
             }
          };
        //  var componentesAll = componentes.componentesToJson();
-          var componentesAll = componentes.loadComponentesFromFile();
+          var componentesAll = database.loadComponentesFromFile();
          console.log('componentesAll',componentesAll);
          req.armario.forEach(function(element,index){
         //  console.log('element.codigo',element.codigo);

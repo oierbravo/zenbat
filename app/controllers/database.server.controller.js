@@ -85,6 +85,7 @@ function loadComponentesFromFile(){
 	//console.log(componentes.length);
 	return componentes;
 }
+exports.loadComponentesFromFile = loadComponentesFromFile;
 function loadComponentesFilter(element,index){
 	//Necesita stockSeguridad y codigo valido
 		var result = false;
@@ -536,7 +537,7 @@ exports.deletePedidoProveedor = function(req, res) {
 	console.log('Deleting ' + req.pedidoProveedor.nPedido);
 	dbPedidosProveedores.del(req.pedidoProveedor.nPedido);
 	//borramos tambien el exports
-	/*var index = _.findIndex(exports.pedidosProveedores,{pedidoProveedorId:req.pedidoProveedor.nPedido});
+	var index = _.findIndex(exports.pedidosProveedores,{pedidoProveedorId:req.pedidoProveedor.nPedido});
 	exports.pedidosProveedores.splice(index,1);
 	//y tambien el registro en cada componente
 	req.pedidoProveedor.componentes.forEach(function(element,cIndex){
@@ -547,7 +548,7 @@ exports.deletePedidoProveedor = function(req, res) {
 		if(pInd > -1){
 			exports.componentes[cInd].pedidosProveedores.splice(pInd,1);
 		}
-	});*/
+	});
 	calculos();
 	res.status(200).send({message:"Deleted " + req.pedidoProveedor.nPedido});
 };
