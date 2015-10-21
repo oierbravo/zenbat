@@ -46,6 +46,7 @@ exports.loadAll = loadAll;
 function reLoadAll(){
 	loadAll();
 }
+
 exports.reLoadAll = reLoadAll;
 function reloadAllCli(req,res){
 	reLoadAll();
@@ -605,13 +606,16 @@ function checkComponenteStatus(componente){
     //var cantReservas = componente.pedidos.length;
     //var cantPedidosProveedores = componente.pedidosProveedores.length;
     //console.log(componente);
+    componente.hasReservas = false;
     componente.totalReservas = componente.cantidadProveedores;
     componente.totalPedidosProveedores = componente.cantidadProveedores;
     componente.usable = usable;
 
     componente.cantReservas = componente.pedidos.length;
     componente.cantPedidosProveedores = componente.pedidosProveedores.length;
-
+    if(componente.totalReservas > 0){
+    	componente.hasReservas = true;
+    }
 
    if(usable < 0){
 		componente.status = 'negatibo';
@@ -621,7 +625,7 @@ function checkComponenteStatus(componente){
     } else {
     	if(usable < stockMinimo){
 	    	componente.status = 'bajoMinimos';
-	    	if(componente.cantidadNoRecibida > 0){
+	    	if(componente.hasReservas){
 	    		componente.status += 'ConReserva';
 	    	}
    		}
@@ -635,7 +639,7 @@ function checkComponenteStatus(componente){
 	    } else {
 	    	if(usableFuturo < stockMinimo){
 		    	componente.status = 'bajoMinimosFuturo';
-		    	if(componente.cantidadNoRecibida > 0){
+		    	if(componente.hasReservas){
 		    		componente.status += 'ConReserva';
 		    	}
 	   		}
@@ -883,4 +887,31 @@ exports.updateComponenteCantidad = function(componenteId,cantidad){
 }
 	
 
+}
+exports.getHomeData = function(req,res){
+	var compCount = exports.componentes.length;
+	var pedidosFaltan = [];
+	pedidosFaltan = _.filter(exports.pedidos,function(pedido){
+		if(pedido.status == "FALTAN COMPONENTES"){
+			return true;
+		} else if(pedido.status == "FALTAN IDS"){
+			return true;
+		} else {
+			return false;
+		}
+	});
+	var pedidosProveedoresPendientes;
+	pedidosProveedoresPendientes = _.filter(exports.pedidosProveedores,function(pedido){
+		if(pedido.status == "Pendiente"){
+			return true;
+		} else {
+			return false;
+		}
+	});
+	var output = {
+		numComponentes: compCount,
+		pedidosFaltan: pedidosFaltan,
+		pedidosProveedoresPendientes:pedidosProveedoresPendientes
+	}
+	res.send(output);
 }

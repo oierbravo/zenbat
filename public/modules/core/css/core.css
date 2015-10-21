@@ -188,3 +188,6 @@ tr.componente-status-bajoMinimosFuturoConReserva {
 	}
 }
 .panel-body .btn:not(.btn-block) { width:120px;margin-bottom:10px; }
+.panel-body table {
+	width: 100%;
+}

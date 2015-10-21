@@ -3,15 +3,16 @@
 <div class="container">
 <div class="row"><h2>Zenbat</h2></div>
     <div class="row">
-        <div class="col-md-6" style="margin:0 auto;">
+        
+      <!--  <div class="col-md-6" style="margin:0 auto;">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        <span class="glyphicon glyphicon-bookmark"></span></h3>
+                        <span class="glyphicon glyphicon-calendar"></span> Pedidos</h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                       <!-- <div class="col-xs-6 col-md-6">
+                       <div class="col-xs-6 col-md-6">
                           <a href="#" class="btn btn-danger btn-lg" role="button"><span class="glyphicon glyphicon-list-alt"></span> <br/>Apps</a>
                           <a href="#" class="btn btn-warning btn-lg" role="button"><span class="glyphicon glyphicon-bookmark"></span> <br/>Bookmarks</a>
                           <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-signal"></span> <br/>Reports</a>
@@ -22,12 +23,103 @@
                           <a href="#" class="btn btn-info btn-lg" role="button"><span class="glyphicon glyphicon-file"></span> <br/>Notes</a>
                           <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-picture"></span> <br/>Photos</a>
                           <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-tag"></span> <br/>Tags</a>
-                        </div>-->
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>-->
+<!-- init pedidos -->
+<div class="col-md-6" style="margin:0 auto;">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-calendar"></span> Pedidos  - FALTAN COMPONENTES</h3>
+                </div>
+                <div class="panel-body">
+                     <div class="list-group">
+                     <a   class="list-group-item" href="#!/pedidos/{{pedido.pedidoId}}" data-ng-repeat="pedido in pedidosFaltan  | orderBy:predicate:reverse "><strong>{{pedido.fecha | date:'mediumDate' }}</strong> - {{pedido.armarioId}}</a>
+                      <div> Total pedidos a los que les faltan de componentes: <span>{{pedidosFaltan.length}}</span></div>
+                    
+                    </div>
+              </div>
+        </div>
+        </div>
+<!-- fin pedidos -->
+<!-- init pedidosProveedors -->
+<div class="col-md-6" style="margin:0 auto;">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="fa fa-shopping-cart"></span> Pedidos a proveedores - PENDIENTES</h3>
+                </div>
+                <div class="panel-body">
+                     <div class="list-group">
+                      <a   class="list-group-item" href="#!/pedidos-proveedores/{{pedidoProveedor.nPedido}}" data-ng-repeat="pedidoProveedor in pedidosProveedoresPendientes  | orderBy:pedido.:reverse "><strong>{{pedidoProveedor.fecha | date:'mediumDate' }}</strong> - {{pedidoProveedor.proveedorData.Nombre}} <span ng-show="pedidoProveedor.fechaEntrega"> - F.Entrega:</span><strong>{{pedidoProveedor.fechaEntrega | date:'mediumDate' }}</strong></a>
+                      <div> Total pedidos a proveedores pendientes: <span>{{pedidosProveedoresPendientes.length}}</span></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+<!-- fin pedidosProveedors -->
+<!-- init tools -->
+<div class="col-md-6" style="margin:0 auto;">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-wrench"></span> Herramientas</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                       
                     </div>
                     <a href="/#!/reload" class="btn btn-danger btn-lg btn-block" role="button"><span class="fa fa-refresh"></span> Releer archivos</a>
                 </div>
             </div>
         </div>
+<!-- fin tools -->
+
+
+        <div class="col-md-6" style="margin:0 auto;">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-tasks"></span> Componentes</h3>
+                </div>
+
+                <div class="panel-body">
+             
+                    <p>Los componentes necesitan <strong>codigo</strong> y <strong>stockSeguridad</strong>
+                    <p>Actualmente hay {{numComponentes}} indexados;</p>
+                     <hr/>
+              
+                    <table>
+                      <thead>
+                        <tr>
+                          <td>Estado</td><td>Explicacion</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr> Estados de los componentes teniendo en cuenta los pedidos a proveedores y los pedidos por entregar.
+                        <tr class="componente-status-OK"><td >ok</td><td>El componente se quedara por encima del stock minimo tras procesar todo</td></tr>
+                        <tr class="componente-status-bajoMinimos"><td>bajoMinimos</td><td>Tras procesar los pedidos a proveedores se quedara entre 0 y el stock minimo. Ningun pedido pendiente.</td></tr>
+                        <tr class="componente-status-bajoMinimosConReserva"><td>bajoMinimosConReserva</td><td>Tras procesar los pedidos a proveedores se quedara entre 0 y el stock minimo. Tiene pedidos pendientes.</td></tr>
+                        <tr class="componente-status-negatibo"><td>negatibo</td><td>Tras procesar los pedidos pendientes se quedara por debajo de 0. Ningun pedido a pendiente.</td></tr>
+                         <tr class="componente-status-negatiboConReserva"><td>negatiboConReserva</td><td>Tras procesar los pedidos a proveedores se quedara por debajo de 0. Tiene pedidos pendientes.</td></tr>
+
+
+                        <tr class="componente-status-negatiboFuturoConReserva"><td>negatiboFuturoConReserva</td><td>Tras procesar los pedidos pendientes y los pedidos a proveedores se quedara por debajo de 0.</td></tr>
+
+                        <tr class="componente-status-bajoMinimosFuturoConReserva"><td>negatiboFuturoConReserva</td><td>Tras procesar los pedidos pendientes y los pedidos a proveedores se quedara por debajo de 0.</td></tr>
+                      </tbody>
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+
     </div>
     </div>
 </section>

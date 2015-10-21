@@ -3,7 +3,7 @@
 		<h1 data-ng-bind="pedido.id"></h1>
 		<h2 data-ng-bind="pedido.fecha"></h2>
 
-		<p>Armario:<strong>{{pedido.codigo}}</strong> Rev: <strong>{{pedido.rev}}</strong> </p>
+		<p>Armario:<strong>{{pedido.codigo}}</strong> Rev: <strong>{{pedido.rev}}</strong>  PC: <strong>{{pedido.PC}}</strong> PT: <strong>{{pedido.PT}}</strong></p>
 		<p>Cantidad:<strong>{{pedido.cantidad}}</strong> - Entregados:<strong>{{pedido.entregados}}</strong> - Pendientes:<strong>{{pedido.pendientes}}</strong></p>
 	</div>
 	<button  class="btn" ng-class="{'btn-success':showDisponibles}"ng-click="toggleShowDisponibles()" ><i class="fa fa-eye fa-lg"></i> Ver disponibles</button>
