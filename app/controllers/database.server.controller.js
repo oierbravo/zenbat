@@ -295,6 +295,7 @@ function loadPedidosForEach(pedido,index){
 		if(el.Codigo){
 			var compI = _.findIndex(exports.componentes,{codigo:el.Codigo});
 			var qty = el.Cantidad * pedido.pendientes;
+			var qtyUnidad = el.Cantidad;
 			//console.log(qty);
 			if(compI > -1){
 				//exports.componentes[compI].pedidos.push({pedidoId:pedido.pedidoId,qty:qty});
@@ -305,10 +306,10 @@ function loadPedidosForEach(pedido,index){
 				
 
 
-				pedido.stock.push({componenteId:el.Codigo,status:'no procesado',cantidad:qty});
+				pedido.stock.push({componenteId:el.Codigo,status:'no procesado',cantidad:qty,cantidadUnidad:qtyUnidad});
 
 			} else {
-				pedido.stock.push({componenteId:el.Codigo,status:'ID no encontrado.',cantidad:qty});
+				pedido.stock.push({componenteId:el.Codigo,status:'ID no encontrado.',cantidad:qty,cantidadUnidad:qtyUnidad});
 			}
 		}
 	});
@@ -560,8 +561,8 @@ function completarPedidoProveedor(req,res){
 	//var pedidoProveedor = exports.pedidosProveedores[index];
 	//var pedidoProveedor = req.pedidoProveedor;
 	var pedidoProveedor = dbPedidosProveedores.get(req.pedidoProveedor.nPedido);
-	console.log('dbPedidosProveedores.keys()',dbPedidosProveedores.keys());
-	console.log(pedidoProveedor);
+	//console.log('dbPedidosProveedores.keys()',dbPedidosProveedores.keys());
+	//console.log(pedidoProveedor);
 	
 	pedidoProveedor.completado = true;
 	dbPedidosProveedores.put(pedidoProveedor.nPedido,pedidoProveedor);
@@ -572,11 +573,11 @@ function completarPedidoProveedor(req,res){
 		var componente = exports.componentes[cInd];
 		if(!_.isNumber(componente.cantidad)){
 
-			componente.cantidad = parseInt(componente.cantidad);
+			componente.cantidad = parseFloat(componente.cantidad);
 		}
-		console.log('componente.cantidad',componente.cantidad);
-		console.log('element.recibidos',element.recibidos);
-		componente.cantidad += parseInt(element.recibidos);
+		//console.log('componente.cantidad',componente.cantidad);
+		//console.log('element.recibidos',element.recibidos);
+		componente.cantidad += element.cantidad;
 		var pInd = _.findIndex(componente.pedidosProveedores,{pedidoProveedorId:req.pedidoProveedor.nPedido});
 		componente.pedidosProveedores.splice(pInd,1);
 		saveComponente(componente);
