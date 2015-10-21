@@ -19,6 +19,7 @@
             </div>
         </form>
         <span us-spinner="{radius:30, width:8, length: 16}" spinner-key="cargador" spinner-start-active="true"></span>
+        <button  class="btn" ng-class="{'btn-success':showCompletados}"ng-click="toggleShowCompletados()" ><i class="fa fa-eye fa-lg"></i> Ver completados</button>
         <table data-toggle="table"  data-height="299" class="table-stripped table table-hover animate-show" ng-show="elCargados"  data-search="true"  data-show-columns="true">
             <thead>
                 <tr>
@@ -49,7 +50,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr data-ng-repeat="pedido in pedidosProveedores | orderBy:predicate:reverse | filter:searchString" class="table-condensed table-stripped" >
+                <tr data-ng-repeat="pedido in pedidosProveedores | orderBy:predicate:reverse | filter:searchString" class="table-condensed table-stripped" ng-class="{completado:pedido.completado,showCompletados:showCompletados}">
                     <td>{{pedido.fecha | date:'mediumDate' }}</td>
                     <td>{{pedido.pedidoProveedorId}}</td>
                     <td>{{pedido.proveedorData.Nombre}}</td>

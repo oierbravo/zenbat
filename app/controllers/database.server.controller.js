@@ -577,7 +577,7 @@ function completarPedidoProveedor(req,res){
 		}
 		//console.log('componente.cantidad',componente.cantidad);
 		//console.log('element.recibidos',element.recibidos);
-		componente.cantidad += element.cantidad;
+		componente.cantidad += parseFloat(componente.cantidad);
 		var pInd = _.findIndex(componente.pedidosProveedores,{pedidoProveedorId:req.pedidoProveedor.nPedido});
 		componente.pedidosProveedores.splice(pInd,1);
 		saveComponente(componente);
@@ -674,8 +674,10 @@ function calculosComponente(componente){
 function calculosPedidosProveedor(pedidoProveedor,ppIndex){
 	if(pedidoProveedor.completado){
 		pedidoProveedor.status = 'Completado';
+		pedidoProveedor.pendiente = false;
 	} else {
 		pedidoProveedor.status = 'Pendiente';
+		pedidoProveedor.pendiente = true;
 	}
 	exports.pedidosProveedores[ppIndex] = pedidoProveedor;
 	return pedidoProveedor;
@@ -720,6 +722,7 @@ function calculosPedido(pedido){
 	});
 	if(pedido.pendientes > 0){
 		if(faltanComponentes){
+
 			pedido.entregado = false;
 			pedido.status ='FALTAN COMPONENTES';
 			pedido.entregable = false;

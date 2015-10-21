@@ -100,7 +100,20 @@ tr.disponible {
 	background-color: #00dd00;
 	background-color: rgba(0, 200, 0, 0.50);;
 }
-
+tr.completado {
+	display:none;
+}
+tr.showCompletados {
+	display:table-row;
+}
+tr.completado {
+	background-color: #00dd00;
+	background-color: rgba(0, 200, 0, 0.50);;
+}
+tr.disponible {
+	background-color: #00dd00;
+	background-color: rgba(0, 200, 0, 0.50);;
+}
 tr.oculatarBajoMinimos {
 	display:none;
 }

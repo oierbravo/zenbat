@@ -17,6 +17,10 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 		$scope.listAlmacenes = Almacenes.getAll();
 		$scope.totalPedido = 0;
 		$scope.pedidoProveedor = {};
+		$scope.showCompletados = false;
+		$scope.toggleShowCompletados = function(){
+			$scope.showCompletados = !$scope.showCompletados
+		}
 		$scope.removeComponente = function(componenteId,update){
 			var index;
 			if(!update){
