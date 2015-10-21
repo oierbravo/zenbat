@@ -16,7 +16,7 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 		$scope.listProveedores = Proveedores.getAll();
 		$scope.listAlmacenes = Almacenes.getAll();
 		$scope.totalPedido = 0;
-
+		$scope.pedidoProveedor = {};
 		$scope.removeComponente = function(componenteId,update){
 			var index;
 			if(!update){
