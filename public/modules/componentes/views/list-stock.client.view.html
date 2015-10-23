@@ -68,10 +68,10 @@
         <tr data-ng-repeat="componente in componentes | orderBy:predicate:reverse   | filter:searchString " class="table-condensed table-stripped componente-status-{{componente.status}}" data-ng-controller="RowComponenteController" id="{{componente.codigo}}">
     			<td><a href="/#!/componentes/{{componente.codigo}}">{{componente.codigo}}</a></td>
     			<td>{{componente.denominacion}}</td>
-          <td>{{componente.cantidad}}</td>
-          <td>{{componente.stockSeguridad}}</td>
-          <td>{{componente.cantidadReservada}}</td>
-          <td>{{componente.cantidadProveedores}}  (<span class="text-success">{{componente.cantidadRecibida}}</span>:<span class="text-warning">{{componente.cantidadNoRecibida}}</span>)</td>
+          <td>{{componente.cantidad| setDecimal }}</td>
+          <td>{{componente.stockSeguridad| setDecimal}}</td>
+          <td>{{componente.cantidadReservada| setDecimal}}</td>
+          <td>{{componente.cantidadProveedores| setDecimal}}  (<span class="text-success">{{componente.cantidadRecibida}}</span>:<span class="text-warning">{{componente.cantidadNoRecibida}}</span>)</td>
           <td>{{componente.status}}</td>
           <td>
             <button ng-click="stockChange('{{componente.codigo}}',-100)">-100</button>

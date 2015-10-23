@@ -697,9 +697,9 @@ function calculosPedidosProveedor(pedidoProveedor,ppIndex){
 	pedidoProveedor.componentes.forEach(function(el,ind){
 		pedidoProveedor.componentes[ind].precioTotal = parseFloat(el.qty) * parseFloat(el.precioUnit) ;
 		pedidoProveedor.componentes[ind].precioTotal = pedidoProveedor.componentes[ind].precioTotal.toFixed(2);
-		if(!_.isNumber(pedidoProveedor.componentes[ind].precioTotal)){
-			pedidoProveedor.componentes[ind].precioTotal = 0;
-		}
+		//if(!_.isNumber(pedidoProveedor.componentes[ind].precioTotal)){
+		//	pedidoProveedor.componentes[ind].precioTotal = 0;
+		//}
 		total += pedidoProveedor.componentes[ind].precioTotal;
 	});
 	pedidoProveedor.total = total;

@@ -83,11 +83,11 @@
 		
 			<td ><a href="/#!/componentes/{{componente.codigo}}">{{componente.codigo}}</a></td>
 			<td>{{componente.denominacion}}</td>
-            <td>{{componente.cantidad}}</td>
-            <td>{{componente.stockSeguridad}}</td>
-            <td>{{componente.cantidadReservada}}</td>
+            <td>{{componente.cantidad| setDecimal}}</td>
+            <td>{{componente.stockSeguridad| setDecimal}}</td>
+            <td>{{componente.cantidadReservada| setDecimal}}</td>
             
-            <td>{{componente.cantidadProveedores}}  (<span class="text-success">{{componente.cantidadRecibida}}</span>:<span class="text-warning">{{componente.cantidadNoRecibida}}</span>)</td>
+            <td>{{componente.cantidadProveedores| setDecimal}}  (<span class="text-success">{{componente.cantidadRecibida}}</span>:<span class="text-warning">{{componente.cantidadNoRecibida}}</span>)</td>
           
             <td>{{componente.status}}</td>
 
