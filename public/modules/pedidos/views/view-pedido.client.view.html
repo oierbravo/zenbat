@@ -38,9 +38,9 @@
 		    <tbody>
 				<tr data-ng-repeat="componente in pedido.stock  | orderBy:predicate:reverse " class="table-condensed table-stripped" ng-class="{disponible:componente.disponible,showDisponibles:showDisponibles}">
 					<td><a href="/#!/componentes/{{componente.codigo}}">{{componente.codigo}}</a></td>
-					<td>{{componente.stock}}</td>
-					<td>{{componente.sumPedidoActual}}</td>
-					<td>{{componente.faltan}}</td>
+					<td>{{componente.stock| setDecimal}}</td>
+					<td>{{componente.sumPedidoActual| setDecimal}}</td>
+					<td>{{componente.faltan| setDecimal}}</td>
 					<td>{{componente.denominacion}}</td>
 		            <td>{{componente.necesarios}} <small>({{componente.cantidadUnidad}}x{{pedido.pendientes}}) </small></td> 
 				</tr>
