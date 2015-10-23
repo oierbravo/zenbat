@@ -45,23 +45,37 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 							$scope.pedidoProveedor.componentes[ind].precioTotal = 0;
 						}
 					});
+			} else {
+				_.forEach($scope.componentes,function(el,ind){
+						if(el.precioUnit){
+							$scope.componentes[ind].precioTotal = parseFloat(el.precioUnit)  * parseFloat(el.qty);
+						} else {
+							$scope.componentes[ind].precioTotal = 0;
+						}
+					});
 			}
 		}
 		$scope.calcularTotal = function(){
 			console.log('calculando total...');
 			$scope.calcularPreciosView();
+			var componentes;
+
 			if(!$scope.pedidoProveedor.componentes){
-				return 0;
+				componentes = $scope.componentes;
+			} else {
+				componentes = $scope.pedidoProveedor.componentes;
 			}
 			var total = 0;
-			$scope.pedidoProveedor.componentes.forEach(function(element,index){
+			componentes.forEach(function(element,index){
 				if(element.precioUnit){
-					var sub_total = parseFloat(element.precioUnit).toFixed(2) * parseFloat(element.qty).toFixed(2);
+					var sub_total = parseFloat(element.precioUnit) * parseFloat(element.qty);
 					if(_.isNumber(sub_total)){
-						total += element.precioTotal;
+						total += sub_total;
 					}
+					
 				}
 			});
+			console.log(componentes);
 			$scope.pedidoProveedor.totalPedido = total;
 			$scope.totalPedido = total;
 			//return total;
