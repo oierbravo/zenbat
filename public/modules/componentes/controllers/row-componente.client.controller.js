@@ -38,7 +38,7 @@ angular.module('componentes').controller('RowComponenteController', ['$scope','C
 		$scope.stockPreciseMinus = function(id){
 			var nucomp = Componentes.stock({
 				componenteId: id,
-				qty: -parseFloat($scope.stockPreciseQty).toFixed(2);
+				qty: -parseFloat($scope.stockPreciseQty).toFixed(2)
 			});
 			//console.log('nucomp',nucomp);
 			$scope.componente = nucomp;

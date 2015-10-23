@@ -35,17 +35,30 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 
 			}
 		}
+		$scope.calcularPreciosView = function(){
+			if($scope.pedidoProveedor){
+				
+					_.forEach($scope.pedidoProveedor.componentes,function(el,ind){
+						if(el.precioUnit){
+							$scope.pedidoProveedor.componentes[ind].precioTotal = parseFloat(el.precioUnit)  * parseFloat(element.qty).toFixed(2);
+						} else {
+							$scope.pedidoProveedor.componentes[ind].precioTotal = 0;
+						}
+					});
+			}
+		}
 		$scope.calcularTotal = function(){
 			console.log('calculando total...');
+			$scope.calcularPreciosView();
 			if(!$scope.pedidoProveedor.componentes){
 				return 0;
 			}
 			var total = 0;
 			$scope.pedidoProveedor.componentes.forEach(function(element,index){
 				if(element.precioUnit){
-					var sub_total = parseFloat(element.precioUnit).toFixed(2) * parseFloat(element.qty).toFixed(2);
+					//var sub_total = parseFloat(element.precioUnit).toFixed(2) * parseFloat(element.qty).toFixed(2);
 					//if(_.isNumber(sub_total)){
-						total += parseFloat(sub_total).toFixed(2);
+						total += element.precioTotal;
 					//}
 				}
 			});
@@ -204,7 +217,8 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
         	$scope.pedidoProveedor =  PedidosProveedores.get(
         		{pedidoProveedorId:$stateParams.pedidoProveedorId}
         		);
-        	$scope.calcularTotal();
+
+        	//$scope.calcularTotal();
         	/*$scope.pedidoProveedor = PedidosProveedores.get(
         		{pedidoProveedorId:$stateParams.pedidoProveedorId}
         		).$promise.then(function(data){

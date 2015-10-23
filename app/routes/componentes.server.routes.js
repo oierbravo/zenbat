@@ -14,8 +14,6 @@ var moment = require('moment');
 
 module.exports = function(app) {
 
-	app.route('/componentes-reload')
-		.get(componentes.reloadFromFile);
 	app.route('/stock')
 		.get(componentes.list);
 	app.route('/componentes')

@@ -100,13 +100,13 @@
             <td>{{componente.codigo}}</td>
             <td>{{componente.denominacion}}</td>
             <td>{{componente.qty}}</td> 
-            <td class="hidden-print">{{componente.precioUnit * componente.qty}}</td>       
+            <td class="hidden-print">{{componente.precioTotal}}</td>       
         </tr>
         <tr class="hidden-print">
             <td></td>
             <td></td>
             <td><strong>TOTAL</strong></td> 
-            <td >{{totalPedido}}</td>       
+            <td >{{pedidoProveedor.total}}</td>       
         </tr>
          
         </tbody>
