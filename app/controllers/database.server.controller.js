@@ -618,8 +618,8 @@ function checkComponenteStatus(componente){
     }
 
    if(usable < 0){
-		componente.status = 'negatibo';
-    	if(componente.cantidadNoRecibida > 0){
+		componente.status = 'negativo';
+    	if(componente.hasReservas){
     		componente.status += 'ConReserva';
     	}
     } else {
@@ -632,8 +632,8 @@ function checkComponenteStatus(componente){
     }
     if(totalPedidosProveedores > 0){
 	    if(usableFuturo < 0){
-			componente.status = 'negatiboFuturo';
-	    	if(componente.cantidadNoRecibida > 0){
+			componente.status = 'negativoFuturo';
+	    	if(componente.hasReservas){
 	    		componente.status += 'ConReserva';
 	    	}
 	    } else {

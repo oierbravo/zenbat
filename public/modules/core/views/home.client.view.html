@@ -102,7 +102,11 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr> Estados de los componentes teniendo en cuenta los pedidos a proveedores y los pedidos por entregar.
+                        <tr> El estado se calcula en base a la cantidad usable del producto
+<br/>La cantidad usable es la cantidad actual + cantidad recibida de un pedido parcial – la cantidad en Armarios
+<br/>La cantidad usable futura es la cantidad usable + cantidad de componentes no recibidos
+<br/>RESERVA son pedidos de armarios pendientes de entregar
+
                         <tr class="componente-status-OK"><td >ok</td><td>El componente se quedara por encima del stock minimo tras procesar todo</td></tr>
                         <tr class="componente-status-bajoMinimos"><td>bajoMinimos</td><td>Tras procesar los pedidos a proveedores se quedara entre 0 y el stock minimo. Ningun pedido pendiente.</td></tr>
                         <tr class="componente-status-bajoMinimosConReserva"><td>bajoMinimosConReserva</td><td>Tras procesar los pedidos a proveedores se quedara entre 0 y el stock minimo. Tiene pedidos pendientes.</td></tr>

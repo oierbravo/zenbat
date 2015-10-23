@@ -127,11 +127,11 @@ tr.disponible.oculatarOk {
 tr.componente-status-OK {
 	background-color: #ffffff;
 }
-tr.componente-status-negatibo {
+tr.componente-status-negativo {
 	background-color: #ff0000;
 	background-color: rgba(255, 0, 0, 0.50);;
 }
-tr.componente-status-negatiboConReserva {
+tr.componente-status-negativoConReserva {
 	background-color: #ff0000;
 	background-color: rgba(255, 0, 0, 0.90);;
 }
@@ -143,11 +143,11 @@ tr.componente-status-bajoMinimosConReserva {
 	background-color: #ff0000;
 	background-color: rgba(255, 200, 100, 0.8);;
 }
-tr.componente-status-negatiboFuturo {
+tr.componente-status-negativoFuturo {
 	background-color: #ff0000;
 	background-color: rgba(0, 0, 255, 0.50);;
 }
-tr.componente-status-negatiboFuturoConReserva {
+tr.componente-status-negativoFuturoConReserva {
 	background-color: #ff0000;
 	background-color: rgba(0, 0, 255, 0.80);;
 }
