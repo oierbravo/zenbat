@@ -25,7 +25,7 @@ angular.module('componentes').controller('RowComponenteController', ['$scope','C
 			$scope.revisarStock() ;
 		};
 		$scope.stockPrecise = function(){
-			var qty = parseFloat($scope.stockPreciseQty) ;
+			var qty = parseFloat($scope.stockPreciseQty).toFixed(2) ;
 			var nucomp = Componentes.stock({
 				componenteId: $scope.componente.codigo,
 				qty: qty ? qty : 0
@@ -38,16 +38,16 @@ angular.module('componentes').controller('RowComponenteController', ['$scope','C
 		$scope.stockPreciseMinus = function(id){
 			var nucomp = Componentes.stock({
 				componenteId: id,
-				qty: -parseFloat($scope.stockPreciseQty)
+				qty: -parseFloat($scope.stockPreciseQty).toFixed(2);
 			});
 			//console.log('nucomp',nucomp);
 			$scope.componente = nucomp;
 			$scope.revisarStock() ;
 		}
 		$scope.revisarStock = function(){
-			var cantidad = parseFloat($scope.componente.cantidad);
-			var cantidadNecesaria = parseFloat($scope.componente.cantidadReservada);
-			var cantidadSeguridad = parseFloat($scope.componente.stockSeguridad);
+			var cantidad = parseFloat($scope.componente.cantidad).toFixed(2);
+			var cantidadNecesaria = parseFloat($scope.componente.cantidadReservada).toFixed(2);
+			var cantidadSeguridad = parseFloat($scope.componente.stockSeguridad).toFixed(2);
 			var usableStock = cantidad -cantidadNecesaria;
 			/*if(usableStock < cantidadSeguridad){
 				$scope.componente.bajoMinimos = true;

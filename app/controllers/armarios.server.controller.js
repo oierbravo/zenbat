@@ -107,7 +107,7 @@ function verificarStock(armarioId,qtyArmarios,pedidoId){
 		var foundFalse = false;
 		armario.componentes.forEach(function(element,index){
 			if(element.Codigo){
-				element.Cantidad = parseFloat(element.Cantidad);
+				element.Cantidad = parseFloat(element.Cantidad).toFixed(2);
 				var gotComponente = Componentes.verificarStock(element.Codigo,element.Cantidad * qtyArmarios,pedidoId);
 //				console.log('gotComponente',gotComponente);
 				element.stockSinReservas = Componentes.getComponenteQtyById(element.Codigo);
@@ -141,7 +141,7 @@ function verificarStock(armarioId,qtyArmarios,pedidoId){
 					result.push({
 						codigo:element.Codigo,
 						denominacion:element.Denominacion,
-						necesarios: parseFloat(element.Cantidad),
+						necesarios: parseFloat(element.Cantidad).toFixed(2),
 						stockSinReservas: element.stockSinReservas,
 						cantidadReservada: element.cantidadReservada,
 						cantidadReservadaSinPedido: element.cantidadReservada,
@@ -219,8 +219,8 @@ exports.exportar = function(req,res){
    		   var componenteExport = {
    		'Codigo Material': element.Codigo,
 	   		'Denominación':element.Denominacion,
-	   		'Precio Unitario':(compDb.precioUnit)?parseFloat(compDb.precioUnit):-1,
-	   		'Cantidad':parseFloat(element.Cantidad),
+	   		'Precio Unitario':(compDb.precioUnit)?parseFloat(compDb.precioUnit).toFixed(2):-1,
+	   		'Cantidad':parseFloat(element.Cantidad).toFixed(2),
 	   		'Precio Total':' '
   		}
  	  armarioExport.componentes.push(componenteExport);

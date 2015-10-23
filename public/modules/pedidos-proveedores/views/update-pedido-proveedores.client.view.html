@@ -136,21 +136,24 @@
 	          <th></th>
 	            <th>
 	               
-            <a href="" ng-click="order('codigo')">Codigo</a>
-            <span class="sortorder" ng-show="predicate === 'codigo'" ng-class="{reverse:reverse}"></span>
+           		 <a href="" ng-click="order('codigo')">Codigo</a>
+           		 <span class="sortorder" ng-show="predicate === 'codigo'" ng-class="{reverse:reverse}"></span>
          
 	            </th>
 	            <th>
 	              Denominacion
 	            </th>
 	            <th>
-	              C.Actual
+	              Cantidad
+	            </th>
+	             <th>
+	              StockSeguridad
 	            </th>
 	            <th>
-	              C.Reservados
+	              Cant. en armarios
 	            </th>
-	            <th>
-	              StockMin.
+	           <th>
+	              Cant. en proveedores
 	            </th>
 	            <th>
 	            	         
@@ -167,8 +170,9 @@
 	            <td>{{componente.codigo}}</td>
 	            <td>{{componente.denominacion}}</td>
 	            <td>{{componente.cantidad}}</td>
-	            <td>{{componente.cantidadReservada}}</td>
 	            <td>{{componente.stockSeguridad}}</td>
+	            <td>{{componente.cantidadReservada}}</td>
+	            <td>{{componente.cantidadProveedores}}</td>
 	            <td>{{componente.status}}</td>
 	        </tr>
 	         

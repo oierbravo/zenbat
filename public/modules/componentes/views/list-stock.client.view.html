@@ -49,11 +49,12 @@
             <span class="sortorder" ng-show="predicate === 'cantidad'" ng-class="{reverse:reverse}"></span>
           </td>
           <td>
-            <a href="" ng-click="order('cantidadReservada')">Cant. en Pedidos</a>
-            <span class="sortorder" ng-show="predicate === 'cantidadReservada'" ng-class="{reverse:reverse}"></span></td>
-          <td>
-            <a href="" ng-click="order('stockSeguridad')">Stock Minimo</a>
+            <a href="" ng-click="order('stockSeguridad')">Stock Seguridad</a>
             <span class="sortorder" ng-show="predicate === 'stockSeguridad'" ng-class="{reverse:reverse}"></span></td>
+          <td>
+            <a href="" ng-click="order('cantidadReservada')">Cant. en armarios</a>
+            <span class="sortorder" ng-show="predicate === 'cantidadReservada'" ng-class="{reverse:reverse}"></span></td>
+          
           <td>
             <a href="" ng-click="order('cantidadProveedores')">Cant. en proveedores</a>
             <span class="sortorder" ng-show="predicate === 'cantidadProveedores'" ng-class="{reverse:reverse}"></span></td>
@@ -68,8 +69,8 @@
     			<td><a href="/#!/componentes/{{componente.codigo}}">{{componente.codigo}}</a></td>
     			<td>{{componente.denominacion}}</td>
           <td>{{componente.cantidad}}</td>
-          <td>{{componente.cantidadReservada}}</td>
           <td>{{componente.stockSeguridad}}</td>
+          <td>{{componente.cantidadReservada}}</td>
           <td>{{componente.cantidadProveedores}}  (<span class="text-success">{{componente.cantidadRecibida}}</span>:<span class="text-warning">{{componente.cantidadNoRecibida}}</span>)</td>
           <td>{{componente.status}}</td>
           <td>

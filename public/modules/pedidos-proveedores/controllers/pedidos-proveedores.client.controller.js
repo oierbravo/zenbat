@@ -36,15 +36,16 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 			}
 		}
 		$scope.calcularTotal = function(){
+			console.log('calculando total...');
 			if(!$scope.pedidoProveedor.componentes){
 				return 0;
 			}
 			var total = 0;
 			$scope.pedidoProveedor.componentes.forEach(function(element,index){
 				if(element.precioUnit){
-					var sub_total = parseFloat(element.precioUnit) * parseFloat(element.qty);
+					var sub_total = parseFloat(element.precioUnit).toFixed(2) * parseFloat(element.qty).toFixed(2);
 					//if(_.isNumber(sub_total)){
-						total += parseFloat(sub_total);
+						total += parseFloat(sub_total).toFixed(2);
 					//}
 				}
 			});
@@ -95,6 +96,7 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 		$scope.open = function (size) {
 			//$log.log($scope);
 			//console.log('open');
+			size = 'lg';
 		    var modalInstance = $modal.open({
 		      animation: $scope.animationsEnabled,
 		      templateUrl: 'myModalContent.html',
@@ -127,6 +129,7 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 	  $scope.openEdit = function (size) {
 			//$log.log($scope);
 			//console.log('open');
+			size = 'lg';
 		    var modalInstance = $modal.open({
 		      animation: $scope.animationsEnabled,
 		      templateUrl: 'myModalContent.html',
@@ -183,6 +186,7 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
        	 	$scope.predicate = predicate;
         };
         $scope.find = function(){
+        	$scope.state = 'list';
         	usSpinnerService.spin('cargador');
 			$scope.pedidosProveedores = PedidosProveedores.query().$promise.then(function(data){
 				usSpinnerService.stop('cargador');

@@ -14,7 +14,7 @@ angular.module('pedidos-proveedores').controller('ModalInstanceCtrlController', 
 		});
 
 	    $scope.searchString   = '';     // set the default search/filter term
- 		$scope.predicate = '';
+ 		$scope.predicate = 'idx';
         $scope.reverse = false;
 
         $scope.order = function(predicate) {
