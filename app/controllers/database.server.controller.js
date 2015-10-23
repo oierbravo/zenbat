@@ -7,6 +7,8 @@ var mongoose = require('mongoose'),
     _ = require('lodash');
 var cache = require('memory-cache');
 var moment = require('moment');
+
+
 var fs      = require('fs');
 var zenbatConfig = require('../../zenbat.config.js');
 var Armarios = require('./armarios.server.controller.js');
@@ -32,9 +34,10 @@ exports.pedidosEntregados = [];
 
 exports.xlsKeys = [];
 
-
+var now;
 
 function loadAll(){
+	now = moment().format();
 	loadComponentes();
 	loadPedidos();
 	loadPedidosProveedores();
@@ -206,7 +209,9 @@ function loadPedidosFromFile(save){
 		var pedidos = XLSX.utils.sheet_to_json(pedidosSheet,{header:zenbatConfig.pedidos.header,range:1});
 		//var xlsKeys = [];
 		pedidos.forEach(function(element,index){
+
 			if(element.fecha){
+				element.fecha = new Date(element.fecha);
 				element.fechaUnix = moment(element.fecha).format('x');
 			}
 			//var fecha = moment(element.fecha).format('YYYY-MM-DD');
@@ -237,6 +242,7 @@ function loadPedidos(){
 
 exports.loadPedidos = loadPedidos;
 function loadPedidosForEach(pedido,index){
+	pedido.fecha = new Date(pedido.fecha);
 	pedido.pedidoId =  makePedidoID(pedido);
 	var fecha = moment(pedido.fecha).format('YYYY-MM-DD');
 	pedido.fecha = fecha;

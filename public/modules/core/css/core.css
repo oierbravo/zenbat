@@ -124,38 +124,40 @@ tr.disponible.oculatarOk {
 	display:none;
 }
 
-tr.componente-status-OK {
+.componente-status-OK {
 	background-color: #ffffff;
 }
-tr.componente-status-negativo {
+.componente-status-negativo {
 	background-color: #ff0000;
 	background-color: rgba(255, 0, 0, 0.50);;
 }
-tr.componente-status-negativoConReserva {
+.componente-status-negativoConReserva {
 	background-color: #ff0000;
 	background-color: rgba(255, 0, 0, 0.90);;
+	color: #fff;
 }
-tr.componente-status-bajoMinimos {
+.componente-status-bajoMinimos {
 	background-color: #ff0000;
 	background-color: rgba(255, 200, 100, 0.40);;
 }
-tr.componente-status-bajoMinimosConReserva {
+.componente-status-bajoMinimosConReserva {
 	background-color: #ff0000;
 	background-color: rgba(255, 200, 100, 0.8);;
 }
-tr.componente-status-negativoFuturo {
+.componente-status-negativoFuturo {
 	background-color: #ff0000;
 	background-color: rgba(0, 0, 255, 0.50);;
 }
-tr.componente-status-negativoFuturoConReserva {
+.componente-status-negativoFuturoConReserva {
 	background-color: #ff0000;
 	background-color: rgba(0, 0, 255, 0.80);;
+	color: #fff;
 }
-tr.componente-status-bajoMinimosFuturo {
+.componente-status-bajoMinimosFuturo {
 	background-color: #ff0000;
 	background-color: rgba(0, 200, 255, 0.40);;
 }
-tr.componente-status-bajoMinimosFuturoConReserva {
+.componente-status-bajoMinimosFuturoConReserva {
 	background-color: #ff0000;
 	background-color: rgba(0, 200, 255, 0.8);;
 }
@@ -190,4 +192,10 @@ tr.componente-status-bajoMinimosFuturoConReserva {
 .panel-body .btn:not(.btn-block) { width:120px;margin-bottom:10px; }
 .panel-body table {
 	width: 100%;
+}
+.panel-body table td {
+	padding: 5px;
+}
+.panel-body table tr {
+	border-color: #ccc;
 }

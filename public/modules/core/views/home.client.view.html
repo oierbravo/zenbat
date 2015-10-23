@@ -92,31 +92,36 @@
                 <div class="panel-body">
              
                     <p>Los componentes necesitan <strong>codigo</strong> y <strong>stockSeguridad</strong>
-                    <p>Actualmente hay {{numComponentes}} indexados;</p>
+                    <p>Actualmente hay <strong>{{numComponentes}}</strong> indexados;</p>
                      <hr/>
-              
-                    <table>
+                    <p>El <strong>estado</strong> se calcula en base a la cantidad <strong>usable</strong> del producto</p>
+                    <p>La cantidad <strong>usable</strong> es la cantidad <strong>actual</strong> <strong>+</strong> cantidad <strong>recibida</strong> de un pedido parcial – la cantidad en Armarios</p>
+                    <p>La cantidad <strong>usable futura</strong> es la cantidad <strong>usable +</strong> cantidad de componentes <strong>no recibidos</strong></p>
+                    <p><strong>Reserva</strong> son pedidos de armarios pendientes de entregar</p>
+                          <table class="table table-condensed table-stripped">
                       <thead>
                         <tr>
                           <td>Estado</td><td>Explicacion</td>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr> El estado se calcula en base a la cantidad usable del producto
-<br/>La cantidad usable es la cantidad actual + cantidad recibida de un pedido parcial – la cantidad en Armarios
-<br/>La cantidad usable futura es la cantidad usable + cantidad de componentes no recibidos
-<br/>RESERVA son pedidos de armarios pendientes de entregar
+                        <tr>
+                     
+                        <tr><td  class="componente-status-OK text-center">ok</td><td>El componente se quedara por encima del stock minimo tras procesar todo</td></tr>
+                        <tr><td class="componente-status-negativo text-center">negatibo</td><td>Si los usables son menor de 0, el componente está en NEGATIVO (por ejemplo, se entrega un armario con material adelantado por Jaso que hay que devolver).</td></tr>
+                        <tr><td class="componente-status-bajoMinimos text-center">bajoMinimos</td><td>Si los usables están entre 0 y el StockSeguridad el componente esta BAJOMINIMOS (se podrá hacer el armario pero el componente queda debajo del SS).</td></tr>
+                         <tr><td class="componente-status-negativoConReserva text-center">negatiboConReserva</td><td>Si los usables son menor de 0 pero hay Armarios pendientes, está en NEGATIVOCONRESERVA (El componente está por debajo de 0 y encima hay que hacer el Armario, o tras hacer otros armarios quedará por debajo)</td></tr>
+                        <tr><td class="componente-status-bajoMinimosConReserva text-center">bajoMinimosConReserva</td><td>Si los usables están entre 0 y el StockSeguridad pero hay Armarios pendientes esta BAJOMINIMOSCONRESERVA (El Armario se puede hacer pero el componente quedará por debajo del SS)</td></tr>
+                        
+                        
+                        <tr><td class="componente-status-negativoFuturo text-center">negatiboFuturoConReserva</td><td>Si los usables futuros son menor de 0, el componente está en NEGATIVOFUTURO (Aun con los componentes que faltan por llegar de proveedores, los usables quedarían bajo 0)</td></tr>
+                        <tr><td class="componente-status-negativoFuturoConReserva text-center">negatiboFuturoConReserva</td><td>Si los usables futuros son menor de 0 pero hay Armarios pendientes, está en NEGATIVOFUTUROCONRESERVA (Aun con los componentes que faltan por llegar de proveedores, habrá armarios que no tienen suficientes componentes)</td></tr>
 
-                        <tr class="componente-status-OK"><td >ok</td><td>El componente se quedara por encima del stock minimo tras procesar todo</td></tr>
-                        <tr class="componente-status-bajoMinimos"><td>bajoMinimos</td><td>Tras procesar los pedidos a proveedores se quedara entre 0 y el stock minimo. Ningun pedido pendiente.</td></tr>
-                        <tr class="componente-status-bajoMinimosConReserva"><td>bajoMinimosConReserva</td><td>Tras procesar los pedidos a proveedores se quedara entre 0 y el stock minimo. Tiene pedidos pendientes.</td></tr>
-                        <tr class="componente-status-negatibo"><td>negatibo</td><td>Tras procesar los pedidos pendientes se quedara por debajo de 0. Ningun pedido a pendiente.</td></tr>
-                         <tr class="componente-status-negatiboConReserva"><td>negatiboConReserva</td><td>Tras procesar los pedidos a proveedores se quedara por debajo de 0. Tiene pedidos pendientes.</td></tr>
+                        <tr><td class="componente-status-bajoMinimosFuturo text-center">negatiboFuturoConReserva</td><td>Si los usables futuros están entre 0 y el StockSeguridad esta BAJOMINIMOSFUTURO (Aun con los pedidos a proveedores, el componente se queda entre 0 y el SS, pero no hay Armarios que usen ese componente)</td></tr>
 
+                        
 
-                        <tr class="componente-status-negatiboFuturoConReserva"><td>negatiboFuturoConReserva</td><td>Tras procesar los pedidos pendientes y los pedidos a proveedores se quedara por debajo de 0.</td></tr>
-
-                        <tr class="componente-status-bajoMinimosFuturoConReserva"><td>negatiboFuturoConReserva</td><td>Tras procesar los pedidos pendientes y los pedidos a proveedores se quedara por debajo de 0.</td></tr>
+                        <tr><td class="componente-status-bajoMinimosFuturoConReserva text-center">negatiboFuturoConReserva</td><td>Si los usables futuros están entre 0 y el SS y hay Armarios pendientes, esta BAJOMINIMOSFUTUROCONRESERVA (Aun con los pedidos a proveedores, el componente se queda entre 0 y SS teniendo en cuenta los Armarios por entregar)</td></tr>
                       </tbody>
                     </table>
                     
