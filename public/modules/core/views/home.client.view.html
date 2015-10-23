@@ -56,7 +56,7 @@
                 </div>
                 <div class="panel-body">
                      <div class="list-group">
-                      <a   class="list-group-item" href="#!/pedidos-proveedores/{{pedidoProveedor.nPedido}}" data-ng-repeat="pedidoProveedor in pedidosProveedoresPendientes  | orderBy:pedido.:reverse "><strong>{{pedidoProveedor.fecha | date:'mediumDate' }}</strong> - {{pedidoProveedor.proveedorData.Nombre}} <span ng-show="pedidoProveedor.fechaEntrega"> - F.Entrega:</span><strong>{{pedidoProveedor.fechaEntrega | date:'mediumDate' }}</strong></a>
+                      <a   class="list-group-item" href="#!/pedidos-proveedores/{{pedidoProveedor.nPedido}}" data-ng-repeat="pedidoProveedor in pedidosProveedoresPendientes  | orderBy:pedidoProveedor.fecha:reverse "><strong>{{pedidoProveedor.fecha | date:'mediumDate' }}</strong> - {{pedidoProveedor.proveedorData.Nombre}} <span ng-show="pedidoProveedor.fechaEntrega"> - F.Entrega:</span><strong>{{pedidoProveedor.fechaEntrega | date:'mediumDate' }}</strong></a>
                       <div> Total pedidos a proveedores pendientes: <span>{{pedidosProveedoresPendientes.length}}</span></div>
                     </div>
                     

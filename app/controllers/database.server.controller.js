@@ -349,7 +349,7 @@ function entregarPedido(pedido){
 		var compIndex = _.findIndex(exports.componentes,{codigo:element.Codigo});
 		if(compIndex > -1){
 			var componente = exports.componentes[compIndex];
-			componente.cantidad -= parseFloat(element.Cantidad).toFixed(2) * pedido.porEntregar;
+			componente.cantidad -= parseFloat(element.Cantidad) * pedido.porEntregar;
 			saveComponente(componente);
 		}
 	});
@@ -584,11 +584,11 @@ function completarPedidoProveedor(req,res){
 		var componente = exports.componentes[cInd];
 		if(!_.isNumber(componente.cantidad)){
 
-			componente.cantidad = parseFloat(componente.cantidad).toFixed(2);
+			componente.cantidad = parseFloat(componente.cantidad);
 		}
 		//console.log('componente.cantidad',componente.cantidad);
 		//console.log('element.recibidos',element.recibidos);
-		componente.cantidad += parseFloat(componente.cantidad).toFixed(2);
+		componente.cantidad += parseFloat(componente.cantidad);
 		var pInd = _.findIndex(componente.pedidosProveedores,{pedidoProveedorId:req.pedidoProveedor.nPedido});
 		componente.pedidosProveedores.splice(pInd,1);
 		saveComponente(componente);
@@ -602,7 +602,7 @@ exports.completarPedidoProveedor = completarPedidoProveedor;
 function checkComponenteStatus(componente){
 	componente.status = 'ok';
 
-	var actual = parseFloat(componente.cantidad).toFixed(2) + componente.cantidadRecibida;
+	var actual = parseFloat(componente.cantidad) + componente.cantidadRecibida;
 	var futura = componente.cantidadProveedores - componente.cantidadRecibida;
 
 //console.log('calcularCosas',componente);
@@ -611,7 +611,7 @@ function checkComponenteStatus(componente){
 
 	var totalPedidosProveedores = componente.cantidadProveedores;
     var usable = actual - componente.cantidadReservada ;
-    var stockMinimo = parseFloat(componente.stockSeguridad).toFixed(2);
+    var stockMinimo = parseFloat(componente.stockSeguridad);
     var usableFuturo = usable + componente.cantidadNoRecibida;
     //var cantReservas = componente.pedidos.length;
     //var cantPedidosProveedores = componente.pedidosProveedores.length;
@@ -695,14 +695,18 @@ function calculosPedidosProveedor(pedidoProveedor,ppIndex){
 	}
 	var total = 0;
 	pedidoProveedor.componentes.forEach(function(el,ind){
-		pedidoProveedor.componentes[ind].precioTotal = parseFloat(el.qty) * parseFloat(el.precioUnit) ;
-		pedidoProveedor.componentes[ind].precioTotal = pedidoProveedor.componentes[ind].precioTotal.toFixed(2);
+		//pedidoProveedor.componentes[ind].precioTotal = parseFloat(el.qty) * parseFloat(el.precioUnit) ;
+		var precioTotal = parseFloat(el.qty) * parseFloat(el.precioUnit) ;
+		pedidoProveedor.componentes[ind].precioTotal = precioTotal;
 		//if(!_.isNumber(pedidoProveedor.componentes[ind].precioTotal)){
 		//	pedidoProveedor.componentes[ind].precioTotal = 0;
 		//}
-		total += pedidoProveedor.componentes[ind].precioTotal;
+		//if(_.isNumber(pedidoProveedor.componentes[ind].precioTotal)){
+		if(precioTotal > 0)
+			total += pedidoProveedor.componentes[ind].precioTotal;
+		//}
 	});
-	pedidoProveedor.total = total;
+	pedidoProveedor.totalPedido = total;
 	exports.pedidosProveedores[ppIndex] = pedidoProveedor;
 	return pedidoProveedor;
 }
@@ -871,9 +875,9 @@ function getArmario(id){
 }
 exports.getArmario = getArmario;
 exports.stock = function(req, res) {
-	var qty = parseFloat(req.query.qty).toFixed(2);
+	var qty = parseFloat(req.query.qty);
 	//console.log(req.componente);
-	var nowQty = parseFloat(req.componente.cantidad).toFixed(2);
+	var nowQty = parseFloat(req.componente.cantidad);
 	req.componente.cantidad = nowQty + qty;
 	var componente = calculosComponente(req.componente);
 	saveComponente(componente);

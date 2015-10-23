@@ -40,7 +40,7 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 				
 					_.forEach($scope.pedidoProveedor.componentes,function(el,ind){
 						if(el.precioUnit){
-							$scope.pedidoProveedor.componentes[ind].precioTotal = parseFloat(el.precioUnit)  * parseFloat(element.qty).toFixed(2);
+							$scope.pedidoProveedor.componentes[ind].precioTotal = parseFloat(el.precioUnit)  * parseFloat(el.qty);
 						} else {
 							$scope.pedidoProveedor.componentes[ind].precioTotal = 0;
 						}
@@ -56,12 +56,13 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 			var total = 0;
 			$scope.pedidoProveedor.componentes.forEach(function(element,index){
 				if(element.precioUnit){
-					//var sub_total = parseFloat(element.precioUnit).toFixed(2) * parseFloat(element.qty).toFixed(2);
-					//if(_.isNumber(sub_total)){
+					var sub_total = parseFloat(element.precioUnit).toFixed(2) * parseFloat(element.qty).toFixed(2);
+					if(_.isNumber(sub_total)){
 						total += element.precioTotal;
-					//}
+					}
 				}
 			});
+			$scope.pedidoProveedor.totalPedido = total;
 			$scope.totalPedido = total;
 			//return total;
 		};

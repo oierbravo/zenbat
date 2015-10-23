@@ -88,7 +88,7 @@
 					<td>{{componente.pedidoMinimo}}</td>
 					<td>{{componente.precioUnit}}</td>
 					<td><input name="qty" type="text" data-ng-model="componente.qty" class="form-control" placeholder="" ng-init="0"  ng-change="calcularTotal()" ></td>
-					<td>{{componente.precioUnit * componente.qty}}</td>	
+					<td>{{componente.precioTotal | number}}</td>	
 					<td><input name="recibidos" data-ng-model="componente.recibidos" class="form-control" placeholder="" ng-init="0" ></td>
 					<td><a class="btn btn-warning" data-ng-click="removeComponente(componente.codigo,true);">
 			<i class="glyphicon glyphicon-trash"></i>
@@ -100,7 +100,7 @@
 					<td></td>
 					<td></td>
 					<td>TOTAL</td>
-					<td>{{totalPedido}}</td>		      
+					<td>{{pedidoProveedor.totalPedido  | number}}</td>		      
 				</tr>
 		    </tbody>
 	    </table>

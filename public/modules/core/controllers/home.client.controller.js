@@ -10,7 +10,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 		$scope.authentication = Authentication;
 
 $scope.predicate = 'fechaUnix';
-$scope.reverse = true;
+$scope.reverse = false;
 
 		$http.get('/get-home-data').success(function(success){
 			console.log(success);
