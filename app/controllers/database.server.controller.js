@@ -702,6 +702,7 @@ function calculosPedidosProveedor(pedidoProveedor,ppIndex){
 		}
 		total += pedidoProveedor.componentes[ind].precioTotal;
 	});
+	pedidoProveedor.total = total;
 	exports.pedidosProveedores[ppIndex] = pedidoProveedor;
 	return pedidoProveedor;
 }
