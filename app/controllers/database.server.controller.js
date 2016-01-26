@@ -377,12 +377,7 @@ function loadPedidosProveedores(){
 					//Componentes.setPedidoProveedor(element,pedido.pedidoProveedorId,pedido.qty);
 					componenteAddPedidoProveedor(element.codigo,pedido.pedidoProveedorId,element.qty,element.recibidos,element);
 					//if(_.isEmpty(element.componenteData)){
-						var cind =  _.findIndex(exports.componentes,{codigo:element.codigo});
-						var componente = exports.componentes[cind];
-						var componenteData = {
-							status: componente.status
-						};
-						pedido.componentes[index].componenteData = componenteData;
+						
 					//}
 				});
 			} else {
@@ -722,6 +717,18 @@ function calculosPedidosProveedor(pedidoProveedor,ppIndex){
 	}
 	var total = 0;
 	pedidoProveedor.componentes.forEach(function(el,ind){
+
+		var cind =  _.findIndex(exports.componentes,{codigo:el.codigo});
+		if(cind > -1){
+						console.log('componente',cind);
+						var componente = exports.componentes[cind];
+						console.log('componente',componente);
+						var componenteData = {
+							status: componente.status
+						};
+						pedidoProveedor.componentes[ind].componenteData = componenteData;
+
+					}
 		//pedidoProveedor.componentes[ind].precioTotal = parseFloat(el.qty) * parseFloat(el.precioUnit) ;
 		var precioTotal = parseFloat(el.qty) * parseFloat(el.precioUnit) ;
 		pedidoProveedor.componentes[ind].precioTotal = precioTotal;
