@@ -13,6 +13,8 @@ var fs      = require('fs');
 var zenbatConfig = require('../../zenbat.config.js');
 var Armarios = require('./armarios.server.controller.js');
 
+var Proveedores = require('./proveedores.server.controller.js');
+
 var XLSX = require('xlsx');
 
 
@@ -373,6 +375,16 @@ function loadPedidosProveedores(){
 			});
 		} else {
 			pedido.status = 'Completado';
+		}
+		if(_.isEmpty(pedido.almacenData)){
+			//console.log('almacen vacio');
+			pedido.almacenData = Proveedores.getAlmacenById(pedido.almacen);
+			//console.log(pedido.almacen);
+		}
+		if(_.isEmpty(pedido.proveedorData)){
+			//console.log('almacen vacio');
+			pedido.proveedorData = Proveedores.getProveedorById(pedido.proveedor);
+			//console.log(pedido.almacen);
 		}
 		exports.pedidosProveedores.push(pedido);
 	});
