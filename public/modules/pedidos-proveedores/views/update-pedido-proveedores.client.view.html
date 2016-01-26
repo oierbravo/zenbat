@@ -69,7 +69,11 @@
 		            <td>
 		            	<a href="" ng-click="order('cantidad')">Cantidad</a>
 		            	<span class="sortorder" ng-show="predicate === 'cantidad'" ng-class="{reverse:reverse}"></span>
-		            </td> 
+		            </td>
+		            <td>
+		            	Unidades
+		            	
+		            </td>  
 		            <td>
 		            	<a href="" ng-click="order('total')">Total</a>
 		            	<span class="sortorder" ng-show="predicate === 'total'" ng-class="{reverse:reverse}"></span>
@@ -88,6 +92,7 @@
 					<td>{{componente.pedidoMinimo}}</td>
 					<td>{{componente.precioUnit}}</td>
 					<td><input name="qty" type="text" data-ng-model="componente.qty" class="form-control" placeholder="" ng-init="0"  ng-change="calcularTotal()" ></td>
+					<td><input name="unidades" type="text" data-ng-model="componente.unidades" class="form-control" placeholder="" ng-init="" ></td>
 					<td>{{componente.precioTotal | number}}</td>	
 					<td><input name="recibidos" data-ng-model="componente.recibidos" class="form-control" placeholder="" ng-init="0" ></td>
 					<td><a class="btn btn-warning" data-ng-click="removeComponente(componente.codigo,true);">

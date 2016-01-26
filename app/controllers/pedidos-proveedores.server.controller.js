@@ -89,6 +89,7 @@ function preparePedidoProveedorData(pedidoProveedor){
 		if(_.isEmpty(pedidoProveedor.componentes)){
 			pedidoProveedor.componentes = [];
 		}
+		
 		return pedidoProveedor;
 }
 exports.pedidoProveedorByID = function(req,res){

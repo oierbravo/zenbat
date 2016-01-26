@@ -99,7 +99,7 @@
         <tr data-ng-repeat="componente in pedidoProveedor.componentes" class="table-condensed table-stripped" >
             <td>{{componente.codigo}}</td>
             <td>{{componente.denominacion}}</td>
-            <td>{{componente.qty}}</td> 
+            <td>{{componente.qty}}{{componente.unidades}}</td> 
             <td class="hidden-print">{{componente.precioTotal | number :2}}</td>       
         </tr>
         <tr class="hidden-print">
