@@ -186,7 +186,7 @@ exports.list = function(req, res) {
 	//if(_.isEmpty(exports.pedidosProveedores)){
 	//	loadPedidosProveedores();
 //	}
-	console.log(req.app.locals.database.pedidosProveedores);
+	//console.log(req.app.locals.database.pedidosProveedores);
 	res.jsonp(req.app.locals.database.pedidosProveedores );
 };
 /**

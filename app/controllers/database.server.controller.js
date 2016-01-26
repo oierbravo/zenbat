@@ -366,27 +366,42 @@ function loadPedidosProveedores(){
 	exports.pedidosProveedores = [];
 	var keys = dbPedidosProveedores.keys();
 	keys.forEach(function(element,index){
-		var pedido = dbPedidosProveedores.get(element);
-		if(!pedido.completado){
-			pedido.componentes.forEach(function(element,index){
-				//console.log(element);
-				//Componentes.setPedidoProveedor(element,pedido.pedidoProveedorId,pedido.qty);
-				componenteAddPedidoProveedor(element.codigo,pedido.pedidoProveedorId,element.qty,element.recibidos)
-			});
+		//console.log('Element loadPedidosProveedores',typeof element);
+		var elementInt = parseInt(element);
+		console.log('element int',elementInt);
+		if(!_.isNaN(elementInt)){
+			var pedido = dbPedidosProveedores.get(element);
+			if(!pedido.completado){
+				pedido.componentes.forEach(function(element,index){
+					//console.log(element);
+					//Componentes.setPedidoProveedor(element,pedido.pedidoProveedorId,pedido.qty);
+					componenteAddPedidoProveedor(element.codigo,pedido.pedidoProveedorId,element.qty,element.recibidos,element);
+					//if(_.isEmpty(element.componenteData)){
+						var cind =  _.findIndex(exports.componentes,{codigo:element.codigo});
+						var componente = exports.componentes[cind];
+						var componenteData = {
+							status: componente.status
+						};
+						pedido.componentes[index].componenteData = componenteData;
+					//}
+				});
+			} else {
+				pedido.status = 'Completado';
+			}
+			if(_.isEmpty(pedido.almacenData)){
+				//console.log('almacen vacio');
+				pedido.almacenData = Proveedores.getAlmacenById(pedido.almacen);
+				//console.log(pedido.almacen);
+			}
+			if(_.isEmpty(pedido.proveedorData)){
+				//console.log('almacen vacio');
+				pedido.proveedorData = Proveedores.getProveedorById(pedido.proveedor);
+				//console.log(pedido.almacen);
+			}
+			exports.pedidosProveedores.push(pedido);
 		} else {
-			pedido.status = 'Completado';
+			console.log('elemento no int');
 		}
-		if(_.isEmpty(pedido.almacenData)){
-			//console.log('almacen vacio');
-			pedido.almacenData = Proveedores.getAlmacenById(pedido.almacen);
-			//console.log(pedido.almacen);
-		}
-		if(_.isEmpty(pedido.proveedorData)){
-			//console.log('almacen vacio');
-			pedido.proveedorData = Proveedores.getProveedorById(pedido.proveedor);
-			//console.log(pedido.almacen);
-		}
-		exports.pedidosProveedores.push(pedido);
 	});
 	return exports.pedidosProveedores;
 	
@@ -403,7 +418,7 @@ function componenteAddPedido(componente,pedidoId,qty){
 	
 }
 
-function componenteAddPedidoProveedor(componenteId,pedidoProveedorId,qty,recibidos){
+function componenteAddPedidoProveedor(componenteId,pedidoProveedorId,qty,recibidos,componente){
 	var index =  _.findIndex(exports.componentes,{codigo:componenteId});
 	//console.log('componenteId',componenteId);
 	//console.log('index',index);
@@ -509,7 +524,7 @@ exports.createPedidoProveedor = function(req, res) {
 		dbObj.componentes = pedido.componentes;
 	}
 	dbObj.componentes.forEach(function(el,ind){
-		componenteAddPedidoProveedor(el.codigo,pedido.nPedido,el.qty,el.recibidos);
+		componenteAddPedidoProveedor(el.codigo,pedido.nPedido,el.qty,el.recibidos,el);
 	});
 	dbObj.observaciones = pedido.observaciones;
 
@@ -714,6 +729,7 @@ function calculosPedidosProveedor(pedidoProveedor,ppIndex){
 		//	pedidoProveedor.componentes[ind].precioTotal = 0;
 		//}
 		//if(_.isNumber(pedidoProveedor.componentes[ind].precioTotal)){
+
 		if(precioTotal > 0)
 			total += pedidoProveedor.componentes[ind].precioTotal;
 		//}
