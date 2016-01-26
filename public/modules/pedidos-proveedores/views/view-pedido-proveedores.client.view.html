@@ -29,7 +29,7 @@
         <div class="col-xs-6 text-right">
           
           <h2>Nº pedido: {{pedidoProveedor.pedidoProveedorId}}</h2>
-          <h3>Fecha: {{pedidoProveedor.fecha}}</h3>
+          <h3>Fecha: {{pedidoProveedor.fecha | date: 'dd-MM-yyyy'}}</h3>
         </div>
       </div>
       <div class="row">

@@ -59,7 +59,7 @@
             </thead>
             <tbody>
                 <tr data-ng-repeat="pedido in pedidos | orderBy:predicate:reverse | filter:searchString" class="table-condensed table-stripped" >
-                    <td>{{pedido.fecha | date:'mediumDate' }}</td>
+                    <td>{{pedido.fecha | date:'dd-MM-yyyy' }}</td>
                     <td>{{pedido.codigo}}</td>
                     <td>{{pedido.rev}}</td>
                     <td>{{pedido.cantidad}}</td>
