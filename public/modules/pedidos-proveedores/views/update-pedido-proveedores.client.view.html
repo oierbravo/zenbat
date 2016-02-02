@@ -82,7 +82,11 @@
 		            	<a href="" ng-click="order('recibido')">Recibido</a>
 		            	<span class="sortorder" ng-show="predicate === 'recibido'" ng-class="{reverse:reverse}"></span>
 		            </td>  
-		            
+		            <td></td>
+		            <td>Cant. Actual</td>
+		            <td>Cant. Armarios</td>
+		            <td>Cant. Proveedores</td>
+		            <td>Stock seguridad</td>
 		        </tr>
 		    </thead>
 		    <tbody>
@@ -91,6 +95,7 @@
 					<td>{{componente.denominacion}}</td>
 					<td>{{componente.pedidoMinimo}}</td>
 					<td>{{componente.precioUnit}}</td>
+
 					<td><input name="qty" type="text" data-ng-model="componente.qty" class="form-control" placeholder="" ng-init="0"  ng-change="calcularTotal()" ></td>
 					<td><input name="unidades" type="text" data-ng-model="componente.unidades" class="form-control" placeholder="" ng-init="" ></td>
 					<td>{{componente.precioTotal | number}}</td>	
@@ -98,6 +103,10 @@
 					<td><a class="btn btn-warning" data-ng-click="removeComponente(componente.codigo,true);">
 			<i class="glyphicon glyphicon-trash"></i>
 		</a></td>
+		<td>{{componente.componenteData.cantidad}}</td>
+		<td>{{componente.componenteData.cantidadReservada}}</td>
+		<td>{{componente.componenteData.cantidadProveedores}}</td>
+		<td>{{componente.componenteData.stockSeguridad}}</td>
 				</tr>
 				<tr>
 					<td></td>

@@ -4,10 +4,10 @@
 </div>
 <div class="container" ng-show="!fallo">
 <div class="pull-right hidden-print ">
-  <a class="btn btn-primary" data-ng-click="completar();">
+  <a class="btn btn-primary" data-ng-click="completar();" data-ng-show="pedidoProveedor.pendiente">
       Completar
     </a>
-		<a class="btn btn-primary" href="/#!/pedidos-proveedores/{{pedidoProveedor.nPedido}}/edit">
+		<a class="btn btn-primary" href="/#!/pedidos-proveedores/{{pedidoProveedor.nPedido}}/edit"  data-ng-show="pedidoProveedor.pendiente">
 			<i class="glyphicon glyphicon-edit"></i>
 		</a>
 		<a class="btn btn-primary" data-ng-click="remove();">
@@ -92,7 +92,14 @@
             <th>
               <h4>Cantidad</h4>
             </th>
-        
+            <th class="hidden-print"  data-ng-show="pedidoProveedor.pendiente">
+              
+            </th>
+     
+              <th class="hidden-print"  data-ng-show="pedidoProveedor.pendiente">Cant. Actual</th>
+                <th class="hidden-print"  data-ng-show="pedidoProveedor.pendiente">Cant. Armarios</th>
+                <th class="hidden-print"  data-ng-show="pedidoProveedor.pendiente">Cant. Proveedores</th>
+                <th class="hidden-print"  data-ng-show="pedidoProveedor.pendiente">Stock seguridad</th> 
           </tr>
         </thead>
         <tbody>
@@ -100,8 +107,12 @@
             <td>{{componente.codigo}}</td>
             <td>{{componente.denominacion}}</td>
             <td>{{componente.qty}}{{componente.unidades}}</td> 
-            <td >{{componente.precioTotal | number :2}}</td>  
-            <td class="hidden-print">{{componente.componenteData.status}}      
+            <td class="hidden-print"  data-ng-show="pedidoProveedor.pendiente">{{componente.precioTotal | number :2}}</td>  
+           
+            <td class="hidden-print" data-ng-show="pedidoProveedor.pendiente">{{componente.componenteData.cantidad}}</td>
+            <td class="hidden-print" data-ng-show="pedidoProveedor.pendiente">{{componente.componenteData.cantidadReservada}}</td>
+            <td class="hidden-print" data-ng-show="pedidoProveedor.pendiente">{{componente.componenteData.cantidadProveedores}}</td>
+            <td class="hidden-print" data-ng-show="pedidoProveedor.pendiente">{{componente.componenteData.stockSeguridad}}</td>      
         </tr>
         <tr class="hidden-print">
             <td></td>

@@ -43,7 +43,7 @@ function loadAll(){
 	exports.componentes = [];
 exports.pedidos = [];
 exports.pedidosProveedores = [];
-
+	console.log('cargando datos...')
 	loadComponentes();
 	loadPedidos();
 	loadPedidosProveedores();
@@ -68,7 +68,7 @@ function reloadAllCli(req,res){
 
 	var str ='Cargados: ' + numComponentes + ' componentes, ' + numPedidos + ' pedidos y ' + numPedidosProveedores +' pedidos a proveedores. ';
 	if(numPedidosEntregados > 0){
-		str += numPedidosEntregados + ' pedidos entregados';
+		str += numPedidosEntregados + ' pedidos entregados.';
 	}
 	res.send({message:str,pedidoEntregados:exports.pedidosEntregados});
 }
@@ -78,7 +78,7 @@ function loadComponentes(){
 	var componentes = loadComponentesFromFile();
 	exports.componentes = componentes;
 	exports.componentes.forEach(loadComponentesForEach);
-	console.log(componentes.length + ' componentes loaded');
+	console.log(componentes.length + ' componentes cargados.');
 	//
 }
 exports.loadComponentes = loadComponentes;
@@ -368,7 +368,7 @@ function loadPedidosProveedores(){
 	keys.forEach(function(element,index){
 		//console.log('Element loadPedidosProveedores',typeof element);
 		var elementInt = parseInt(element);
-		console.log('element int',elementInt);
+		//console.log('element int',elementInt);
 		if(!_.isNaN(elementInt)){
 			var pedido = dbPedidosProveedores.get(element);
 			if(!pedido.completado){
@@ -381,7 +381,11 @@ function loadPedidosProveedores(){
 					//}
 				});
 			} else {
-				pedido.status = 'Completado';
+				if(pedido.pendiente){
+
+				} else {
+				   pedido.status = 'Completado';
+			    }
 			}
 			if(_.isEmpty(pedido.almacenData)){
 				//console.log('almacen vacio');
@@ -395,7 +399,7 @@ function loadPedidosProveedores(){
 			}
 			exports.pedidosProveedores.push(pedido);
 		} else {
-			console.log('elemento no int');
+			//console.log('elemento no int');
 		}
 	});
 	return exports.pedidosProveedores;
@@ -545,7 +549,7 @@ exports.updatePedidoProveedor = function(req, res) {
 	var index =  _.findIndex(exports.pedidosProveedores,{pedidoProveedorId:req.pedidoProveedor.nPedido});
 	
 	var pedidoProveedor = dbPedidosProveedores.get(req.pedidoProveedor.nPedido);
-	console.log('dbPedidosProveedores.keys()',dbPedidosProveedores.keys());
+	//console.log('dbPedidosProveedores.keys()',dbPedidosProveedores.keys());
 	pedidoProveedor = _.extend(pedidoProveedor, req.body);
 
 	dbPedidosProveedores.put(req.pedidoProveedor.nPedido,pedidoProveedor);
@@ -587,7 +591,8 @@ exports.deletePedidoProveedor = function(req, res) {
 	res.status(200).send({message:"Deleted " + req.pedidoProveedor.nPedido});
 };
 function completarPedidoProveedor(req,res){
-	console.log('completarPedidoProveedor',req.pedidoProveedor);
+	console.log("completando pedido " + req.pedidoProveedor.nPedido);
+	//console.log('completarPedidoProveedor',req.pedidoProveedor);
 	var index =  _.findIndex(exports.pedidosProveedores,{pedidoProveedorId:req.pedidoProveedor.nPedido});
 	//dbPedidosProveedores = flatfile.sync(zenbatConfig.basePath + zenbatConfig.pedidosProveedores.dbFile);
 	//var pedidoProveedor = dbPedidosProveedores.get(req.pedidoProveedor.nPedido);
@@ -606,13 +611,16 @@ function completarPedidoProveedor(req,res){
 		var componente = exports.componentes[cInd];
 		if(!_.isNumber(componente.cantidad)){
 
-			componente.cantidad = parseFloat(componente.cantidad);
+			componente.cantidad = parseFloat(element.qty);
+		} else {
+			componente.cantidad += parseFloat(element.qty);
 		}
 		//console.log('componente.cantidad',componente.cantidad);
 		//console.log('element.recibidos',element.recibidos);
-		componente.cantidad += parseFloat(componente.cantidad);
+		
 		var pInd = _.findIndex(componente.pedidosProveedores,{pedidoProveedorId:req.pedidoProveedor.nPedido});
 		componente.pedidosProveedores.splice(pInd,1);
+		console.log(componente.codigo + " +" + element.qty);
 		saveComponente(componente);
 	});
 	//console.log(dbPedidosProveedores.keys());
@@ -720,11 +728,15 @@ function calculosPedidosProveedor(pedidoProveedor,ppIndex){
 
 		var cind =  _.findIndex(exports.componentes,{codigo:el.codigo});
 		if(cind > -1){
-						console.log('componente',cind);
+					//	console.log('componente',cind);
 						var componente = exports.componentes[cind];
-						console.log('componente',componente);
+						//console.log('componente',componente);
 						var componenteData = {
-							status: componente.status
+							status: componente.status,
+							cantidad:  componente.cantidad,
+							cantidadReservada: componente.cantidadReservada,
+							cantidadProveedores: componente.cantidadProveedores,
+							stockSeguridad: componente.stockSeguridad
 						};
 						pedidoProveedor.componentes[ind].componenteData = componenteData;
 
@@ -826,7 +838,7 @@ function calculos(){
 	exports.pedidos.forEach(function(pedido,pIndex){
 		exports.pedidos[pIndex] = calculosPedido(pedido);
 	});
-	console.log('fin calculando');
+	console.log('fin calculando.');
 }
 exports.calculos = calculos;
 function getComponenteById(req,res,next,id){
