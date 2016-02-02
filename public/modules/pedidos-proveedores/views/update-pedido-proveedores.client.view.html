@@ -97,7 +97,7 @@
 					<td>{{componente.precioUnit}}</td>
 
 					<td><input name="qty" type="text" data-ng-model="componente.qty" class="form-control" placeholder="" ng-init="0"  ng-change="calcularTotal()" ></td>
-					<td><input name="unidades" type="text" data-ng-model="componente.unidades" class="form-control" placeholder="" ng-init="" ></td>
+					<td><input name="unidades" type="text" data-ng-model="componente.unidades" class="form-control" placeholder="" ng-init="" ng-trim="false"></td>
 					<td>{{componente.precioTotal | number}}</td>	
 					<td><input name="recibidos" data-ng-model="componente.recibidos" class="form-control" placeholder="" ng-init="0" ></td>
 					<td><a class="btn btn-warning" data-ng-click="removeComponente(componente.codigo,true);">

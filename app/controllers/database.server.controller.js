@@ -302,7 +302,7 @@ function loadPedidosForEach(pedido,index){
 		pedido.porEntregar = 0;
 	}
 	
-	//actualizam os los componentes
+	//actualizamos los componentes
 	pedido.stock = [];
 	armario.componentes.forEach(function(el,ind){
 		if(el.Codigo){
@@ -366,11 +366,29 @@ function loadPedidosProveedores(){
 	exports.pedidosProveedores = [];
 	var keys = dbPedidosProveedores.keys();
 	keys.forEach(function(element,index){
+
 		//console.log('Element loadPedidosProveedores',typeof element);
 		var elementInt = parseInt(element);
 		//console.log('element int',elementInt);
 		if(!_.isNaN(elementInt)){
 			var pedido = dbPedidosProveedores.get(element);
+			//var fecha = moment(pedido.fecha);
+			//var f = Date(pedido.fecha);
+			//pedido.fecha = f;
+			//console.log('f',f);
+			//console.log('fecha',pedido.fecha);
+			var fechaRaw = pedido.fecha;
+			var f = pedido.fecha.split('-');
+			if(f.length == 3){
+				if(f[0].length == 4){
+					//correct order
+				} else {
+					//reorder
+					pedido.fecha = f[2] + '-' + f[1] + '-' + f[0];
+				}
+			} else {
+				//fecha bad format
+			}
 			if(!pedido.completado){
 				pedido.componentes.forEach(function(element,index){
 					//console.log(element);
@@ -517,6 +535,7 @@ exports.createPedidoProveedor = function(req, res) {
 	dbObj.proveedor =pedido.proveedor;
 	dbObj.fechaEntrega =pedido.fechaEntrega;
 	dbObj.almacen = pedido.almacen;
+	dbObj.pendiente = true;
 	if(_.isEmpty(pedido.componentes)){
 		pedido.componentes = [];
 	} else {
@@ -692,12 +711,13 @@ function checkComponenteStatus(componente){
 function calculosComponente(componente){
 	componente.cantidadProveedores = 0;
 		componente.cantidadRecibida = 0;
+		componente.pedidosProveedoresSums = [];
 		componente.pedidosProveedores.forEach(function(pedidoProveedor,ppIndex){
 		
 			
 					componente.cantidadProveedores += parseInt(pedidoProveedor.qty);
 					componente.cantidadRecibida += parseInt(pedidoProveedor.recibidos);
-					
+					componente.pedidosProveedoresSums.push({pedidoId:pedidoProveedor.pedidoProveedorId,sum:componente.cantidadProveedores});
 			
 		});
 		componente.cantidadNoRecibida = componente.cantidadProveedores - componente.cantidadRecibida;
@@ -770,7 +790,8 @@ function calculosPedido(pedido){
 			componentePedido.stock = componente.cantidad;
 			componentePedido.denominacion = componente.denominacion;
 			//console.log('calculosPedido.componente',componente);
-			
+			componentePedido.cantidadReservada = componente.cantidadReservada;
+			componentePedido.cantidadProveedores = componente.cantidadProveedores;
 			
 			var pedidoInd = _.findIndex(componente.pedidosSums,{pedidoId:pedido.pedidoId});
 			var sumPedidoActual = componente.pedidosSums[pedidoInd].sum;

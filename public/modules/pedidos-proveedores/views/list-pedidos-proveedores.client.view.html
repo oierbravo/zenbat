@@ -23,10 +23,13 @@
         <table data-toggle="table"  data-height="299" class="table-stripped table table-hover animate-show" ng-show="elCargados"  data-search="true"  data-show-columns="true">
             <thead>
                 <tr>
-                
-                    <td>
-                        <a href="" ng-click="order('fecha')">Fecha entrega</a>
+                     <td>
+                        <a href="" ng-click="order('fecha')">Fecha</a>
                      <span class="sortorder" ng-show="predicate === 'fecha'" ng-class="{reverse:reverse}"></span>
+                        </td>
+                    <td>
+                        <a href="" ng-click="order('fechaEntrega')">Fecha entrega</a>
+                     <span class="sortorder" ng-show="predicate === 'fechaEntrega'" ng-class="{reverse:reverse}"></span>
                         </td>
 
 
@@ -52,11 +55,12 @@
             <tbody>
                 <tr data-ng-repeat="pedido in pedidosProveedores | orderBy:predicate:reverse | filter:searchString" class="table-condensed table-stripped" ng-class="{completado:pedido.completado,showCompletados:showCompletados}">
                     <td>{{pedido.fecha | date:'dd-MM-yyyy'}}</td>
+                    <td>{{pedido.fechaEntrega | date:'dd-MM-yyyy'}}</td>
                     <td>{{pedido.pedidoProveedorId}}</td>
                     <td>{{pedido.proveedorData.Nombre}}</td>
                     <td>{{pedido.almacenData.Nombre}}</td>
                     <td>{{pedido.status}}</td>
-                    <td><a href="#!/pedidos-proveedores/{{pedido.nPedido}}"> Ver</a> | <a href="#!/pedidos-proveedores/{{pedido.nPedido}}/edit"> Editar</a></td>
+                    <td><a href="#!/pedidos-proveedores/{{pedido.nPedido}}"> Ver</a> | <a href="#!/pedidos-proveedores/{{pedido.nPedido}}/edit" data-ng-show="pedido.pendiente"> Editar</a></td>
                 </tr>
             </tbody>
         </table>

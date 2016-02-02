@@ -12,13 +12,13 @@
 				<div class="form-group">
 					<label class="control-label" for="fecha">Fecha</label>
 					<div class="controls">
-						<input name="fecha" type="date" data-ng-model="fecha" id="fecha" class="form-control" placeholder="27-07-2015" required>
+						<input name="fecha" type="date" data-ng-model="fecha" id="fecha" class="form-control" placeholder="2016-12-28" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="control-label" for="fechaEntrega">Fecha entrega</label>
 					<div class="controls">
-						<input name="fechaEntrega" type="date" data-ng-model="fechaEntrega" id="fechaEntrega" class="form-control" placeholder="27-07-2015" required>
+						<input name="fechaEntrega" type="date" data-ng-model="fechaEntrega" id="fechaEntrega" class="form-control" placeholder="2016-12-28" required>
 					</div>
 				</div>
 				<div class="form-group">
@@ -92,7 +92,7 @@
 					<td>{{componente.pedidoMinimo}}</td>
 					<td>{{componente.precioUnit}}</td>
 					<td><input name="componenteQty" type="text" data-ng-model="componente.qty" id="componenteQty" class="form-control" placeholder="" ng-init="0" ></td>
-					<td><input name="componenteUnidades" type="text" data-ng-model="componente.unidades" id="componenteUnidades" class="form-control" placeholder="" ng-init="" ></td>
+					<td><input name="componenteUnidades" type="text" data-ng-model="componente.unidades" id="componenteUnidades" class="form-control" placeholder="" ng-init="" ng-trim="false"></td>
 					<td>{{componente.precioUnit * componente.qty | number}}</td>
 					<td><button class="btn btn-warning" data-ng-click="removeComponente(componente.codigo);">
 			<i class="glyphicon glyphicon-trash"></i>

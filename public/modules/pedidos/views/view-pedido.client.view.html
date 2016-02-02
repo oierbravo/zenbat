@@ -33,6 +33,7 @@
 		            	<span class="sortorder" ng-show="predicate === 'denominacion'" ng-class="{reverse:reverse}"></span>
 		            </td>           
 		  			<td>Necesarios</td>
+		  			<td>Cant. Proveedores</td>
 		        </tr>
 		    </thead>
 		    <tbody>
@@ -43,6 +44,7 @@
 					<td>{{componente.faltan| number :2}}</td>
 					<td>{{componente.denominacion}}</td>
 		            <td>{{componente.necesarios | number :2}} <small>({{componente.cantidadUnidad}}x{{pedido.pendientes}}) </small></td> 
+		            <td>{{componente.cantidadProveedores}}</td>
 				</tr>
 		    </tbody>
 	    </table>
