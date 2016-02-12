@@ -65,11 +65,13 @@ function reloadAllCli(req,res){
 	res.status(200);
 	var numComponentes = exports.componentes.length;
 	var numPedidos = exports.pedidos.length;
-	var numPedidosProveedores = exports.pedidosProveedores.length;
 
+
+	var numPedidosProveedores = exports.pedidosProveedores.length;
+	var numPedidosProveedoresPendientes = _.filter(exports.pedidosProveedores,'pendiente').length;
 	var numPedidosEntregados = exports.pedidosEntregados.length;
 
-	var str ='Cargados: ' + numComponentes + ' componentes, ' + numPedidos + ' pedidos y ' + numPedidosProveedores +' pedidos a proveedores. ';
+	var str ='Cargados: ' + numComponentes + ' componentes, ' + numPedidos + ' pedidos y ' + numPedidosProveedoresPendientes +' pedidos a proveedores pendientes. ';
 	if(numPedidosEntregados > 0){
 		str += numPedidosEntregados + ' pedidos entregados.';
 	}
@@ -392,6 +394,22 @@ function loadPedidosProveedores(){
 			} else {
 				//fecha bad format
 			}
+
+			//var fechaEntregaRaw = pedido.fechaEntrega;
+			if(typeof pedido.fechaEntrega !== 'undefined'){
+				var fe = pedido.fechaEntrega.split('-');
+				if(fe.length == 3){
+					if(fe[0].length == 4){
+						//correct order
+					} else {
+						//reorder
+						pedido.fechaEntrega = fe[2] + '-' + fe[1] + '-' + fe[0];
+					}
+				} else {
+					//fecha bad format
+				}
+			}
+
 			if(!pedido.completado){
 				pedido.componentes.forEach(function(element,index){
 					//console.log(element);
