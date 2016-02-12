@@ -47,6 +47,46 @@
         </div>
         </div>
 <!-- fin pedidos -->
+<!-- init leyenda -->
+<!--
+<div class="col-md-6" style="margin:0 auto;">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-calendar"></span>Info</h3>
+                </div>
+                <div class="panel-body">
+                 
+                   <marked>
+                     {{leyenda}}
+                    </marked>
+              </div>
+        </div>
+        </div>
+
+-->
+<!-- fin leyenda -->
+
+<!-- init proximos pedidos -->
+<div class="col-md-6" style="margin:0 auto;">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="fa fa-shopping-cart"></span>Proximos Pedidos a proveedores </h3>
+                </div>
+                <div class="panel-body">
+                     <div class="list-group">
+                      <a   class="list-group-item" href="" data-ng-repeat="proximo in proximos | orderBy:proximo.PROVEEDOR:reverse">{{proximo.PROVEEDOR}} <strong>{{proximo.PRODUCTO}}</strong> - {{proximo.CANTIDAD}} 
+                       - <small>{{proximo.NOTAS}}</small></a>
+
+                   <!--   <div> Total pedidos a proveedores pendientes: <span>{{pedidosProveedoresPendientes.length}}</span></div>-->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+<!-- fin pedidosProveedors -->
+
 <!-- init pedidosProveedors -->
 <div class="col-md-6" style="margin:0 auto;">
             <div class="panel panel-warning">

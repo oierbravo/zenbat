@@ -46,7 +46,7 @@ function loadAll(){
 exports.pedidos = [];
 exports.pedidosProveedores = [];
 	console.log('cargando datos...')
-	log.info("Cargando datos");
+	//log.info("Cargando datos");
 	loadComponentes();
 	loadPedidos();
 	loadPedidosProveedores();
@@ -881,7 +881,7 @@ function calculos(){
 		exports.pedidos[pIndex] = calculosPedido(pedido);
 	});
 	console.log('fin calculando.');
-	log.info("Carga de datos y calculos finalizados.");
+	//log.info("Carga de datos y calculos finalizados.");
 }
 exports.calculos = calculos;
 function getComponenteById(req,res,next,id){
@@ -1022,10 +1022,55 @@ exports.getHomeData = function(req,res){
 			return false;
 		}
 	});
+	var leyenda = "";
+	var leyendaFile =  zenbatConfig.basePath + "leyenda.txt";
+	leyenda = fs.readFileSync( leyendaFile).toString();
+	/*if (fs.existsSync(leyendaFile)) {
+		fs.readFileSync( leyendaFile, function (err, data) {
+	  if (err) {
+	    throw err; 
+	  }
+	  //console.log();
+	 leyenda = data.toString();
+	 console.log(leyenda);
+		});
+	}*/
+
+	var proximosFile =  zenbatConfig.basePath + "proximos-pedidos.xlsx";
+	var proximosworkbook = XLSX.readFileSync(proximosFile);
+	//exports.workbook = workbook;
+	//console.log(proximosworkbook);
+	//var componentesRaw = XLSX.utils.sheet_to_json(workbook.Sheets.componentes,{header:headerProductos,range:1});
+	var sheetname = proximosworkbook.SheetNames[0];
+	var proximosRaw = XLSX.utils.sheet_to_json(proximosworkbook.Sheets[sheetname]);
+	//console.log('proximosRaw',proximosRaw);
+	//console.log('componentesRaw.length',componentesRaw.length);
+	//var componentes = componentesRaw.filter(loadComponentesFilter);
+	//console.log(componentes.length);
+	//return componentes;
+
+	var proximos;
+	
+
 	var output = {
+		leyenda: leyenda,
+		proximos: proximosRaw,
 		numComponentes: compCount,
 		pedidosFaltan: pedidosFaltan,
 		pedidosProveedoresPendientes:pedidosProveedoresPendientes
 	}
 	res.send(output);
+}
+
+exports.getLeyenda = function(req,res){
+	var leyendaFile =  zenbatConfig.basePath + "leyenda.txt";
+	if (fs.existsSync(leyendaFile)) {
+		fs.readFile( leyendaFile, function (err, data) {
+	  if (err) {
+	    throw err; 
+	  }
+	  //console.log();
+	  res.send(data);
+		});
+	}
 }

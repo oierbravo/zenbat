@@ -36,7 +36,9 @@ module.exports = {
 				'public/lib/js-xlsd/dist/xlsx.full.min.js',
 				'public/lib/spin.js/spin.min.js',
 				'public/lib/angular-spinner/angular-spinner.js',
-				'public/lib/ngprogress/build/ngprogress.js'
+				'public/lib/ngprogress/build/ngprogress.js',
+				'public/lib/marked/lib/marked.js',
+				'public/lib/angular-marked/dist/angular-marked.min.js'
 			]
 		},
 		css: [

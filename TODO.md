@@ -1,8 +1,9 @@
 #TODO FIXES
-- Fecha de entrega
+* Fecha de entrega
 * pedido clientes - pedido proveedores.
-- info recarga solo pedidos pendientes.
+* info recarga solo pedidos pendientes.
 - leyenda
+* excel cosas pendientes a pedir.  PROVEEDOR - PRODUCTO - CANTIDAD - NOTAS
 
 #TODO NU
 - new pedido status: "Componentes en camino"

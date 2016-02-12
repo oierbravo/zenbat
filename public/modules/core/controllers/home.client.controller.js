@@ -1,8 +1,8 @@
 'use strict';
 
 
-angular.module('core').controller('HomeController', ['$scope', 'Authentication','$http',
-	function($scope, Authentication,$http) {
+angular.module('core').controller('HomeController', ['$scope', 'Authentication','$http','marked',
+	function($scope, Authentication,$http,marked) {
 		// This provides Authentication context.
 		$scope.pedidosFaltan = [];
 		$scope.numComponentes = 0;
@@ -17,6 +17,9 @@ $scope.reverse = false;
 			$scope.pedidosFaltan = success.pedidosFaltan;
 			$scope.numComponentes = success.numComponentes;
 			$scope.pedidosProveedoresPendientes = success.pedidosProveedoresPendientes;
+			$scope.proximos = success.proximos;
+			//$scope.leyenda = marked(success.leyenda);
+			$scope.leyenda = success.leyenda;
 		});
 	}
 ]);
