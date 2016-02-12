@@ -1,3 +1,9 @@
+#TODO FIXES
+- Fecha de entrega
+* pedido clientes - pedido proveedores.
+- info recarga solo pedidos pendientes.
+- leyenda
+
 #TODO NU
 - new pedido status: "Componentes en camino"
 - Logger:
