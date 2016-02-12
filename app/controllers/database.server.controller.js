@@ -8,6 +8,8 @@ var mongoose = require('mongoose'),
 var cache = require('memory-cache');
 var moment = require('moment');
 
+var EventLogger = require('node-windows').EventLogger;
+var log = new EventLogger('Zenbat');
 
 var fs      = require('fs');
 var zenbatConfig = require('../../zenbat.config.js');
@@ -44,6 +46,7 @@ function loadAll(){
 exports.pedidos = [];
 exports.pedidosProveedores = [];
 	console.log('cargando datos...')
+	log.info("Cargando datos");
 	loadComponentes();
 	loadPedidos();
 	loadPedidosProveedores();
@@ -860,6 +863,7 @@ function calculos(){
 		exports.pedidos[pIndex] = calculosPedido(pedido);
 	});
 	console.log('fin calculando.');
+	log.info("Carga de datos y calculos finalizados.");
 }
 exports.calculos = calculos;
 function getComponenteById(req,res,next,id){

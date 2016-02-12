@@ -6,6 +6,9 @@ var init = require('./config/init')(),
 	config = require('./config/config'),
 	mongoose = require('mongoose'),
 	chalk = require('chalk');
+var EventLogger = require('node-windows').EventLogger;
+var log = new EventLogger('Zenbat');
+
 
 /**
  * Main application entry file.

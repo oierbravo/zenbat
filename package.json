@@ -10,6 +10,8 @@
   "scripts": {
     "start": "grunt",
     "test": "grunt test",
+    "install-windows-service": "winser -i",
+    "uninstall-windows-service": "winser -r",
     "postinstall": "bower install --config.interactive=false"
   },
   "dependencies": {
@@ -54,6 +56,7 @@
     "uuid": "^2.0.1",
     "walk": "^2.3.9",
     "watch": "^0.16.0",
+    "winser": "^1.0.2",
     "xlsx": "*",
     "ya-csv": "*"
   },
