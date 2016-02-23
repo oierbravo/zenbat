@@ -17,6 +17,8 @@ module.exports = {
 				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
 				'public/lib/fontawesome/css/font-awesome.css',
 				'public/lib/ngprogress/ngProgress.css',
+				'public/lib/angular-tags/dist/angular-tags-0.2.10.css'
+			
 			],
 			js: [
 				'public/lib/ng-file-upload/FileAPI.min.js', 
@@ -38,7 +40,10 @@ module.exports = {
 				'public/lib/angular-spinner/angular-spinner.js',
 				'public/lib/ngprogress/build/ngprogress.js',
 				'public/lib/marked/lib/marked.js',
-				'public/lib/angular-marked/dist/angular-marked.min.js'
+				'public/lib/angular-marked/dist/angular-marked.min.js',
+				'public/lib/angular-tags/dist/angular-tags-0.2.10-tpls.min.js',
+				'public/lib/angular-tags/dist/angular-tags-0.2.10.min.js'
+
 			]
 		},
 		css: [

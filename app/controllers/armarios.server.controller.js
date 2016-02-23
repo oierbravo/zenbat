@@ -62,12 +62,23 @@ exports.list = function(req, res) {
 	walker.on('file', function(root, fileStat, next){
 
 		var filename = fileStat.name;
+		
+			
 		if(filename.charAt(0) !== '~'){
-			var armario = {
-				id: fileStat.name.replace('.xlsx',''),
-				filename: fileStat.name
-			};
-	   	   result.push(armario);
+			if (fs.existsSync(zenbatConfig.basePath + zenbatConfig.armarios.folder + "\\" + fileStat.name)) {
+				console.log(fileStat);
+				var armarioWorkbook = XLSX.readFileSync(zenbatConfig.basePath + zenbatConfig.armarios.folder + "\\" + fileStat.name);
+		 		var componentesRaw = XLSX.utils.sheet_to_json(armarioWorkbook.Sheets.componentes,{header:zenbatConfig.armarios.header,range:3});
+		   		var componentes = componentesRaw.filter(function(element,index){
+		  			return (element.Cantidad)?true: false;
+		  		});
+				var armario = {
+					id: fileStat.name.replace('.xlsx',''),
+					filename: fileStat.name,
+					componente:componentes
+				};
+		   	   result.push(armario);
+		   	}
 	   	}
    	next();
     });

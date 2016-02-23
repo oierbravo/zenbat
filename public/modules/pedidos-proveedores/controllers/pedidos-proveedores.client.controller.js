@@ -102,7 +102,8 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 				almacen: this.almacen,
 				componentes:this.componentes,
 				observaciones:this.observaciones,
-				complatado:false
+				pedidosAsociados:this.pedidosAsociados,
+				completado:false
 			});
 			
 			pedidoProveedor.$save(function(response) {
@@ -116,6 +117,9 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 				$scope.almacen = '';
 				$scope.componentes = [];
 				$scope.observaciones = '';
+
+				$scope.pedidosAsociados = [];
+
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});

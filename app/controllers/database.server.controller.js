@@ -8,11 +8,20 @@ var mongoose = require('mongoose'),
 var cache = require('memory-cache');
 var moment = require('moment');
 
-var EventLogger = require('node-windows').EventLogger;
-var log = new EventLogger('Zenbat');
-
 var fs      = require('fs');
 var zenbatConfig = require('../../zenbat.config.js');
+
+var EventLogger = require('node-windows').EventLogger;
+var syslog = new EventLogger('Zenbat');
+
+var winston = require('winston');
+var log = new (winston.Logger)({
+    transports: [
+      new (winston.transports.Console)({ level: 'verbose' }),
+      new (winston.transports.File)({ filename: zenbatConfig.basePath + "historial.log",level: "info" })
+    ]
+  });
+
 var Armarios = require('./armarios.server.controller.js');
 
 var Proveedores = require('./proveedores.server.controller.js');
@@ -40,12 +49,16 @@ exports.xlsKeys = [];
 
 var now;
 
+
+
 function loadAll(){
 	now = moment().format();
 	exports.componentes = [];
 exports.pedidos = [];
 exports.pedidosProveedores = [];
-	console.log('cargando datos...')
+	//console.log('cargando datos...')
+	//log.info('Iniciando Zenbat');
+	log.verbose('cargando datos...');
 	//log.info("Cargando datos");
 	loadComponentes();
 	loadPedidos();
@@ -83,7 +96,8 @@ function loadComponentes(){
 	var componentes = loadComponentesFromFile();
 	exports.componentes = componentes;
 	exports.componentes.forEach(loadComponentesForEach);
-	console.log(componentes.length + ' componentes cargados.');
+	//console.log(componentes.length + ' componentes cargados.');
+	log.verbose(componentes.length + ' componentes cargados.');
 	//
 }
 exports.loadComponentes = loadComponentes;
@@ -190,12 +204,19 @@ element.cantidadReservada = 0;
 	    cache.put(element.codigo,element);
 }
 
-function saveComponente(componente){
+function saveComponente(componente,categoria,accion,nuCantidad,oldCantidad){
 	var dbObj = {
 		cantidad:componente.cantidad
 	}
-	dbProductos.put(componente.codigo,dbObj);
 	var cInd = _.findIndex(exports.componentes,{codigo:componente.codigo});
+	var tComp = exports.componentes[cInd];
+	// console.log('componente',componente);
+	//console.log('tComp',tComp);
+	//if(tComp.cantidad !== componente.cantidad){
+		log.info('Componente modificado',{codigo:componente.codigo,categoria:categoria})
+	//}
+
+	dbProductos.put(componente.codigo,dbObj);
 	exports.componentes[cInd] = componente;
 	return componente;
 }
@@ -299,7 +320,8 @@ function loadPedidosForEach(pedido,index){
 	//entregamos los completos.
 	if( pedido.entregados >  pedido.lastEntregados){
 		var diff = pedido.entregados - pedido.lastEntregados;
-		console.log(diff + " armarios a entregar");
+		//console.log(diff + " armarios a entregar");
+		log.verbose(diff + " armarios a entregar");
 		pedido.porEntregar = diff;
 		pedido = entregarPedido(pedido);
 		
@@ -344,20 +366,27 @@ function savePedido(pedido){
 	dbPedidos.put(pedido.pedidoId,dbObj);
 	var pIndex = _.findIndex(exports.pedidos,{pedidoId:pedido.pedidoId});
 	exports.pedidos[pIndex] = pedido;
-	console.log('saved ' + pedido.pedidoId + ' with index ' + pIndex);
+	// console.log('saved ' + pedido.pedidoId + ' with index ' + pIndex);
+	log.verbose('saved ' + pedido.pedidoId + ' with index ' + pIndex);
 	return pedido;
 }
 exports.savePedido = savePedido;
 function entregarPedido(pedido){
-	console.log('Entregando pedido');
-	console.log('entregar',pedido);
-	console.log('procesando ' + pedido.armario.componentes.length + ' componentes.');
+	// console.log('Entregando pedido');
+	log.verbose('Entregando pedido');
+	// console.log('entregar',pedido);
+//	log.verbose('entregar',pedido);
+	// console.log('procesando ' + pedido.armario.componentes.length + ' componentes.');
+	log.verbose('procesando ' + pedido.armario.componentes.length + ' componentes.');
+
+	//log.info('En')
+
 	pedido.armario.componentes.forEach(function(element,index){
 		var compIndex = _.findIndex(exports.componentes,{codigo:element.Codigo});
 		if(compIndex > -1){
 			var componente = exports.componentes[compIndex];
 			componente.cantidad -= parseFloat(element.Cantidad) * pedido.porEntregar;
-			saveComponente(componente);
+			saveComponente(componente,'clientes');
 		}
 	});
 	pedido.lastEntregados = pedido.entregados;
@@ -416,7 +445,7 @@ function loadPedidosProveedores(){
 					//Componentes.setPedidoProveedor(element,pedido.pedidoProveedorId,pedido.qty);
 					componenteAddPedidoProveedor(element.codigo,pedido.pedidoProveedorId,element.qty,element.recibidos,element);
 					//if(_.isEmpty(element.componenteData)){
-						
+					//stockPorLlegarAddComponente(element.codigo,pedido.pedidoProveedorId,element.qty,element.recibidos,element);
 					//}
 				});
 			} else {
@@ -469,7 +498,8 @@ function componenteAddPedidoProveedor(componenteId,pedidoProveedorId,qty,recibid
 		});
 		//componente.cantidadProveedores += parseInt(qty); 
 	} else {
-		console.log('COMPONENTE NO ENCONTRADO',componenteId);
+		// console.log('COMPONENTE NO ENCONTRADO',componenteId);
+		log.verbose('COMPONENTE NO ENCONTRADO',componenteId);
 	}
 	//return componente;
 }
@@ -494,7 +524,8 @@ function componenteUpdatePedidoProveedor(componenteId,pedidoProveedorId,qty,reci
 
 		//componente.cantidadProveedores += parseInt(qty); 
 	} else {
-		console.log('COMPONENTE NO ENCONTRADO',componenteId);
+		// console.log('COMPONENTE NO ENCONTRADO',componenteId);
+		log.verbose('COMPONENTE NO ENCONTRADO',componenteId);
 	}
 	//return componente;
 }
@@ -584,8 +615,8 @@ exports.createPedidoProveedor = function(req, res) {
  * Update a Pedidos proveedore
  */
 exports.updatePedidoProveedor = function(req, res) {
-	console.log('updating ' + req.pedidoProveedor.nPedido);
-	
+	// console.log('updating ' + req.pedidoProveedor.nPedido);
+	log.verbose('updating ' + req.pedidoProveedor.nPedido);
 	var index =  _.findIndex(exports.pedidosProveedores,{pedidoProveedorId:req.pedidoProveedor.nPedido});
 	
 	var pedidoProveedor = dbPedidosProveedores.get(req.pedidoProveedor.nPedido);
@@ -612,7 +643,8 @@ exports.updatePedidoProveedor = function(req, res) {
 exports.deletePedidoProveedor = function(req, res) {
 	//console.log('req.params.pedidoProveedorId',req.params.pedidoProveedorId);
 	//console.log('req.pedidoProveedor',req.pedidoProveedor);
-	console.log('Deleting ' + req.pedidoProveedor.nPedido);
+	// console.log('Deleting ' + req.pedidoProveedor.nPedido);
+	log.verbose('Deleting ' + req.pedidoProveedor.nPedido);
 	dbPedidosProveedores.del(req.pedidoProveedor.nPedido);
 	//borramos tambien el exports
 	var index = _.findIndex(exports.pedidosProveedores,{pedidoProveedorId:req.pedidoProveedor.nPedido});
@@ -631,7 +663,8 @@ exports.deletePedidoProveedor = function(req, res) {
 	res.status(200).send({message:"Deleted " + req.pedidoProveedor.nPedido});
 };
 function completarPedidoProveedor(req,res){
-	console.log("completando pedido " + req.pedidoProveedor.nPedido);
+	// console.log("completando pedido " + req.pedidoProveedor.nPedido);
+	log.info("Completado pedido " + req.pedidoProveedor.nPedido);
 	//console.log('completarPedidoProveedor',req.pedidoProveedor);
 	var index =  _.findIndex(exports.pedidosProveedores,{pedidoProveedorId:req.pedidoProveedor.nPedido});
 	//dbPedidosProveedores = flatfile.sync(zenbatConfig.basePath + zenbatConfig.pedidosProveedores.dbFile);
@@ -660,8 +693,9 @@ function completarPedidoProveedor(req,res){
 		
 		var pInd = _.findIndex(componente.pedidosProveedores,{pedidoProveedorId:req.pedidoProveedor.nPedido});
 		componente.pedidosProveedores.splice(pInd,1);
-		console.log(componente.codigo + " +" + element.qty);
-		saveComponente(componente);
+		// console.log(componente.codigo + " +" + element.qty);
+		log.verbose(componente.codigo + " +" + element.qty);
+		saveComponente(componente,'proveedores');
 	});
 	//console.log(dbPedidosProveedores.keys());
 	reLoadAll();
@@ -863,24 +897,30 @@ function calculosPedido(pedido){
 	return pedido;
 }
 function calculos(){
-	console.log('init calculando...');
-	console.log('calculos componentes...');
+	// console.log('init calculando...');
+	log.verbose('init calculando...');
+
+	// console.log('calculos componentes...');
+	log.verbose('calculos componentes...');
 	exports.componentes.forEach(function(componente,cIndex){
 		//console.log('calculando-componente-foreach',componente);
 		
 		exports.componentes[cIndex] = calculosComponente(componente);
 	});	
-	console.log('calculos pedidosProveedores...');
+	// console.log('calculos pedidosProveedores...');
+	log.verbose('calculos pedidosProveedores...');
 	exports.pedidosProveedores.forEach(function(pedidoProveedor,ppIndex){
 		//console.log('calculando-componente-foreach',componente);
 		
 		exports.pedidosProveedores[ppIndex] = calculosPedidosProveedor(pedidoProveedor,ppIndex);
 	});	
-	console.log('calculos pedidos...');
+	// console.log('calculos pedidos...');
+	log.verbose('calculos pedidos...');
 	exports.pedidos.forEach(function(pedido,pIndex){
 		exports.pedidos[pIndex] = calculosPedido(pedido);
 	});
-	console.log('fin calculando.');
+	// console.log('fin calculando.');
+	log.verbose('fin calculando.');
 	//log.info("Carga de datos y calculos finalizados.");
 }
 exports.calculos = calculos;
@@ -970,7 +1010,7 @@ exports.stock = function(req, res) {
 	var nowQty = parseFloat(req.componente.cantidad);
 	req.componente.cantidad = nowQty + qty;
 	var componente = calculosComponente(req.componente);
-	saveComponente(componente);
+	saveComponente(componente,'manual');
 	//req.componente.bajoMinimos = checkMinimos(req.componente);
 	//req.componente = calcularCosas(req.componente);
 	//updateComponente(req.componente);
@@ -989,14 +1029,19 @@ exports.componentesToJson = function(req,res){
 	});
 	return output;	
 }
+/*
+Usado por el importador de componentes ( XLS -> Zenbat)
+*/
 exports.updateComponenteCantidad = function(componenteId,cantidad){
+
 	var cIndex = _.findIndex(exports.componentes,{codigo:componenteId});
 	if(cIndex > -1){
 		exports.componentes[cIndex].cantidad = cantidad;
-	saveComponente(exports.componentes[cIndex]);
+	saveComponente(exports.componentes[cIndex],'importador');
 	return true;
 } else {
-	console.log('Componente No encontrado: ' + componenteId);
+	// console.log('Componente No encontrado: ' + componenteId);
+	log.verbose('Componente No encontrado: ' + componenteId);
 	return false;
 }
 	
@@ -1073,4 +1118,30 @@ exports.getLeyenda = function(req,res){
 	  res.send(data);
 		});
 	}
+}
+
+exports.getPedidosAutocomplete = function(req,res){
+
+}
+
+exports.getHistorial = function(req,res){
+	console.log('Historial');
+
+	 var options = {
+    from: '2016-01-01 00:00:00.000',
+    until: new Date,
+    // limit: 10,
+    // start: 0,
+    order: 'desc',
+    fields: ['message','codigo','categoria','timestamp','level']
+  };
+	 log.query(options, function (err, results) {
+    if (err) {
+      throw err;
+    }
+    // console.log(results);
+res.send(results.file);
+     // console.log(results);
+  });
+
 }
