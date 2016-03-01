@@ -18,6 +18,16 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 		$scope.totalPedido = 0;
 		$scope.pedidoProveedor = {};
 		$scope.showCompletados = false;
+		var ultimoPedidoProveedor = PedidosProveedores.ultimo().$promise.then(
+			function(success){
+				//console.log(success);
+				$scope.nPedido = success.data + 1;
+			},
+			function(reject){
+				console.log(reject);
+			});
+		//$scope.nPedido = ultimoPedidoProveedor;
+		console.log(ultimoPedidoProveedor);
 		$scope.toggleShowCompletados = function(){
 			$scope.showCompletados = !$scope.showCompletados
 		}
@@ -105,24 +115,57 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 				pedidosAsociados:this.pedidosAsociados,
 				completado:false
 			});
-			
-			pedidoProveedor.$save(function(response) {
+			//verificar que no existe.
+			var existe
+			PedidosProveedores.existe(
+        		{pedidoProveedoresExistsId:this.nPedido}
+        		).$promise.then(
+        		function(success){
+        			existe = success.existe;
+        			var guardar = true;
+        			if(existe){
+        				
+	        			if(confirm('El pedido ya existe, se sobreescribira. ¿Estas seguro?')) { 
+        			
+		        			//Guardando pedido a proveedor.
+				        	console.log('aceptado sobreescribir');
+				        	
+							
+						} else {
+							console.log('cancelado');
+							guardar = false;
+						}
+						
+					}
+					if(guardar){
+							pedidoProveedor.$save(function(response) {
 				//console.log(response);
-				$location.path('pedidos-proveedores/' + response.pedidoProveedorId);
+								$location.path('pedidos-proveedores/' + response.pedidoProveedorId);
 
-				$scope.nPedido = '';
-				$scope.fecha = '';
-				$scope.proveedor = '';
-				$scope.fechaDeEntrega = '';
-				$scope.almacen = '';
-				$scope.componentes = [];
-				$scope.observaciones = '';
+								$scope.nPedido = '';
+								$scope.fecha = '';
+								$scope.proveedor = '';
+								$scope.fechaDeEntrega = '';
+								$scope.almacen = '';
+								$scope.componentes = [];
+								$scope.observaciones = '';
 
-				$scope.pedidosAsociados = [];
+								$scope.pedidosAsociados = [];
 
-			}, function(errorResponse) {
-				$scope.error = errorResponse.data.message;
-			});
+							}, function(errorResponse) {
+								$scope.error = errorResponse.data.message;
+							});
+						}
+        		},
+        		function(reject){
+        	
+        			console.log(reject);
+        		});
+
+			
+			
+			/*
+*/
 			//console.log(pedidoProveedor);
 		}
 		$scope.open = function (size) {

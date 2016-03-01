@@ -17,6 +17,13 @@ module.exports = function(app) {
 	app.route('/pedidos-proveedores/:pedidoProveedoresId/completar')
 		.get(database.completarPedidoProveedor);
 
+	app.route('/pedidos-proveedores-ultimo')
+		.get(database.getUltimoPedidoProveedores);
+
+	app.route('/pedidos-proveedores-existe/:pedidoProveedoresExistsId')
+		.get(database.pedidoProveedorExists);
+
+	app.param('pedidoProveedoresExistsId', database.pedidoProveedorExistsById);
 	app.param('pedidoProveedoresId', database.pedidoProveedorByID);
 
 };

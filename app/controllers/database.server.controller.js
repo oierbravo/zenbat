@@ -395,7 +395,24 @@ function entregarPedido(pedido){
 	return pedido;
 }
 exports.entragarPedido = entregarPedido;
+function toInt(str){
+	return parseInt(str);
+}
+function getUltimoPedidoProveedores(){
+	var keys = dbPedidosProveedores.keys();
+	var intKeys = keys.map(toInt);
+	var max = _.max(intKeys);
+	return max;
+	//console.log("MAX: ", max);
+}
+function getUltimoPedidoProveedoresResponse(req,res){
+	var last = getUltimoPedidoProveedores();
+	res.send({data:last});
+	//res.send(last);
+}
+exports.getUltimoPedidoProveedores = getUltimoPedidoProveedoresResponse;
 function loadPedidosProveedores(){
+
 	//console.log('loadPedidosProveedores.dbPedidosProveedores',dbPedidosProveedores);
 	exports.pedidosProveedores = [];
 	var keys = dbPedidosProveedores.keys();
@@ -412,6 +429,9 @@ function loadPedidosProveedores(){
 			//console.log('f',f);
 			//console.log('fecha',pedido.fecha);
 			var fechaRaw = pedido.fecha;
+			if(!pedido.fecha){
+				pedido.fecha = '';
+			}
 			var f = pedido.fecha.split('-');
 			if(f.length == 3){
 				if(f[0].length == 4){
@@ -470,6 +490,7 @@ function loadPedidosProveedores(){
 			//console.log('elemento no int');
 		}
 	});
+
 	return exports.pedidosProveedores;
 	
 }
@@ -537,10 +558,22 @@ function componenteDeletePedidoProveedor(componenteId,pedidoProveedorId){
 		var pedidoIndex =  _.findIndex(exports.componentes[index].pedidosProveedores,{pedidoProveedorId:pedidoProveedorId});
 		if(pedidoIndex > -1){
 			exports.componentes[index].pedidosProveedores.splice(pedidoIndex,1);
+			log.info('Componte eliminado',{nPedido:dbObj.nPedido,categoria:"proveedores"})
 		}
 
 	}
 
+}
+exports.pedidoProveedorExists = function(req,res){
+	res.send({existe:req.existe});
+}
+exports.pedidoProveedorExistsById = function(req, res, next, id){
+	if(exports.dbPedidosProveedores.has(id)){
+		req.existe = true;
+	} else {
+		req.existe = false;
+	}
+	next();
 }
 exports.pedidoProveedorByID = function(req, res, next, id) {
 	//console.log(req.app.locals.database.pedidosProveedores);
@@ -556,7 +589,8 @@ exports.pedidoProveedorByID = function(req, res, next, id) {
 		req.pedidoProveedor = exports.dbPedidosProveedores.get(id);
 		next();
 	} else {
-		return next(new Error('Failed to load Pedido ' + id));
+		return next(res.sendStatus(404))
+		//return next(new Error('Pedido a proveedor ' + id + ' no encontrado.'));
 	}
 
 
@@ -600,6 +634,7 @@ exports.createPedidoProveedor = function(req, res) {
 
 	dbPedidosProveedores.put(pedido.nPedido,dbObj,function(data){
 		exports.pedidosProveedores.push(dbObj);
+		log.info('Pedido proveedor creado',{nPedido:dbObj.nPedido,codigo:dbObj.nPedido,categoria:"proveedores"})
 		res.json(dbObj);
 	});
 	
@@ -660,11 +695,12 @@ exports.deletePedidoProveedor = function(req, res) {
 		}
 	});
 	calculos();
+	log.info('Pedido proveedor borrado',{nPedido:dbObj.nPedido,codigo:dbObj.nPedido,categoria:"proveedores"})
 	res.status(200).send({message:"Deleted " + req.pedidoProveedor.nPedido});
 };
 function completarPedidoProveedor(req,res){
 	// console.log("completando pedido " + req.pedidoProveedor.nPedido);
-	log.info("Completado pedido " + req.pedidoProveedor.nPedido);
+	log.info("Completando pedido " + req.pedidoProveedor.nPedido,{nPedido:req.pedidoProveedor.nPedido,codigo:req.pedidoProveedor.nPedido,categoria:"proveedores"});
 	//console.log('completarPedidoProveedor',req.pedidoProveedor);
 	var index =  _.findIndex(exports.pedidosProveedores,{pedidoProveedorId:req.pedidoProveedor.nPedido});
 	//dbPedidosProveedores = flatfile.sync(zenbatConfig.basePath + zenbatConfig.pedidosProveedores.dbFile);
@@ -699,6 +735,7 @@ function completarPedidoProveedor(req,res){
 	});
 	//console.log(dbPedidosProveedores.keys());
 	reLoadAll();
+	log.info("Pedido a proveedores Nº" + req.pedidoProveedor.nPedido + " completado.",{nPedido:dbObj.nPedido,codigo:dbObj.nPedido,categoria:"proveedores"});
 	res.status(200).send({message:"Completado " + req.pedidoProveedor.nPedido});
 }
 exports.completarPedidoProveedor = completarPedidoProveedor;
@@ -1125,13 +1162,16 @@ exports.getPedidosAutocomplete = function(req,res){
 }
 
 exports.getHistorial = function(req,res){
-	console.log('Historial');
+	var file = fs.readFileSync( zenbatConfig.basePath + "historial.log");
+	console.log(file.toJson());
+	/*console.log('Historial');
 
 	 var options = {
     from: '2016-01-01 00:00:00.000',
-    until: new Date,
+   // until: new Date,
     // limit: 10,
     // start: 0,
+    q:'pedido',
     order: 'desc',
     fields: ['message','codigo','categoria','timestamp','level']
   };
@@ -1142,6 +1182,7 @@ exports.getHistorial = function(req,res){
     // console.log(results);
 res.send(results.file);
      // console.log(results);
-  });
+  });*/
 
+res.send([]);
 }

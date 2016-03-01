@@ -1,22 +1,23 @@
 #TODO FIXES
-* Fecha de entrega
-* pedido clientes - pedido proveedores.
-* info recarga solo pedidos pendientes.
 - leyenda
 * excel cosas pendientes a pedir.  PROVEEDOR - PRODUCTO - CANTIDAD - NOTAS
 - verificar entragas parciales (p.prov);
+- revisar residuos en ped. proveedores.
 
-#AÑADIR COMPONENTES AL ANGULAR del armario
+[done]#AÑADIR COMPONENTES AL ANGULAR del armario
+		#YA SE PUEDEN FILTRAR LOS COMPONENTES EN LOS ARMARIOS
+
+[done]#Cuando existan el numero de pedido  prov. confirmar sobreescribir.
+[done]#informar del ultimo numero.
 
 #TODO NU
 - new pedido status: "Componentes en camino"
 	- stock por llegar e ir descontando.
 - Logger:
 	- Marcar entrada y salida en logs largos
-	- Componentes: modif stock,
+	* Componentes: modif stock,
 	- Pedidos: entregado
 	- P.Prov: add,update,delete,recibido,
-	- Separar por año y mes.
 	- Loggear todas las acciones, automaticas tambien. Ej: al entregar un pedido figurara la entrega y todos los componentes descontados. 
 
 	-Pantalla "Historial"
@@ -26,7 +27,7 @@
 		- categorias logs largos, completando/listo
 #ID
 - Link pedidos y p.prov para status?
-- Log to file with Wiston or bunyan.
+* Log to file with Wiston or bunyan.
 
 
 
@@ -44,3 +45,5 @@ x Startup script.
 
 ##TODO PRODUCTION
 - gruntfile: comment "jshint" task
+
+## Desplegable usuarios.
