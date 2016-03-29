@@ -268,6 +268,7 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 				$scope.pedidosProveedores = data;
 				console.log('pedidosProveedores',data);
 				$scope.elCargados = true;
+
 			},function(reject){
 				usSpinnerService.stop('cargador');
 		
@@ -311,12 +312,14 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 			}
 		};
 		$scope.completar = function(){
-			if(confirm('Se va a marcar como completado ¿Estas seguro?')) { 
+			if(confirm('Se va a marcar como completado ¿Estas seguro?')) {
+				usSpinnerService.spin('cargador');
 	        	console.log($scope.pedidoProveedor);
 	        	$scope.pedidoProveedor.$completar(function(success){
-	        		console.log(success);
-	        		$location.path('pedidos-proveedores');
+	        		//console.log(success);
 	        		AlertasFactory.show({message:'Pedido completado',type:'success'});
+	        		$location.path('/pedidos-proveedores');
+	        		
 	        	});
 	        	/*$scope.pedidoProveedor.pedidoProveedorId = $scope.pedidoProveedor.nPedido;
 					$http.get('/pedidos-proveedores/' + $scope.pedidoProveedor.nPedido + '/completar').success(function(data){

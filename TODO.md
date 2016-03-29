@@ -14,6 +14,7 @@
 - new pedido status: "Componentes en camino"
 	- stock por llegar e ir descontando.
 - Logger:
+	- Para cambiar el historial borrar y darle a recargar.
 	- Marcar entrada y salida en logs largos
 	* Componentes: modif stock,
 	- Pedidos: entregado

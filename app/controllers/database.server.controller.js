@@ -15,12 +15,12 @@ var EventLogger = require('node-windows').EventLogger;
 var syslog = new EventLogger('Zenbat');
 
 var winston = require('winston');
-var log = new (winston.Logger)({
+/*var log = new (winston.Logger)({
     transports: [
       new (winston.transports.Console)({ level: 'verbose' }),
       new (winston.transports.File)({ filename: zenbatConfig.basePath + "historial.log",level: "info" })
     ]
-  });
+  });*/
 
 var Armarios = require('./armarios.server.controller.js');
 
@@ -47,9 +47,71 @@ exports.pedidosEntregados = [];
 
 exports.xlsKeys = [];
 
-var now;
+var now ;
 
+var fileHistorial = zenbatConfig.basePath + 'historial.db';
+var dbHistorial = flatfile.sync(fileHistorial);
+var dbHistorial;
+//var lastLID;
+var log = {
+	info: function(msg,data){
+		if(typeof data === 'undefined'){
+			data = {};
+		}
+		var timestamp = moment();
+		var lid = log.getNextLID();
+		var dbObj = {
+			lid: lid,
+			descripcion: msg,
+			timestamp: timestamp.format()
+		}
+		//console.log(data);
+		_.forEach(data,function(el,index){
+			dbObj[index] = el;
+		});
+	/*	data.forEach(function(key){
+			dbObj[key] = data[key];
+		});*/
+		 dbHistorial.put(lid,dbObj)
+		 console.log('[INFO]' + timestamp.format('HH:mm:ss') + ': ' ,msg);
+	},
+	verbose: function(msg,data){
+		if(typeof data === 'undefined'){
+			data = '';
+		}
+		console.log(msg,data);
+	},
+	query: function(options){
+		var output = [];
+		var ks = dbHistorial.keys()
+		ks.forEach(function(el,ind){
+			var obj = dbHistorial.get(el);
+			output.push(obj);
+		})
+		//console.log(output);
+		return output;
+	},
+	getNextLID: function(){
+		return dbHistorial.keys().length;
+	},
+	getLastLID: function(){
 
+		var keys = dbHistorial.keys();
+		if(keys.length === 0){
+			return 0;
+		} else {
+			var intKeys = keys.map(toInt);
+			var max = _.max(intKeys);
+			return max;
+		}
+		//console.log("MAX: ", max);
+
+	},
+	init: function(){
+		dbHistorial = flatfile.sync(fileHistorial);
+		
+	}
+}
 
 function loadAll(){
 	now = moment().format();
@@ -58,6 +120,8 @@ exports.pedidos = [];
 exports.pedidosProveedores = [];
 	//console.log('cargando datos...')
 	//log.info('Iniciando Zenbat');
+	log.verbose('preparando historial...');
+	//log.init();
 	log.verbose('cargando datos...');
 	//log.info("Cargando datos");
 	loadComponentes();
@@ -69,6 +133,7 @@ exports.pedidosProveedores = [];
 loadAll();
 exports.loadAll = loadAll;
 function reLoadAll(){
+	log.init();
 	loadAll();
 }
 
@@ -88,6 +153,9 @@ function reloadAllCli(req,res){
 	if(numPedidosEntregados > 0){
 		str += numPedidosEntregados + ' pedidos entregados.';
 	}
+	/*if(lastLID === 0){
+		str += "Generado nuevo historial."
+	}*/
 	res.send({message:str,pedidoEntregados:exports.pedidosEntregados});
 }
 exports.reloadAllCli = reloadAllCli;
@@ -378,8 +446,8 @@ function entregarPedido(pedido){
 //	log.verbose('entregar',pedido);
 	// console.log('procesando ' + pedido.armario.componentes.length + ' componentes.');
 	log.verbose('procesando ' + pedido.armario.componentes.length + ' componentes.');
+	log.info('Inicio entrega pedido',{pedidoId:pedido.pedidoId,codigo:pedido.pedidoId,categoria:"clientes"})
 
-	//log.info('En')
 
 	pedido.armario.componentes.forEach(function(element,index){
 		var compIndex = _.findIndex(exports.componentes,{codigo:element.Codigo});
@@ -387,11 +455,13 @@ function entregarPedido(pedido){
 			var componente = exports.componentes[compIndex];
 			componente.cantidad -= parseFloat(element.Cantidad) * pedido.porEntregar;
 			saveComponente(componente,'clientes');
+			
 		}
 	});
 	pedido.lastEntregados = pedido.entregados;
 	exports.pedidosEntregados.push(pedido);
 	savePedido(pedido);
+	log.info('Pedido entregado',{pedidoId:pedido.pedidoId,codigo:pedido.pedidoId,categoria:"clientes"})
 	return pedido;
 }
 exports.entragarPedido = entregarPedido;
@@ -558,7 +628,7 @@ function componenteDeletePedidoProveedor(componenteId,pedidoProveedorId){
 		var pedidoIndex =  _.findIndex(exports.componentes[index].pedidosProveedores,{pedidoProveedorId:pedidoProveedorId});
 		if(pedidoIndex > -1){
 			exports.componentes[index].pedidosProveedores.splice(pedidoIndex,1);
-			log.info('Componte eliminado',{nPedido:dbObj.nPedido,categoria:"proveedores"})
+			log.info('Componte eliminado del pedido',{nPedido:pedidoProveedorId,codigo:componenteId,categoria:"proveedores"})
 		}
 
 	}
@@ -695,7 +765,7 @@ exports.deletePedidoProveedor = function(req, res) {
 		}
 	});
 	calculos();
-	log.info('Pedido proveedor borrado',{nPedido:dbObj.nPedido,codigo:dbObj.nPedido,categoria:"proveedores"})
+	log.info('Pedido proveedor borrado',{nPedido:req.pedidoProveedor.nPedido,codigo:req.pedidoProveedor.nPedido,categoria:"proveedores"})
 	res.status(200).send({message:"Deleted " + req.pedidoProveedor.nPedido});
 };
 function completarPedidoProveedor(req,res){
@@ -735,7 +805,7 @@ function completarPedidoProveedor(req,res){
 	});
 	//console.log(dbPedidosProveedores.keys());
 	reLoadAll();
-	log.info("Pedido a proveedores Nº" + req.pedidoProveedor.nPedido + " completado.",{nPedido:dbObj.nPedido,codigo:dbObj.nPedido,categoria:"proveedores"});
+	log.info("Pedido a proveedores Nº" + req.pedidoProveedor.nPedido + " completado.",{nPedido:req.pedidoProveedor.nPedido,codigo:req.pedidoProveedor.nPedido,categoria:"proveedores"});
 	res.status(200).send({message:"Completado " + req.pedidoProveedor.nPedido});
 }
 exports.completarPedidoProveedor = completarPedidoProveedor;
@@ -1105,8 +1175,9 @@ exports.getHomeData = function(req,res){
 		}
 	});
 	var leyenda = "";
-	var leyendaFile =  zenbatConfig.basePath + "leyenda.txt";
-	leyenda = fs.readFileSync( leyendaFile).toString();
+	//var leyendaFile =  zenbatConfig.basePath + "leyenda.txt";
+	//leyenda = fs.readFileSync( leyendaFile).toString();
+	leyenda = getLeyendaData();
 	/*if (fs.existsSync(leyendaFile)) {
 		fs.readFileSync( leyendaFile, function (err, data) {
 	  if (err) {
@@ -1143,7 +1214,20 @@ exports.getHomeData = function(req,res){
 	}
 	res.send(output);
 }
-
+function getLeyendaData(){
+	var leyendaFile =  zenbatConfig.basePath + "leyenda.txt";
+	if (fs.existsSync(leyendaFile)) {
+		fs.readFile( leyendaFile, function (err, data) {
+	  if (err) {
+	    throw err; 
+	  }
+	  //console.log();
+	  return data;
+		});
+	} else {
+		return false;
+	}
+}
 exports.getLeyenda = function(req,res){
 	var leyendaFile =  zenbatConfig.basePath + "leyenda.txt";
 	if (fs.existsSync(leyendaFile)) {
@@ -1154,16 +1238,27 @@ exports.getLeyenda = function(req,res){
 	  //console.log();
 	  res.send(data);
 		});
+	} else {
+		res.sendStatus(404);
 	}
 }
 
 exports.getPedidosAutocomplete = function(req,res){
 
 }
-
+function toJSON(o){
+	o.replace('\n','');
+	return JSON.parse(o);
+}
 exports.getHistorial = function(req,res){
-	var file = fs.readFileSync( zenbatConfig.basePath + "historial.log");
-	console.log(file.toJson());
+	
+	//var file = fs.readFileSync( zenbatConfig.basePath + "historial.log",'utf8');
+	//var obj = JSON.parse( fs.readFileSync(zenbatConfig.basePath + "historial.log", 'utf8'));
+	// var obj = JSON.parse('[' + fs.readFileSync(zenbatConfig.basePath + "historial.log", 'utf8') + ']');
+	//var lines = file.split('\r');
+	//var jLines = _.map(lines,'toJSON');
+	//console.log(jLines);
+
 	/*console.log('Historial');
 
 	 var options = {
@@ -1183,6 +1278,6 @@ exports.getHistorial = function(req,res){
 res.send(results.file);
      // console.log(results);
   });*/
-
-res.send([]);
+var logs = log.query();
+res.send(logs);
 }

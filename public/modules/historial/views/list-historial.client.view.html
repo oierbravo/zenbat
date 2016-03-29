@@ -1,0 +1,64 @@
+ <section data-ng-controller="HistorialController"  data-ng-init="find()">
+	<div class="page-header">
+		<h1>Historial</h1>
+	</div>
+  <div class="page-content">
+    <data-alertas></data-alertas>
+    <div class="alert alert-info devel-output" >
+      <p>Sort predicate: {{ predicate }}</p>
+      <p>Sort reverse: {{ reverse }}</p>
+      <p>Search Query: {{ searchString }}</p>
+    </div>
+    <form class="animate-show" ng-show="elCargados">
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-search"></i></div>
+          <input type="text" class="form-control" placeholder="Buscador" ng-model="searchString">
+        </div>      
+      </div>
+    </form>
+    <span us-spinner="{radius:30, width:8, length: 16}" spinner-key="cargador" spinner-start-active="true"></span>
+
+    <div>
+    <button  class="btn" ng-class="{'btn-success':showAll}"ng-click="toggleCategoria('all')" ><i class="fa fa-eye fa-lg"></i> Todo</button>
+      <button  class="btn" ng-class="{'btn-success':showManual}"ng-click="toggleCategoria('manual')" ><i class="fa fa-eye fa-lg"></i> Manual</button>
+      <button  class="btn" ng-class="{'btn-success':showClientes}"ng-click="toggleCategoria('clientes')" ><i class="fa fa-eye fa-lg"></i> Clientes</button>
+      <button  class="btn" ng-class="{'btn-success':showProveedores}"ng-click="toggleCategoria('proveedores')" ><i class="fa fa-eye fa-lg"></i> Proveedores</button>
+    </div>
+
+  	<table data-toggle="table"  data-height="299" class=" table-stripped table table-hover animate-show" ng-show="elCargados"  data-search="true"  data-show-columns="true">
+  	  <thead>
+        <tr>
+        <td>
+            <a href="" ng-click="order('timestamp')">Fecha</a>
+            <span class="sortorder" ng-show="predicate === 'timestamp'" ng-class="{reverse:reverse}"></span>
+          </td>
+          <td>
+            <a href="" ng-click="order('codigo')">Codigo</a>
+            <span class="sortorder" ng-show="predicate === 'codigo'" ng-class="{reverse:reverse}"></span>
+          </td>
+          <td>
+            <a href="" ng-click="order('categoria')">Categoria</a>
+            <span class="sortorder" ng-show="predicate === 'categoria'" ng-class="{reverse:reverse}"></span>
+          </td>
+          <td>
+          	Descripcion
+          </td>
+
+
+       
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-ng-repeat="evento in historial | orderBy:predicate:reverse | filter:searchString"  class="table-condensed table-stripped tipo-{{evento.categoria}}" ng-class="{showManual:showManual,showClientes:showClientes,showProveedores:showProveedores,showAll:showAll}">
+        <td>{{evento.timestamp  | date:'dd-MM-yyyy HH:mm' }}</td>
+    			<td>{{evento.codigo}}</td>
+    				<td>{{evento.categoria}}</td>
+    			<td>{{evento.descripcion}}</td>
+    		
+    		</tr>
+      </tbody>
+    </table>
+	</div>
+
+</section>

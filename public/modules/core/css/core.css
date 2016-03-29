@@ -199,3 +199,24 @@ tr.disponible.oculatarOk {
 .panel-body table tr {
 	border-color: #ccc;
 }
+tr.tipo-manual {
+	display:none;
+}
+tr.tipo-clientes {
+	display:none;
+}
+tr.tipo-proveedores {
+	display:none;
+}
+tr.tipo-manual.showManual {
+	display:table-row;
+}
+tr.tipo-clientes.showClientes {
+	display:table-row;
+}
+tr.tipo-proveedores.showProveedores {
+	display:table-row;
+}
+tr.showAll {
+	display:table-row;
+}

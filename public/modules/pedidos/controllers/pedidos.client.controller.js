@@ -14,7 +14,7 @@ angular.module('pedidos').controller('PedidosController', ['$scope', '$statePara
 		$scope.toggleShowDisponibles = function(){
 			$scope.showDisponibles = !$scope.showDisponibles
 		}
-
+		
  		$scope.order = function(predicate) {
         	$scope.reverse = ($scope.predicate === predicate) ? !$scope.reverse : false;
        	 	$scope.predicate = predicate;
