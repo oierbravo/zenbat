@@ -35,7 +35,7 @@
       </thead>
       <tbody>
         <tr data-ng-repeat="componente in armario.componentes | orderBy:predicate:reverse   | filter:searchString" class="table-condensed table-stripped" >	
-    			<td ng-class="{'text-danger':componente.faltaID}"><i class="fa" ng-class="{'fa-times':componente.faltaID}"></i> {{componente.Codigo}}</td>
+    			<td ng-class="{'text-danger':componente.faltaID}"><i class="fa" ng-class="{'fa-times':componente.faltaID}"></i> <a href="/#!/componentes/{{componente.Codigo}}">{{componente.Codigo}}</a></td>
     			<td>{{componente.Denominacion}}</td>
     			<td>{{componente.Cantidad}}</td>
     		</tr>

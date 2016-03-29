@@ -1,36 +1,24 @@
 #TODO FIXES
 - leyenda
 * excel cosas pendientes a pedir.  PROVEEDOR - PRODUCTO - CANTIDAD - NOTAS
-- verificar entragas parciales (p.prov);
-* revisar residuos en ped. proveedores.
+* verificar entregas parciales (p.prov);
+- View componentes detail: Falta codigo comp.
 
-[done]#AÑADIR COMPONENTES AL ANGULAR del armario
-		#YA SE PUEDEN FILTRAR LOS COMPONENTES EN LOS ARMARIOS
-
-[done]#Cuando existan el numero de pedido  prov. confirmar sobreescribir.
-[done]#informar del ultimo numero.
 
 #TODO NU
 - new pedido status: "Componentes en camino"
 	- stock por llegar e ir descontando.
 - Logger:
-	- Para cambiar el historial borrar y darle a recargar.
-	- Marcar entrada y salida en logs largos
+	* Para cambiar el historial borrar y darle a recargar.
+	* Marcar entrada y salida en logs largos
 	* Componentes: modif stock,
-	- Pedidos: entregado
+	* Pedidos: entregado
 	- P.Prov: add,update,delete,recibido,
-	- Loggear todas las acciones, automaticas tambien. Ej: al entregar un pedido figurara la entrega y todos los componentes descontados. 
-
-	-Pantalla "Historial"
-		- Buscador
-		- FECHA - CODIGO - CATEGORIA - DESCRIPCION
-		- categoria: manual, proveedores, clientes
-		- categorias logs largos, completando/listo
-#ID
-- Link pedidos y p.prov para status?
-* Log to file with Wiston or bunyan.
-
-
+	* Loggear todas las acciones, automaticas tambien. Ej: al entregar un pedido figurara la entrega y todos los componentes descontados. 
+- User DropdownList
+    - Desplegable con los usuarios siempre visible.
+    	- Guardar los historiales con el usuario.
+- P.Prov Sortable componentes. Poder decidir el orden final de los componentes.
 
 # TO PRODUCTION
 x bck files,dbs,xls
@@ -44,13 +32,6 @@ x Startup script.
 - NSSM to create service
 
 
-##TODO PRODUCTION
-- gruntfile: comment "jshint" task
-+
 ## Desplegable usuarios.
 
 
-
-
-
-##Leyenda.txt verificar y si no existe crear.

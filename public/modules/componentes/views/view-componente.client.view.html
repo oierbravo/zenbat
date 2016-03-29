@@ -1,7 +1,7 @@
 <section data-ng-controller="ComponentesController" data-ng-init="findOne()">
 	<div class="page-header">
 		<h1>{{componente.denominacion}} <small>{{componente.proveedor}}</small></h1> 
-
+		<h2>{{componente.codigo}}</h2>
 		<p>Cantidad: <strong>{{componente.cantidad + componente.cantidadRecibida| number :2}}</strong></p>
 		<p>Stock Minimo: <strong>{{componente.stockSeguridad}}</strong></p>
 		<p>Precio Unidad: <strong>{{componente.precioUnit}}€</strong></p>
@@ -13,14 +13,14 @@
 	<h3 ng-show="componente.pedidos.length !== 0">Armarios en proceso({{componente.pedidos.length}})</h3>
 	<ul>
 		<li ng-repeat="pedido in componente.pedidos">
-			{{pedido.pedidoId}} - {{pedido.qty}}
+			<a href="/#!/pedidos/{{pedido.pedidoId}}">{{pedido.pedidoId}}</a> - {{pedido.qty}}
 		</li>
 	</ul>
 	<p ng-show ="componente.pedidos.length !== 0">Cantidad en pedidos: <strong>{{componente.cantidadReservada | number :2}}</strong></p>
 	<h3 ng-show="componente.pedidosProveedores.length !== 0">Pedidos a proveedores({{componente.pedidosProveedores.length}})</h3>
 	<ul>
 		<li ng-repeat="pedidoProveedor in componente.pedidosProveedores">
-			{{pedidoProveedor.pedidoProveedorId}} - {{pedidoProveedor.qty}}
+			<a href="/#!/pedidos-proveedores/{{pedidoProveedor.pedidoProveedorId}}">{{pedidoProveedor.pedidoProveedorId}}</a> - {{pedidoProveedor.qty}}
 		</li>
 	</ul>
 	<p ng-show ="componente.pedidosProveedores.length !== 0">Cantidad en pedidos a proveedores: <strong>{{componente.cantidadProveedores}}</strong></p>

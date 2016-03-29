@@ -91,7 +91,7 @@
 		    </thead>
 		    <tbody>
 				<tr data-ng-repeat="componente in pedidoProveedor.componentes  | orderBy:predicate:reverse " class="table-condensed table-stripped" ng-show="!componente.removed">
-					<td>{{componente.codigo}}</td>
+					<td><a href="/#!/componentes/{{componente.codigo}}">{{componente.codigo}}</a></td>
 					<td>{{componente.denominacion}}</td>
 					<td>{{componente.pedidoMinimo}}</td>
 					<td>{{componente.precioUnit}}</td>
@@ -181,7 +181,7 @@
 	        <tbody>
 	        <tr data-ng-repeat="componente in componentes |  orderBy:predicate:reverse   | filter:searchString" class="table-condensed table-stripped componente-status-{{componente.status}}" >
 	            <td><input class="" type="checkbox"  data-ng-model="componente.seleccionado"></td>
-	            <td>{{componente.codigo}}</td>
+	            <td><a href="/#!/componentes/{{componente.codigo}}">{{componente.codigo}}</a></td>
 	            <td>{{componente.denominacion}}</td>
 	            <td>{{componente.cantidad}}</td>
 	            <td>{{componente.stockSeguridad}}</td>

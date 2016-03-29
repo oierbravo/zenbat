@@ -54,7 +54,7 @@ var dbHistorial = flatfile.sync(fileHistorial);
 var dbHistorial;
 //var lastLID;
 var log = {
-	info: function(msg,data){
+	info: function(msg,data,user){
 		if(typeof data === 'undefined'){
 			data = {};
 		}
@@ -63,7 +63,8 @@ var log = {
 		var dbObj = {
 			lid: lid,
 			descripcion: msg,
-			timestamp: timestamp.format()
+			timestamp: timestamp.format(),
+			user:user
 		}
 		//console.log(data);
 		_.forEach(data,function(el,index){
@@ -73,7 +74,8 @@ var log = {
 			dbObj[key] = data[key];
 		});*/
 		 dbHistorial.put(lid,dbObj)
-		 console.log('[INFO]' + timestamp.format('HH:mm:ss') + ': ' ,msg);
+		 // console.log('[INFO]' +'[' + user +  ']'  + timestamp.format('HH:mm:ss') + ': ' ,msg);
+		 console.log('[INFO]'   + timestamp.format('HH:mm:ss') + ': ' ,msg);
 	},
 	verbose: function(msg,data){
 		if(typeof data === 'undefined'){
@@ -116,8 +118,8 @@ var log = {
 function loadAll(){
 	now = moment().format();
 	exports.componentes = [];
-exports.pedidos = [];
-exports.pedidosProveedores = [];
+	exports.pedidos = [];
+	exports.pedidosProveedores = [];
 	//console.log('cargando datos...')
 	//log.info('Iniciando Zenbat');
 	log.verbose('preparando historial...');
@@ -975,7 +977,7 @@ function calculosPedido(pedido){
 			var necesarios = componentePedido.cantidad;
 			componentePedido.necesarios = necesarios;
 			componentePedido.codigo = componente.codigo;
-			componentePedido.stock = componente.cantidad;
+			componentePedido.stock = componente.cantidad + componente.cantidadRecibida;
 			componentePedido.denominacion = componente.denominacion;
 			//console.log('calculosPedido.componente',componente);
 			componentePedido.cantidadReservada = componente.cantidadReservada;

@@ -186,7 +186,7 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 
 		    modalInstance.result.then(function (selectedItem) {
 		      var selected = selectedItem;
-		      //console.log(selected);
+		      console.log(selected);
 		      selected.forEach(function(element,index){
 		      	element.removed = false;
 		      	var compExist = _.findIndex($scope.componentes,'codigo',element.codigo);
@@ -219,7 +219,7 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 
 		    modalInstance.result.then(function (selectedItem) {
 		      var selected = selectedItem;
-		      //console.log(selected);
+		      console.log(selected);
 
 		      selected.forEach(function(element,index){
 		      	
