@@ -14,7 +14,7 @@ var zenbatConfig = require('../../zenbat.config.js');
 var EventLogger = require('node-windows').EventLogger;
 var syslog = new EventLogger('Zenbat');
 
-var winston = require('winston');
+//var winston = require('winston');
 /*var log = new (winston.Logger)({
     transports: [
       new (winston.transports.Console)({ level: 'verbose' }),
@@ -272,16 +272,35 @@ element.cantidadReservada = 0;
 	    cache.put(element.codigo,element);
 }
 
-function saveComponente(componente,categoria,accion,nuCantidad,oldCantidad){
+function saveComponente(componente,categoria,diff,accion){
 	var dbObj = {
 		cantidad:componente.cantidad
 	}
 	var cInd = _.findIndex(exports.componentes,{codigo:componente.codigo});
-	var tComp = exports.componentes[cInd];
-	// console.log('componente',componente);
-	//console.log('tComp',tComp);
+	var tComp =dbProductos.get(componente.codigo);
+	var msg = 'Componente modificado ';
+	switch(categoria){
+		case 'manual':
+			if(diff > 0){
+				msg += '+';
+			} else {
+				//msg += '-';
+			}
+			break;
+		case 'clientes':
+			msg += '-';
+			break;
+		case 'proveedores':
+			msg += '+';
+			break;
+		case 'importador':
+			msg += '=';
+			break;
+	}
+
+	msg += diff.toString();
 	//if(tComp.cantidad !== componente.cantidad){
-		log.info('Componente modificado',{codigo:componente.codigo,categoria:categoria})
+		log.info(msg,{codigo:componente.codigo,categoria:categoria})
 	//}
 
 	dbProductos.put(componente.codigo,dbObj);
@@ -428,7 +447,7 @@ exports.loadPedido = function(){
 }
 function savePedido(pedido){
 	var dbObj = {
-		entregados:pedido.entregados,
+		
 		lastEntregados: pedido.lastEntregados
 	}
 	dbPedidos.put(pedido.pedidoId,dbObj);
@@ -453,8 +472,11 @@ function entregarPedido(pedido){
 		var compIndex = _.findIndex(exports.componentes,{codigo:element.Codigo});
 		if(compIndex > -1){
 			var componente = exports.componentes[compIndex];
-			componente.cantidad -= parseFloat(element.Cantidad) * pedido.porEntregar;
-			saveComponente(componente,'clientes');
+			var nuCant =  parseFloat(element.Cantidad) * pedido.porEntregar;
+
+			componente.cantidad -= nuCant;
+			var diff = nuCant;
+			saveComponente(componente,'clientes',diff);
 			
 		}
 	});
@@ -704,6 +726,7 @@ exports.createPedidoProveedor = function(req, res) {
 
 	dbPedidosProveedores.put(pedido.nPedido,dbObj,function(data){
 		exports.pedidosProveedores.push(dbObj);
+		calculos();
 		log.info('Pedido proveedor creado',{nPedido:dbObj.nPedido,codigo:dbObj.nPedido,categoria:"proveedores"})
 		res.json(dbObj);
 	});
@@ -739,6 +762,7 @@ exports.updatePedidoProveedor = function(req, res) {
 	});
 	
 	exports.pedidosProveedores[index] = pedidoProveedor;
+	calculos();
 	res.json(pedidoProveedor);
 };
 
@@ -801,7 +825,8 @@ function completarPedidoProveedor(req,res){
 		componente.pedidosProveedores.splice(pInd,1);
 		// console.log(componente.codigo + " +" + element.qty);
 		log.verbose(componente.codigo + " +" + element.qty);
-		saveComponente(componente,'proveedores');
+		var diff = parseFloat(element.qty);
+		saveComponente(componente,'proveedores',diff);
 	});
 	//console.log(dbPedidosProveedores.keys());
 	reLoadAll();
@@ -894,6 +919,7 @@ function calculosComponente(componente){
 
 
 		});
+		//componente.cantidad += componente.cantidadRecibida;
 		componente = checkComponenteStatus(componente);
 		return componente;
 }
@@ -1117,7 +1143,7 @@ exports.stock = function(req, res) {
 	var nowQty = parseFloat(req.componente.cantidad);
 	req.componente.cantidad = nowQty + qty;
 	var componente = calculosComponente(req.componente);
-	saveComponente(componente,'manual');
+	saveComponente(componente,'manual',qty);
 	//req.componente.bajoMinimos = checkMinimos(req.componente);
 	//req.componente = calcularCosas(req.componente);
 	//updateComponente(req.componente);
@@ -1144,7 +1170,7 @@ exports.updateComponenteCantidad = function(componenteId,cantidad){
 	var cIndex = _.findIndex(exports.componentes,{codigo:componenteId});
 	if(cIndex > -1){
 		exports.componentes[cIndex].cantidad = cantidad;
-	saveComponente(exports.componentes[cIndex],'importador');
+	saveComponente(exports.componentes[cIndex],'importador',cantidad);
 	return true;
 } else {
 	// console.log('Componente No encontrado: ' + componenteId);

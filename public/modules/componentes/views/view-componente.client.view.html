@@ -2,7 +2,7 @@
 	<div class="page-header">
 		<h1>{{componente.denominacion}} <small>{{componente.proveedor}}</small></h1> 
 
-		<p>Cantidad: <strong>{{componente.cantidad | number :2}}</strong></p>
+		<p>Cantidad: <strong>{{componente.cantidad + componente.cantidadRecibida| number :2}}</strong></p>
 		<p>Stock Minimo: <strong>{{componente.stockSeguridad}}</strong></p>
 		<p>Precio Unidad: <strong>{{componente.precioUnit}}€</strong></p>
 		<p>Status: <strong>{{componente.status}}</strong></p>

@@ -68,7 +68,7 @@
         <tr data-ng-repeat="componente in componentes | orderBy:predicate:reverse   | filter:searchString " class="table-condensed table-stripped componente-status-{{componente.status}}" data-ng-controller="RowComponenteController" id="{{componente.codigo}}">
     			<td><a href="/#!/componentes/{{componente.codigo}}">{{componente.codigo}}</a></td>
     			<td>{{componente.denominacion}}</td>
-          <td>{{componente.cantidad| number :2 }}</td>
+          <td>{{componente.cantidad + componente.cantidadRecibida | number :2 }}</td>
           <td>{{componente.stockSeguridad| number :2}}</td>
           <td>{{componente.cantidadReservada| number :2}}</td>
           <td>{{componente.cantidadProveedores| number :2}}  (<span class="text-success">{{componente.cantidadRecibida}}</span>:<span class="text-warning">{{componente.cantidadNoRecibida}}</span>)</td>

@@ -103,7 +103,7 @@
 					<td><a class="btn btn-warning" data-ng-click="removeComponente(componente.codigo,true);">
 			<i class="glyphicon glyphicon-trash"></i>
 		</a></td>
-		<td>{{componente.componenteData.cantidad}}</td>
+		<td>{{componente.componenteData.cantidad}}<span class="text-success" ng-show="componente.recibidos"> + {{componente.recibidos}}</span></td>
 		<td>{{componente.componenteData.cantidadReservada}}</td>
 		<td>{{componente.componenteData.cantidadProveedores}}</td>
 		<td>{{componente.componenteData.stockSeguridad}}</td>

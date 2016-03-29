@@ -83,7 +83,7 @@
 		
 			<td ><a href="/#!/componentes/{{componente.codigo}}">{{componente.codigo}}</a></td>
 			<td>{{componente.denominacion}}</td>
-            <td>{{componente.cantidad| number :2}}</td>
+            <td>{{componente.cantidad + componente.cantidadRecibida | number :2}}</td>
             <td>{{componente.stockSeguridad| number :2}}</td>
             <td>{{componente.cantidadReservada| number :2}}</td>
             

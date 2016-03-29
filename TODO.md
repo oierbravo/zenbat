@@ -2,7 +2,7 @@
 - leyenda
 * excel cosas pendientes a pedir.  PROVEEDOR - PRODUCTO - CANTIDAD - NOTAS
 - verificar entragas parciales (p.prov);
-- revisar residuos en ped. proveedores.
+* revisar residuos en ped. proveedores.
 
 [done]#AÑADIR COMPONENTES AL ANGULAR del armario
 		#YA SE PUEDEN FILTRAR LOS COMPONENTES EN LOS ARMARIOS
@@ -46,5 +46,11 @@ x Startup script.
 
 ##TODO PRODUCTION
 - gruntfile: comment "jshint" task
-
++
 ## Desplegable usuarios.
+
+
+
+
+
+##Leyenda.txt verificar y si no existe crear.
