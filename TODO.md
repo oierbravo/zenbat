@@ -2,7 +2,7 @@
 - leyenda
 * excel cosas pendientes a pedir.  PROVEEDOR - PRODUCTO - CANTIDAD - NOTAS
 * verificar entregas parciales (p.prov);
-- View componentes detail: Falta codigo comp.
+* View componentes detail: Falta codigo comp.
 
 
 #TODO NU

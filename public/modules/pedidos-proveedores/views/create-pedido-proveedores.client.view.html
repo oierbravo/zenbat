@@ -59,6 +59,7 @@
 					<table data-toggle="table"  data-height="299" class=" table-stripped table table-hover animate-show"    data-show-columns="true" >
 				<thead>
 			        <tr>
+			        <td>peso</td>
 			        	<td>
 			            	<a href="" ng-click="order('codigo')">Codigo</a>
 			            	<span class="sortorder" ng-show="predicate === 'codigo'" ng-class="{reverse:reverse}"></span>
@@ -95,7 +96,8 @@
 			        </tr>
 			    </thead>
 			    <tbody>
-					<tr data-ng-repeat="componente in componentes  | orderBy:predicate:reverse " class="table-condensed table-stripped" >
+					<tr data-ng-repeat="componente in componentes  | orderBy:'weight' " class="table-condensed table-stripped" >
+							<td><input name="weight" type="text" data-ng-model="componente.weight" class="form-control"></td>
 						<td>{{componente.codigo}}</td>
 						<td>{{componente.denominacion}}</td>
 						<td>{{componente.pedidoMinimo}}</td>

@@ -764,7 +764,7 @@ exports.updatePedidoProveedor = function(req, res) {
 	});
 	
 	exports.pedidosProveedores[index] = pedidoProveedor;
-	calculos();
+	//calculos();
 	res.json(pedidoProveedor);
 };
 
@@ -790,7 +790,7 @@ exports.deletePedidoProveedor = function(req, res) {
 			exports.componentes[cInd].pedidosProveedores.splice(pInd,1);
 		}
 	});
-	calculos();
+	//calculos();
 	log.info('Pedido proveedor borrado',{nPedido:req.pedidoProveedor.nPedido,codigo:req.pedidoProveedor.nPedido,categoria:"proveedores"})
 	res.status(200).send({message:"Deleted " + req.pedidoProveedor.nPedido});
 };
@@ -934,6 +934,7 @@ function calculosPedidosProveedor(pedidoProveedor,ppIndex){
 		pedidoProveedor.pendiente = true;
 	}
 	var total = 0;
+	var weight = 0;
 	pedidoProveedor.componentes.forEach(function(el,ind){
 
 		var cind =  _.findIndex(exports.componentes,{codigo:el.codigo});
@@ -942,6 +943,7 @@ function calculosPedidosProveedor(pedidoProveedor,ppIndex){
 						var componente = exports.componentes[cind];
 						//console.log('componente',componente);
 						var componenteData = {
+							
 							status: componente.status,
 							cantidad:  componente.cantidad,
 							cantidadReservada: componente.cantidadReservada,
@@ -950,14 +952,15 @@ function calculosPedidosProveedor(pedidoProveedor,ppIndex){
 						};
 						pedidoProveedor.componentes[ind].componenteData = componenteData;
 
+
 					}
 		//pedidoProveedor.componentes[ind].precioTotal = parseFloat(el.qty) * parseFloat(el.precioUnit) ;
 		var precioTotal = parseFloat(el.qty) * parseFloat(el.precioUnit) ;
 		pedidoProveedor.componentes[ind].precioTotal = precioTotal;
-		//if(!_.isNumber(pedidoProveedor.componentes[ind].precioTotal)){
-		//	pedidoProveedor.componentes[ind].precioTotal = 0;
-		//}
-		//if(_.isNumber(pedidoProveedor.componentes[ind].precioTotal)){
+		pedidoProveedor.componentes[ind].weight = weight;
+
+
+		weight++;
 
 		if(precioTotal > 0)
 			total += pedidoProveedor.componentes[ind].precioTotal;

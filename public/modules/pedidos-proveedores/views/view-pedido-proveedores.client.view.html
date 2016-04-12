@@ -104,7 +104,7 @@
           </tr>
         </thead>
         <tbody>
-        <tr data-ng-repeat="componente in pedidoProveedor.componentes" class="table-condensed table-stripped " >
+        <tr data-ng-repeat="componente in pedidoProveedor.componentes | orderBy:'weight'" class="table-condensed table-stripped " >
             <td><a style="text-decoration:none" href="/#!/componentes/{{componente.codigo}}">{{componente.codigo}}</a></td>
             <td>{{componente.denominacion}}</td>
             <td>{{componente.qty}}{{componente.unidades}}</td> 

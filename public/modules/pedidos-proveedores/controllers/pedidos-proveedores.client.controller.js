@@ -18,6 +18,9 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 		$scope.totalPedido = 0;
 		$scope.pedidoProveedor = {};
 		$scope.showCompletados = false;
+
+		$scope.lastWeight = 0;
+
 		var ultimoPedidoProveedor = PedidosProveedores.ultimo().$promise.then(
 			function(success){
 				//console.log(success);
@@ -186,13 +189,13 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 
 		    modalInstance.result.then(function (selectedItem) {
 		      var selected = selectedItem;
-		      console.log(selected);
+		      //console.log(selected);
 		      selected.forEach(function(element,index){
 		      	element.removed = false;
 		      	var compExist = _.findIndex($scope.componentes,'codigo',element.codigo);
 		      	//$scope.componentes.push(element);
 		      	if(compExist === -1){
-
+		      		element.weight = $scope.lastWeight++;
 		      		$scope.componentes.push(element);
 		      		$scope.totalPedido = $scope.calcularTotal($scope.componentes);
 		      	}
