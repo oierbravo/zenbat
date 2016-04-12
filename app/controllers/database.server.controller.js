@@ -957,10 +957,13 @@ function calculosPedidosProveedor(pedidoProveedor,ppIndex){
 		//pedidoProveedor.componentes[ind].precioTotal = parseFloat(el.qty) * parseFloat(el.precioUnit) ;
 		var precioTotal = parseFloat(el.qty) * parseFloat(el.precioUnit) ;
 		pedidoProveedor.componentes[ind].precioTotal = precioTotal;
-		pedidoProveedor.componentes[ind].weight = weight;
+		if(typeof pedidoProveedor.componentes[ind].weight === 'undefined'){
+				pedidoProveedor.componentes[ind].weight = weight;
+				weight++;
+			}
 
 
-		weight++;
+		
 
 		if(precioTotal > 0)
 			total += pedidoProveedor.componentes[ind].precioTotal;

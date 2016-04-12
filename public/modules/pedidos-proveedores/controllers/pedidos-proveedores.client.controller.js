@@ -102,7 +102,7 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 				self.componentes = [];
 			}
 			self.componentes.forEach(function(element,index){
-				//console.log('componente-' + index,element);
+				console.log('componente-' + index,element);
 				if(_.isUndefined(element.qty)){
 					self.componentes[index].qty = 0;
 				}
