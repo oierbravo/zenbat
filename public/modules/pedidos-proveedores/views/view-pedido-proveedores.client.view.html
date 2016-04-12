@@ -104,8 +104,10 @@
           </tr>
         </thead>
         <tbody>
-        <tr data-ng-repeat="componente in pedidoProveedor.componentes | orderBy:'weight'" class="table-condensed table-stripped " >
-            <td><a style="text-decoration:none" href="/#!/componentes/{{componente.codigo}}">{{componente.codigo}}</a></td>
+
+        <tr data-ng-repeat="componente in pedidoProveedor.componentes" class="table-condensed table-stripped " >
+             <td><a class="hidden-print" style="text-decoration:none" href="/#!/componentes/{{componente.codigo}}">{{componente.codigo}}</a><span class="visible-print-block">{{componente.codigo}}</span></td>
+
             <td>{{componente.denominacion}}</td>
             <td>{{componente.qty}}{{componente.unidades}}</td> 
             <td class="hidden-print"  data-ng-show="pedidoProveedor.pendiente">{{componente.precioTotal | number :2}}</td>  
