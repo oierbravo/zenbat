@@ -8,6 +8,7 @@
 #TODO NU
 - new pedido status: "Componentes en camino"
 	- stock por llegar e ir descontando.
+			- 
 - Logger:
 	* Para cambiar el historial borrar y darle a recargar.
 	* Marcar entrada y salida en logs largos
@@ -18,7 +19,7 @@
 - User DropdownList
     - Desplegable con los usuarios siempre visible.
     	- Guardar los historiales con el usuario.
-- P.Prov Sortable componentes. Poder decidir el orden final de los componentes.
+* P.Prov Sortable componentes. Poder decidir el orden final de los componentes.
 
 # TO PRODUCTION
 x bck files,dbs,xls

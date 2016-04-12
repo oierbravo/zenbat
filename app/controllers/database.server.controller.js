@@ -53,6 +53,7 @@ var fileHistorial = zenbatConfig.basePath + 'historial.db';
 var dbHistorial = flatfile.sync(fileHistorial);
 var dbHistorial;
 //var lastLID;
+var tempComponentes = [];
 var log = {
 	info: function(msg,data,user){
 		if(typeof data === 'undefined'){
@@ -728,7 +729,7 @@ exports.createPedidoProveedor = function(req, res) {
 
 	dbPedidosProveedores.put(pedido.nPedido,dbObj,function(data){
 		exports.pedidosProveedores.push(dbObj);
-		calculos();
+		//calculos();
 		log.info('Pedido proveedor creado',{nPedido:dbObj.nPedido,codigo:dbObj.nPedido,categoria:"proveedores"})
 		res.json(dbObj);
 	});
@@ -965,9 +966,10 @@ function calculosPedidosProveedor(pedidoProveedor,ppIndex){
 
 		
 
-		if(precioTotal > 0)
+		if(precioTotal > 0){
 			total += pedidoProveedor.componentes[ind].precioTotal;
-		//}
+		}
+		
 	});
 	pedidoProveedor.totalPedido = total;
 	exports.pedidosProveedores[ppIndex] = pedidoProveedor;
@@ -975,6 +977,7 @@ function calculosPedidosProveedor(pedidoProveedor,ppIndex){
 }
 function calculosPedido(pedido){
 	var faltanComponentes = false;
+	var componentesEnCamino;
 	pedido.stock.forEach(function(componentePedido,index){
 		if(componentePedido.status === 'no procesado'){
 			//console.log('calculosPedido.componentePedido',componentePedido);
@@ -1005,8 +1008,18 @@ function calculosPedido(pedido){
 			if(componentePedido.faltan === 0){
 				componentePedido.disponible = true;
 			} else {
-				componentePedido.disponible = false;
-				faltanComponentes = true;
+
+				//Checkear si hay componentes en camino
+				if(tempComponentes[cIndex].cantidadNoRecibida >= componentePedido.faltan){
+					tempComponentes[cIndex].cantidadNoRecibida -= componentePedido.faltan;
+					componentesEnCamino = true;
+				} else {
+					
+					
+					componentesEnCamino = false;
+					componentePedido.disponible = false;
+					faltanComponentes = true;
+				}
 			}
 			componentePedido.status = 'procesado';
 			pedido.stock[index] = componentePedido;
@@ -1019,6 +1032,12 @@ function calculosPedido(pedido){
 			pedido.status ='FALTAN COMPONENTES';
 			pedido.entregable = false;
 			pedido.cssClass = 'times';
+		} else if(componentesEnCamino) {
+			pedido.entregado = false;
+			pedido.status ='COMPONENTES EN CAMINO';
+			pedido.entregable = false;
+			pedido.cssClass = 'hourglass';
+		
 		} else {
 			pedido.status = 'OK';
 			pedido.entregado = true;
@@ -1038,29 +1057,24 @@ function calculosPedido(pedido){
 	return pedido;
 }
 function calculos(){
-	// console.log('init calculando...');
+
 	log.verbose('init calculando...');
 
-	// console.log('calculos componentes...');
+
 	log.verbose('calculos componentes...');
 	exports.componentes.forEach(function(componente,cIndex){
-		//console.log('calculando-componente-foreach',componente);
-		
 		exports.componentes[cIndex] = calculosComponente(componente);
 	});	
-	// console.log('calculos pedidosProveedores...');
+	tempComponentes = exports.componentes;
 	log.verbose('calculos pedidosProveedores...');
 	exports.pedidosProveedores.forEach(function(pedidoProveedor,ppIndex){
-		//console.log('calculando-componente-foreach',componente);
 		
 		exports.pedidosProveedores[ppIndex] = calculosPedidosProveedor(pedidoProveedor,ppIndex);
 	});	
-	// console.log('calculos pedidos...');
 	log.verbose('calculos pedidos...');
 	exports.pedidos.forEach(function(pedido,pIndex){
 		exports.pedidos[pIndex] = calculosPedido(pedido);
 	});
-	// console.log('fin calculando.');
 	log.verbose('fin calculando.');
 	//log.info("Carga de datos y calculos finalizados.");
 }
