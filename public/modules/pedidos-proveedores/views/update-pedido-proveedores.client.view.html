@@ -98,7 +98,7 @@
 					<td>{{componente.pedidoMinimo}}</td>
 					<td>{{componente.precioUnit}}</td>
 
-					<td><input name="qty" type="text" data-ng-model="componente.qty" class="form-control" placeholder="" ng-init="0"  ng-change="calcularTotal()" ></td>
+					<td><input name="qty" type="text" data-ng-model="componente.qty" class="form-control" placeholder="" ng-init="0"  ng-change="calcularTotal()" ng-keyup="$event.keyCode == 13 && getEnterKey()" ></td>
 					<td><input name="unidades" type="text" data-ng-model="componente.unidades" class="form-control" placeholder="" ng-init="" ng-trim="false"></td>
 					<td>{{componente.precioTotal | number}}</td>	
 					<td><input name="recibidos" data-ng-model="componente.recibidos" class="form-control" placeholder="" ng-init="0" ></td>
@@ -124,7 +124,7 @@
 					<a class="btn btn-primary" ng-click="openEdit()">Añadir componentes</a>
 				</div>
 				<div class="form-group">
-					<input type="submit" class="btn btn-default">
+					<a class="btn btn-default" ng-click="update()">Guardar</a>
 				</div>
 				<div data-ng-show="error" class="text-danger">
 					<strong data-ng-bind="error"></strong>

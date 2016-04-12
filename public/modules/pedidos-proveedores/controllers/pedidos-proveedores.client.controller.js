@@ -334,6 +334,17 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 				
 			}
 		};
+		$scope.getEnterKey = function(){
+			console.log('enter');
+		}
+		$scope.checkIfEnterKeyWasPressed = function($event){
+		    var keyCode = $event.which || $event.keyCode;
+		    if (keyCode === 13) {
+		        // Do that thing you finally wanted to do
+		        console.log('enter',$event);
+		    }
+
+		  };
 
 	}
 ]);
