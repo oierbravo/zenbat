@@ -402,47 +402,54 @@ function loadPedidosForEach(pedido,index){
 
 	exports.pedidos[index] = pedido;
 	var armario = getArmario(armarioId);
-	pedido.armario = armario;
-	if(armario.faltanIDs){
-		pedido.status = 'FALTAN IDS';
+	if(armario){
+		pedido.armario = armario;
+
+		if(armario.faltanIDs){
+			pedido.status = 'FALTAN IDS';
+			pedido.entregable = false;
+		}
+		//entregamos los completos.
+		if( pedido.entregados >  pedido.lastEntregados){
+			var diff = pedido.entregados - pedido.lastEntregados;
+			//console.log(diff + " armarios a entregar");
+			log.verbose(diff + " armarios a entregar");
+			pedido.porEntregar = diff;
+			pedido = entregarPedido(pedido);
+			
+		} else {
+			pedido.porEntregar = 0;
+		}
+		
+		//actualizamos los componentes
+		pedido.stock = [];
+		armario.componentes.forEach(function(el,ind){
+			if(el.Codigo){
+				var compI = _.findIndex(exports.componentes,{codigo:el.Codigo});
+				var qty = el.Cantidad * pedido.pendientes;
+				var qtyUnidad = el.Cantidad;
+				//console.log(qty);
+				if(compI > -1){
+					//exports.componentes[compI].pedidos.push({pedidoId:pedido.pedidoId,qty:qty});
+					if(_.isNumber(qty)){
+						exports.componentes[compI] = componenteAddPedido(exports.componentes[compI],pedido.pedidoId,qty);
+
+					}
+					
+
+
+					pedido.stock.push({componenteId:el.Codigo,status:'no procesado',cantidad:qty,cantidadUnidad:qtyUnidad});
+
+				} else {
+					pedido.stock.push({componenteId:el.Codigo,status:'ID no encontrado.',cantidad:qty,cantidadUnidad:qtyUnidad});
+				}
+			}
+		});
+
+	} else {
+		pedido.status = 'EL ARMARIO NO A SIDO GENERADO';
 		pedido.entregable = false;
 	}
-	//entregamos los completos.
-	if( pedido.entregados >  pedido.lastEntregados){
-		var diff = pedido.entregados - pedido.lastEntregados;
-		//console.log(diff + " armarios a entregar");
-		log.verbose(diff + " armarios a entregar");
-		pedido.porEntregar = diff;
-		pedido = entregarPedido(pedido);
-		
-	} else {
-		pedido.porEntregar = 0;
-	}
-	
-	//actualizamos los componentes
-	pedido.stock = [];
-	armario.componentes.forEach(function(el,ind){
-		if(el.Codigo){
-			var compI = _.findIndex(exports.componentes,{codigo:el.Codigo});
-			var qty = el.Cantidad * pedido.pendientes;
-			var qtyUnidad = el.Cantidad;
-			//console.log(qty);
-			if(compI > -1){
-				//exports.componentes[compI].pedidos.push({pedidoId:pedido.pedidoId,qty:qty});
-				if(_.isNumber(qty)){
-					exports.componentes[compI] = componenteAddPedido(exports.componentes[compI],pedido.pedidoId,qty);
-
-				}
-				
-
-
-				pedido.stock.push({componenteId:el.Codigo,status:'no procesado',cantidad:qty,cantidadUnidad:qtyUnidad});
-
-			} else {
-				pedido.stock.push({componenteId:el.Codigo,status:'ID no encontrado.',cantidad:qty,cantidadUnidad:qtyUnidad});
-			}
-		}
-	});
 
 }
 exports.loadPedido = function(){
@@ -922,7 +929,10 @@ function calculosComponente(componente){
 
 
 		});
+
+		componente.cantidadRecomendada = parseInt(componente.cantidadReservada) + parseInt(componente.stockSeguridad) - parseInt(componente.cantidad);
 		//componente.cantidad += componente.cantidadRecibida;
+		//console.log("CR:" + componente.cantidadRecomendada + " CRes:" + componente.cantidadReservada + " SS: " + componente.stockSeguridad + " C: " + componente.cantidad );
 		componente = checkComponenteStatus(componente);
 		return componente;
 }
@@ -949,10 +959,12 @@ function calculosPedidosProveedor(pedidoProveedor,ppIndex){
 							cantidad:  componente.cantidad,
 							cantidadReservada: componente.cantidadReservada,
 							cantidadProveedores: componente.cantidadProveedores,
-							stockSeguridad: componente.stockSeguridad
+							stockSeguridad: componente.stockSeguridad,
+							cantidadRecomendada: componente.cantidadRecomendada
 						};
-						pedidoProveedor.componentes[ind].componenteData = componenteData;
-
+						//pedidoProveedor.componentes[ind].componenteData = componenteData;
+						_.extend(pedidoProveedor.componentes[ind],componente);
+//
 
 					}
 		//pedidoProveedor.componentes[ind].precioTotal = parseFloat(el.qty) * parseFloat(el.precioUnit) ;
@@ -978,53 +990,54 @@ function calculosPedidosProveedor(pedidoProveedor,ppIndex){
 function calculosPedido(pedido){
 	var faltanComponentes = false;
 	var componentesEnCamino;
-	pedido.stock.forEach(function(componentePedido,index){
-		if(componentePedido.status === 'no procesado'){
-			//console.log('calculosPedido.componentePedido',componentePedido);
-			var cIndex = _.findIndex(exports.componentes,{codigo:componentePedido.componenteId});
-			var componente = exports.componentes[cIndex];
-			var necesarios = componentePedido.cantidad;
-			componentePedido.necesarios = necesarios;
-			componentePedido.codigo = componente.codigo;
-			componentePedido.stock = componente.cantidad + componente.cantidadRecibida;
-			componentePedido.denominacion = componente.denominacion;
-			//console.log('calculosPedido.componente',componente);
-			componentePedido.cantidadReservada = componente.cantidadReservada;
-			componentePedido.cantidadProveedores = componente.cantidadProveedores;
-			
-			var pedidoInd = _.findIndex(componente.pedidosSums,{pedidoId:pedido.pedidoId});
-			var sumPedidoActual = componente.pedidosSums[pedidoInd].sum;
-			componentePedido.sumPedidoActual = sumPedidoActual;
-			if(componentePedido.stock > (sumPedidoActual + necesarios)){
-				componentePedido.faltan = 0;
+	if(pedido.status !== 'EL ARMARIO NO A SIDO GENERADO'){
+		pedido.stock.forEach(function(componentePedido,index){
+			if(componentePedido.status === 'no procesado'){
+				//console.log('calculosPedido.componentePedido',componentePedido);
+				var cIndex = _.findIndex(exports.componentes,{codigo:componentePedido.componenteId});
+				var componente = exports.componentes[cIndex];
+				var necesarios = componentePedido.cantidad;
+				componentePedido.necesarios = necesarios;
+				componentePedido.codigo = componente.codigo;
+				componentePedido.stock = componente.cantidad + componente.cantidadRecibida;
+				componentePedido.denominacion = componente.denominacion;
+				//console.log('calculosPedido.componente',componente);
+				componentePedido.cantidadReservada = componente.cantidadReservada;
+				componentePedido.cantidadProveedores = componente.cantidadProveedores;
 				
-			} else {
-		
-				componentePedido.faltan = componentePedido.stock - sumPedidoActual - componentePedido.necesarios;
-				if(componentePedido.faltan < 0){
-					componentePedido.faltan  = -componentePedido.faltan;
-				}
-			}
-			if(componentePedido.faltan === 0){
-				componentePedido.disponible = true;
-			} else {
-
-				//Checkear si hay componentes en camino
-				if(tempComponentes[cIndex].cantidadNoRecibida >= componentePedido.faltan){
-					tempComponentes[cIndex].cantidadNoRecibida -= componentePedido.faltan;
-					componentesEnCamino = true;
+				var pedidoInd = _.findIndex(componente.pedidosSums,{pedidoId:pedido.pedidoId});
+				var sumPedidoActual = componente.pedidosSums[pedidoInd].sum;
+				componentePedido.sumPedidoActual = sumPedidoActual;
+				if(componentePedido.stock > (sumPedidoActual + necesarios)){
+					componentePedido.faltan = 0;
+					
 				} else {
-					
-					
-					componentesEnCamino = false;
-					componentePedido.disponible = false;
-					faltanComponentes = true;
+			
+					componentePedido.faltan = componentePedido.stock - sumPedidoActual - componentePedido.necesarios;
+					if(componentePedido.faltan < 0){
+						componentePedido.faltan  = -componentePedido.faltan;
+					}
 				}
-			}
-			componentePedido.status = 'procesado';
-			pedido.stock[index] = componentePedido;
-		}	
-	});
+				if(componentePedido.faltan === 0){
+					componentePedido.disponible = true;
+				} else {
+
+					//Checkear si hay componentes en camino
+					if(tempComponentes[cIndex].cantidadNoRecibida >= componentePedido.faltan){
+						tempComponentes[cIndex].cantidadNoRecibida -= componentePedido.faltan;
+						componentesEnCamino = true;
+					} else {
+						
+						
+						componentesEnCamino = false;
+						componentePedido.disponible = false;
+						faltanComponentes = true;
+					}
+				}
+				componentePedido.status = 'procesado';
+				pedido.stock[index] = componentePedido;
+			}	
+		});
 	if(pedido.pendientes > 0){
 		if(faltanComponentes){
 
@@ -1044,6 +1057,7 @@ function calculosPedido(pedido){
 			pedido.cssClass = 'check';
 		}
 
+
 	} else if(pedido.pendientes === 0){
 		pedido.status = 'FINALIZADO';
 		pedido.entregado = true;
@@ -1051,8 +1065,14 @@ function calculosPedido(pedido){
 	} else {
 		pedido.entregado = false;
 	}
+
+}
 	if(pedido.status === 'FALTAN IDS'){
 		pedido.cssClass = 'times';
+	} else if(pedido.status === 'EL ARMARIO NO A SIDO GENERADO'){
+		pedido.cssClass = 'warning';
+
+
 	}
 	return pedido;
 }
@@ -1130,30 +1150,30 @@ exports.verificarComponenteId = verificarComponenteId
 function getArmario(id){
 	var filepath = zenbatConfig.basePath + zenbatConfig.armarios.folder + '\\' + id + '.xlsx';
     if (fs.existsSync(filepath)) {
-  //console.log('Found file',filepath);
-    var workbook = XLSX.readFileSync(filepath);
+	  //console.log('Found file',filepath);
+	    var workbook = XLSX.readFileSync(filepath);
 
- 	var componentesRaw = XLSX.utils.sheet_to_json(workbook.Sheets.componentes,{header:zenbatConfig.armarios.header,range:3});
-    var componentes = componentesRaw.filter(function(element,index){
-  		return (element.Cantidad)?true: false;
-  	});
-    var faltanIDs = false;
-  	componentes.forEach(function(element,index){
-  		//verificar returs true if exists
-  		componentes[index].Cantidad = parseFloat(element.Cantidad).toFixed(2);
-  		var faltaID = !verificarComponenteId(element.Codigo);
-  		if(faltaID){
-  			faltanIDs = true;
-  		}
-  		componentes[index].faltaID = faltaID;
-  	
-    });
- ///console.log('arm-comps',componentes);
-    return {
-  		id: id,
-  		faltanIDs:faltanIDs, 
-  		componentes:componentes
-    };
+	 	var componentesRaw = XLSX.utils.sheet_to_json(workbook.Sheets.componentes,{header:zenbatConfig.armarios.header,range:3});
+	    var componentes = componentesRaw.filter(function(element,index){
+	  		return (element.Cantidad)?true: false;
+	  	});
+	    var faltanIDs = false;
+	  	componentes.forEach(function(element,index){
+	  		//verificar returs true if exists
+	  		componentes[index].Cantidad = parseFloat(element.Cantidad).toFixed(2);
+	  		var faltaID = !verificarComponenteId(element.Codigo);
+	  		if(faltaID){
+	  			faltanIDs = true;
+	  		}
+	  		componentes[index].faltaID = faltaID;
+	  	
+	    });
+	 ///console.log('arm-comps',componentes);
+	    return {
+	  		id: id,
+	  		faltanIDs:faltanIDs, 
+	  		componentes:componentes
+	    };
 	} else {
 		return false;
 	}

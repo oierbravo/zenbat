@@ -101,6 +101,7 @@
                 <th class="hidden-print"  data-ng-show="pedidoProveedor.pendiente">Cant. Armarios</th>
                 <th class="hidden-print"  data-ng-show="pedidoProveedor.pendiente">Cant. Proveedores</th>
                 <th class="hidden-print"  data-ng-show="pedidoProveedor.pendiente">Stock seguridad</th> 
+                <th class="hidden-print"  data-ng-show="pedidoProveedor.pendiente">Cantidad recomendada</th> 
           </tr>
         </thead>
         <tbody>
@@ -112,10 +113,11 @@
             <td>{{componente.qty}}{{componente.unidades}}</td> 
             <td class="hidden-print"  data-ng-show="pedidoProveedor.pendiente">{{componente.precioTotal | number :2}}</td>  
            
-            <td class="hidden-print" data-ng-show="pedidoProveedor.pendiente">{{componente.componenteData.cantidad}}<span class="text-success" ng-show="componente.recibidos"> + {{componente.recibidos}}</span></td>
-            <td class="hidden-print" data-ng-show="pedidoProveedor.pendiente">{{componente.componenteData.cantidadReservada}}</td>
-            <td class="hidden-print" data-ng-show="pedidoProveedor.pendiente">{{componente.componenteData.cantidadProveedores}}</td>
-            <td class="hidden-print" data-ng-show="pedidoProveedor.pendiente">{{componente.componenteData.stockSeguridad}}</td>      
+            <td class="hidden-print" data-ng-show="pedidoProveedor.pendiente">{{componente.cantidad}}<span class="text-success" ng-show="componente.recibidos"> + {{componente.recibidos}}</span></td>
+            <td class="hidden-print" data-ng-show="pedidoProveedor.pendiente">{{componente.cantidadReservada}}</td>
+            <td class="hidden-print" data-ng-show="pedidoProveedor.pendiente">{{componente.cantidadProveedores}}</td>
+            <td class="hidden-print" data-ng-show="pedidoProveedor.pendiente">{{componente.stockSeguridad}}</td>
+            <td class="hidden-print" data-ng-show="pedidoProveedor.pendiente">{{componente.cantidadRecomendada}}</td>       
         </tr>
         <tr class="hidden-print">
             <td></td>

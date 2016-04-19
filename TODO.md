@@ -1,12 +1,18 @@
 * new pedido status: "Componentes en camino"
 	* stock por llegar e ir descontando.
-- [p.prov] keypress enter = tab or next line
-- [p.prov] Cantidad recomendada a pedir
+* [p.prov] override keypress enter = tab or next line
+* [p.prov] Cantidad recomendada a pedir :cantidad en armarios + StockSeguridad – Cant. Actual y el resultado es la cantidad recomendada a pedir
 - [HOME] leyenda
 - [recarga] mostrar errores
-	- Armario not found.
+	* pedido: armario no generado
 
+- [Tables] Tooltips.
 
+- [stock] Añadir a pedido
+  - View: stock
+  	- Añadir columna con boton de añadir a pedido.
+  	- Popup para elejir pedido y textinput para qty y unidad
+  		- Tabla de p.proveedores tal cual.
 
 - Logger:
 	* Para cambiar el historial borrar y darle a recargar.

@@ -88,6 +88,7 @@
 		            <td>Cant. Armarios</td>
 		            <td>Cant. Proveedores</td>
 		            <td>Stock seguridad</td>
+		            <td>Cantidad recomendada</td> 
 		        </tr>
 		    </thead>
 		    <tbody>
@@ -105,10 +106,12 @@
 					<td><a class="btn btn-warning" data-ng-click="removeComponente(componente.codigo,true);">
 			<i class="glyphicon glyphicon-trash"></i>
 		</a></td>
-		<td>{{componente.componenteData.cantidad}}<span class="text-success" ng-show="componente.recibidos"> + {{componente.recibidos}}</span></td>
-		<td>{{componente.componenteData.cantidadReservada}}</td>
-		<td>{{componente.componenteData.cantidadProveedores}}</td>
-		<td>{{componente.componenteData.stockSeguridad}}</td>
+		<td>{{componente.cantidad}}<span class="text-success" ng-show="componente.recibidos"> + {{componente.recibidos}}</span></td>
+		<td>{{componente.cantidadReservada}}</td>
+		<td>{{componente.cantidadProveedores}}</td>
+		<td>{{componente.stockSeguridad}}</td>
+		<td>{{componente.cantidadRecomendada}}</td>
+
 				</tr>
 				<tr>
 					<td></td>

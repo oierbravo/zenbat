@@ -27,7 +27,13 @@ angular.module('pedidos-proveedores').controller('ModalInstanceCtrlController', 
 	  	_.forEach(componentesSeleccionados,function(element,index){
 	  		componentesSeleccionados[index].qty  = 0;
 	  		componentesSeleccionados[index].recibidos  = 0;
-	  		var componente = {
+	  		var componente =  {
+	  			qty: 0,
+	  			recibidos:0,
+	  			removed:false
+	  		};
+	  		_.extend(componente,element);
+	  		/*var componente = {
 	  			codigo: element.codigo,
 	  			denominacion:element.denominacion,
 	  			pedidoMinimo: element.pedidoMinimo,
@@ -36,10 +42,9 @@ angular.module('pedidos-proveedores').controller('ModalInstanceCtrlController', 
 	  			cantidadReservada: element.cantidadReservada,
 	  			cantidadProveedores: element.cantidadProveedores,
 	  			stockSeguridad: element.stockSeguridad,
-	  			qty: 0,
-	  			recibidos:0,
-	  			removed:false
-	  		};
+	  			
+	  		};*/
+
 	  		output.push(componente);
 	  	});
 	    $modalInstance.close(output);

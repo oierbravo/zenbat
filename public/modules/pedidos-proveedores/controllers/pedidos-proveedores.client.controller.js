@@ -230,7 +230,7 @@ angular.module('pedidos-proveedores').controller('PedidosProveedoresController',
 		      	//$scope.componentes.push(element);
 
 		      	if(compExist === -1){
-
+		      		
 		      		$scope.pedidoProveedor.componentes.push(element);
 		      		$scope.totalPedido = $scope.calcularTotal($scope.pedidoProveedor.componentes);
 		      	} else {
