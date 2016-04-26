@@ -1,8 +1,8 @@
 'use strict';
 
 
-angular.module('componentes').controller('ComponentesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Componentes','usSpinnerService','AlertasFactory',
-	function($scope, $stateParams, $location, Authentication, Componentes,usSpinnerService,AlertasFactory) {
+angular.module('componentes').controller('ComponentesController', ['$http','$scope', '$stateParams', '$location', 'Authentication', 'Componentes','usSpinnerService','AlertasFactory','$modal',
+	function($http,$scope, $stateParams, $location, Authentication, Componentes,usSpinnerService,AlertasFactory,$modal) {
 		$scope.authentication = Authentication;
 
  		$scope.searchString   = '';     // set the default search/filter term
@@ -82,5 +82,69 @@ angular.module('componentes').controller('ComponentesController', ['$scope', '$s
 
 			});
 		};
+		$scope.addToPedido = function(codigo){
+			console.log('addToPedido', codigo);
+		}
+		$scope.openModalAddToPedido = function (codigo) {
+			//$log.log($scope);
+			//console.log('open');
+			console.log('addToPedido', codigo);
+			var size = 'lg';
+		    var modalInstance = $modal.open({
+		      animation: $scope.animationsEnabled,
+		      templateUrl: 'addToPedidoContent.html',
+		      controller: 'StockAddToPedidoModalController',
+		      size: size,
+		
+		      resolve: {
+		        codigo: function () {
+		          return "ppp";
+		        }
+		      }
+		    });
+
+		    modalInstance.result.then(function (modalOutput) {
+		    	modalOutput.codigo = codigo;
+		    	console.log(modalOutput);
+		    	
+		    	$http.post('/add-to-pedido-proveedor',modalOutput).then(
+		    		function(success){
+		    			console.log('success',success);
+		    			alert(success.data.message);
+		    			/*var modalInstance = $modal.open({
+						      animation: $scope.animationsEnabled,
+						      templateUrl: 'addToPedidoResult.html',
+						      controller: 'StockAddToPedidoModalController',
+						      size: 'sm',
+						      
+						      resolve: {
+						        message: 
+						          success.data.message
+						        
+						      }
+						    });*/
+
+		    		},function(fail){
+		    			console.log('fail',fail);
+		    			//alert(fail.data.message)
+		    			alert("Ha habido un error");
+		    		}
+		    	);
+		      /*var selected = selectedItem;
+		      //console.log(selected);
+		      selected.forEach(function(element,index){
+		      	element.removed = false;
+		      	var compExist = _.findIndex($scope.componentes,'codigo',element.codigo);
+		      	//$scope.componentes.push(element);
+		      	if(compExist === -1){
+		      		element.weight = $scope.lastWeight++;
+		      		$scope.componentes.push(element);
+		      		$scope.totalPedido = $scope.calcularTotal($scope.componentes);
+		      	}
+		      });*/
+		    }, function () {
+		     // $log.info('Modal dismissed at: ' + new Date());++
+		    });
+	  };
 	}
 ]);

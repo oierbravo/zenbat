@@ -23,6 +23,10 @@ module.exports = function(app) {
 	app.route('/pedidos-proveedores-existe/:pedidoProveedoresExistsId')
 		.get(database.pedidoProveedorExists);
 
+
+	app.route('/add-to-pedido-proveedor')
+		.post(database.addToPedidoProveedor);
+
 	app.param('pedidoProveedoresExistsId', database.pedidoProveedorExistsById);
 	app.param('pedidoProveedoresId', database.pedidoProveedorByID);
 

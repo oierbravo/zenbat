@@ -274,7 +274,14 @@ element.cantidadReservada = 0;
 		exports.componentes[index] = element;
 	    cache.put(element.codigo,element);
 }
-
+function getComponente(codigo){
+	var componente = _.find(exports.componentes,['codigo',codigo]);
+	if(componente === -1){
+		return false;
+	} else {
+		return componente;
+	}
+}
 function saveComponente(componente,categoria,diff,accion){
 	var dbObj = {
 		cantidad:componente.cantidad
@@ -761,7 +768,7 @@ exports.updatePedidoProveedor = function(req, res) {
 	//console.log('dbPedidosProveedores.keys()',dbPedidosProveedores.keys());
 	pedidoProveedor = _.extend(pedidoProveedor, req.body);
 
-	dbPedidosProveedores.put(req.pedidoProveedor.nPedido,pedidoProveedor);
+	
 	pedidoProveedor.componentes.forEach(function(el,ind){
 		if(el.removed){
 			componenteDeletePedidoProveedor(el.codigo,pedidoProveedor.nPedido);
@@ -770,7 +777,7 @@ exports.updatePedidoProveedor = function(req, res) {
 			componenteUpdatePedidoProveedor(el.codigo,pedidoProveedor.nPedido,el.qty,el.recibidos);
 		}
 	});
-	
+	dbPedidosProveedores.put(req.pedidoProveedor.nPedido,pedidoProveedor);
 	exports.pedidosProveedores[index] = pedidoProveedor;
 	//calculos();
 	res.json(pedidoProveedor);
@@ -844,8 +851,99 @@ function completarPedidoProveedor(req,res){
 	res.status(200).send({message:"Completado " + req.pedidoProveedor.nPedido});
 }
 exports.completarPedidoProveedor = completarPedidoProveedor;
+function addToPedidoProveedor(req,res){
+	console.log('addToPedidoProveedor',req.body);
+	
 
+
+	var pedidoProveedor = exports.dbPedidosProveedores.get(req.body.nPedido);
+	
+	//var componente = getComponente(req.body.codigo);
+	var componenteIndex = _.findIndex(pedidoProveedor.componentes, {'codigo' :req.body.codigo});
+	console.log('componenteIndex',componenteIndex);
+	var outputQty = 0;
+	if(componenteIndex === -1){
+		pedidoProveedor.componentes.push({codigo:req.body.codigo,qty:parseInt(req.body.qty),unidad:req.body.unidad,recibidos:0});
+		outputQty = req.body.qty;
+	} else {
+		console.log('comp',pedidoProveedor.componentes[componenteIndex]);
+		var comp = pedidoProveedor.componentes[componenteIndex];
+		comp.qty += parseInt(qty);
+		pedidoProveedor.componentes[componenteIndex] = comp;
+		//pedidoProveedor.componentes[componenteIndex].qty += parseInt(qty);
+		outputQty = pedidoProveedor.componentes[componenteIndex].qty;
+	}
+	
+	//console.log('pedidoProveedor',pedidoProveedor);
+	dbPedidosProveedores.put(req.body.nPedido,pedidoProveedor,function(data){
+		//exports.pedidosProveedores.push(dbObj);
+		//calculos();
+		log.info('Añadido componente' + req.body.codigo +' al pedido',{nPedido:req.body.nPedido,codigo:req.body.nPedido,categoria:"proveedores"})
+		//res.json(dbObj);
+		res.status(200).send({message:"Añadido " + req.body.codigo +" al pedido " + req.body.nPedido + ". Total componente: " + outputQty});
+	});
+	
+}//res.status(400).send({message:"" + req.body.codigo " al pedido " + req.body.nPedido});
+exports.addToPedidoProveedor = addToPedidoProveedor;
 function checkComponenteStatus(componente){
+	componente.status = 'ok';
+
+	var actual = parseFloat(componente.cantidad) + componente.cantidadRecibida;
+	var futura = componente.cantidadProveedores - componente.cantidadRecibida;
+
+//console.log('calcularCosas',componente);
+
+	//var totalReservas = getReservaTotal(componente);
+
+	var totalPedidosProveedores = componente.cantidadProveedores;
+    var usable = actual - componente.cantidadReservada ;
+    var stockMinimo = parseFloat(componente.stockSeguridad);
+    var usableFuturo = usable + componente.cantidadNoRecibida;
+    //var cantReservas = componente.pedidos.length;
+    //var cantPedidosProveedores = componente.pedidosProveedores.length;
+    //console.log(componente);
+    componente.hasReservas = false;
+    componente.totalReservas = componente.cantidadProveedores;
+    componente.totalPedidosProveedores = componente.cantidadProveedores;
+    componente.usable = usable;
+
+    componente.cantReservas = componente.pedidos.length;
+    componente.cantPedidosProveedores = componente.pedidosProveedores.length;
+    if(componente.cantidadReservada > 0){
+    	componente.hasReservas = true;
+    }
+    if(componente.cantidadProveedores > 0){
+    	componente.hasProveedores = true;
+    }
+
+
+ //   if(totalPedidosProveedores > 0){
+	    if(usableFuturo < 0){
+			componente.status = 'negativo';
+	    	
+	    } else {
+	    	if(usableFuturo < stockMinimo){
+		    	componente.status = 'bajoMinimos';
+		    	
+	   		}
+	    }
+//	}
+	if(componente.hasReservas){
+    		componente.status += ' con PC';
+    		if(componente.hasProveedores){
+		    		componente.status += ' y Proveedor';
+		    	}
+    	} else {
+    		if(componente.hasProveedores){
+		    		componente.status += ' con Proveedor';
+		    	}
+    	}
+    	
+	return componente;
+
+
+}
+function _checkComponenteStatusOLD(componente){
 	componente.status = 'ok';
 
 	var actual = parseFloat(componente.cantidad) + componente.cantidadRecibida;

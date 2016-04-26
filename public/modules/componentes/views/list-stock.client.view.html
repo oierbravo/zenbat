@@ -73,6 +73,7 @@
           <td>{{componente.cantidadReservada| number :2}}</td>
           <td>{{componente.cantidadProveedores| number :2}}  (<span class="text-success">{{componente.cantidadRecibida}}</span>:<span class="text-warning">{{componente.cantidadNoRecibida}}</span>)</td>
           <td>{{componente.status}}</td>
+          <td><a class="btn btn-warning" data-ng-click="openModalAddToPedido(componente.codigo);"><i class="glyphicon glyphicon-shopping-cart"></i></a></td>
           <td>
             <button ng-click="stockChange('{{componente.codigo}}',-100)">-100</button>
             <button ng-click="stockChange('{{componente.codigo}}',-10)">-10</button>
@@ -99,64 +100,52 @@
         </div>
         <div class="modal-body" >
             <form class="animate-show">
+         
+        <form class="form container">
+     
+
+
+      <div class="form-group">
+            <div class="input-group">
+              <label for="pedidoSeleccionado">Pedido</label>
+  
+        <select name="pedidoSeleccionado" id="pedidoSeleccionado" ng-model="pedidoSeleccionado">
+           <option ng-repeat="pedido in pedidosProveedores | orderBy:'pedido.fecha'" value="{{pedido.nPedido}}">{{pedido.fecha}} | {{pedido.nPedido}} - {{pedido.proveedorData.Nombre}}</option>
+        </select>
+            </div>      
+          </div>
+        
           <div class="form-group">
             <div class="input-group">
-              <div class="input-group-addon"><i class="fa fa-search"></i></div>
-              <input type="text" class="form-control" placeholder="Buscador" ng-model="searchString">
+              <label for="qty">Cantidad</label>
+              <input type="text" class="form-control" ng-model="qty" id="qty"></input>
+              <label for="unidad">Unidad</label>
+              <input type="text" class="form-control" ng-model="unidad" id="unidad"></input>
             </div>      
           </div>
         </form>
-     <table data-toggle="table"  data-height="299" class="table-stripped table table-hover animate-show" ng-show="elCargados"  data-search="true"  data-show-columns="true">
-            <thead>
-                <tr>
-                     <td>
-                        <a href="" ng-click="order('fecha')">Fecha</a>
-                     <span class="sortorder" ng-show="predicate === 'fecha'" ng-class="{reverse:reverse}"></span>
-                        </td>
-                    <td>
-                        <a href="" ng-click="order('fechaEntrega')">Fecha entrega</a>
-                     <span class="sortorder" ng-show="predicate === 'fechaEntrega'" ng-class="{reverse:reverse}"></span>
-                        </td>
-
-
-                    <td>
-                        <a href="" ng-click="order('pedidoProveedorId')">Numero</a>
-                        <span class="sortorder" ng-show="predicate === 'pedidoProveedorId'" ng-class="{reverse:reverse}"></span>
-                    </td>
-                    <td>
-                        <a href="" ng-click="order('proveedor')">Proveedor</a>
-                        <span class="sortorder" ng-show="predicate === 'proveedor'" ng-class="{reverse:reverse}"></span>
-                    </td>
-                     <td>
-                        <a href="" ng-click="almacen('almacen')">Almacen</a>
-                        <span class="sortorder" ng-show="predicate === 'almacen'" ng-class="{reverse:reverse}"></span>
-                    </td>
-                    <td>
-                        <a href="" ng-click="order('status')">Estado</a>
-                        <span class="sortorder" ng-show="predicate === 'status'" ng-class="{reverse:reverse}"></span>
-                    </td>
-                    <td>Acciones</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr data-ng-repeat="pedido in pedidosProveedores | orderBy:predicate:reverse | filter:searchString" class="table-condensed table-stripped" ng-class="{completado:pedido.completado,showCompletados:showCompletados}">
-                    <td>{{pedido.fecha | date:'dd-MM-yyyy'}}</td>
-                    <td>{{pedido.fechaEntrega | date:'dd-MM-yyyy'}}</td>
-                    <td>{{pedido.pedidoProveedorId}}</td>
-                    <td>{{pedido.proveedorData.Nombre}}</td>
-                    <td>{{pedido.almacenData.Nombre}}</td>
-                    <td>{{pedido.status}}</td>
-                    <td><a href="#!/pedidos-proveedores/{{pedido.nPedido}}"> Ver</a> | <a href="#!/pedidos-proveedores/{{pedido.nPedido}}/edit" data-ng-show="pedido.pendiente"> Editar</a></td>
-                </tr>
-            </tbody>
-        </table>
-
-
-            
-            
         </div>
         <div class="modal-footer">
+            <span>{{codigo}}</span>
             <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
             <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+
+
+    <script type="text/ng-template" id="addToPedidoResult.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Añadir a pedido</h3>
+        </div>
+        <div class="modal-body" >
+           {{message}}
+         
+       
+
+        </div>
+        <div class="modal-footer">
+            <span>{{pedidoSeleccionado}}</span>
+            <button class="btn btn-primary" type="button" ng-click="okResult()">OK</button>
+          
         </div>
     </script>

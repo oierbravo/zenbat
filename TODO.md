@@ -10,10 +10,9 @@
 
 - [stock] Añadir a pedido
   - View: stock
-  	- Añadir columna con boton de añadir a pedido.
-  	- Popup para elejir pedido y textinput para qty y unidad
-  		- Tabla de p.proveedores tal cual.
-
+  	* Añadir columna con boton de añadir a pedido.
+  	* Popup para elejir pedido y textinput para qty y unidad
+  	- FALLO : no actualiza bien cuando el pedido ya tiene el componente.
 - Logger:
 	* Para cambiar el historial borrar y darle a recargar.
 	* Marcar entrada y salida en logs largos
