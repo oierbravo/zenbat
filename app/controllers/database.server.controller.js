@@ -14,6 +14,17 @@ var zenbatConfig = require('../../zenbat.config.js');
 var EventLogger = require('node-windows').EventLogger;
 var syslog = new EventLogger('Zenbat');
 
+var marked = require('marked');
+marked.setOptions({
+  renderer: new marked.Renderer(),
+  gfm: true,
+  tables: true,
+  breaks: false,
+  pedantic: false,
+  sanitize: true,
+  smartLists: true,
+  smartypants: false
+});
 //var winston = require('winston');
 /*var log = new (winston.Logger)({
     transports: [
@@ -915,7 +926,7 @@ function checkComponenteStatus(componente){
     if(componente.cantidadProveedores > 0){
     	componente.hasProveedores = true;
     }
-
+    
 
  //   if(totalPedidosProveedores > 0){
 	    if(usableFuturo < 0){
@@ -1343,7 +1354,19 @@ exports.getHomeData = function(req,res){
 	var leyenda = "";
 	//var leyendaFile =  zenbatConfig.basePath + "leyenda.txt";
 	//leyenda = fs.readFileSync( leyendaFile).toString();
-	leyenda = getLeyendaData();
+	var leyendaFile =  zenbatConfig.basePath + "leyenda.txt";
+	if (fs.existsSync(leyendaFile)) {
+		fs.readFile( leyendaFile, function (err, data) {
+	  if (err) {
+	    throw err; 
+	  }
+	  //console.log();
+	  leyenda =  data.toString();
+		});
+	} else {
+		leyenda=  'file not found';
+	}
+	
 	/*if (fs.existsSync(leyendaFile)) {
 		fs.readFileSync( leyendaFile, function (err, data) {
 	  if (err) {
@@ -1372,7 +1395,6 @@ exports.getHomeData = function(req,res){
 	
 
 	var output = {
-		leyenda: leyenda,
 		proximos: proximosRaw,
 		numComponentes: compCount,
 		pedidosFaltan: pedidosFaltan,
@@ -1388,10 +1410,10 @@ function getLeyendaData(){
 	    throw err; 
 	  }
 	  //console.log();
-	  return data;
+	  return data.toString();
 		});
 	} else {
-		return false;
+		return 'file not found';
 	}
 }
 exports.getLeyenda = function(req,res){
@@ -1402,11 +1424,14 @@ exports.getLeyenda = function(req,res){
 	    throw err; 
 	  }
 	  //console.log();
-	  res.send(data);
+	  return  res.send(marked(data.toString()));
 		});
 	} else {
-		res.sendStatus(404);
+		return 'file not found';
 	}
+
+		
+
 }
 
 exports.getPedidosAutocomplete = function(req,res){

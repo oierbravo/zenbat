@@ -1,8 +1,18 @@
+- File leyenda
+	- Patrones codigos
+	- 
+- Colores:
+	Negativos -> rojo+
+	Negativo con Proveedor -> rojo+
+
+
+
+
 * new pedido status: "Componentes en camino"
 	* stock por llegar e ir descontando.
 * [p.prov] override keypress enter = tab or next line
 * [p.prov] Cantidad recomendada a pedir :cantidad en armarios + StockSeguridad – Cant. Actual y el resultado es la cantidad recomendada a pedir
-- [HOME] leyenda
+* [HOME] leyenda
 - [recarga] mostrar errores
 	* pedido: armario no generado
 

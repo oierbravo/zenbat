@@ -19,7 +19,10 @@ $scope.reverse = false;
 			$scope.pedidosProveedoresPendientes = success.pedidosProveedoresPendientes;
 			$scope.proximos = success.proximos;
 			//$scope.leyenda = marked(success.leyenda);
-			$scope.leyenda = success.leyenda;
+			//$scope.leyenda = success.leyenda;
 		});
+		$http.get('/leyenda').success(function(success){
+			$scope.leyenda = success;
+			});
 	}
 ]);

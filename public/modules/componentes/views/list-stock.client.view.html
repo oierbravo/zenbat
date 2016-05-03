@@ -65,7 +65,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr data-ng-repeat="componente in componentes | orderBy:predicate:reverse   | filter:searchString " class="table-condensed table-stripped componente-status-{{componente.status}}" data-ng-controller="RowComponenteController" id="{{componente.codigo}}">
+        <tr data-ng-repeat="componente in componentes | orderBy:predicate:reverse   | filter:searchString " class="table-condensed table-stripped componente-status-{{componente.status | css}}" data-ng-controller="RowComponenteController" id="{{componente.codigo}}">
     			<td><a href="/#!/componentes/{{componente.codigo}}">{{componente.codigo}}</a></td>
     			<td>{{componente.denominacion}}</td>
           <td>{{componente.cantidad + componente.cantidadRecibida | number :2 }}</td>
@@ -101,27 +101,30 @@
         <div class="modal-body" >
             <form class="animate-show">
          
-        <form class="form container">
+        <form class="form container col-md-6">
      
 
 
       <div class="form-group">
-            <div class="input-group">
+        
               <label for="pedidoSeleccionado">Pedido</label>
   
-        <select name="pedidoSeleccionado" id="pedidoSeleccionado" ng-model="pedidoSeleccionado">
+        <select name="pedidoSeleccionado" id="pedidoSeleccionado" ng-model="pedidoSeleccionado" class="form-control">
            <option ng-repeat="pedido in pedidosProveedores | orderBy:'pedido.fecha'" value="{{pedido.nPedido}}">{{pedido.fecha}} | {{pedido.nPedido}} - {{pedido.proveedorData.Nombre}}</option>
         </select>
-            </div>      
+           
           </div>
         
           <div class="form-group">
-            <div class="input-group">
+   
               <label for="qty">Cantidad</label>
               <input type="text" class="form-control" ng-model="qty" id="qty"></input>
+         </div>
+        <div class="form-group">
               <label for="unidad">Unidad</label>
               <input type="text" class="form-control" ng-model="unidad" id="unidad"></input>
-            </div>      
+
+         
           </div>
         </form>
         </div>

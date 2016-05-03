@@ -124,43 +124,60 @@ tr.disponible.oculatarOk {
 	display:none;
 }
 
-.componente-status-OK {
+.componente-status-ok {
 	background-color: #ffffff;
+}
+.componente-status-ok-con-pc {
+	background-color: #ccc;
+}
+.componente-status-ok-con-proveedor {
+	background-color: #ddd;
+}
+.componente-status-ok-con-pc-y-proveedor {
+	background-color: #ddd;
 }
 .componente-status-negativo {
 	background-color: #ff0000;
+	background-color: rgba(255, 0, 0, 0.90);;
+}
+.componente-status-negativo-con-pc {
+	background-color: #ff0000;
 	background-color: rgba(255, 0, 0, 0.50);;
+	color: #fff;
+}
+.componente-status-negativo-con-proveedor {
+	background-color: #ff0000;
+	background-color: rgba(255, 0, 0, 0.90);;
+	color: #fff;
+}
+.componente-status-negativo-con-pc-y-proveedor {
+	background-color: #ff0000;
+	background-color: rgba(255, 0, 0, 0.90);;
+	color: #fff;
 }
 .componente-status-negativoConReserva {
 	background-color: #ff0000;
 	background-color: rgba(255, 0, 0, 0.90);;
 	color: #fff;
 }
-.componente-status-bajoMinimos {
+.componente-status-bajominimos {
+	background-color: #ff0000;
+	background-color: rgba(255, 200, 100, 0.20);;
+}
+.componente-status-bajominimos-con-pc {
 	background-color: #ff0000;
 	background-color: rgba(255, 200, 100, 0.40);;
 }
-.componente-status-bajoMinimosConReserva {
+.componente-status-bajominimos-con-proveedor {
 	background-color: #ff0000;
-	background-color: rgba(255, 200, 100, 0.8);;
+	background-color: rgba(255, 200, 100, 0.60);;
 }
-.componente-status-negativoFuturo {
+.componente-status-bajominimos-con-pc-y-proveedor {
 	background-color: #ff0000;
-	background-color: rgba(0, 0, 255, 0.50);;
+	background-color: rgba(255, 200, 100, 0.60);;
 }
-.componente-status-negativoFuturoConReserva {
-	background-color: #ff0000;
-	background-color: rgba(0, 0, 255, 0.80);;
-	color: #fff;
-}
-.componente-status-bajoMinimosFuturo {
-	background-color: #ff0000;
-	background-color: rgba(0, 200, 255, 0.40);;
-}
-.componente-status-bajoMinimosFuturoConReserva {
-	background-color: #ff0000;
-	background-color: rgba(0, 200, 255, 0.8);;
-}
+
+
 .modal-body table {
 	height: 300px;
 	overflow: scroll;
