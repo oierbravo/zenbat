@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 var path = require('path');
-var zenbatConfig = require(__dirname +'../../zenbat.config.js');
+var zenbatConfig = require(__dirname +'/zenbat.config.js');
 
 
 var walk    = require('walk');

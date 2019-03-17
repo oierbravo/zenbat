@@ -10,7 +10,7 @@ var path = require('path');
  * Load app configurations
  */
 module.exports = _.extend(
-	require(process.cwd() + '/config/env/all'),
+	require(__dirname + '/config/env/all'),
 	require(path.normalize(__dirname + '/config/env/' + process.env.NODE_ENV)) || {}
 );
 
