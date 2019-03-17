@@ -8,8 +8,7 @@ module.exports = function(grunt) {
 		clientViews: ['public/modules/**/views/**/*.html'],
 		clientJS: ['public/js/*.js', 'public/modules/**/*.js'],
 		clientCSS: ['public/modules/**/*.css'],
-		configEzarri: ['zenbat.config.js'],
-		mochaTests: ['app/tests/**/*.js']
+		configEzarri: ['zenbat.config.js']
 	};
 
 	// Project Configuration
@@ -135,18 +134,6 @@ module.exports = function(grunt) {
 			secure: {
 				NODE_ENV: 'secure'
 			}
-		},
-		mochaTest: {
-			src: watchFiles.mochaTests,
-			options: {
-				reporter: 'spec',
-				require: 'server.js'
-			}
-		},
-		karma: {
-			unit: {
-				configFile: 'karma.conf.js'
-			}
 		}
 	});
 
@@ -181,5 +168,4 @@ grunt.registerTask('lint', []);
 	grunt.registerTask('build', ['lint', 'loadConfig', 'ngAnnotate', 'uglify', 'cssmin']);
 
 	// Test task.
-	grunt.registerTask('test', ['env:test', 'mochaTest', 'karma:unit']);
 };

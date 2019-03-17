@@ -5,47 +5,54 @@
  */
 var _ = require('lodash'),
 	errorHandler = require('../errors.server.controller.js'),
-	mongoose = require('mongoose'),
+	//mongoose = require('mongoose'),
 	passport = require('passport'),
-	User = mongoose.model('User');
+	//User = mongoose.model('User');
+	user = { // This a hard-coded user
+		_id: 1,
+		username: 'oier',
+		email: 'john@doe.com',
+		password: 'carampa'
+	};
 
 /**
  * Update user details
  */
 exports.update = function(req, res) {
 	// Init Variables
-	var user = req.user;
+	//var user = req.user;
 	var message = null;
 
 	// For security measurement we remove the roles from the req.body object
-	delete req.body.roles;
+	// delete req.body.roles;
 
-	if (user) {
-		// Merge existing user
-		user = _.extend(user, req.body);
-		user.updated = Date.now();
-		user.displayName = user.firstName + ' ' + user.lastName;
+	// if (user) {
+	// 	// Merge existing user
+	// 	user = _.extend(user, req.body);
+	// 	user.updated = Date.now();
+	// 	user.displayName = user.firstName + ' ' + user.lastName;
 
-		user.save(function(err) {
-			if (err) {
-				return res.status(400).send({
-					message: errorHandler.getErrorMessage(err)
-				});
-			} else {
-				req.login(user, function(err) {
-					if (err) {
-						res.status(400).send(err);
-					} else {
-						res.json(user);
-					}
-				});
-			}
-		});
-	} else {
-		res.status(400).send({
-			message: 'User is not signed in'
-		});
-	}
+	// 	user.save(function(err) {
+	// 		if (err) {
+	// 			return res.status(400).send({
+	// 				message: errorHandler.getErrorMessage(err)
+	// 			});
+	// 		} else {
+	// 			req.login(user, function(err) {
+	// 				if (err) {
+	// 					res.status(400).send(err);
+	// 				} else {
+	// 					res.json(user);
+	// 				}
+	// 			});
+	// 		}
+	// 	});
+	// } else {
+	// 	res.status(400).send({
+	// 		message: 'User is not signed in'
+	// 	});
+	// }
+	res.json(user);
 };
 
 /**

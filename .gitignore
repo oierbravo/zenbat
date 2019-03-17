@@ -9,3 +9,5 @@ app/tests/coverage/
 .idea/
 data/
 zenbat/
+
+zenbat-*

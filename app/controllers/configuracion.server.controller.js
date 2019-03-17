@@ -3,11 +3,11 @@
 /**
  * Module dependencies.
  */
-var mongoose = require('mongoose'),
+/*var mongoose = require('mongoose'),*/
     _ = require('lodash');
 
 var cache = require('memory-cache');
-var zenbatConfig = require('../../zenbat.config.js');
+var zenbatConfig = require(__dirname + '/zenbat.config.js');
 
 
 var flatfile = require('flat-file-db');

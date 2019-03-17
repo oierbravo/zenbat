@@ -4,10 +4,10 @@
  */
 var init = require('./config/init')(),
 	config = require('./config/config'),
-	mongoose = require('mongoose'),
+	//mongoose = require('mongoose'),
 	chalk = require('chalk');
-var EventLogger = require('node-windows').EventLogger;
-var log = new EventLogger('Zenbat');
+//var EventLogger = require('node-windows').EventLogger;
+//var log = new EventLogger('Zenbat');
 
 
 /**
@@ -16,18 +16,19 @@ var log = new EventLogger('Zenbat');
  */
 
 // Bootstrap db connection
-var db = mongoose.connect(config.db, function(err) {
+/* var db = mongoose.connect(config.db, function(err) {
 	if (err) {
 		console.error(chalk.red('Could not connect to MongoDB!'));
 		console.log(chalk.red(err));
 	}
-});
+}); */
 
 // Init the express application
-var app = require('./config/express')(db);
+// var app = require('./config/express')(db);
+var app = require('./config/express')();
 
 // Bootstrap passport config
-require('./config/passport')();
+//require('./config/passport')();
 
 
 // Start the app by listening on <port>
@@ -39,3 +40,4 @@ exports = module.exports = app;
 
 // Logging initialization
 console.log('MEAN.JS application started on port ' + config.port);
+console.log(process.cwd());

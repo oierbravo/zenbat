@@ -5,13 +5,13 @@
  */
 var _ = require('lodash'),
 	glob = require('glob');
-
+var path = require('path');
 /**
  * Load app configurations
  */
 module.exports = _.extend(
-	require('./env/all'),
-	require('./env/' + process.env.NODE_ENV) || {}
+	require(process.cwd() + '/config/env/all'),
+	require(path.normalize(__dirname + '/config/env/' + process.env.NODE_ENV)) || {}
 );
 
 /**

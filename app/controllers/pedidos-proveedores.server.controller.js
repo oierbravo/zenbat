@@ -3,8 +3,8 @@
 /**
  * Module dependencies.
  */
-var mongoose = require('mongoose'),
-    _ = require('lodash');
+//var mongoose = require('mongoose'),
+  var  _ = require('lodash');
 var moment = require('moment');
 
 var Componentes = require('./componentes.server.controller.js');
@@ -13,7 +13,7 @@ var Proveedores = require('./proveedores.server.controller.js');
 var errorHandler = require('./errors.server.controller');
 
 var cache = require('memory-cache');
-var zenbatConfig = require('../../zenbat.config.js');
+var zenbatConfig = require(__dirname + '/zenbat.config.js');
 
 
 var flatfile = require('flat-file-db');

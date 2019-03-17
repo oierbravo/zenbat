@@ -4,8 +4,8 @@
  * Module dependencies.
  */
 var chalk = require('chalk');
-var mongoose = require('mongoose'),
-	errorHandler = require('./errors.server.controller'),
+//var mongoose = require('mongoose'),
+	var errorHandler = require('./errors.server.controller'),
 	
 	_ = require('lodash');
 
@@ -18,7 +18,7 @@ var Componentes = require('./componentes.server.controller.js');
 require('array.prototype.find');
 
 var cache = require('memory-cache');
-var zenbatConfig = require('../../zenbat.config.js');
+var zenbatConfig = require(__dirname + '/zenbat.config.js');
 
 var headerPedidos = zenbatConfig.pedidos.header;
 
@@ -30,7 +30,7 @@ cache.put('reloadPedidos',true);
 
 
 var flatfile = require('flat-file-db');
-var dbPedidos = flatfile.sync(zenbatConfig.basePath + 'db\\pedidos.db');
+var dbPedidos = flatfile.sync(zenbatConfig.basePath + zenbatConfig.pedidos.dbFile);
 //var dbPedidosComponente = flatfile.sync(zenbatConfig.basePath + 'db\\pedidosComponente.db');
 var cachePedidosComponente = cache;
 /*var chokidar = require('chokidar');

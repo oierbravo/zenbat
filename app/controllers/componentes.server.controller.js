@@ -3,8 +3,8 @@
 /**
  * Module dependencies.
  */
-var mongoose = require('mongoose'),
-	errorHandler = require('./errors.server.controller'),
+/*var mongoose = require('mongoose'),*/
+	var errorHandler = require('./errors.server.controller'),
 	
 	_ = require('lodash');
 
@@ -15,10 +15,10 @@ var Pedidos =  require('./pedidos.server.controller');
 var PedidosProveedores =  require('./pedidos-proveedores.server.controller');
 
 //var cache = require('memory-cache');
-var zenbatConfig = require('../../zenbat.config.js');
+var zenbatConfig = require(__dirname + '/zenbat.config.js');
 
 var flatfile = require('flat-file-db');
-var dbProductos = flatfile.sync(zenbatConfig.basePath + 'db\\productos.db');
+var dbProductos = flatfile.sync(zenbatConfig.basePath + zenbatConfig.componentes.dbFile);
 
 var headerProductos = zenbatConfig.componentes.header;
 var headerStock = zenbatConfig.stock.header;

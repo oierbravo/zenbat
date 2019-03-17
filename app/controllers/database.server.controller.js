@@ -3,16 +3,16 @@
 /**
  * Module dependencies.
  */
-var mongoose = require('mongoose'),
-    _ = require('lodash');
+//var mongoose = require('mongoose'),
+var    _ = require('lodash');
 var cache = require('memory-cache');
 var moment = require('moment');
 
 var fs      = require('fs');
 var zenbatConfig = require('../../zenbat.config.js');
 
-var EventLogger = require('node-windows').EventLogger;
-var syslog = new EventLogger('Zenbat');
+//var EventLogger = require('node-windows').EventLogger;
+//var syslog = new EventLogger('Zenbat');
 
 var marked = require('marked');
 marked.setOptions({

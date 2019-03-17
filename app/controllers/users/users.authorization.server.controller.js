@@ -4,31 +4,40 @@
  * Module dependencies.
  */
 var _ = require('lodash'),
-	mongoose = require('mongoose'),
-	User = mongoose.model('User');
+	//mongoose = require('mongoose'),
+	//User = mongoose.model('User');
+	user = { // This a hard-coded user
+		_id: 1,
+		username: 'oier',
+		email: 'john@doe.com',
+		password: 'carampa'
+	};
 
 /**
  * User middleware
  */
 exports.userByID = function(req, res, next, id) {
-	User.findOne({
+	/*User.findOne({
 		_id: id
 	}).exec(function(err, user) {
 		if (err) return next(err);
 		if (!user) return next(new Error('Failed to load User ' + id));
 		req.profile = user;
 		next();
-	});
+	});*/
+	req.profile = user;
+	next();
 };
 
 /**
  * Require login routing middleware
  */
 exports.requiresLogin = function(req, res, next) {
+
 	if (!req.isAuthenticated()) {
-		return res.status(401).send({
-			message: 'User is not logged in'
-		});
+		// return res.status(401).send({
+		// 	message: 'User is not logged in'
+		// });
 	}
 
 	next();
@@ -39,8 +48,9 @@ exports.requiresLogin = function(req, res, next) {
  */
 exports.hasAuthorization = function(roles) {
 	var _this = this;
-
+	
 	return function(req, res, next) {
+		return next();
 		_this.requiresLogin(req, res, function() {
 			if (_.intersection(req.user.roles, roles).length) {
 				return next();

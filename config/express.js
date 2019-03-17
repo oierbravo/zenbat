@@ -1,9 +1,8 @@
-'use strict';
-
 /**
  * Module dependencies.
  */
 var fs = require('fs'),
+	path = require('path'),
 	http = require('http'),
 	https = require('https'),
 	express = require('express'),
@@ -14,27 +13,27 @@ var fs = require('fs'),
 	methodOverride = require('method-override'),
 	cookieParser = require('cookie-parser'),
 	helmet = require('helmet'),
-	passport = require('passport'),
-	mongoStore = require('connect-mongo')({
-		session: session
-	}),
+	//passport = require('passport'),
+
 	flash = require('connect-flash'),
-	config = require('./config'),
+	config = require(path.normalize(__dirname + '/config/config')),
 	consolidate = require('consolidate'),
-	path = require('path'),
+	
 	json2xls = require('json2xls');
 
- var database = require('../app/controllers/database.server.controller.js');
+ var database = require(path.normalize(__dirname + '/app/controllers/database.server.controller.js'));
 
 
-module.exports = function(db) {
+
+ module.exports = function() {
+	// module.exports = function(db) {
 	// Initialize express app
 	var app = express();
 
 	// Globbing model files
-	config.getGlobbedFiles('./app/models/**/*.js').forEach(function(modelPath) {
-		require(path.resolve(modelPath));
-	});
+	// config.getGlobbedFiles('./app/models/**/*.js').forEach(function(modelPath) {
+	// 	require(path.resolve(modelPath));
+	// });
 
 	// Setting application local variables
 	app.locals.title = config.app.title;
@@ -68,7 +67,7 @@ module.exports = function(db) {
 
 	// Set views path and view engine
 	app.set('view engine', 'server.view.html');
-	app.set('views', './app/views');
+	app.set('views', path.join(process.cwd(),'/app/views'));
 
 	// Environment dependent middleware
 	if (process.env.NODE_ENV === 'development') {
@@ -92,19 +91,31 @@ module.exports = function(db) {
 	app.use(cookieParser());
 
 	// Express MongoDB session storage
-	app.use(session({
-		saveUninitialized: true,
-		resave: true,
-		secret: config.sessionSecret,
-		store: new mongoStore({
-			db: db.connection.db,
-			collection: config.sessionCollection
-		})
-	}));
+	// app.use(session({
+	// 	saveUninitialized: true,
+	// 	resave: true,
+	// 	secret: config.sessionSecret,
+	// 	store: new mongoStore({
+	// 		db: db.connection.db,
+	// 		collection: config.sessionCollection
+	// 	})
+	// }));
+
+	/*app.use(session({
+		genid: function(req)  {
+		  console.log('Inside the session middleware')
+		  console.log(req.sessionID)
+		  return uuid() // use UUIDs for session IDs
+		},
+		store: new FileStore(),
+		secret: 'keyboard cat',
+		resave: false,
+		saveUninitialized: true
+	  }))*/
 
 	// use passport session
-	app.use(passport.initialize());
-	app.use(passport.session());
+	//app.use(passport.initialize());
+	//app.use(passport.session());
 
 	// connect flash for flash messages
 	app.use(flash());
@@ -117,10 +128,10 @@ module.exports = function(db) {
 	app.disable('x-powered-by');
 
 	// Setting the app router and static folder
-	app.use(express.static(path.resolve('./public')));
+	app.use(express.static(path.resolve(process.cwd() + '/public')));
 
 	// Globbing routing files
-	config.getGlobbedFiles('./app/routes/**/*.js').forEach(function(routePath) {
+	config.getGlobbedFiles(path.join(process.cwd() + '/app/routes/**/*.js')).forEach(function(routePath) {
 		require(path.resolve(routePath))(app);
 	});
 
@@ -153,8 +164,8 @@ module.exports = function(db) {
 		console.log('Securely using https protocol');
 
 		// Load SSL key and certificate
-		var privateKey = fs.readFileSync('./config/sslcerts/key.pem', 'utf8');
-		var certificate = fs.readFileSync('./config/sslcerts/cert.pem', 'utf8');
+		var privateKey = fs.readFileSync(path.join(process.cwd() + '/config/sslcerts/key.pem', 'utf8'));
+		var certificate = fs.readFileSync(path.join(process.cwd() + '/config/sslcerts/cert.pem', 'utf8'));
 
 		// Create HTTPS Server
 		var httpsServer = https.createServer({
