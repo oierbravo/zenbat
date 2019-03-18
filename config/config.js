@@ -9,10 +9,22 @@ var path = require('path');
 /**
  * Load app configurations
  */
-module.exports = _.extend(
-	require(__dirname + '/config/env/all'),
-	require(path.normalize(__dirname + '/config/env/' + process.env.NODE_ENV)) || {}
-);
+
+if( process.env.NODE_ENV === 'development'){
+	module.exports = _.extend(
+		require('./env/all'),
+		require('./env/development') || {}
+	);
+} else {
+	module.exports = _.extend(
+		require('./env/all'),
+		require( './env/production') || {}
+	);
+}
+
+
+
+
 
 /**
  * Get files by glob patterns
@@ -49,7 +61,6 @@ module.exports.getGlobbedFiles = function(globPatterns, removeRoot) {
 			});
 		}
 	}
-
 	return output;
 };
 

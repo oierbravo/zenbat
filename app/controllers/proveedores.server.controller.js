@@ -6,7 +6,7 @@
 //var mongoose = require('mongoose'),
   var  _ = require('lodash');
 var path = require('path');
-var zenbatConfig = require(__dirname + '/zenbat.config.js');
+var zenbatConfig = require('../../zenbat.config.js');
 
 //var headerProveedores = zenbatConfig.pedidosProveedores.proveedores.header;
 

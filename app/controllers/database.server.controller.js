@@ -7,6 +7,7 @@
 var    _ = require('lodash');
 var cache = require('memory-cache');
 var moment = require('moment');
+var path = require('path');
 
 var fs      = require('fs');
 var zenbatConfig = require('../../zenbat.config.js');

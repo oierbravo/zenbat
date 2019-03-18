@@ -1,13 +1,12 @@
 'use strict';
 
 
-angular.module('core').controller('HomeController', ['$scope', 'Authentication','$http','marked',
-	function($scope, Authentication,$http,marked) {
+angular.module('core').controller('HomeController', ['$scope', '$http','marked',
+	function($scope, $http,marked) {
 		// This provides Authentication context.
 		$scope.pedidosFaltan = [];
 		$scope.numComponentes = 0;
 		$scope.pedidosProveedoresPendientes = [];
-		$scope.authentication = Authentication;
 
 $scope.predicate = 'fechaUnix';
 $scope.reverse = false;

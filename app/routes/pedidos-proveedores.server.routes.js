@@ -4,7 +4,6 @@ var database = require('../../app/controllers/database.server.controller');
 
 module.exports = function(app) {
 	
-	var users = require('../../app/controllers/users.server.controller');
 	// Pedidos Routes
 	app.route('/pedidos-proveedores')
 		.get(pedidosProveedores.list)

@@ -4,10 +4,11 @@
 npm-debug.log
 node_modules/
 public/lib
+public/dist
 app/tests/coverage/
 .bower-*/
 .idea/
 data/
 zenbat/
-
+zenbat.exe
 zenbat-*

@@ -2,6 +2,7 @@
 /**
  * Module dependencies.
  */
+var config = require('./zenbat.config');
 var init = require('./config/init')(),
 	config = require('./config/config'),
 	//mongoose = require('mongoose'),
@@ -27,6 +28,7 @@ var init = require('./config/init')(),
 // var app = require('./config/express')(db);
 var app = require('./config/express')();
 
+
 // Bootstrap passport config
 //require('./config/passport')();
 
@@ -40,4 +42,3 @@ exports = module.exports = app;
 
 // Logging initialization
 console.log('MEAN.JS application started on port ' + config.port);
-console.log(process.cwd());

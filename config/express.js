@@ -8,7 +8,6 @@ var fs = require('fs'),
 	express = require('express'),
 	morgan = require('morgan'),
 	bodyParser = require('body-parser'),
-	session = require('express-session'),
 	compress = require('compression'),
 	methodOverride = require('method-override'),
 	cookieParser = require('cookie-parser'),
@@ -16,12 +15,14 @@ var fs = require('fs'),
 	//passport = require('passport'),
 
 	flash = require('connect-flash'),
-	config = require(path.normalize(__dirname + '/config/config')),
+	config = require( './config'),
 	consolidate = require('consolidate'),
 	
 	json2xls = require('json2xls');
 
- var database = require(path.normalize(__dirname + '/app/controllers/database.server.controller.js'));
+	
+
+ var database = require('../app/controllers/database.server.controller.js');
 
 
 
@@ -30,16 +31,10 @@ var fs = require('fs'),
 	// Initialize express app
 	var app = express();
 
-	// Globbing model files
-	// config.getGlobbedFiles('./app/models/**/*.js').forEach(function(modelPath) {
-	// 	require(path.resolve(modelPath));
-	// });
-
 	// Setting application local variables
 	app.locals.title = config.app.title;
 	app.locals.description = config.app.description;
 	app.locals.keywords = config.app.keywords;
-	app.locals.facebookAppId = config.facebook.clientID;
 	app.locals.jsFiles = config.getJavaScriptAssets();
 	app.locals.cssFiles = config.getCSSAssets();
 	
@@ -67,7 +62,8 @@ var fs = require('fs'),
 
 	// Set views path and view engine
 	app.set('view engine', 'server.view.html');
-	app.set('views', path.join(process.cwd(),'/app/views'));
+	path.join(__dirname,'../app/views');
+	app.set('views', './app/views');
 
 	// Environment dependent middleware
 	if (process.env.NODE_ENV === 'development') {
@@ -90,33 +86,6 @@ var fs = require('fs'),
 	// CookieParser should be above session
 	app.use(cookieParser());
 
-	// Express MongoDB session storage
-	// app.use(session({
-	// 	saveUninitialized: true,
-	// 	resave: true,
-	// 	secret: config.sessionSecret,
-	// 	store: new mongoStore({
-	// 		db: db.connection.db,
-	// 		collection: config.sessionCollection
-	// 	})
-	// }));
-
-	/*app.use(session({
-		genid: function(req)  {
-		  console.log('Inside the session middleware')
-		  console.log(req.sessionID)
-		  return uuid() // use UUIDs for session IDs
-		},
-		store: new FileStore(),
-		secret: 'keyboard cat',
-		resave: false,
-		saveUninitialized: true
-	  }))*/
-
-	// use passport session
-	//app.use(passport.initialize());
-	//app.use(passport.session());
-
 	// connect flash for flash messages
 	app.use(flash());
 
@@ -128,12 +97,21 @@ var fs = require('fs'),
 	app.disable('x-powered-by');
 
 	// Setting the app router and static folder
-	app.use(express.static(path.resolve(process.cwd() + '/public')));
+	//app.use(express.static('../public'));
+	app.use(express.static(path.resolve('./public')));
 
-	// Globbing routing files
-	config.getGlobbedFiles(path.join(process.cwd() + '/app/routes/**/*.js')).forEach(function(routePath) {
-		require(path.resolve(routePath))(app);
-	});
+
+	const armarioGeneratorServer = require('../app/routes/armario-generator.server.routes')(app);
+	const armariosServer = require('../app/routes/armarios.server.routes')(app);
+	const componentesServer = require('../app/routes/componentes.server.routes')(app);
+	const coreServer = require('../app/routes/core.server.routes')(app);
+	const fileUploadImporterServer = require('../app/routes/file-upload-importer.server.routes')(app);
+	const historialServer = require('../app/routes/historial.server.routes')(app);
+	const pedidosProveedoresServer = require('../app/routes/pedidos-proveedores.server.routes')(app);
+	const pedidosServer = require('../app/routes/pedidos.server.routes')(app);
+	const proveedoresServer = require('../app/routes/proveedores.server.routes')(app);
+
+
 
 	// Assume 'not found' in the error msgs is a 404. this is somewhat silly, but valid, you can do whatever you like, set properties, use instanceof etc.
 	app.use(function(err, req, res, next) {
@@ -158,24 +136,6 @@ var fs = require('fs'),
 	});
 
 	app.use(json2xls.middleware);
-	
-	if (process.env.NODE_ENV === 'secure') {
-		// Log SSL usage
-		console.log('Securely using https protocol');
-
-		// Load SSL key and certificate
-		var privateKey = fs.readFileSync(path.join(process.cwd() + '/config/sslcerts/key.pem', 'utf8'));
-		var certificate = fs.readFileSync(path.join(process.cwd() + '/config/sslcerts/cert.pem', 'utf8'));
-
-		// Create HTTPS Server
-		var httpsServer = https.createServer({
-			key: privateKey,
-			cert: certificate
-		}, app);
-
-		// Return HTTPS server instance
-		return httpsServer;
-	}
 
 	// Return Express server instance
 	return app;

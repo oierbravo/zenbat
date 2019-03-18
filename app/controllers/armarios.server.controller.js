@@ -4,17 +4,17 @@
  * Module dependencies.
  */
 var path = require('path');
-var zenbatConfig = require(__dirname +'/zenbat.config.js');
+var zenbatConfig = require('../../zenbat.config.js');
 
 
 var walk    = require('walk');
 var fs      = require('fs');
 var XLSX = require('xlsx');
 var moment = require('moment');
-var Componentes = require(__dirname + '/componentes.server.controller.js');
+var Componentes = require( './componentes.server.controller.js');
 var json2xls = require('json2xls');
 var _ = require('lodash');
-
+var path = require('path');
 var cache = require('memory-cache');
 
 function getArmarioold(id){
@@ -60,7 +60,7 @@ exports.read = function(req, res) {
  */
 exports.list = function(req, res) {
    	var result = [];
-	var walker  = walk.walk(zenbatConfig.basePath + zenbatConfig.armarios.folder, { followLinks: false });
+	var walker  = walk.walk(path.normalize(zenbatConfig.basePath + zenbatConfig.armarios.folder), { followLinks: false });
 	walker.on('file', function(root, fileStat, next){
 
 		var filename = fileStat.name;

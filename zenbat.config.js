@@ -2,7 +2,7 @@
 
 
 module.exports = {
-	basePath: '../zenbat-data/',
+	basePath: 'C:\\Ezarri\\Zenbat\\',
 	componentes: {
 		file: 'productos.xlsx',
 		dbFile:'db/productos.db',

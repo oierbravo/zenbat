@@ -4,7 +4,8 @@
  * Module dependencies.
  */
 var glob = require('glob'),
-	chalk = require('chalk');
+path = require('path');
+var	chalk = require('chalk');
 
 /**
  * Module init function.
@@ -14,7 +15,7 @@ module.exports = function() {
 	 * Before we begin, lets set the environment variable
 	 * We'll Look for a valid NODE_ENV variable and if one cannot be found load the development NODE_ENV
 	 */
-	glob(__dirname + '/config/env/' + process.env.NODE_ENV + '.js', {
+	glob(path.normalize(process.cwd() + '/config/env/' + process.env.NODE_ENV + '.js'), {
 		sync: true
 	}, function(err, environmentFiles) {
 		if (!environmentFiles.length) {

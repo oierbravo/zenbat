@@ -6,6 +6,7 @@
 //var mongoose = require('mongoose'),
   var  _ = require('lodash');
 var moment = require('moment');
+var path = require('path');
 
 var Componentes = require('./componentes.server.controller.js');
 var Proveedores = require('./proveedores.server.controller.js');
@@ -13,7 +14,7 @@ var Proveedores = require('./proveedores.server.controller.js');
 var errorHandler = require('./errors.server.controller');
 
 var cache = require('memory-cache');
-var zenbatConfig = require(__dirname + '/zenbat.config.js');
+var zenbatConfig = require('../../zenbat.config.js');
 
 
 var flatfile = require('flat-file-db');
@@ -194,6 +195,7 @@ exports.list = function(req, res) {
  * Article authorization middleware
  */
 exports.hasAuthorization = function(req, res, next) {
+	next();
 	if (req.article.user.id !== req.user.id) {
 		return res.status(403).send({
 			message: 'User is not authorized'

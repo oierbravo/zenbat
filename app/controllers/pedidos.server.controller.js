@@ -8,6 +8,7 @@ var chalk = require('chalk');
 	var errorHandler = require('./errors.server.controller'),
 	
 	_ = require('lodash');
+	var path = require('path');
 
 	var XLSX = require('xlsx');
 var moment = require('moment');
@@ -18,7 +19,7 @@ var Componentes = require('./componentes.server.controller.js');
 require('array.prototype.find');
 
 var cache = require('memory-cache');
-var zenbatConfig = require(__dirname + '/zenbat.config.js');
+var zenbatConfig = require('../../zenbat.config.js');
 
 var headerPedidos = zenbatConfig.pedidos.header;
 
@@ -585,6 +586,7 @@ exports.pedidoByID = function(req, res, next, id) {
  * Pedido authorization middleware
  */
 exports.hasAuthorization = function(req, res, next) {
+	next();
 	if (req.pedido.user.id !== req.user.id) {
 		return res.status(403).send('User is not authorized');
 	}

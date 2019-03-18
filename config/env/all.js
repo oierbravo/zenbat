@@ -6,7 +6,7 @@ module.exports = {
 		description: 'Zenbat, inventory and manufacturing.',
 		keywords: 'mrp,inventory,manufacturing'
 	},
-	port: process.env.PORT || 8000,
+	port: process.env.PORT || 80,
 	templateEngine: 'swig',
 	sessionSecret: 'MEAN',
 	sessionCollection: 'sessions',
@@ -46,18 +46,14 @@ module.exports = {
 
 			]
 		},
+		
 		css: [
 			'public/modules/**/css/*.css'
 		],
 		js: [
 			'public/config.js',
 			'public/application.js',
-			'public/modules/*/*.js',
-			'public/modules/*/*[!tests]*/*.js'
-		],
-		tests: [
-			'public/lib/angular-mocks/angular-mocks.js',
-			'public/modules/*/tests/*.js'
+			'public/modules/**/*.js'
 		]
 	}
 };

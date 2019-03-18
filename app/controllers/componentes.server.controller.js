@@ -4,9 +4,10 @@
  * Module dependencies.
  */
 /*var mongoose = require('mongoose'),*/
-	var errorHandler = require('./errors.server.controller'),
-	
-	_ = require('lodash');
+	var errorHandler = require('./errors.server.controller');
+	var path = require('path');
+
+	var _ = require('lodash');
 
 require('array.prototype.find');
 var XLSX = require('xlsx');
@@ -15,10 +16,10 @@ var Pedidos =  require('./pedidos.server.controller');
 var PedidosProveedores =  require('./pedidos-proveedores.server.controller');
 
 //var cache = require('memory-cache');
-var zenbatConfig = require(__dirname + '/zenbat.config.js');
+var zenbatConfig = require('../../zenbat.config.js');
 
 var flatfile = require('flat-file-db');
-var dbProductos = flatfile.sync(zenbatConfig.basePath + zenbatConfig.componentes.dbFile);
+var dbProductos = flatfile.sync(path.normalize(zenbatConfig.basePath + zenbatConfig.componentes.dbFile));
 
 var headerProductos = zenbatConfig.componentes.header;
 var headerStock = zenbatConfig.stock.header;
@@ -52,6 +53,7 @@ exports.list = function(req, res) {
  * Article authorization middleware
  */
 exports.hasAuthorization = function(req, res, next) {
+	next();
 	if (req.componente.user.id !== req.user.id) {
 		return res.status(403).send({
 			message: 'User is not authorized'

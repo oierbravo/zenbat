@@ -11,25 +11,8 @@ angular.module('core').service('Menus', [
 		this.menus = {};
 
 		// A private function for rendering decision 
-		var shouldRender = function(user) {
+		var shouldRender = function() {
 			return true;
-			if (user) {
-				if (!!~this.roles.indexOf('*')) {
-					return true;
-				} else {
-					for (var userRoleIndex in user.roles) {
-						for (var roleIndex in this.roles) {
-							if (this.roles[roleIndex] === user.roles[userRoleIndex]) {
-								return true;
-							}
-						}
-					}
-				}
-			} else {
-				return this.isPublic;
-			}
-
-			return false;
 		};
 
 		// Validate menu existance
