@@ -69,23 +69,28 @@ bower install
 
 ## 6. Configure the data path
 
-The application reads data from Excel files (`.xlsx`) and stores its database in a `db/` folder. The base path is configured in `zenbat.config.js`:
+The application reads data from Excel files (`.xlsx`) and stores its flat-file databases in a `db/` folder. The base path is set in `zenbat.config.js`.
 
-```js
-basePath: 'C:\\Ezarri\\Zenbat\\'   // Windows production default
+### Development (Linux/Mac)
+
+The default `zenbat.config.js` uses `./data/` (relative to the project root). Create the folder and place the data files there:
+
+```bash
+mkdir -p data
+# copy productos.xlsx, pedidos.xlsx, proveedores.xlsx into data/
 ```
 
-**On Windows:** place the data files (`productos.xlsx`, `pedidos.xlsx`, `proveedores.xlsx`) in `C:\Ezarri\Zenbat\` (or update `basePath` to your preferred location).
+### Windows (production)
 
-**On Linux/Mac (development):** update `basePath` to a local path, for example:
+An example config is provided at `example-win.zenbat.config.js` with the standard Windows paths (`C:\Ezarri\Zenbat\`). Copy it over `zenbat.config.js` and adjust if needed:
 
-```js
-basePath: '/home/user/zenbat-data/',
+```bash
+copy example-win.zenbat.config.js zenbat.config.js
 ```
 
-Then place the data files in that directory.
+Then place the data files (`productos.xlsx`, `pedidos.xlsx`, `proveedores.xlsx`) in `C:\Ezarri\Zenbat\`.
 
-The `db/` folder for the flat-file databases is created automatically relative to the project root the first time the app writes data.
+The `db/` folder for the flat-file databases is created automatically the first time the app writes data.
 
 ---
 
