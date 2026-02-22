@@ -8,7 +8,16 @@ import { Stock } from './pages/componentes/Stock';
 import { ImportarComponentes } from './pages/componentes/ImportarComponentes';
 import { ExportComponentes } from './pages/componentes/ExportComponentes';
 import { ComponentesReload } from './pages/componentes/ComponentesReload';
-import { Placeholder } from './pages/Placeholder';
+import { ListArmarios } from './pages/armarios/ListArmarios';
+import { ViewArmario } from './pages/armarios/ViewArmario';
+import { GenerarArmario } from './pages/armario-generator/GenerarArmario';
+import { ListPedidos } from './pages/pedidos/ListPedidos';
+import { ViewPedido } from './pages/pedidos/ViewPedido';
+import { ListPedidosProveedores } from './pages/pedidos-proveedores/ListPedidosProveedores';
+import { ViewPedidoProveedor } from './pages/pedidos-proveedores/ViewPedidoProveedor';
+import { CreatePedidoProveedor } from './pages/pedidos-proveedores/CreatePedidoProveedor';
+import { EditPedidoProveedor } from './pages/pedidos-proveedores/EditPedidoProveedor';
+import { ListHistorial } from './pages/historial/ListHistorial';
 
 function App() {
   return (
@@ -23,16 +32,16 @@ function App() {
           <Route path="/importar-componentes" element={<ImportarComponentes />} />
           <Route path="/export-componentes" element={<ExportComponentes />} />
           <Route path="/componentes-reload" element={<ComponentesReload />} />
-          <Route path="/armarios" element={<Placeholder title="Armarios" />} />
-          <Route path="/armarios/:armarioId" element={<Placeholder title="Armario" />} />
-          <Route path="/generar-armario" element={<Placeholder title="Generar armario" />} />
-          <Route path="/pedidos" element={<Placeholder title="Pedidos" />} />
-          <Route path="/pedidos/:pedidoId" element={<Placeholder title="Pedido" />} />
-          <Route path="/pedidos-proveedores" element={<Placeholder title="Pedidos proveedores" />} />
-          <Route path="/pedidos-proveedores/create" element={<Placeholder title="Crear pedido proveedor" />} />
-          <Route path="/pedidos-proveedores/:id" element={<Placeholder title="Pedido proveedor" />} />
-          <Route path="/pedidos-proveedores/:id/edit" element={<Placeholder title="Editar pedido proveedor" />} />
-          <Route path="/historial" element={<Placeholder title="Historial" />} />
+          <Route path="/armarios" element={<ListArmarios />} />
+          <Route path="/armarios/:armarioId" element={<ViewArmario />} />
+          <Route path="/generar-armario" element={<GenerarArmario />} />
+          <Route path="/pedidos" element={<ListPedidos />} />
+          <Route path="/pedidos/:pedidoId" element={<ViewPedido />} />
+          <Route path="/pedidos-proveedores" element={<ListPedidosProveedores />} />
+          <Route path="/pedidos-proveedores/create" element={<CreatePedidoProveedor />} />
+          <Route path="/pedidos-proveedores/:id" element={<ViewPedidoProveedor />} />
+          <Route path="/pedidos-proveedores/:id/edit" element={<EditPedidoProveedor />} />
+          <Route path="/historial" element={<ListHistorial />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -24,7 +24,7 @@ function AddToPedidoModal({
     queryFn: pedidosProveedoresApi.list,
   });
   const pendientes = (pedidos as PedidoProveedorListItem[]).filter(
-    (p) => (p.status ?? '').toString().toLowerCase() === 'pendiente'
+    (p) => p.pendiente === true || (p.status ?? '').toString().toLowerCase() === 'pendiente'
   );
   const [nPedido, setNPedido] = useState('');
   const [qty, setQty] = useState(1);

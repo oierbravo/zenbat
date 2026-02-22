@@ -34,6 +34,8 @@ Output is in `dist/`. When `client/dist` exists, Express serves the React app an
 ## Structure
 
 - `src/api/` – API client and types
-- `src/components/` – shared layout and UI
-- `src/pages/` – page components by module (core, componentes, armarios, etc.)
+- `src/components/` – shared layout, ErrorBoundary, UI
+- `src/pages/` – page components by module (core, componentes, armarios, armario-generator, pedidos, pedidos-proveedores, historial)
 - See [REACT-MIGRATION-PLAN.md](../REACT-MIGRATION-PLAN.md) for route and API mapping.
+
+When `client/dist` exists, Express serves the React app first; the legacy Angular app in `public/` is not used for the SPA entry.
