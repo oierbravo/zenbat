@@ -35,7 +35,7 @@ module.exports = {
 				'public/lib/lodash/lodash.js',
 				'public/lib/ng-file-upload/ng-file-upload.min.js',
 				'public/lib/file-saver/FileSaver.min.js',
-				'public/lib/js-xlsd/dist/xlsx.full.min.js',
+				'public/lib/js-xlsx/dist/xlsx.full.min.js',
 				'public/lib/spin.js/spin.min.js',
 				'public/lib/angular-spinner/angular-spinner.js',
 				'public/lib/ngprogress/build/ngprogress.js',
@@ -53,6 +53,7 @@ module.exports = {
 		js: [
 			'public/config.js',
 			'public/application.js',
+			'public/modules/**/*.client.module.js',
 			'public/modules/**/*.js'
 		]
 	}

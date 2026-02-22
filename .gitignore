@@ -15,3 +15,4 @@ zenbat-*
 db/
 *.db
 bower_components/
+e2e-browser-report.json

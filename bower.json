@@ -2,6 +2,9 @@
   "name": "zenbat",
   "version": "0.0.1",
   "description": "Zenbat, inventory and manufacturing.",
+  "resolutions": {
+    "angular": "1.2.32"
+  },
   "dependencies": {
     "bootstrap": "~3",
     "angular": "~1.2",
@@ -23,6 +26,7 @@
     "fontawesome": "~4.4.0",
     "ngprogress": "~1.1.2",
     "angular-marked": "~1.0.1",
-    "angular-tags": "~0.2.10"
+    "angular-tags": "~0.2.10",
+    "js-xlsx": "~0.18.0"
   }
 }
