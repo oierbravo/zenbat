@@ -1,20 +1,38 @@
 #!/usr/bin/env node
 /**
- * Playwright e2e test for Zenbat app.
- * Run: npx playwright test scripts/e2e-test.mjs
- * Or: node scripts/e2e-test.mjs (with playwright installed)
+ * Playwright e2e test for Zenbat React app.
+ * Visits every route, asserts 200 response and no console errors.
+ * Run: npm run test:e2e  (with backend + client build, or dev server on 3000)
+ * Requires: server running on BASE_URL (e.g. npm start then node scripts/e2e-test.mjs)
  */
 import { chromium } from 'playwright';
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = process.env.E2E_BASE_URL || 'http://localhost:3000';
+
+// All React routes (static; no dynamic segments so we get 200 from SPA fallback)
+const ROUTES = [
+  '/',
+  '/reload',
+  '/componentes',
+  '/stock',
+  '/importar-componentes',
+  '/export-componentes',
+  '/componentes-reload',
+  '/armarios',
+  '/generar-armario',
+  '/pedidos',
+  '/pedidos-proveedores',
+  '/pedidos-proveedores/create',
+  '/historial',
+];
 
 async function run() {
   const consoleErrors = [];
   const consoleWarnings = [];
   const failedRequests = [];
-  const badStatusRequests = []; // 4xx, 5xx responses
+  const badStatusRequests = [];
   const uncaughtErrors = [];
-  let passed = true;
+  const routeResults = [];
 
   const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext();
@@ -29,7 +47,6 @@ async function run() {
     const text = msg.text();
     if (type === 'error') consoleErrors.push(text);
     else if (type === 'warning') consoleWarnings.push(text);
-    // Log all for debugging
     if (type === 'error' || type === 'warning') process.stderr.write(`[${type}] ${text}\n`);
   });
 
@@ -48,50 +65,56 @@ async function run() {
     }
   });
 
+  let passed = true;
+
   try {
-    const response = await page.goto(BASE_URL, {
-      waitUntil: 'networkidle',
-      timeout: 20000,
-    });
+    for (const route of ROUTES) {
+      const url = BASE_URL + route;
+      const response = await page.goto(url, {
+        waitUntil: 'domcontentloaded',
+        timeout: 15000,
+      });
 
-    if (!response || !response.ok()) {
-      console.error('FAIL: Page load failed', response?.status());
-      passed = false;
-    } else {
-      console.log('OK: Page loaded', response.status());
+      if (!response) {
+        console.error(`FAIL: ${route} - no response`);
+        routeResults.push({ route, status: null, ok: false });
+        passed = false;
+        continue;
+      }
+
+      const status = response.status();
+      const ok = response.ok();
+      routeResults.push({ route, status, ok });
+      if (!ok) {
+        console.error(`FAIL: ${route} - HTTP ${status}`);
+        passed = false;
+      } else {
+        console.log(`OK: ${route} - ${status}`);
+      }
+
+      await page.waitForTimeout(800);
     }
-
-    await page.waitForTimeout(5000);
 
     const title = await page.title();
-    console.log('Title:', title || '(empty)');
-
-    const hasContent = await page.locator('body').count() > 0;
-    if (!hasContent) {
-      console.error('FAIL: No body content');
-      passed = false;
-    } else {
-      console.log('OK: Body present');
-    }
+    console.log('\nTitle:', title || '(empty)');
 
     if (consoleWarnings.length > 0) {
       console.log('\n--- Console warnings ---');
       consoleWarnings.forEach((e, i) => console.log(`  ${i + 1}. ${e}`));
     }
 
-    // Explicit assertion: console must have no errors
     const totalConsoleErrors = consoleErrors.length + uncaughtErrors.length;
     if (totalConsoleErrors > 0) {
       console.log('\n--- Console errors ---');
       consoleErrors.forEach((e, i) => console.log(`  ${i + 1}. ${e}`));
       if (uncaughtErrors.length > 0) {
-        console.log('\n--- Uncaught exceptions (count as console errors) ---');
+        console.log('\n--- Uncaught exceptions ---');
         uncaughtErrors.forEach((e, i) => console.log(`  ${i + 1}. ${e}`));
       }
       console.error(`\nFAIL: Console has ${totalConsoleErrors} error(s) (expected 0)`);
       passed = false;
     } else {
-      console.log('\nOK: Console has no errors');
+      console.log('\nOK: No console errors');
     }
 
     if (badStatusRequests.length > 0) {
@@ -106,19 +129,19 @@ async function run() {
       passed = false;
     }
 
-    // Write full report for inspection
     const report = {
+      routeResults,
       consoleErrors,
       consoleWarnings,
       failedRequests,
       badStatusRequests,
       uncaughtErrors,
-      title: await page.title(),
+      title,
     };
     const fs = await import('fs');
     fs.writeFileSync('e2e-browser-report.json', JSON.stringify(report, null, 2));
     console.log('\nReport written to e2e-browser-report.json');
-    console.log(passed ? '\n=== All checks passed (including: console has no errors) ===' : '\n=== FAILED ===');
+    console.log(passed ? '\n=== All routes 200, no console errors ===' : '\n=== FAILED ===');
   } catch (err) {
     console.error('FAIL:', err.message);
     passed = false;
