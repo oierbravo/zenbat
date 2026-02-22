@@ -12,6 +12,7 @@
     "start": "grunt",
     "build": "grunt build & pkg .",
     "test": "grunt test",
+    "test:e2e": "node scripts/e2e-test.mjs",
     "install-windows-service": "winser -i",
     "uninstall-windows-service": "winser -r"
   },
@@ -79,7 +80,8 @@
     "should": "~4.6.5",
     "supertest": "~0.15.0",
     "uuid": "^2.0.3",
-    "uuid-v4": "^0.1.0"
+    "uuid-v4": "^0.1.0",
+    "playwright": "^1.49.0"
   },
   "pkg": {
     "scripts": [
