@@ -19,7 +19,7 @@
     "ng-file-upload-shim": "~7.0.17",
     "file-saver": "*",
     "spinjs": "~2.3.2",
-    "angular-spinner": "~0.7.0",
+    "angular-spinner": "urish/angular-spinner#~0.7.0",
     "fontawesome": "~4.4.0",
     "ngprogress": "~1.1.2",
     "angular-marked": "~1.0.1",

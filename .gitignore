@@ -12,3 +12,6 @@ data/
 zenbat/
 zenbat.exe
 zenbat-*
+db/
+*.db
+bower_components/
