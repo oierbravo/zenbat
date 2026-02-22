@@ -3,14 +3,20 @@
   "description": "Zenbat, inventory and manufacturing.",
   "version": "0.0.1",
   "author": "Ezarri 2000",
+  "private": true,
+  "workspaces": ["client", "server"],
   "engines": {
-    "node": "6.17.x",
-    "npm": "3.10.x"
+    "node": ">=18"
   },
-  "bin": "server.js",
   "scripts": {
-    "start": "grunt",
-    "build": "grunt build & pkg .",
+    "start": "npm run start -w @zenbat/server",
+    "start:server": "npm run start -w @zenbat/server",
+    "start:client": "npm run dev -w client",
+    "dev": "npm run start:server & npm run start:client",
+    "dev:server": "npm run start -w @zenbat/server",
+    "dev:client": "npm run dev -w client",
+    "build": "npm run build -w client",
+    "build:legacy": "grunt build & pkg .",
     "test": "grunt test",
     "test:e2e": "node scripts/e2e-test.mjs",
     "install-windows-service": "winser -i",
@@ -85,12 +91,12 @@
   },
   "pkg": {
     "scripts": [
-      "app/routes/**/*.js"
+      "server/app/routes/**/*.js"
     ],
     "assets": [
       "public/**/**",
-      "config/**/*.js",
-      "app/**/**"
+      "server/config/**/*.js",
+      "server/app/**/**"
     ],
     "targets": [
       "node6-windows-x64"

@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(app) {
-		var proveedores = require('../../app/controllers/proveedores.server.controller');
+		var proveedores = require('../controllers/proveedores.server.controller');
 	
 	// Pedidos Routes
 	app.route('/proveedores')

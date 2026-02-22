@@ -1,10 +1,35 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import path from 'path'
+
+// SPA routes that must serve index.html for document requests (not be proxied to API)
+const SPA_ROUTES = new Set([
+  '/', '/reload', '/componentes', '/stock', '/importar-componentes', '/export-componentes',
+  '/componentes-reload', '/armarios', '/generar-armario', '/pedidos', '/pedidos-proveedores',
+  '/historial',
+])
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    {
+      name: 'spa-fallback-before-proxy',
+      configureServer(server) {
+        server.middlewares.use((req, res, next) => {
+          const url = req.url?.split('?')[0] ?? ''
+          const isDocumentRequest = req.method === 'GET' && req.headers.accept?.includes('text/html')
+          const isSpaRoute = SPA_ROUTES.has(url) || url.startsWith('/componentes/') || url.startsWith('/armarios/') || url.startsWith('/pedidos/') || url.startsWith('/pedidos-proveedores/')
+          if (isDocumentRequest && isSpaRoute) {
+            req.url = '/index.html'
+          }
+          next()
+        })
+      },
+    },
+  ],
   build: {
     outDir: 'dist',
     emptyOutDir: true,

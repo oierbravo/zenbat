@@ -3,8 +3,8 @@
 module.exports = function(grunt) {
 	// Unified Watch Object
 	var watchFiles = {
-		serverViews: ['app/views/**/*.*'],
-		serverJS: ['gruntfile.js', 'server.js', 'config/**/*.js', 'app/**/*.js'],
+		serverViews: ['server/app/views/**/*.*'],
+		serverJS: ['gruntfile.js', 'server/server.js', 'server/config/**/*.js', 'server/app/**/*.js'],
 		clientViews: ['public/modules/**/views/**/*.html'],
 		clientJS: ['public/js/*.js', 'public/modules/**/*.js'],
 		clientCSS: ['public/modules/**/*.css'],
@@ -91,7 +91,8 @@ module.exports = function(grunt) {
 		},
 		nodemon: {
 			dev: {
-				script: 'server.js',
+				script: 'server/server.js',
+				cwd: 'server',
 				options: {
 					//nodeArgs: ['--debug'],
 					ext: 'js,html',
@@ -139,8 +140,8 @@ module.exports = function(grunt) {
 
 	// A Task for loading the configuration object
 	grunt.task.registerTask('loadConfig', 'Task that loads the config into a grunt option.', function() {
-		var init = require('./config/init')();
-		var config = require('./config/config');
+		var init = require('./server/config/init')();
+		var config = require('./server/config/config');
 
 		grunt.config.set('applicationJavaScriptFiles', config.assets.js);
 		grunt.config.set('applicationCSSFiles', config.assets.css);

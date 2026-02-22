@@ -3,8 +3,8 @@
 /**
  * Module dependencies.
  */
-	var componentes = require('../../app/controllers/componentes.server.controller'),
-	database = require('../../app/controllers/database.server.controller');
+	var componentes = require('../controllers/componentes.server.controller'),
+	database = require('../controllers/database.server.controller');
 var _ = require('lodash');
 
 

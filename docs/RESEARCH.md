@@ -22,7 +22,7 @@ The frontend is an **AngularJS** SPA using **UI-Router**. The main app module is
 | historial           | 1        | History log                     |
 | **Total**           | **28**   |                                 |
 
-(Excluding shared/utility views like header; counting each UI-router state as one “page”.)
+(Excluding shared/utility views like header; counting each UI-router state as one "page".)
 
 ---
 
@@ -61,7 +61,7 @@ The frontend is an **AngularJS** SPA using **UI-Router**. The main app module is
 |------------------------|------------------------|------------------------------------|--------|-------------|
 | `listComponentes`     | `/componentes`         | `list-componentes.client.view.html`| List all components. | **GET** `/componentes` (or `/stock`) → list of componentes. |
 | `viewComponente`      | `/componentes/:componenteId` | `view-componente.client.view.html` | Single component detail. | **GET** `/componentes/:componenteId` → one componente. |
-| `stock`               | `/stock`               | `list-stock.client.view.html`      | Stock view: list + stock actions (add to supplier order, adjust stock). | **GET** `/componentes` or `/stock` → componentes; modal uses **GET** `/pedidos-proveedores` for “add to pedido”; stock change → **GET** `/componentes/:componenteId/stock?qty=...`; add to pedido → **POST** `/add-to-pedido-proveedor`. |
+| `stock`               | `/stock`               | `list-stock.client.view.html`      | Stock view: list + stock actions (add to supplier order, adjust stock). | **GET** `/componentes` or `/stock` → componentes; modal uses **GET** `/pedidos-proveedores` for "add to pedido"; stock change → **GET** `/componentes/:componenteId/stock?qty=...`; add to pedido → **POST** `/add-to-pedido-proveedor`. |
 | `importar-componentes`| `/importar-componentes` | `importar-componentes.client.view.html` | Import components from XLSX (update quantities). | **POST** `/import/archivo` (multipart file). |
 | `exportComponentes`   | `/export-componentes` | `list-componente.client.view.html` | Export components to XLSX. | Page may list components; actual file from **GET** `/export-componentes` (server returns XLSX). |
 | `componentes-reload`  | `/componentes-reload` | `reload-from-file.client.view.html` | Reload components from file. | **GET** `componentes-reload` (via Componentes service) → triggers reload. |
@@ -88,7 +88,7 @@ The frontend is an **AngularJS** SPA using **UI-Router**. The main app module is
 #### Pedidos (internal orders / armario orders)
 
 | State        | URL                  | Template                     | Purpose | Data needed |
-|--------------|----------------------|------------------------------|--------|-------------|
+|--------------|----------------------|-----------------------------|--------|-------------|
 | `listPedidos`| `/pedidos`           | `list-pedidos.client.view.html` | List internal pedidos. | **GET** `/pedidos` → list of pedidos. |
 | `viewPedido` | `/pedidos/:pedidoId` | `view-pedido.client.view.html`  | Single pedido (verify stock, deliver). | **GET** `/pedidos/:pedidoId`; Armarios.verificar for stock check; Armarios.entregar for deliver. |
 
@@ -224,7 +224,7 @@ Backend is **Express**; routes are registered in `config/express.js`. Below: met
 
 ## 3. Summary
 
-- **Frontend:** 28 UI-router states across 8 feature modules (core, users, componentes, armarios, armario-generator, pedidos, pedidos-proveedores, historial). Each page’s data sources are listed above (REST endpoints and, where relevant, POST/GET for file operations).
+- **Frontend:** 28 UI-router states across 8 feature modules (core, users, componentes, armarios, armario-generator, pedidos, pedidos-proveedores, historial). Each page's data sources are listed above (REST endpoints and, where relevant, POST/GET for file operations).
 - **Backend:** 9 route files defining ~35 distinct endpoints for app index, dashboard, reload, armarios, armario generation, componentes (CRUD, stock, import/export), pedidos, pedidos-proveedores (full CRUD + add line + complete), proveedores/almacenes, historial, and XLSX import.
 
 Data layer uses flat-file DB and config-driven paths (e.g. `zenbat.config.js`); main logic lives in `app/controllers/database.server.controller.js` and the various server controllers.

@@ -1,6 +1,6 @@
 # Zenbat – React Migration Plan
 
-This document proposes a plan to replace the AngularJS frontend with a React SPA, **keeping the same Express backend and all existing API routes** as documented in [RESEARCH.md](./RESEARCH.md).
+This document proposes a plan to replace the AngularJS frontend with a React SPA, **keeping the same Express backend and all existing API routes** as documented in [RESEARCH.md](RESEARCH.md).
 
 ---
 
@@ -50,7 +50,7 @@ zenbat/
 │   │   ├── api/            # API client (base URL, fetch wrappers)
 │   │   ├── components/     # shared (Layout, Header, Table, etc.)
 │   │   ├── hooks/          # useHomeData, useComponentes, etc.
-│   │   └── pages/          # one folder per RESEARCH “module”
+│   │   └── pages/          # one folder per RESEARCH "module"
 │   │       ├── core/
 │   │       ├── users/
 │   │       ├── componentes/
@@ -161,7 +161,7 @@ You can swap order (e.g. do Pedidos before Armarios) depending on priority.
 
 - **Backend:** Unchanged; same routes and controllers.
 - **Frontend:** New React SPA in `client/` (or `frontend/`) with Vite, React Router, and an API layer that mirrors RESEARCH.md.
-- **Integration:** Express serves the built React app (Option A or B) with SPA fallback so all 28 “states” work as client-side routes.
+- **Integration:** Express serves the built React app (Option A or B) with SPA fallback so all 28 "states" work as client-side routes.
 - **Rollout:** Implement by feature area (Core → Componentes → Armarios → …), then switch production to the React build and remove the Angular app from `public/`.
 
 If you want, next step can be a minimal **Phase 0** (Vite + React + Router + one Core page calling `GET /get-home-data`) scaffold under `client/` and the exact Express changes to serve it.

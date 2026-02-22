@@ -1,9 +1,10 @@
 /**
- * Base API client. In dev, Vite proxies requests to Express (see vite.config.ts).
- * Uses same-origin in production when React is served by Express.
+ * Base API URL. In dev with Vite, '' uses the proxy (vite.config.ts) to the API server.
+ * When frontend and API run on separate servers, set VITE_API_URL (e.g. http://localhost:3000).
  */
-const getBaseUrl = () => {
-  if (import.meta.env.DEV) return ''; // Vite proxy
+const getBaseUrl = (): string => {
+  const url = import.meta.env.VITE_API_URL;
+  if (typeof url === 'string' && url !== '') return url.replace(/\/$/, '');
   return '';
 };
 

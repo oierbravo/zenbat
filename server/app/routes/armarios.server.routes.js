@@ -1,5 +1,5 @@
 'use strict';
-	var armarios = require('../../app/controllers/armarios.server.controller');
+	var armarios = require('../controllers/armarios.server.controller');
 var json2xls = require('json2xls');
 module.exports = function(app) {
 	app.route('/armarios')

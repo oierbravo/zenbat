@@ -49,4 +49,3 @@ x Startup script.
 - User DropdownList
     - Desplegable con los usuarios siempre visible.
     	- Guardar los historiales con el usuario.
-

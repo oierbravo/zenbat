@@ -3,8 +3,6 @@
  */
 var fs = require('fs'),
 	path = require('path'),
-	http = require('http'),
-	https = require('https'),
 	express = require('express'),
 	morgan = require('morgan'),
 	bodyParser = require('body-parser'),
@@ -12,12 +10,10 @@ var fs = require('fs'),
 	methodOverride = require('method-override'),
 	cookieParser = require('cookie-parser'),
 	helmet = require('helmet'),
-	//passport = require('passport'),
-
+	cors = require('cors'),
 	flash = require('connect-flash'),
 	config = require( './config'),
 	consolidate = require('consolidate'),
-	
 	json2xls = require('json2xls');
 
 	
@@ -62,8 +58,7 @@ var fs = require('fs'),
 
 	// Set views path and view engine
 	app.set('view engine', 'server.view.html');
-	path.join(__dirname,'../app/views');
-	app.set('views', './app/views');
+	app.set('views', path.join(__dirname, '../app/views'));
 
 	// Environment dependent middleware
 	if (process.env.NODE_ENV === 'development') {
@@ -96,17 +91,10 @@ var fs = require('fs'),
 	app.use(helmet.ienoopen());
 	app.disable('x-powered-by');
 
-	// Setting the app router and static folder
-	// Serve React build when present (production or after npm run build in client/)
-	var clientDist = path.resolve('./client/dist');
-	if (require('fs').existsSync(clientDist)) {
-		app.use(express.static(clientDist));
-	}
-	// Angular / legacy static files
-	//app.use(express.static('../public'));
-	app.use(express.static(path.resolve('./public')));
+	// CORS: allow frontend (separate origin) to call the API
+	app.use(cors({ origin: true, credentials: true }));
 
-
+	// API routes only (no static frontend; frontend runs on its own server)
 	const armarioGeneratorServer = require('../app/routes/armario-generator.server.routes')(app);
 	const armariosServer = require('../app/routes/armarios.server.routes')(app);
 	const componentesServer = require('../app/routes/componentes.server.routes')(app);
@@ -133,17 +121,9 @@ var fs = require('fs'),
 		});
 	});
 
-	// Assume 404 since no middleware responded
-	// SPA fallback: serve React index for GET when client/dist exists (client-side routing)
+	// 404 for unknown API routes
 	app.use(function(req, res) {
-		var reactIndex = path.resolve('./client/dist/index.html');
-		if (req.method === 'GET' && require('fs').existsSync(reactIndex)) {
-			return res.sendFile(reactIndex);
-		}
-		res.status(404).render('404', {
-			url: req.originalUrl,
-			error: 'Not Found'
-		});
+		res.status(404).json({ error: 'Not Found', url: req.originalUrl });
 	});
 
 	app.use(json2xls.middleware);

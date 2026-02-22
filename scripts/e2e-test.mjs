@@ -2,14 +2,14 @@
 /**
  * Playwright e2e test for Zenbat React app.
  * Visits every route, asserts 200 response and no console errors.
- * Run: npm run test:e2e  (with backend + client build, or dev server on 3000)
- * Requires: server running on BASE_URL (e.g. npm start then node scripts/e2e-test.mjs)
+ * Run: npm run dev:server (terminal 1), npm run dev:client (terminal 2), then npm run test:e2e
+ * E2E_BASE_URL defaults to the frontend dev server (5173), which proxies API to 3000.
  */
 import { chromium } from 'playwright';
 
-const BASE_URL = process.env.E2E_BASE_URL || 'http://localhost:3000';
+const BASE_URL = process.env.E2E_BASE_URL || 'http://localhost:5173';
 
-// All React routes (static; no dynamic segments so we get 200 from SPA fallback)
+// All React routes (static; no dynamic segments so we get 200 from the app)
 const ROUTES = [
   '/',
   '/reload',
@@ -70,10 +70,18 @@ async function run() {
   try {
     for (const route of ROUTES) {
       const url = BASE_URL + route;
-      const response = await page.goto(url, {
-        waitUntil: 'domcontentloaded',
-        timeout: 15000,
-      });
+      let response;
+      try {
+        response = await page.goto(url, {
+          waitUntil: 'domcontentloaded',
+          timeout: 30000,
+        });
+      } catch (navErr) {
+        console.error(`FAIL: ${route} - ${navErr.message || 'navigation error'}`);
+        routeResults.push({ route, status: null, ok: false });
+        passed = false;
+        continue;
+      }
 
       if (!response) {
         console.error(`FAIL: ${route} - no response`);
@@ -92,7 +100,7 @@ async function run() {
         console.log(`OK: ${route} - ${status}`);
       }
 
-      await page.waitForTimeout(800);
+      await page.waitForTimeout(500);
     }
 
     const title = await page.title();

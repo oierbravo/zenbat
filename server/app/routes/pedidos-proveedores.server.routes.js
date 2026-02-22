@@ -1,6 +1,6 @@
 'use strict';
-var pedidosProveedores = require('../../app/controllers/pedidos-proveedores.server.controller');
-var database = require('../../app/controllers/database.server.controller');
+var pedidosProveedores = require('../controllers/pedidos-proveedores.server.controller');
+var database = require('../controllers/database.server.controller');
 
 module.exports = function(app) {
 	

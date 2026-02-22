@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = function(app) {
-	var pedidos = require('../../app/controllers/pedidos.server.controller');
-	var database = require('../../app/controllers/database.server.controller');
+	var pedidos = require('../controllers/pedidos.server.controller');
+	var database = require('../controllers/database.server.controller');
 	// Pedidos Routes
 	app.route('/pedidos')
 		.get(pedidos.list);

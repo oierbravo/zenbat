@@ -2,8 +2,8 @@
 var uuid = require('uuid'); // https://github.com/defunctzombie/node-uuid
 var multiparty = require('multiparty'); // https://github.com/andrewrk/node-multiparty
 
-var componentes = require('../../app/controllers/componentes.server.controller');
-var database = require('../../app/controllers/database.server.controller');
+var componentes = require('../controllers/componentes.server.controller');
+var database = require('../controllers/database.server.controller');
 var XLSX = require('xlsx');
 var _ = require('lodash');
 
