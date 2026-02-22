@@ -97,6 +97,12 @@ var fs = require('fs'),
 	app.disable('x-powered-by');
 
 	// Setting the app router and static folder
+	// Serve React build when present (production or after npm run build in client/)
+	var clientDist = path.resolve('./client/dist');
+	if (require('fs').existsSync(clientDist)) {
+		app.use(express.static(clientDist));
+	}
+	// Angular / legacy static files
 	//app.use(express.static('../public'));
 	app.use(express.static(path.resolve('./public')));
 
@@ -128,7 +134,12 @@ var fs = require('fs'),
 	});
 
 	// Assume 404 since no middleware responded
+	// SPA fallback: serve React index for GET when client/dist exists (client-side routing)
 	app.use(function(req, res) {
+		var reactIndex = path.resolve('./client/dist/index.html');
+		if (req.method === 'GET' && require('fs').existsSync(reactIndex)) {
+			return res.sendFile(reactIndex);
+		}
 		res.status(404).render('404', {
 			url: req.originalUrl,
 			error: 'Not Found'

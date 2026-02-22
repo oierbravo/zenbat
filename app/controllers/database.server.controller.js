@@ -1333,9 +1333,10 @@ exports.updateComponenteCantidad = function(componenteId,cantidad){
 
 }
 exports.getHomeData = function(req,res){
-	var compCount = exports.componentes.length;
+	var compCount = (exports.componentes && exports.componentes.length) || 0;
 	var pedidosFaltan = [];
-	pedidosFaltan = _.filter(exports.pedidos,function(pedido){
+	var pedidosList = exports.pedidos || [];
+	pedidosFaltan = _.filter(pedidosList,function(pedido){
 		if(pedido.status == "FALTAN COMPONENTES"){
 			return true;
 		} else if(pedido.status == "FALTAN IDS"){
@@ -1345,62 +1346,35 @@ exports.getHomeData = function(req,res){
 		}
 	});
 	var pedidosProveedoresPendientes;
-	pedidosProveedoresPendientes = _.filter(exports.pedidosProveedores,function(pedido){
+	var pedidosProveedoresList = exports.pedidosProveedores || [];
+	pedidosProveedoresPendientes = _.filter(pedidosProveedoresList,function(pedido){
 		if(pedido.status == "Pendiente"){
 			return true;
 		} else {
 			return false;
 		}
 	});
-	var leyenda = "";
-	//var leyendaFile =  zenbatConfig.basePath + "leyenda.txt";
-	//leyenda = fs.readFileSync( leyendaFile).toString();
-	var leyendaFile =  zenbatConfig.basePath + "leyenda.txt";
-	if (fs.existsSync(leyendaFile)) {
-		fs.readFile( leyendaFile, function (err, data) {
-	  if (err) {
-	    throw err; 
-	  }
-	  //console.log();
-	  leyenda =  data.toString();
-		});
-	} else {
-		leyenda=  'file not found';
+
+	var proximosFile = zenbatConfig.basePath + "proximos-pedidos.xlsx";
+	var proximosRaw = [];
+	try {
+		if (fs.existsSync(proximosFile)) {
+			var proximosworkbook = XLSX.readFileSync(proximosFile);
+			var sheetname = proximosworkbook.SheetNames[0];
+			if (sheetname && proximosworkbook.Sheets[sheetname]) {
+				proximosRaw = XLSX.utils.sheet_to_json(proximosworkbook.Sheets[sheetname]);
+			}
+		}
+	} catch (err) {
+		console.error('getHomeData proximos-pedidos.xlsx:', err.message);
 	}
-	
-	/*if (fs.existsSync(leyendaFile)) {
-		fs.readFileSync( leyendaFile, function (err, data) {
-	  if (err) {
-	    throw err; 
-	  }
-	  //console.log();
-	 leyenda = data.toString();
-	 console.log(leyenda);
-		});
-	}*/
-
-	var proximosFile =  zenbatConfig.basePath + "proximos-pedidos.xlsx";
-	var proximosworkbook = XLSX.readFileSync(proximosFile);
-	//exports.workbook = workbook;
-	//console.log(proximosworkbook);
-	//var componentesRaw = XLSX.utils.sheet_to_json(workbook.Sheets.componentes,{header:headerProductos,range:1});
-	var sheetname = proximosworkbook.SheetNames[0];
-	var proximosRaw = XLSX.utils.sheet_to_json(proximosworkbook.Sheets[sheetname]);
-	//console.log('proximosRaw',proximosRaw);
-	//console.log('componentesRaw.length',componentesRaw.length);
-	//var componentes = componentesRaw.filter(loadComponentesFilter);
-	//console.log(componentes.length);
-	//return componentes;
-
-	var proximos;
-	
 
 	var output = {
 		proximos: proximosRaw,
 		numComponentes: compCount,
 		pedidosFaltan: pedidosFaltan,
-		pedidosProveedoresPendientes:pedidosProveedoresPendientes
-	}
+		pedidosProveedoresPendientes: pedidosProveedoresPendientes
+	};
 	res.send(output);
 }
 function getLeyendaData(){
