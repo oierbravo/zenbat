@@ -1,25 +1,52 @@
 # Zenbat API server
 
-The **API server** is a standalone Node.js (Express) app in `server/`. It serves all Zenbat API routes. The React frontend runs separately (Vite dev server or any static host) and talks to this API.
+The **API server** is a Node.js (Express) app in `server/`. It can run in three modes:
+
+- **Standalone** (default) – API only; no frontend served. Use when the frontend runs elsewhere (e.g. Vite dev server).
+- **Server + Angular** – Serves the legacy Angular app from `public/` and the API.
+- **Server + React** – Serves the built React app from `client/dist/` and the API (build with `npm run build` first).
+
+Set the mode with the **`ZENBAT_FRONTEND`** environment variable: `standalone`, `angular`, or `react`. Default is `standalone`.
 
 ## How to start
 
 **From repo root:**
 
 ```bash
+# API only (default)
 npm run dev:server
+
+# API + Angular (serves public/)
+ZENBAT_FRONTEND=angular npm run dev:server
+# or
+npm run start:angular
+
+# API + React (serves client/dist/; run npm run build first)
+ZENBAT_FRONTEND=react npm run dev:server
+# or
+npm run start:react
 ```
 
-Starts the API on **port 3000** (or `PORT` env var).
+Starts the server on **port 3000** (or `PORT` env var). In **angular** or **react** mode, the same port serves both the API and the frontend.
 
 **From the server package:**
 
 ```bash
 cd server
 npm start
+# or with frontend: ZENBAT_FRONTEND=react npm start
 ```
 
 Same as `node server.js` inside `server/`.
+
+## Environment variables
+
+| Variable | Values | Description |
+|----------|--------|-------------|
+| `ZENBAT_FRONTEND` | `standalone` (default), `angular`, `react` | Which frontend to serve with the API. `standalone` = API only. |
+| `ZENBAT_DATA_PATH` | Path string | Data directory (default: `server/data/` when run from `server/`). |
+| `PORT` | Number | Server port (default: 3000 in development, 80 in production). |
+| `NODE_ENV` | `development`, `production` | Environment (affects config and port default). |
 
 ## Data directory
 
@@ -42,8 +69,8 @@ CORS is enabled so the frontend on another origin (e.g. `http://localhost:5173`)
 
 ## Ports
 
-- **3000** – API server (default).
-- Frontend in development runs on **5173** and proxies API requests to 3000 (see `client/vite.config.ts`).
+- **3000** – API server (default). In **angular** or **react** mode, the same port serves both API and frontend.
+- In **standalone** mode, the frontend in development runs on **5173** and proxies API requests to 3000 (see `client/vite.config.ts`).
 
 ## See also
 

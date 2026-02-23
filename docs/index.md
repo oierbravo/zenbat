@@ -10,7 +10,7 @@ All project documentation lives in the `docs/` folder. Quick links:
 
 ## Server & API
 
-- **[Server](server.md)** – API server: how to start, data directory, CORS, ports.
+- **[Server](server.md)** – API server: three modes (standalone, Angular, React), how to start, env vars, data directory, CORS, ports.
 
 ## Client (React)
 

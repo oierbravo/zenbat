@@ -9,18 +9,21 @@ var path = require('path');
 /**
  * Load app configurations
  */
-
-if( process.env.NODE_ENV === 'development'){
-	module.exports = _.extend(
+var config;
+if (process.env.NODE_ENV === 'development') {
+	config = _.extend(
 		require('./env/all'),
 		require('./env/development') || {}
 	);
 } else {
-	module.exports = _.extend(
+	config = _.extend(
 		require('./env/all'),
-		require( './env/production') || {}
+		require('./env/production') || {}
 	);
 }
+// Project root (repo root) so asset globs resolve when server runs from server/
+config.appRoot = path.join(__dirname, '..', '..');
+module.exports = config;
 
 
 
@@ -48,7 +51,8 @@ module.exports.getGlobbedFiles = function(globPatterns, removeRoot) {
 		if (urlRegex.test(globPatterns)) {
 			output.push(globPatterns);
 		} else {
-			var files = glob.sync(globPatterns);
+			var cwd = this.appRoot || process.cwd();
+			var files = glob.sync(globPatterns, { cwd: cwd });
 			if (removeRoot) {
 				files = files.map(function(file) {
 					return file.replace(removeRoot, '');

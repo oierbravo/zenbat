@@ -94,7 +94,7 @@ var fs = require('fs'),
 	// CORS: allow frontend (separate origin) to call the API
 	app.use(cors({ origin: true, credentials: true }));
 
-	// API routes only (no static frontend; frontend runs on its own server)
+	// API routes
 	const armarioGeneratorServer = require('../app/routes/armario-generator.server.routes')(app);
 	const armariosServer = require('../app/routes/armarios.server.routes')(app);
 	const componentesServer = require('../app/routes/componentes.server.routes')(app);
@@ -105,7 +105,37 @@ var fs = require('fs'),
 	const pedidosServer = require('../app/routes/pedidos.server.routes')(app);
 	const proveedoresServer = require('../app/routes/proveedores.server.routes')(app);
 
+	// Standalone mode: respond at / so it's clear the API is running
+	if (config.frontendMode === 'standalone') {
+		app.get('/', function(req, res) {
+			res.json({
+				zenbat: 'API',
+				message: 'Frontend not served. Set ZENBAT_FRONTEND=angular or ZENBAT_FRONTEND=react to serve a frontend.'
+			});
+		});
+	}
 
+	// Serve frontend static files by mode
+	if (config.frontendMode === 'angular') {
+		app.use(express.static(path.join(__dirname, '../../public')));
+		var core = require('../app/controllers/core.server.controller');
+		app.get('*', function(req, res, next) {
+			if (req.method !== 'GET' || !req.accepts('html')) return next();
+			core.index(req, res);
+		});
+	} else if (config.frontendMode === 'react') {
+		var reactDist = path.join(__dirname, '../../client/dist');
+		app.use(express.static(reactDist));
+		// SPA fallback: non-API GET requests without a file serve index.html
+		app.get('*', function(req, res, next) {
+			if (req.method !== 'GET') return next();
+			if (req.accepts('html')) {
+				res.sendFile(path.join(reactDist, 'index.html'));
+			} else {
+				next();
+			}
+		});
+	}
 
 	// Assume 'not found' in the error msgs is a 404. this is somewhat silly, but valid, you can do whatever you like, set properties, use instanceof etc.
 	app.use(function(err, req, res, next) {

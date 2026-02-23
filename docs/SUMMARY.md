@@ -1,6 +1,6 @@
 # Zenbat – Project summary
 
-**Zenbat** is an inventory and manufacturing (MRP) application. The repo is split into a **Node.js API server** and a **React frontend** (Vite), each runnable separately.
+**Zenbat** is an inventory and manufacturing (MRP) application. The repo has a **Node.js API server** and two frontends: a **React app** (Vite, in `client/`) and a **legacy AngularJS app** (in `public/`). The server can run standalone (API only), with Angular, or with React.
 
 ## Repository structure
 
@@ -8,22 +8,28 @@
 |------------|-------------|
 | `server/`  | API server (Express). Routes, controllers, config, data path. |
 | `client/`  | React SPA (Vite, React Router, Tailwind). Proxies API in dev. |
+| `public/`  | Legacy AngularJS app (used when `ZENBAT_FRONTEND=angular`). |
 | `docs/`    | Documentation. See [index](index.md) for the full list. |
-| `public/`  | Legacy AngularJS assets (optional). |
 | `scripts/` | E2E test (Playwright), etc. |
 | `bin/`     | **zenbat** CLI entry point. |
 | `lib/`     | Extraction logic (e.g. armario PDF). |
 
 ## How to start
 
-- **API only** (port 3000):  
+- **API only** (port 3000, default):  
   `npm run dev:server`  
   Or from `server/`: `npm start`
+
+- **Server + Angular** (serves `public/` and API on same port):  
+  `npm run start:angular` or `ZENBAT_FRONTEND=angular npm run dev:server`
+
+- **Server + React** (serves `client/dist/` and API; run `npm run build` first):  
+  `npm run start:react` or `ZENBAT_FRONTEND=react npm run dev:server`
 
 - **Frontend only** (port 5173, proxies API to 3000):  
   `npm run dev:client`
 
-- **Both**:  
+- **API + React dev** (API in background, Vite client):  
   `npm run dev`
 
 Data is read from `server/data/` by default. To use another path:  

@@ -3,7 +3,8 @@
 ## Prerequisites
 
 - **Git**
-- **nvm** (Node Version Manager) — [install guide](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Node.js** (see `.nvmrc` or `package.json` engines; **Node.js 18+**)
+- **npm** (comes with Node)
 
 ---
 
@@ -16,117 +17,132 @@ cd zenbat
 
 ---
 
-## 2. Install the required Node.js version
+## 2. Install Node.js (recommended: nvm)
 
-The project includes an `.nvmrc` file that pins the Node.js version. Run:
+If you use **nvm**:
 
 ```bash
 nvm install
 nvm use
 ```
 
-This installs and activates **Node.js 6.17.1** with **npm 3.10.10**.
-
 Verify:
 
 ```bash
-node --version   # v6.17.1
-npm --version    # 3.10.10
+node --version   # v18.x or higher
+npm --version
 ```
 
 ---
 
-## 3. Install global tools
+## 3. Install dependencies
 
-```bash
-npm install -g bower grunt-cli
-```
-
-Verify:
-
-```bash
-bower --version   # 1.x
-grunt --version   # grunt-cli: 1.x
-```
-
----
-
-## 4. Install Node.js dependencies
+From the repo root:
 
 ```bash
 npm install
 ```
 
----
+This installs dependencies for the root workspace and for `client/` and `server/` (npm workspaces).
 
-## 5. Install frontend dependencies
+### Optional: Angular (legacy) frontend
 
-```bash
-bower install
-```
-
----
-
-## 6. Configure the data path
-
-The application reads data from Excel files (`.xlsx`) and stores its flat-file databases in a `db/` folder. The base path is set in `zenbat.config.js`.
-
-### Development (Linux/Mac)
-
-The default `zenbat.config.js` uses `./data/` (relative to the project root). Create the folder and place the data files there:
+To run the server with the **Angular** frontend (`ZENBAT_FRONTEND=angular`), you also need Bower assets in `public/`:
 
 ```bash
-mkdir -p data
-# copy productos.xlsx, pedidos.xlsx, proveedores.xlsx into data/
+npx bower install
 ```
 
-### Windows (production)
-
-An example config is provided at `example-win.zenbat.config.js` with the standard Windows paths (`C:\Ezarri\Zenbat\`). Copy it over `zenbat.config.js` and adjust if needed:
-
-```bash
-copy example-win.zenbat.config.js zenbat.config.js
-```
-
-Then place the data files (`productos.xlsx`, `pedidos.xlsx`, `proveedores.xlsx`) in `C:\Ezarri\Zenbat\`.
-
-The `db/` folder for the flat-file databases is created automatically the first time the app writes data.
+(Only needed if you use `npm run start:angular`.)
 
 ---
 
-## 7. Start the application
+## 4. Configure the data path
 
-### Development (with auto-reload)
+The server reads data from **`server/data/`** by default (relative to the `server/` package).
 
-```bash
-grunt
-```
-
-This runs `nodemon` (auto-restarts on server changes) and `watch` (livereload on frontend changes) concurrently.
-
-### Simple start (no auto-reload)
+### Use repo-root `data/`
 
 ```bash
-node server.js
+ZENBAT_DATA_PATH=../data npm run dev:server
 ```
 
-### Production
+Or create a symlink from `server/data` to your data folder:
 
 ```bash
-export NODE_ENV=production
-grunt
+ln -s ../data server/data
 ```
 
-> **Port:** The app listens on port **80** by default. On Linux/Mac this requires root privileges. To use a different port:
-> ```bash
-> PORT=3000 grunt
-> ```
+### Required data
+
+- Excel files (e.g. `productos.xlsx`, `pedidos.xlsx`, `proveedores.xlsx`) as defined in `server/zenbat.config.js`
+- A `db/` folder for flat-file databases (created automatically when the app writes data)
 
 ---
 
-## 8. Open the application
+## 5. Start the application
 
-Navigate to [http://localhost](http://localhost) (or `http://localhost:3000` if you set a custom port).
+All commands from **repo root** unless noted.
+
+### API only (default, port 3000)
+
+```bash
+npm run dev:server
+```
+
+Or from `server/`: `npm start`
+
+### Server + Angular (serves `public/` and API on port 3000)
+
+```bash
+npm run start:angular
+```
+
+Requires Bower assets in `public/` (see step 3).
+
+### Server + React (serves `client/dist/` and API on port 3000)
+
+Build the client first, then:
+
+```bash
+npm run build
+npm run start:react
+```
+
+### API + React dev (API in background, Vite on 5173)
+
+```bash
+npm run dev
+```
+
+### Frontend only (Vite on 5173, proxies API to 3000)
+
+```bash
+npm run dev:client
+```
+
+(Start the API separately with `npm run dev:server`.)
+
+---
+
+## 6. Open the application
+
+- **API only**: [http://localhost:3000](http://localhost:3000) (JSON response at `/`)
+- **Angular or React** (served by server): [http://localhost:3000](http://localhost:3000)
+- **React dev** (Vite): [http://localhost:5173](http://localhost:5173)
+
+---
+
+## Environment variables
+
+| Variable | Description |
+|----------|-------------|
+| `ZENBAT_FRONTEND` | `standalone` (default), `angular`, or `react` — which frontend to serve with the API |
+| `ZENBAT_DATA_PATH` | Data directory (default: `server/data/` when run from `server/`) |
+| `PORT` | Server port (default: 3000 in development) |
+| `NODE_ENV` | `development` or `production` |
+
+See [Server](server.md) for full details.
 
 ---
 
@@ -149,8 +165,16 @@ npm run uninstall-windows-service
 ## Troubleshooting
 
 | Problem | Cause | Fix |
-|---|---|---|
-| `ENOENT: no such file or directory, open '...\productos.xlsx'` | Data files not found at `basePath` | Place `.xlsx` files in the path defined in `zenbat.config.js` |
-| `Error: listen EACCES ... port 80` | Port 80 requires root on Linux | Run with `PORT=3000 grunt` or use `sudo` |
-| `bower: command not found` | Global tools not installed | Run step 3 again after `nvm use` |
-| `grunt: command not found` | Same as above | Run step 3 again after `nvm use` |
+|--------|--------|-----|
+| `ENOENT: no such file or directory, open '...\productos.xlsx'` | Data files not found | Set `ZENBAT_DATA_PATH` or place files in `server/data/` (or symlink) |
+| `Error: listen EACCES ... port 80` | Port 80 requires root on Linux | Use `PORT=3000 npm run dev:server` |
+| Blank page with Angular | Asset paths not resolving | Ensure you run from repo root or use the fixed config (asset globs use project root) |
+| `bower: command not found` | Bower not installed | Use `npx bower install` or install globally; only needed for Angular frontend |
+
+---
+
+## See also
+
+- [Server](server.md) – API server modes, env vars, CORS, ports.
+- [Summary](SUMMARY.md) – Project structure and start commands.
+- [Documentation index](index.md) – All docs.

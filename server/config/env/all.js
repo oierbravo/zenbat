@@ -1,5 +1,10 @@
 'use strict';
 
+var frontendMode = (process.env.ZENBAT_FRONTEND || 'standalone').toLowerCase();
+if (!['standalone', 'angular', 'react'].includes(frontendMode)) {
+	frontendMode = 'standalone';
+}
+
 module.exports = {
 	app: {
 		title: 'Zenbat',
@@ -7,6 +12,7 @@ module.exports = {
 		keywords: 'mrp,inventory,manufacturing'
 	},
 	port: process.env.PORT || 80,
+	frontendMode: frontendMode,
 	templateEngine: 'swig',
 	sessionSecret: 'MEAN',
 	sessionCollection: 'sessions',

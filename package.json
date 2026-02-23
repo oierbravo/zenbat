@@ -14,6 +14,8 @@
   "scripts": {
     "start": "npm run start -w @zenbat/server",
     "start:server": "npm run start -w @zenbat/server",
+    "start:angular": "ZENBAT_FRONTEND=angular npm run start -w @zenbat/server",
+    "start:react": "ZENBAT_FRONTEND=react npm run start -w @zenbat/server",
     "start:client": "npm run dev -w client",
     "dev": "npm run start:server & npm run start:client",
     "dev:server": "npm run start -w @zenbat/server",

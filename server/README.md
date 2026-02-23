@@ -1,16 +1,22 @@
 # Zenbat API server
 
-Standalone Node.js API server. Serves all Zenbat API routes; the React frontend runs separately (Vite dev server or any static host).
+Node.js API server. Can run in three modes (env **`ZENBAT_FRONTEND`**):
+
+- **standalone** (default) – API only; frontend runs separately (e.g. Vite).
+- **angular** – Serves Angular app from `public/` and the API.
+- **react** – Serves built React app from `client/dist/` and the API.
 
 ## Run
 
 From repo root:
 
-- `npm run dev:server` – start API only (port 3000)
-- `npm run dev:client` – start frontend only (port 5173, proxies API to 3000)
-- `npm run dev` – start both (server in background, then client)
+- `npm run dev:server` – API only (port 3000)
+- `npm run start:angular` – API + Angular (serves `public/`)
+- `npm run start:react` – API + React (serves `client/dist/`; run `npm run build` first)
+- `npm run dev:client` – frontend only (port 5173, proxies API to 3000)
+- `npm run dev` – API in background + client (standalone + Vite)
 
-From this directory: `npm start` (same as `node server.js`).
+From this directory: `npm start` (default standalone). Use `ZENBAT_FRONTEND=angular` or `ZENBAT_FRONTEND=react` to serve a frontend.
 
 ## Data directory
 
