@@ -17,3 +17,4 @@ db/
 bower_components/
 e2e-browser-report.json
 out/
+.env
