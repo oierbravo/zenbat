@@ -6,6 +6,8 @@ All project documentation lives in the `docs/` folder. Quick links:
 
 - **[Summary](SUMMARY.md)** – Project structure, how to start server and client.
 
+- **[CLI (zenbat)](cli.md)** – Command-line tool: `zenbat generate armario`, options, output files.
+
 ## Server & API
 
 - **[Server](server.md)** – API server: how to start, data directory, CORS, ports.
@@ -22,6 +24,7 @@ All project documentation lives in the `docs/` folder. Quick links:
 
 - **[REACT-MIGRATION-PLAN](REACT-MIGRATION-PLAN.md)** – React migration plan and tech stack.
 - **[RESEARCH](RESEARCH.md)** – Frontend/backend research, pages and API routes.
+- **[armario-pdf-extraction-plan](armario-pdf-extraction-plan.md)** – Plan: `zenbat` CLI and extracting component list from armario PDFs.
 
 ## Tasks & reference
 

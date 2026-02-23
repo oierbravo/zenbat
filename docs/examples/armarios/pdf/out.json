@@ -1,0 +1,2471 @@
+{
+  "head": [
+    "1",
+    "Pág.",
+    "50073",
+    "JASO Equipos de Obras y Construcciones, S. L.",
+    "T14582100 | 18/02/26 | 9:38:51",
+    "LISTADO DE COMPOSICIONES Y PROCESOS (C/Desg)",
+    "T 145.82.100 | Conjunto mando + envolvente 3 motores g",
+    "iro | O",
+    "Nº",
+    "210,00 | 294,70"
+  ],
+  "components": [
+    {
+      "Denominación Técnica": "Rv",
+      "Col1": "Peso neto",
+      "Col2": "Peso Cal."
+    },
+    {
+      "Denominación Técnica": "F1",
+      "Col1": "F2",
+      "Col2": "F3",
+      "Col3": "F4"
+    },
+    {
+      "Denominación Técnica": "Ud.",
+      "Col1": "Peso",
+      "Col2": "Peso C.",
+      "Col3": "Longitud",
+      "Col4": "Ancho",
+      "Col5": "Altura",
+      "Col6": "Nº Plano",
+      "Col7": "Norma"
+    },
+    {
+      "Denominación Técnica": "Ficticio",
+      "Col1": "Mat.Dep."
+    },
+    {
+      "Denominación Técnica": "T 145.82.005",
+      "Col1": "Conjunto canaletas mando + variadore"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,5",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "145.82.005"
+    },
+    {
+      "Denominación Técnica": "M 100.07.613",
+      "Col1": "Canaleta TEHALIT BA7 80060"
+    },
+    {
+      "Denominación Técnica": "M",
+      "Col1": "0,75",
+      "Col2": "10",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "M 100.07.614",
+      "Col1": "Canaleta TEHALIT BA7 80080"
+    },
+    {
+      "Denominación Técnica": "M",
+      "Col1": "0,93",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "M 100.07.615",
+      "Col1": "Canaleta TEHALIT BA7 80040"
+    },
+    {
+      "Denominación Técnica": "M",
+      "Col1": "0",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 145.82.075",
+      "Col1": "Conjunto canaletas"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,5",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "145.82.075"
+    },
+    {
+      "Denominación Técnica": "M 100.07.616",
+      "Col1": "Canaleta TEHALIT BA7 40040"
+    },
+    {
+      "Denominación Técnica": "M",
+      "Col1": "0",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 202.07.162",
+      "Col1": "Perfil simetrico perf. 35x7,5 GOUL 4"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0",
+      "Col2": "0,35",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "NP 4620"
+    },
+    {
+      "Denominación Técnica": "M 100.07.601",
+      "Col1": "Perfil simetrico perf. 35x7,5 GOU"
+    },
+    {
+      "Denominación Técnica": "L 45520 -REF. QUIOP-",
+      "Col1": "M",
+      "Col2": "0,38",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 202.07.173",
+      "Col1": "Perfil simetrico perf. 35x7,5 GOUL 4"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "NP 4620"
+    },
+    {
+      "Denominación Técnica": "M 100.07.601",
+      "Col1": "Perfil simetrico perf. 35x7,5 GOU"
+    },
+    {
+      "Denominación Técnica": "L 45520 -REF. QUIOP-",
+      "Col1": "M",
+      "Col2": "0,38",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 145.15.852",
+      "Col1": "Transf. 1000+750VA 0-380-415-440 / 0"
+    },
+    {
+      "Denominación Técnica": "-220",
+      "Col1": "0-48",
+      "Col2": "UN",
+      "Col3": "13,5",
+      "Col4": "0",
+      "Col5": "0",
+      "Col6": "0",
+      "Col7": "145.15.852"
+    },
+    {
+      "Denominación Técnica": "T 145.82.035",
+      "Col1": "Placa montaje mando"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "145.82.035"
+    },
+    {
+      "Denominación Técnica": "M 100.03.002",
+      "Col1": "Chapa 2",
+      "Col2": "S275JR",
+      "Col3": "EN-10029",
+      "Col4": "EN-100"
+    },
+    {
+      "Denominación Técnica": "M2",
+      "Col1": "15,7",
+      "Col2": "2",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 145.82.101",
+      "Col1": "Esquema mando + envolvente"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,01",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "145.82.101"
+    },
+    {
+      "Denominación Técnica": "T 145.97.000",
+      "Col1": "Instrucción puesta a tierra en armar"
+    },
+    {
+      "Denominación Técnica": "ios eléctricos",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0",
+      "Col6": "145.97.000"
+    },
+    {
+      "Denominación Técnica": "T 149.14.050",
+      "Col1": "Tarjeta ralentizador para gruas con"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,15",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "149.14.050"
+    },
+    {
+      "Denominación Técnica": "T 160.82.030",
+      "Col1": "Placa montaje variadores"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "160.82.030"
+    },
+    {
+      "Denominación Técnica": "M 100.03.002",
+      "Col1": "Chapa 2",
+      "Col2": "S275JR",
+      "Col3": "EN-10029",
+      "Col4": "EN-100"
+    },
+    {
+      "Denominación Técnica": "M2",
+      "Col1": "15,7",
+      "Col2": "2",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 204.17.111",
+      "Col1": "Tarjeta Krenel",
+      "Col2": "ref. CEL40/REMBERG r"
+    },
+    {
+      "Denominación Técnica": "ef. FORCE-ISO-FLEX",
+      "Col1": "UN",
+      "Col2": "0,1",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0",
+      "Col6": "204.17.111"
+    },
+    {
+      "Denominación Técnica": "T 204.17.112",
+      "Col1": "Tarjeta Krenel",
+      "Col2": "Ref. PTMIL40 s/REMBE"
+    },
+    {
+      "Denominación Técnica": "RG Ref. TERMO-RTD",
+      "Col1": "UN",
+      "Col2": "0,1",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0",
+      "Col6": "204.17.112"
+    },
+    {
+      "Denominación Técnica": "T 100.16.024",
+      "Col1": "Tornillo hexagonal M5x30 8.8 EN-ISO-"
+    },
+    {
+      "Denominación Técnica": "4017 Geomet 500A",
+      "Col1": "UN",
+      "Col2": "0,01",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.16.028",
+      "Col1": "Tornillo hexagonal M8X16 8.8 EN-ISO-"
+    },
+    {
+      "Denominación Técnica": "4017 Geomet 500A",
+      "Col1": "UN",
+      "Col2": "0,01",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.16.061",
+      "Col1": "Tornillo hexagonal M10x60 8.8 EN-ISO"
+    },
+    {
+      "Denominación Técnica": "-4017 Geomet 500A",
+      "Col1": "UN",
+      "Col2": "0,05",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,01",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.20.105",
+      "Col1": "Tuerca hexagonal M5",
+      "Col2": "8",
+      "Col3": "EN-ISO-4032"
+    },
+    {
+      "Denominación Técnica": "Geomet 500A",
+      "Col1": "UN",
+      "Col2": "0,01",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.20.108",
+      "Col1": "Tuerca hexagonal M8",
+      "Col2": "8",
+      "Col3": "EN-ISO-4032"
+    },
+    {
+      "Denominación Técnica": "Geomet 500A",
+      "Col1": "UN",
+      "Col2": "0,01",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.20.110",
+      "Col1": "Tuerca hexagonal M10",
+      "Col2": "8",
+      "Col3": "EN-ISO-4032"
+    },
+    {
+      "Denominación Técnica": "Geomet 500A",
+      "Col1": "UN",
+      "Col2": "0,01",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "Arandela",
+      "Col1": "5",
+      "Col2": "200HV EN-ISO-7089 Geomet 500A"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,01",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "Arandela",
+      "Col1": "8",
+      "Col2": "200HV EN-ISO-7089 Geomet 500A"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,01",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "Arandela 10",
+      "Col1": "200HV EN-ISO-7089 Geomet 500A"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,01",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,01",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,01",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.004",
+      "Col1": "Relé de tensión Omron mod. K8AV//K8A"
+    },
+    {
+      "Denominación Técnica": "K-VS2 100-240 VAC",
+      "Col1": "UN",
+      "Col2": "0,15",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.015",
+      "Col1": "Contactor TEE-CAD32 E7"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,58",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.023",
+      "Col1": "Contactor TEE-LC1-D09 E7"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,32",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.046",
+      "Col1": "Contactor Schneider 3NO+2NC 220V ref"
+    },
+    {
+      "Denominación Técnica": ".CAD32P7",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T14582100",
+      "Col1": "18/02/26",
+      "Col2": "9:38:51"
+    },
+    {
+      "Denominación Técnica": "F1",
+      "Col1": "F2",
+      "Col2": "F3",
+      "Col3": "F4"
+    },
+    {
+      "Denominación Técnica": "Ud.",
+      "Col1": "Peso",
+      "Col2": "Peso C.",
+      "Col3": "Longitud",
+      "Col4": "Ancho",
+      "Col5": "Altura",
+      "Col6": "Nº Plano",
+      "Col7": "Norma"
+    },
+    {
+      "Denominación Técnica": "Ficticio",
+      "Col1": "Mat.Dep."
+    },
+    {
+      "Denominación Técnica": "T 100.90.060",
+      "Col1": "Rele enchufable TEE RXN4A06B1E7 // M"
+    },
+    {
+      "Denominación Técnica": "Y4IN-GS-R AC48",
+      "Col1": "UN",
+      "Col2": "0,34",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.061",
+      "Col1": "Zocalo para Rele TEE RXZE1S114M // P"
+    },
+    {
+      "Denominación Técnica": "YF 14-ESS",
+      "Col1": "UN",
+      "Col2": "0,06",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.062",
+      "Col1": "Estribo de mantenimiento TEE RXZ-R23"
+    },
+    {
+      "Denominación Técnica": "5 //",
+      "Col1": "PYC35B",
+      "Col2": "UN",
+      "Col3": "0,05",
+      "Col4": "0",
+      "Col5": "0",
+      "Col6": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.092",
+      "Col1": "Rele control",
+      "Col2": "fases K8AK-PH1//FANOX"
+    },
+    {
+      "Denominación Técnica": "S4 3x440V",
+      "Col1": "UN",
+      "Col2": "0,17",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.181",
+      "Col1": "Interruptor diferencial",
+      "Col2": "2P 25A 30mA"
+    },
+    {
+      "Denominación Técnica": "ref. MGA9R60225",
+      "Col1": "UN",
+      "Col2": "0,15",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.231",
+      "Col1": "Int. automatico C60N 2P 1A curva C r"
+    },
+    {
+      "Denominación Técnica": "ef. A9F74201",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.233",
+      "Col1": "Int. automatico C60N 2P 4A curva C r"
+    },
+    {
+      "Denominación Técnica": "ef. A9F74204",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.250",
+      "Col1": "Cabeza selector llave 455 2 Pos. TEE"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.370",
+      "Col1": "Contacto completo para pulsador NA T"
+    },
+    {
+      "Denominación Técnica": "EE ZB4 BZ101",
+      "Col1": "UN",
+      "Col2": "0,02",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.371",
+      "Col1": "Contacto completo para",
+      "Col2": "pulsador NC"
+    },
+    {
+      "Denominación Técnica": "TEE ZB4 BZ102",
+      "Col1": "UN",
+      "Col2": "0,02",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.372",
+      "Col1": "Contacto para pulsador NC TEE ZBE 10"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,02",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.388",
+      "Col1": "Disyuntor magnetot. TEE GV2-ME06 (1-"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,28",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.389",
+      "Col1": "Disyuntor magnetot. TEE GV2-ME07 (1,"
+    },
+    {
+      "Denominación Técnica": "6-2,5A)",
+      "Col1": "UN",
+      "Col2": "0,28",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.512",
+      "Col1": "Base",
+      "Col2": "16+T 16A",
+      "Col3": "400V ( nº 1-16 ) 7"
+    },
+    {
+      "Denominación Técnica": "7,5x27 Conex. por muelle",
+      "Col1": "UN",
+      "Col2": "0,1",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.515",
+      "Col1": "Clavija 16+T 16A 400V",
+      "Col2": "( nº 1-16 ) 7"
+    },
+    {
+      "Denominación Técnica": "7,5x27 Conex. por muelle",
+      "Col1": "UN",
+      "Col2": "0,1",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.535",
+      "Col1": "Base",
+      "Col2": "24+T 16A 400V 104x27 Conex. po"
+    },
+    {
+      "Denominación Técnica": "r muelle",
+      "Col1": "UN",
+      "Col2": "0,1",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.541",
+      "Col1": "Clavija",
+      "Col2": "6+T 16A 400V 44x27 Conex. p"
+    },
+    {
+      "Denominación Técnica": "or muelle",
+      "Col1": "UN",
+      "Col2": "0,04",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.588",
+      "Col1": "Borna de conexion 4/6T de 1E-2S"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,05",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.598",
+      "Col1": "Prensa LAP SKINTOP ST 7 POLIAMIDA"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,05",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.610",
+      "Col1": "Tapon plastico PG - 9"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,05",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.615",
+      "Col1": "Tapon plastico PG-29"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,05",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.618",
+      "Col1": "Tuerca LAP SKINTOP GMP-GL 7"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,02",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.628",
+      "Col1": "Tuerca LAP SKINTOP GMP-GL",
+      "Col2": "9"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,02",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.645",
+      "Col1": "Embudo de goma Ref. 65SHORE"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.714",
+      "Col1": "Disyuntor magnetot. TEE GV2-RT10 (4-"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,26",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.718",
+      "Col1": "Interruptor automatico MG 1 polo 2A"
+    },
+    {
+      "Denominación Técnica": "ref. MGA9F74102",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.724",
+      "Col1": "Interruptor automatico MG 1 polo 20A"
+    },
+    {
+      "Denominación Técnica": "ref. MGA9F79120",
+      "Col1": "UN",
+      "Col2": "0,3",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.739",
+      "Col1": "Bloque de contactos TEE-GV-AE20"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.744",
+      "Col1": "Bloque de contactos TEE-LA1-DN11",
+      "Col2": "(L"
+    },
+    {
+      "Denominación Técnica": "A1-D11)",
+      "Col1": "UN",
+      "Col2": "0,03",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.746",
+      "Col1": "Bloque de contactos TEE LA1-DN20"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,03",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.747",
+      "Col1": "Bloque de contactos TEE LA1-DN40",
+      "Col2": "(T"
+    },
+    {
+      "Denominación Técnica": "EE LA1-D40)",
+      "Col1": "UN",
+      "Col2": "0,03",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.814",
+      "Col1": "Casquillo reductor POWER LOCK para c"
+    },
+    {
+      "Denominación Técnica": "able de 50",
+      "Col1": "UN",
+      "Col2": "0,01",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.817",
+      "Col1": "Conector panel receptor SPX4PDEGN-LD"
+    },
+    {
+      "Denominación Técnica": "120MP (400A) Verde",
+      "Col1": "UN",
+      "Col2": "0,5",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.827",
+      "Col1": "Tapón conector 5 p hembra negro ref."
+    },
+    {
+      "Denominación Técnica": "Wieland 99.530.0000.7",
+      "Col1": "UN",
+      "Col2": "0,05",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.835",
+      "Col1": "Zocalo ILME CHI 32 / 093 0032 0301/7"
+    },
+    {
+      "Denominación Técnica": "0.320.3228.0",
+      "Col1": "UN",
+      "Col2": "0,29",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.836",
+      "Col1": "Base",
+      "Col2": "16+T 16A",
+      "Col3": "400V ( nº 16-32 ) 77"
+    },
+    {
+      "Denominación Técnica": ",5x27 Conex.por muelle",
+      "Col1": "UN",
+      "Col2": "0,08",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.840",
+      "Col1": "Clavija 16+T 16A 400V",
+      "Col2": "( nº 16-32 )"
+    },
+    {
+      "Denominación Técnica": "77,5x27 Conex.",
+      "Col1": "muelle",
+      "Col2": "UN",
+      "Col3": "0,2",
+      "Col4": "0",
+      "Col5": "0",
+      "Col6": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.844",
+      "Col1": "Zocalo",
+      "Col2": "166406 / 09 30 010 0303 / 7"
+    },
+    {
+      "Denominación Técnica": "1.325.1028.0",
+      "Col1": "UN",
+      "Col2": "0,15",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.845",
+      "Col1": "Base",
+      "Col2": "10+T 16A 400V 57x27 Conex. po"
+    },
+    {
+      "Denominación Técnica": "r muelle",
+      "Col1": "UN",
+      "Col2": "0,1",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.846",
+      "Col1": "Clavija",
+      "Col2": "10+T 16A 400V 57x27 Conex."
+    },
+    {
+      "Denominación Técnica": "por muelle",
+      "Col1": "UN",
+      "Col2": "0,5",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.863",
+      "Col1": "Placa cubierta 24 Wieland: 07.416.71"
+    },
+    {
+      "Denominación Técnica": "53.0 / Weidm: 1664970000",
+      "Col1": "UN",
+      "Col2": "0,2",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T14582100",
+      "Col1": "18/02/26",
+      "Col2": "9:38:51"
+    },
+    {
+      "Denominación Técnica": "F1",
+      "Col1": "F2",
+      "Col2": "F3",
+      "Col3": "F4"
+    },
+    {
+      "Denominación Técnica": "Ud.",
+      "Col1": "Peso",
+      "Col2": "Peso C.",
+      "Col3": "Longitud",
+      "Col4": "Ancho",
+      "Col5": "Altura",
+      "Col6": "Nº Plano",
+      "Col7": "Norma"
+    },
+    {
+      "Denominación Técnica": "Ficticio",
+      "Col1": "Mat.Dep."
+    },
+    {
+      "Denominación Técnica": "T 100.90.874",
+      "Col1": "Cubierta ILME CHV32 PG29 / 0930 032"
+    },
+    {
+      "Denominación Técnica": "0421/70.352.3228.0",
+      "Col1": "UN",
+      "Col2": "0,45",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.876",
+      "Col1": "Zocalo",
+      "Col2": "120250 / 09 30 006 0302 / 7"
+    },
+    {
+      "Denominación Técnica": "0.325.0628.0",
+      "Col1": "UN",
+      "Col2": "0,15",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.877",
+      "Col1": "Zocalo",
+      "Col2": "1210100000 / 09 30 016 0306"
+    },
+    {
+      "Denominación Técnica": "/ 71.325.1628.0",
+      "Col1": "UN",
+      "Col2": "0,2",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.896",
+      "Col1": "Zocalo y tapa(24) 09 30 024 0304 / 7"
+    },
+    {
+      "Denominación Técnica": "1.325.2428.0",
+      "Col1": "UN",
+      "Col2": "0,18",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,5",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.91.463",
+      "Col1": "Pulsador de seta 60mm con encl. TEE"
+    },
+    {
+      "Denominación Técnica": "ZB4 BS64",
+      "Col1": "UN",
+      "Col2": "0,09",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.91.467",
+      "Col1": "Etiqueta Ø60 amarilla \"Emergency Sto"
+    },
+    {
+      "Denominación Técnica": "p\" ZBY9330 agujero Ø22",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.91.479",
+      "Col1": "Pletina cobre TEKNOMEGA 25x5 ref. BR"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.91.480",
+      "Col1": "Espaciador metálico TEKNOMEGA 40mm r"
+    },
+    {
+      "Denominación Técnica": "ef.DZM1165",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.91.481",
+      "Col1": "Pletina cobre TEKNOMEGA para tierras"
+    },
+    {
+      "Denominación Técnica": "ref.MRS2000",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.91.677",
+      "Col1": "F.A. OMRON S8VK-G06024 / WEIDMULLER"
+    },
+    {
+      "Denominación Técnica": "ref. 1469470000",
+      "Col1": "UN",
+      "Col2": "0,26",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.91.792",
+      "Col1": "Portaplano de Plástico Tipo A4 Prof."
+    },
+    {
+      "Denominación Técnica": "40",
+      "Col1": "Ref. NSYDPA44",
+      "Col2": "UN",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0",
+      "Col6": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.91.820",
+      "Col1": "Conector panel emisor Ref. SPX4PSEGN"
+    },
+    {
+      "Denominación Técnica": "-LS120MP (400A) Verde",
+      "Col1": "UN",
+      "Col2": "0,44",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.91.831",
+      "Col1": "Base wieland 4 polos 82A ref. 72.208"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.91.872",
+      "Col1": "Zócalo + base",
+      "Col2": "5 polos gris ref. Wie"
+    },
+    {
+      "Denominación Técnica": "land 96.051.5053.0",
+      "Col1": "UN",
+      "Col2": "0,2",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.91.874",
+      "Col1": "Zócalo + base",
+      "Col2": "5 polos marrón ref. W"
+    },
+    {
+      "Denominación Técnica": "ieland 96.051.5051.4",
+      "Col1": "UN",
+      "Col2": "0,2",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.91.884",
+      "Col1": "Tapón conector 5 polos hembra gris r"
+    },
+    {
+      "Denominación Técnica": "ef.Wieland 99.529.000.7",
+      "Col1": "UN",
+      "Col2": "0,05",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.91.911",
+      "Col1": "Lampara Lotec 12W CLG-T2312 \\\\ Sylva"
+    },
+    {
+      "Denominación Técnica": "nia 4W ref. 0051376",
+      "Col1": "UN",
+      "Col2": "0,36",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.91.930",
+      "Col1": "Zócalo ethernet PHOENIX CONTACT ref."
+    },
+    {
+      "Denominación Técnica": "1414397",
+      "Col1": "UN",
+      "Col2": "0,2",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.91.936",
+      "Col1": "Capuchon ethernet PHOENIX CONTACT re"
+    },
+    {
+      "Denominación Técnica": "f. 1430899",
+      "Col1": "UN",
+      "Col2": "0,01",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.91.949",
+      "Col1": "Sonda termica PT1000"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.92.431",
+      "Col1": "Switch Ethernet WieNET UMS 6-L ref.8"
+    },
+    {
+      "Denominación Técnica": "3.040.0000.1",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.92.500",
+      "Col1": "Int. automatico C60N 2P 4A curva D r"
+    },
+    {
+      "Denominación Técnica": "ef. A9F75204",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.92.501",
+      "Col1": "Int. automatico C60N 2P 6A curva D r"
+    },
+    {
+      "Denominación Técnica": "ef. A9F75206",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.90.712",
+      "Col1": "Latiguillo Cat.6A S/FTP LS0H 2m DAT"
+    },
+    {
+      "Denominación Técnica": "WYLER 65351000DY",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.90.714",
+      "Col1": "Latiguillo Cat.6A S/FTP LS0H 0,5m D"
+    },
+    {
+      "Denominación Técnica": "ATWYLER 65350300DY",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.90.950",
+      "Col1": "Termostato Stego (1NC+1NO) Ref.STGZR"
+    },
+    {
+      "Denominación Técnica": "01172",
+      "Col1": "UN",
+      "Col2": "0,3",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.90.953",
+      "Col1": "Termostato Stego (-20º + 30º) Ref.ST"
+    },
+    {
+      "Denominación Técnica": "GFZK01170",
+      "Col1": "UN",
+      "Col2": "0,1",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.90.954",
+      "Col1": "Termoventilador Stego ref. CSL028-40"
+    },
+    {
+      "Denominación Técnica": "0W 230VAC-CLIP",
+      "Col1": "UN",
+      "Col2": "0,5",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.131",
+      "Col1": "Bandeja perforada Sendzimir 35x150 r"
+    },
+    {
+      "Denominación Técnica": "ef. P0315S",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.132",
+      "Col1": "Tapa bandeja Sendzimir 150 ref. TB15"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.234",
+      "Col1": "Distribuidor de potencial Phoenix Co"
+    },
+    {
+      "Denominación Técnica": "ntact ref. 3270158",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.235",
+      "Col1": "Distribuidor de potencial Phoenix Co"
+    },
+    {
+      "Denominación Técnica": "ntact ref. 3270160",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.236",
+      "Col1": "Tapa Phoenix Contact ref.3270155"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.270",
+      "Col1": "Zócalo hembra 2 polos negro Wieland"
+    },
+    {
+      "Denominación Técnica": "Mini ref. 46.031.5054.1",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.271",
+      "Col1": "Zócalo hembra 5 polos negro Wieland"
+    },
+    {
+      "Denominación Técnica": "Mini ref. 46.051.5053.1",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.272",
+      "Col1": "Zócalo hembra 5 polos gris Wieland M"
+    },
+    {
+      "Denominación Técnica": "ini ref. 46.051.5053.0",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.273",
+      "Col1": "Zócalo hembra 2 polos gris Wieland M"
+    },
+    {
+      "Denominación Técnica": "ini ref. 46.031.5054.0",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.278",
+      "Col1": "Zócalo hembra 7p negro Wieland Class"
+    },
+    {
+      "Denominación Técnica": "ic ref.: 96.071.6353.1",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.279",
+      "Col1": "Zócalo hembra 5 polos azul Wieland M"
+    },
+    {
+      "Denominación Técnica": "ini ref.46.051.5053.9",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.280",
+      "Col1": "Zócalo hembra 2 polos verde Wieland"
+    },
+    {
+      "Denominación Técnica": "Mini ref.46.031.5056.7",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.281",
+      "Col1": "Zócalo hembra 2 polos azul Wieland M"
+    },
+    {
+      "Denominación Técnica": "ini ref.46.031.5054.9",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T14582100",
+      "Col1": "18/02/26",
+      "Col2": "9:38:51"
+    },
+    {
+      "Denominación Técnica": "F1",
+      "Col1": "F2",
+      "Col2": "F3",
+      "Col3": "F4"
+    },
+    {
+      "Denominación Técnica": "Ud.",
+      "Col1": "Peso",
+      "Col2": "Peso C.",
+      "Col3": "Longitud",
+      "Col4": "Ancho",
+      "Col5": "Altura",
+      "Col6": "Nº Plano",
+      "Col7": "Norma"
+    },
+    {
+      "Denominación Técnica": "Ficticio",
+      "Col1": "Mat.Dep."
+    },
+    {
+      "Denominación Técnica": "T 101.91.287",
+      "Col1": "Tapón conector 5 p hembra negro Wiel"
+    },
+    {
+      "Denominación Técnica": "and ref. 06.563.9153.1",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.291",
+      "Col1": "Tapón conector 6 p hembra negro Wiel"
+    },
+    {
+      "Denominación Técnica": "and ref. 99.589.0000.7",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.292",
+      "Col1": "Tapón conector 2 p hembra negro Wiel"
+    },
+    {
+      "Denominación Técnica": "and ref. 06.563.8753.1",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.293",
+      "Col1": "Tapón conector 5p hembra gris Wielan"
+    },
+    {
+      "Denominación Técnica": "d ref. 06.563.9153.0",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.336",
+      "Col1": "Convertidor DC/DC 10V 15W ref. Power"
+    },
+    {
+      "Denominación Técnica": "DC 15W-10",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.337",
+      "Col1": "Módulo antiparasitario Schneider 24-"
+    },
+    {
+      "Denominación Técnica": "48 VAC ref. LAD4RCE",
+      "Col1": "UN",
+      "Col2": "0,02",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.344",
+      "Col1": "Tapón conector 2 p hembra gris Wiela"
+    },
+    {
+      "Denominación Técnica": "nd ref. 06.563.8753.0",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.385",
+      "Col1": "Zócalo hembra 4 polos marrón Wieland"
+    },
+    {
+      "Denominación Técnica": "Mini ref.46.051.5051.4",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.394",
+      "Col1": "Zócalo hembra 5 polos turques Wielan"
+    },
+    {
+      "Denominación Técnica": "d Mini ref.46.051.5053.6",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 145.82.010",
+      "Col1": "PLC MITSUBISHI FX5U Armario Principa"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,5",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "145.82.010"
+    },
+    {
+      "Denominación Técnica": "T 100.91.669",
+      "Col1": "Batería para autómata Mitsubishi"
+    },
+    {
+      "Denominación Técnica": "ref. FX3U-32BL",
+      "Col1": "UN",
+      "Col2": "0,01",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,6",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.91.686",
+      "Col1": "Módulo de entradas analógicas Mit"
+    },
+    {
+      "Denominación Técnica": "subishi ref. FX5-4AD-ADP",
+      "Col1": "UN",
+      "Col2": "0,2",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.91.687",
+      "Col1": "Módulo de entradas digitales Mits"
+    },
+    {
+      "Denominación Técnica": "ubishi ref. FX5-16EX",
+      "Col1": "UN",
+      "Col2": "0,2",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 145.82.015",
+      "Col1": "PLC MITSUBISHI FX5UJ Armario Princip"
+    },
+    {
+      "Denominación Técnica": "al (nº2)",
+      "Col1": "UN",
+      "Col2": "0,5",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0",
+      "Col6": "145.82.015"
+    },
+    {
+      "Denominación Técnica": "T 100.91.687",
+      "Col1": "Módulo de entradas digitales Mits"
+    },
+    {
+      "Denominación Técnica": "ubishi ref. FX5-16EX",
+      "Col1": "UN",
+      "Col2": "0,2",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 145.82.020",
+      "Col1": "Conjunto regletero armario principal"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "2",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "145.82.020"
+    },
+    {
+      "Denominación Técnica": "T 100.11.152",
+      "Col1": "Tornillo cilíndrico M5x12 5.8 EN-"
+    },
+    {
+      "Denominación Técnica": "ISO-1207 Geomet 500A",
+      "Col1": "UN",
+      "Col2": "0,01",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,01",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,05",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.581",
+      "Col1": "Tope final para bornas 2,5/5"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,05",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.088",
+      "Col1": "Borna simple Siemens 0,08-2,5 mm²"
+    },
+    {
+      "Denominación Técnica": "ref. 8WH2000-0AF00",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.089",
+      "Col1": "Borna tierra Siemens 0,08-2,5 mm²"
+    },
+    {
+      "Denominación Técnica": "ref. 8WH2003-0CF07",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.090",
+      "Col1": "Borna 3 puntos conex Siemens 0,08"
+    },
+    {
+      "Denominación Técnica": "-2,5 mm² ref. 8WH2003-0AF00",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.091",
+      "Col1": "Borna 2 pisos Siemens 0,08-2,5 mm"
+    },
+    {
+      "Denominación Técnica": "² ref. 8WH2020-0AF00",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.092",
+      "Col1": "Borna simple Siemens 0,5-4 mm² re"
+    },
+    {
+      "Denominación Técnica": "f. 8WH2000-0AG00",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.093",
+      "Col1": "Borna tierra Siemens 0,5-4 mm² re"
+    },
+    {
+      "Denominación Técnica": "f. 8WH2000-0CG07",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.094",
+      "Col1": "Borna simple Siemens 1,5-10 mm² r"
+    },
+    {
+      "Denominación Técnica": "ef. 8WH2000-0AJ00",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.098",
+      "Col1": "Tapa final Siemens para 2,5 mm²"
+    },
+    {
+      "Denominación Técnica": "ref. 8WH9000-1VA00",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.136",
+      "Col1": "Etiqueta Cembre MG-CPM04 5X10mm r"
+    },
+    {
+      "Denominación Técnica": "ef. 41390N",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "M 100.07.601",
+      "Col1": "Perfil simetrico perf. 35x7,5 GOU"
+    },
+    {
+      "Denominación Técnica": "L 45520 -REF. QUIOP-",
+      "Col1": "M",
+      "Col2": "0,38",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 145.82.025",
+      "Col1": "Conjunto regletero armario principal"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "1",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "145.82.025"
+    },
+    {
+      "Denominación Técnica": "T 100.90.583",
+      "Col1": "Etiqueta RC610 ENTRELEC 233 000.0"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,01",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.089",
+      "Col1": "Borna tierra Siemens 0,08-2,5 mm²"
+    },
+    {
+      "Denominación Técnica": "ref. 8WH2003-0CF07",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.090",
+      "Col1": "Borna 3 puntos conex Siemens 0,08"
+    },
+    {
+      "Denominación Técnica": "-2,5 mm² ref. 8WH2003-0AF00",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.091",
+      "Col1": "Borna 2 pisos Siemens 0,08-2,5 mm"
+    },
+    {
+      "Denominación Técnica": "² ref. 8WH2020-0AF00",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.092",
+      "Col1": "Borna simple Siemens 0,5-4 mm² re"
+    },
+    {
+      "Denominación Técnica": "f. 8WH2000-0AG00",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.094",
+      "Col1": "Borna simple Siemens 1,5-10 mm² r"
+    },
+    {
+      "Denominación Técnica": "ef. 8WH2000-0AJ00",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.098",
+      "Col1": "Tapa final Siemens para 2,5 mm²"
+    },
+    {
+      "Denominación Técnica": "ref. 8WH9000-1VA00",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 101.91.135",
+      "Col1": "Borna 4 puntos conex Siemens 0,08"
+    },
+    {
+      "Denominación Técnica": "-2,5 mm² ref. 8WH2004-0AF00",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T14582100",
+      "Col1": "18/02/26",
+      "Col2": "9:38:51"
+    },
+    {
+      "Denominación Técnica": "F1",
+      "Col1": "F2",
+      "Col2": "F3",
+      "Col3": "F4"
+    },
+    {
+      "Denominación Técnica": "Ud.",
+      "Col1": "Peso",
+      "Col2": "Peso C.",
+      "Col3": "Longitud",
+      "Col4": "Ancho",
+      "Col5": "Altura",
+      "Col6": "Nº Plano",
+      "Col7": "Norma"
+    },
+    {
+      "Denominación Técnica": "Ficticio",
+      "Col1": "Mat.Dep."
+    },
+    {
+      "Denominación Técnica": "T 101.91.260",
+      "Col1": "Tapa final Siemens para 2,5 mm² 4"
+    },
+    {
+      "Denominación Técnica": "puntos",
+      "Col1": "ref. 8WH9000-4GA00",
+      "Col2": "UN",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0",
+      "Col6": "0"
+    },
+    {
+      "Denominación Técnica": "M 100.07.602",
+      "Col1": "Perfil simetrico perf. 35x15 GOUL"
+    },
+    {
+      "Denominación Técnica": "45555 /QUIORP",
+      "Col1": "M",
+      "Col2": "0,49",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 145.82.040",
+      "Col1": "Conjunto armario galvanizado + Chapa"
+    },
+    {
+      "Denominación Técnica": "s Conexiones",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0",
+      "Col6": "145.82.040"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "127,78",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "145.82.050"
+    },
+    {
+      "Denominación Técnica": "T 145.82.041",
+      "Col1": "Chapa conexiones 450x350 para arm"
+    },
+    {
+      "Denominación Técnica": "ario eléctrico",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0",
+      "Col6": "145.82.041"
+    },
+    {
+      "Denominación Técnica": "T 145.82.042",
+      "Col1": "Chapa conexiones 450x350 para arm"
+    },
+    {
+      "Denominación Técnica": "ario eléctrico",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0",
+      "Col6": "145.82.042"
+    },
+    {
+      "Denominación Técnica": "T 145.82.043",
+      "Col1": "Chapa conexiones 450x350 para arm"
+    },
+    {
+      "Denominación Técnica": "ario eléctrico",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0",
+      "Col6": "145.82.043"
+    },
+    {
+      "Denominación Técnica": "T 145.82.044",
+      "Col1": "Chapa conexiones 450x350 para arm"
+    },
+    {
+      "Denominación Técnica": "ario eléctrico",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0",
+      "Col6": "145.82.044"
+    },
+    {
+      "Denominación Técnica": "T 145.82.045",
+      "Col1": "Chapa conexiones 450x350 para arm"
+    },
+    {
+      "Denominación Técnica": "ario eléctrico",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0",
+      "Col6": "145.82.045"
+    },
+    {
+      "Denominación Técnica": "T 145.82.046",
+      "Col1": "Chapa conexiones 450x350 para arm"
+    },
+    {
+      "Denominación Técnica": "ario eléctrico",
+      "Col1": "UN",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0",
+      "Col6": "145.82.046"
+    },
+    {
+      "Denominación Técnica": "T 145.83.508",
+      "Col1": "Conjunto conector CBL"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "NP 4850"
+    },
+    {
+      "Denominación Técnica": "T 100.90.515",
+      "Col1": "Clavija 16+T 16A 400V",
+      "Col2": "( nº 1-16"
+    },
+    {
+      "Denominación Técnica": ") 77,5x27 Conex. por muelle",
+      "Col1": "UN",
+      "Col2": "0,1",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.614",
+      "Col1": "Tapon plastico PG - 21"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "0,05",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "T 100.90.887",
+      "Col1": "Cubierta 165796 / 09 30 016 1440"
+    },
+    {
+      "Denominación Técnica": "/ 71.352.1628.1",
+      "Col1": "UN",
+      "Col2": "0,1",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "T 145.82.060",
+      "Col1": "Soporte armario electrico"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "94,71",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "145.82.060"
+    },
+    {
+      "Denominación Técnica": "I 145.82.061",
+      "Col1": "L 100x100x10",
+      "Col2": "S355J2",
+      "Col3": "EN-10056",
+      "Col4": "E"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "28,47",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "0",
+      "Col1": "0",
+      "Col2": "No"
+    },
+    {
+      "Denominación Técnica": "M 100.02.160",
+      "Col1": "L 100x100x10",
+      "Col2": "S355J2",
+      "Col3": "EN-10056"
+    },
+    {
+      "Denominación Técnica": "M",
+      "Col1": "14,7",
+      "Col2": "12,1",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "I 145.82.062",
+      "Col1": "L 100x100x10",
+      "Col2": "S355J2",
+      "Col3": "EN-10056",
+      "Col4": "E"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "28,47",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "0",
+      "Col1": "0",
+      "Col2": "No"
+    },
+    {
+      "Denominación Técnica": "M 100.02.160",
+      "Col1": "L 100x100x10",
+      "Col2": "S355J2",
+      "Col3": "EN-10056"
+    },
+    {
+      "Denominación Técnica": "M",
+      "Col1": "14,7",
+      "Col2": "12,1",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "I 145.82.063",
+      "Col1": "L 80x80x8",
+      "Col2": "S355J2",
+      "Col3": "EN-10056",
+      "Col4": "EN-1"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "12,27",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "0",
+      "Col1": "0",
+      "Col2": "No"
+    },
+    {
+      "Denominación Técnica": "M 100.02.150",
+      "Col1": "L 80x80x8",
+      "Col2": "S355J2",
+      "Col3": "EN-10056",
+      "Col4": "E"
+    },
+    {
+      "Denominación Técnica": "M",
+      "Col1": "9,63",
+      "Col2": "12,1",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "I 145.82.064",
+      "Col1": "L 80x80x8",
+      "Col2": "S355J2",
+      "Col3": "EN-10056",
+      "Col4": "EN-1"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "12,27",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "0",
+      "Col1": "0",
+      "Col2": "No"
+    },
+    {
+      "Denominación Técnica": "M 100.02.150",
+      "Col1": "L 80x80x8",
+      "Col2": "S355J2",
+      "Col3": "EN-10056",
+      "Col4": "E"
+    },
+    {
+      "Denominación Técnica": "M",
+      "Col1": "9,63",
+      "Col2": "12,1",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "I 145.82.065",
+      "Col1": "L 100x100x10",
+      "Col2": "S355J2",
+      "Col3": "EN-10056",
+      "Col4": "E"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "5,97",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "0",
+      "Col1": "0",
+      "Col2": "No"
+    },
+    {
+      "Denominación Técnica": "M 100.02.160",
+      "Col1": "L 100x100x10",
+      "Col2": "S355J2",
+      "Col3": "EN-10056"
+    },
+    {
+      "Denominación Técnica": "M",
+      "Col1": "14,7",
+      "Col2": "12,1",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "I 145.82.066",
+      "Col1": "L 100x100x10",
+      "Col2": "S355J2",
+      "Col3": "EN-10056",
+      "Col4": "E"
+    },
+    {
+      "Denominación Técnica": "UN",
+      "Col1": "5,97",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "0",
+      "Col1": "0",
+      "Col2": "No"
+    },
+    {
+      "Denominación Técnica": "M 100.02.160",
+      "Col1": "L 100x100x10",
+      "Col2": "S355J2",
+      "Col3": "EN-10056"
+    },
+    {
+      "Denominación Técnica": "M",
+      "Col1": "14,7",
+      "Col2": "12,1",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "I 146.32.102",
+      "Col1": "Chapa",
+      "Col2": "15",
+      "Col3": "EN 10029/91 Mat.:S 355"
+    },
+    {
+      "Denominación Técnica": "J2G3 EN 10025/90",
+      "Col1": "UN",
+      "Col2": "0,65",
+      "Col3": "0",
+      "Col4": "0",
+      "Col5": "0"
+    },
+    {
+      "Denominación Técnica": "D",
+      "Col1": "No"
+    },
+    {
+      "Denominación Técnica": "M 100.03.115",
+      "Col1": "Chapa 15",
+      "Col2": "S355J2",
+      "Col3": "EN-10029",
+      "Col4": "EN"
+    },
+    {
+      "Denominación Técnica": "M2",
+      "Col1": "117,75",
+      "Col2": "3,75",
+      "Col3": "0",
+      "Col4": "0"
+    },
+    {
+      "Denominación Técnica": "M 100.07.612",
+      "Col1": "Canaleta TEHALIT BA7 60060"
+    },
+    {
+      "Denominación Técnica": "M",
+      "Col1": "0,68",
+      "Col2": "0",
+      "Col3": "0",
+      "Col4": "0"
+    }
+  ]
+}

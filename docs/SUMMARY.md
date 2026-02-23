@@ -11,6 +11,8 @@
 | `docs/`    | Documentation. See [index](index.md) for the full list. |
 | `public/`  | Legacy AngularJS assets (optional). |
 | `scripts/` | E2E test (Playwright), etc. |
+| `bin/`     | **zenbat** CLI entry point. |
+| `lib/`     | Extraction logic (e.g. armario PDF). |
 
 ## How to start
 
@@ -26,6 +28,17 @@
 
 Data is read from `server/data/` by default. To use another path:  
 `ZENBAT_DATA_PATH=/path/to/data npm run dev:server`
+
+## CLI (zenbat)
+
+From the project root you can run:
+
+```bash
+npm run zenbat -- generate armario <input.pdf> -o <output> [--xlsx] [--column-map <path>]
+```
+Or: `npx zenbat generate armario ...` or `node bin/zenbat.mjs generate armario ...`
+
+This extracts the component list from an armario PDF and writes JSON, CSV, Markdown, and optionally XLSX. See [docs/cli.md](cli.md) for full usage.
 
 ## More details
 

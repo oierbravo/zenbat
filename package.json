@@ -8,6 +8,9 @@
   "engines": {
     "node": ">=18"
   },
+  "bin": {
+    "zenbat": "./bin/zenbat.mjs"
+  },
   "scripts": {
     "start": "npm run start -w @zenbat/server",
     "start:server": "npm run start -w @zenbat/server",
@@ -19,6 +22,7 @@
     "build:legacy": "grunt build & pkg .",
     "test": "grunt test",
     "test:e2e": "node scripts/e2e-test.mjs",
+    "zenbat": "node bin/zenbat.mjs",
     "install-windows-service": "winser -i",
     "uninstall-windows-service": "winser -r"
   },
@@ -68,7 +72,9 @@
     "winser": "^1.0.3",
     "winston": "^2.4.7",
     "xlsx": "*",
-    "ya-csv": "*"
+    "ya-csv": "*",
+    "commander": "^12.0.0",
+    "pdf2json": "^3.0.5"
   },
   "devDependencies": {
     "bson": "^0.4.23",
