@@ -140,6 +140,7 @@ generate
   .option('--html', 'Also write self-contained HTML (head + components)')
   .option('--lines', 'Write line-by-line parse output (.lines.json and .lines.txt) for debugging')
   .option('--column-map <path>', 'Path to column mapping JSON (PDF column names → armario header)')
+  .option('--productos <path>', 'Path to productos.xlsx to add PrecioUnitario and PrecioTotal (quantity × price) per component')
   .action(async (inputFile, options) => {
     const inputPath = path.resolve(inputFile);
     if (!fs.existsSync(inputPath)) {
@@ -153,6 +154,7 @@ generate
         html: options.html === true,
         lines: options.lines === true,
         columnMapPath: options.columnMap ? path.resolve(options.columnMap) : undefined,
+        productosPath: options.productos ? path.resolve(options.productos) : undefined,
       });
       const base = path.extname(outputPath) ? path.basename(outputPath, path.extname(outputPath)) : path.basename(outputPath);
       const dir = fs.existsSync(outputPath) && fs.statSync(outputPath).isDirectory() ? outputPath : path.dirname(outputPath);

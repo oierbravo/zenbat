@@ -38,7 +38,6 @@ var Armarios = require('./armarios.server.controller.js');
 
 var Proveedores = require('./proveedores.server.controller.js');
 
-var XLSX = require('xlsx');
 var zenbatXlsx = require('../../../lib/zenbat-xlsx.cjs');
 
 var flatfile = require('flat-file-db');
@@ -187,14 +186,8 @@ exports.loadComponentes = loadComponentes;
 
 
 function loadComponentesFromFile(){
-	var workbook = XLSX.readFileSync(fileProductos);
-	//exports.workbook = workbook;
-	//console.log(workbook);
-	//var componentesRaw = XLSX.utils.sheet_to_json(workbook.Sheets.componentes,{header:headerProductos,range:1});
-	var componentesRaw = XLSX.utils.sheet_to_json(workbook.Sheets.componentes);
-	//console.log('componentesRaw.length',componentesRaw.length);
-	var componentes = componentesRaw.filter(loadComponentesFilter);
-	//console.log(componentes.length);
+	var result = zenbatXlsx.readComponentesXlsx(fileProductos);
+	var componentes = result.raw.filter(loadComponentesFilter);
 	return componentes;
 }
 exports.loadComponentesFromFile = loadComponentesFromFile;
@@ -342,12 +335,11 @@ function makePedidoID(pedido){
 	return output;
 }
 function loadPedidosFromFile(save){
-	var workbook = XLSX.readFileSync(zenbatConfig.basePath + zenbatConfig.pedidos.file);
-
-		var sheetName = workbook.SheetNames[workbook.SheetNames.length -1];
-
-		var pedidosSheet = workbook.Sheets[sheetName];
-		var pedidos = XLSX.utils.sheet_to_json(pedidosSheet,{header:zenbatConfig.pedidos.header,range:1});
+	var result = zenbatXlsx.readPedidosXlsx(zenbatConfig.basePath + zenbatConfig.pedidos.file, {
+		header: zenbatConfig.pedidos.header,
+		range: 1
+	});
+		var pedidos = result.pedidos;
 		//var xlsKeys = [];
 		pedidos.forEach(function(element,index){
 
@@ -1347,18 +1339,7 @@ exports.getHomeData = function(req,res){
 	});
 
 	var proximosFile = zenbatConfig.basePath + "proximos-pedidos.xlsx";
-	var proximosRaw = [];
-	try {
-		if (fs.existsSync(proximosFile)) {
-			var proximosworkbook = XLSX.readFileSync(proximosFile);
-			var sheetname = proximosworkbook.SheetNames[0];
-			if (sheetname && proximosworkbook.Sheets[sheetname]) {
-				proximosRaw = XLSX.utils.sheet_to_json(proximosworkbook.Sheets[sheetname]);
-			}
-		}
-	} catch (err) {
-		console.error('getHomeData proximos-pedidos.xlsx:', err.message);
-	}
+	var proximosRaw = zenbatXlsx.readProximosPedidosXlsx(proximosFile);
 
 	var output = {
 		proximos: proximosRaw,
