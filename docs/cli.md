@@ -18,7 +18,50 @@ From the project root:
 
 - **Global (optional):** after `npm link`, the `zenbat` command is available in your PATH.
 
+Server start is integrated: use `zenbat start server`, `zenbat start angular`, or `zenbat start react` (run `zenbat start` for help), or `zenbat dev` instead of `npm run start`, `npm run start:angular`, `npm run start:react`, or `npm run dev`.
+
 ## Commands
+
+### start
+
+Start the Zenbat API server. **Requires a mode:** `server`, `angular`, or `react`. Replaces `npm run start`, `npm run start:angular`, `npm run start:react`.
+
+Run `zenbat start` with no arguments to see comprehensive help and mode descriptions.
+
+**Usage:**
+
+```bash
+zenbat start <mode> [options]
+zenbat start server
+zenbat start server --port 4000
+zenbat start angular
+zenbat start react -p 3000
+```
+
+**Modes:**
+
+- **server** – API only (standalone). No frontend is served; API responds with JSON.
+- **angular** – Serve the Angular frontend (legacy app).
+- **react** – Serve the React frontend (requires `client/dist` from `npm run build` first).
+
+**Options:**
+
+- **-p, --port &lt;number&gt;** – Port (default: 3000, or `PORT` env).
+- **-d, --data &lt;path&gt;** – Data folder for XLSX, DB, armarios, etc. (default: `./out`).
+
+### dev
+
+Start the API server and the client dev server (Vite) together. Replaces `npm run dev`. Press Ctrl+C to stop both.
+
+**Usage:**
+
+```bash
+zenbat dev [options]
+zenbat dev --react
+zenbat dev -p 3000
+```
+
+**Options:** Same as `start` (`-p`, `-d`, `-f`, `--angular`, `--react`). Data folder default: `./out`.
 
 ### generate armario
 
