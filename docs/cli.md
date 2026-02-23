@@ -76,6 +76,32 @@ Parse the PDF **line-by-line only** (no head/component extraction). Same input a
 
 Use this when you only need the raw line parse (e.g. to inspect or post-process the text layout without running the full extraction).
 
+### generate armario-image
+
+Generate a single image with all PDF pages stacked vertically. Writes one PNG file.
+
+**Usage:**
+
+```bash
+zenbat generate armario-image <input_file> -o <output>
+```
+
+- **&lt;input_file&gt;** – Path to the PDF.
+- **-o, --output &lt;path&gt;** – Output path:
+  - **Directory:** writes `{input_basename}.png` into that directory.
+  - **File path:** writes to that path (if the path has no extension, `.png` is appended).
+
+**Options:**
+
+- **-s, --scale &lt;number&gt;** – Viewport scale for render quality (default: 2). Higher values produce larger, sharper images.
+
+**Examples:**
+
+```bash
+zenbat generate armario-image report.pdf -o ./out
+zenbat generate armario-image report.pdf -o ./out/combined.png --scale 2
+```
+
 **Usage:**
 
 ```bash

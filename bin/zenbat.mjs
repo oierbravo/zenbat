@@ -10,6 +10,7 @@
 
 import { program } from 'commander';
 import { extractArmarioFromPdf, extractArmarioLinesOnly } from '../lib/extract-armario-pdf.mjs';
+import { generateArmarioImage } from '../lib/generate-armario-image.mjs';
 import path from 'path';
 import fs from 'fs';
 import { spawn } from 'child_process';
@@ -164,6 +165,33 @@ generate
       if (options.html) files.push(outBase + '.html');
       if (options.lines) files.push(outBase + '.lines.json', outBase + '.lines.txt');
       console.log('Wrote:', files.join(', '));
+    } catch (err) {
+      console.error('Error:', err.message);
+      process.exit(1);
+    }
+  });
+
+generate
+  .command('armario-image <input_file>')
+  .description('Generate a single image with all PDF pages stacked vertically.')
+  .requiredOption('-o, --output <path>', 'Output path: directory (writes {input_basename}.png) or file path')
+  .option('-s, --scale <number>', 'Viewport scale for render quality (default: 2)', '2')
+  .action(async (inputFile, options) => {
+    const inputPath = path.resolve(inputFile);
+    if (!fs.existsSync(inputPath)) {
+      console.error(`Error: input file not found: ${inputPath}`);
+      process.exit(1);
+    }
+    const outputOpt = path.resolve(options.output);
+    const isDir = fs.existsSync(outputOpt) && fs.statSync(outputOpt).isDirectory();
+    const outputPath = isDir
+      ? path.join(outputOpt, path.basename(inputFile, path.extname(inputFile)) + '.png')
+      : path.extname(outputOpt) ? outputOpt : outputOpt + '.png';
+    try {
+      const written = await generateArmarioImage(inputPath, outputPath, {
+        viewportScale: Number(options.scale) || 2,
+      });
+      console.log('Wrote:', written);
     } catch (err) {
       console.error('Error:', err.message);
       process.exit(1);
