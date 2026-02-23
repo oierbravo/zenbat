@@ -62,7 +62,7 @@ zenbat generate armario-lines report.pdf -o ./out
 
 **Output files:**
 
-- **JSON** – `{ "head": [ ... ], "components": [ ... ] }` (head lines from page 1, then component rows).
+- **JSON** – `{ "head": { "companyName", "identifierDateTime", "pageTitle", "armarioIdRaw", "armarioId", "description", "pesoNetoCal", "extraLines"? }, "components": [ ... ] }` (`armarioIdRaw` is as in the document; `armarioId` is the number only, leading letter removed).. The document head is always an object with these named fields; `extraLines` (array of strings) is present when there are more than five head lines (e.g. in position-based fallback parsing).
 - **CSV** – Component table only.
 - **Markdown** – Head section plus component table.
 - **XLSX** (with `--xlsx`) – Workbook with sheet `componentes` for use in Zenbat armarios.

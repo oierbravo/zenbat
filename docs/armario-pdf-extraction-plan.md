@@ -21,7 +21,7 @@ Use a Node script that:
    - **Page 1 only — Table header:** identify the first table header row (e.g. by keyword matching or column count). Use this to define column layout for all pages. **Pages 2+:** skip the repeated head and repeated table header (same pattern at top of each page); treat those as continuation header blocks to ignore.
    - **Table body:** on every page, collect only **data rows** (after the header row on page 1, and after the repeated head + header on pages 2+). Append all data rows into a single component list.
 3. **Output:**
-   - **JSON:** one file (e.g. `{basename}.json`) with **head data and component list**, e.g. `{ "head": { ... }, "components": [ ... ] }` (head as object or array of lines; components as array of row objects).
+   - **JSON:** one file (e.g. `{basename}.json`) with **head data and component list**, e.g. `{ "head": { "companyName", "identifierDateTime", "pageTitle", "armarioIdRaw", "armarioId", "description", "pesoNetoCal", "extraLines"? }, "components": [ ... ] }` (head is always an object with these named fields; components as array of row objects).
    - **CSV:** component table only (e.g. `{basename}.csv`).
    - **Markdown:** one file (e.g. `{basename}.md`) with head section (formatted as text or key-value list) followed by the component table as a Markdown table (header row + rows).
    - **Armario XLSX:** (optional flag) map extracted columns to `Codigo`, `Denominacion`, `PrecioUnitario`, `Cantidad`, `PrecioTotal`, then use **xlsx** to write a workbook with sheet `componentes` and data from row 3, for use in `data/armarios/`.
