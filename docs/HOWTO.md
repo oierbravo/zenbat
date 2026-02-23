@@ -73,10 +73,25 @@ Or create a symlink from `server/data` to your data folder:
 ln -s ../data server/data
 ```
 
+### Windows
+
+Set the env variable before starting (Command Prompt):
+
+```cmd
+set ZENBAT_DATA_PATH=C:\Ezarri\Zenbat\
+npm run dev:server
+```
+
+Or add it to a `.env` file in the repo root:
+
+```env
+ZENBAT_DATA_PATH=C:\Ezarri\Zenbat\
+```
+
 ### Required data
 
 - Excel files (e.g. `productos.xlsx`, `pedidos.xlsx`, `proveedores.xlsx`) as defined in `server/zenbat.config.js`
-- A `db/` folder for flat-file databases (created automatically when the app writes data)
+- A `db/` folder for flat-file databases — created automatically inside the data directory the first time the app writes data
 
 ---
 
@@ -143,6 +158,29 @@ npm run dev:client
 | `NODE_ENV` | `development` or `production` |
 
 See [Server](server.md) for full details.
+
+---
+
+## Telegram Bot
+
+The bot parses armario PDFs sent via Telegram and replies with structured data.
+
+```bash
+npm run bot
+```
+
+Required env vars (in `.env` or shell):
+
+| Variable | Description |
+|----------|-------------|
+| `TELEGRAM_BOT_TOKEN` | Bot token from @BotFather |
+| `ZENBAT_BOT_DATA_DIR` | Path to data directory (for `productos.xlsx` price lookup) |
+| `ZENBAT_BOT_OUTPUT_DIR` | Where to write output files (default: system temp dir) |
+| `ZENBAT_BOT_LISTEN_DMS` | Listen to direct messages (default: `true`) |
+| `ZENBAT_BOT_LISTEN_CHANNELS` | Listen to channel posts (default: `false`) |
+| `ZENBAT_BOT_LOG_LEVEL` | `quiet`, `error`, `info`, `debug`, `verbose` (default: `info`) |
+
+The bot loads `.env` from both the `bot/` directory and the repo root.
 
 ---
 
