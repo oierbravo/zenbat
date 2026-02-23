@@ -39,7 +39,7 @@ var Armarios = require('./armarios.server.controller.js');
 var Proveedores = require('./proveedores.server.controller.js');
 
 var XLSX = require('xlsx');
-
+var zenbatXlsx = require('../../../lib/zenbat-xlsx.cjs');
 
 var flatfile = require('flat-file-db');
 
@@ -1258,35 +1258,26 @@ function verificarComponenteId(componenteId){
 }
 exports.verificarComponenteId = verificarComponenteId 
 function getArmario(id){
-	var filepath = zenbatConfig.basePath + zenbatConfig.armarios.folder + '\\' + id + '.xlsx';
-    if (fs.existsSync(filepath)) {
-	  //console.log('Found file',filepath);
-	    var workbook = XLSX.readFileSync(filepath);
-
-	 	var componentesRaw = XLSX.utils.sheet_to_json(workbook.Sheets.componentes,{header:zenbatConfig.armarios.header,range:3});
-	    var componentes = componentesRaw.filter(function(element,index){
-	  		return (element.Cantidad)?true: false;
-	  	});
-	    var faltanIDs = false;
-	  	componentes.forEach(function(element,index){
-	  		//verificar returs true if exists
-	  		componentes[index].Cantidad = parseFloat(element.Cantidad).toFixed(2);
-	  		var faltaID = !verificarComponenteId(element.Codigo);
-	  		if(faltaID){
-	  			faltanIDs = true;
-	  		}
-	  		componentes[index].faltaID = faltaID;
-	  	
-	    });
-	 ///console.log('arm-comps',componentes);
-	    return {
-	  		id: id,
-	  		faltanIDs:faltanIDs, 
-	  		componentes:componentes
-	    };
-	} else {
+	var filepath = path.join(zenbatConfig.basePath, zenbatConfig.armarios.folder, id + '.xlsx');
+	if (!fs.existsSync(filepath)) {
 		return false;
 	}
+	var result = zenbatXlsx.readArmarioXlsx(filepath, { header: zenbatConfig.armarios.header });
+	var componentes = result.componentes;
+	var faltanIDs = false;
+	componentes.forEach(function(element, index){
+		componentes[index].Cantidad = parseFloat(element.Cantidad).toFixed(2);
+		var faltaID = !verificarComponenteId(element.Codigo);
+		if (faltaID) {
+			faltanIDs = true;
+		}
+		componentes[index].faltaID = faltaID;
+	});
+	return {
+		id: id,
+		faltanIDs: faltanIDs,
+		componentes: componentes
+	};
 }
 exports.getArmario = getArmario;
 exports.stock = function(req, res) {

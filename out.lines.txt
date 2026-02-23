@@ -1,0 +1,1298 @@
+# PDF line-by-line (parse only, no extraction)
+# Source: raw
+
+    1 | 1
+    2 | Pág.
+    3 | 50073
+    4 | JASO Equipos de Obras y Construcciones, S. L.
+    5 | T14582100 | 18/02/26 | 9:38:51
+    6 | LISTADO DE COMPOSICIONES Y PROCESOS (C/Desg)
+    7 | T 145.82.100 | Conjunto mando + envolvente 3 motores g
+    8 | iro | O
+    9 | Nº
+   10 | 210,00 | 294,70
+   11 | Denominación Técnica
+   12 | Rv | Peso neto | Peso Cal.
+   13 | Rev.
+   14 | F1 | F2 | F3 | F4
+   15 | Niv. | Ref. | Denominación Técnica
+   16 | Ud. | Peso | Peso C. | Longitud | Ancho | Altura | Nº Plano | Norma
+   17 | Rev. procesos
+   18 | Ficticio | Mat.Dep.
+   19 | T 145.82.005 | Conjunto canaletas mando + variadore
+   20 | s
+   21 | UN | 0,5 | 0 | 0 | 0 | 145.82.005
+   22 | 1
+   23 | 1
+   24 | F
+   25 | 3,33
+   26 | A
+   27 | No
+   28 | M 100.07.613 | Canaleta TEHALIT BA7 80060
+   29 | M | 0,75 | 10 | 0 | 0
+   30 | 2
+   31 | 3,6
+   32 | 0
+   33 | No
+   34 | M 100.07.614 | Canaleta TEHALIT BA7 80080
+   35 | M | 0,93 | 0 | 0 | 0
+   36 | 2
+   37 | 0,68
+   38 | 0
+   39 | No
+   40 | M 100.07.615 | Canaleta TEHALIT BA7 80040
+   41 | M | 0 | 0 | 0 | 0
+   42 | 2
+   43 | 3,48
+   44 | 0
+   45 | No
+   46 | T 145.82.075 | Conjunto canaletas
+   47 | UN | 0,5 | 0 | 0 | 0 | 145.82.075
+   48 | 1
+   49 | 1
+   50 | 0
+   51 | 0
+   52 | No
+   53 | M 100.07.616 | Canaleta TEHALIT BA7 40040
+   54 | M | 0 | 0 | 0 | 0
+   55 | 2
+   56 | 0,8
+   57 | 0
+   58 | No
+   59 | T 202.07.162 | Perfil simetrico perf. 35x7,5 GOUL 4
+   60 | 5520
+   61 | UN | 0 | 0,35 | 0 | 0 | NP 4620
+   62 | 1
+   63 | 1
+   64 | 0,13
+   65 | No
+   66 | M 100.07.601 | Perfil simetrico perf. 35x7,5 GOU
+   67 | L 45520 -REF. QUIOP- | M | 0,38 | 0 | 0 | 0
+   68 | 2
+   69 | 0,35
+   70 | 0
+   71 | No
+   72 | T 202.07.173 | Perfil simetrico perf. 35x7,5 GOUL 4
+   73 | 5520
+   74 | UN | 0 | 0 | 0 | 0 | NP 4620
+   75 | 1
+   76 | 5
+   77 | 0,21
+   78 | No
+   79 | M 100.07.601 | Perfil simetrico perf. 35x7,5 GOU
+   80 | L 45520 -REF. QUIOP- | M | 0,38 | 0 | 0 | 0
+   81 | 2
+   82 | 0,56
+   83 | 0
+   84 | No
+   85 | T 145.15.852 | Transf. 1000+750VA 0-380-415-440 / 0
+   86 | -220 | 0-48 | UN | 13,5 | 0 | 0 | 0 | 145.15.852
+   87 | 1
+   88 | 1
+   89 | 0
+   90 | D
+   91 | Sí
+   92 | T 145.82.035 | Placa montaje mando
+   93 | UN | 0 | 0 | 0 | 0 | 145.82.035
+   94 | 1
+   95 | 1
+   96 | 15,04
+   97 | C
+   98 | No
+   99 | M 100.03.002 | Chapa 2 | S275JR | EN-10029 | EN-100
+  100 | 25
+  101 | M2 | 15,7 | 2 | 0 | 0
+  102 | 2
+  103 | 0,958
+  104 | 0
+  105 | No
+  106 | T 145.82.101 | Esquema mando + envolvente
+  107 | UN | 0,01 | 0 | 0 | 0 | 145.82.101
+  108 | 1
+  109 | 1
+  110 | 0
+  111 | O
+  112 | No
+  113 | T 145.97.000 | Instrucción puesta a tierra en armar
+  114 | ios eléctricos | UN | 0 | 0 | 0 | 0 | 145.97.000
+  115 | 1
+  116 | 1
+  117 | 0
+  118 | B
+  119 | No
+  120 | T 149.14.050 | Tarjeta ralentizador para gruas con
+  121 | variador
+  122 | UN | 0,15 | 0 | 0 | 0 | 149.14.050
+  123 | 1
+  124 | 1
+  125 | 0
+  126 | B
+  127 | Sí
+  128 | T 160.82.030 | Placa montaje variadores
+  129 | UN | 0 | 0 | 0 | 0 | 160.82.030
+  130 | 1
+  131 | 1
+  132 | 7,24
+  133 | 0
+  134 | No
+  135 | M 100.03.002 | Chapa 2 | S275JR | EN-10029 | EN-100
+  136 | 25
+  137 | M2 | 15,7 | 2 | 0 | 0
+  138 | 2
+  139 | 0,461
+  140 | 0
+  141 | No
+  142 | T 204.17.111 | Tarjeta Krenel | ref. CEL40/REMBERG r
+  143 | ef. FORCE-ISO-FLEX | UN | 0,1 | 0 | 0 | 0 | 204.17.111
+  144 | 1
+  145 | 1
+  146 | 0
+  147 | Sí
+  148 | T 204.17.112 | Tarjeta Krenel | Ref. PTMIL40 s/REMBE
+  149 | RG Ref. TERMO-RTD | UN | 0,1 | 0 | 0 | 0 | 204.17.112
+  150 | 1
+  151 | 1
+  152 | 0
+  153 | Sí
+  154 | T 100.16.024 | Tornillo hexagonal M5x30 8.8 EN-ISO-
+  155 | 4017 Geomet 500A | UN | 0,01 | 0 | 0 | 0
+  156 | 1
+  157 | 20
+  158 | 0
+  159 | No
+  160 | T 100.16.028 | Tornillo hexagonal M8X16 8.8 EN-ISO-
+  161 | 4017 Geomet 500A | UN | 0,01 | 0 | 0 | 0
+  162 | 1
+  163 | 4
+  164 | 0
+  165 | No
+  166 | T 100.16.061 | Tornillo hexagonal M10x60 8.8 EN-ISO
+  167 | -4017 Geomet 500A | UN | 0,05 | 0 | 0 | 0
+  168 | 1
+  169 | 8
+  170 | 0
+  171 | No
+  172 | T 100.18.030
+  173 | Varilla roscada AM 8x40 DIN 913 14.9 Geomet 500A
+  174 | UN | 0,01 | 0 | 0 | 0
+  175 | 1
+  176 | 6
+  177 | 0
+  178 | No
+  179 | T 100.20.105 | Tuerca hexagonal M5 | 8 | EN-ISO-4032
+  180 | Geomet 500A | UN | 0,01 | 0 | 0 | 0
+  181 | 1
+  182 | 20
+  183 | 0
+  184 | No
+  185 | T 100.20.108 | Tuerca hexagonal M8 | 8 | EN-ISO-4032
+  186 | Geomet 500A | UN | 0,01 | 0 | 0 | 0
+  187 | 1
+  188 | 10
+  189 | 0
+  190 | No
+  191 | T 100.20.110 | Tuerca hexagonal M10 | 8 | EN-ISO-4032
+  192 | Geomet 500A | UN | 0,01 | 0 | 0 | 0
+  193 | 1
+  194 | 24
+  195 | 0
+  196 | No
+  197 | T 100.30.105
+  198 | Arandela | 5 | 200HV EN-ISO-7089 Geomet 500A
+  199 | UN | 0,01 | 0 | 0 | 0
+  200 | 1
+  201 | 20
+  202 | 0
+  203 | No
+  204 | T 100.30.108
+  205 | Arandela | 8 | 200HV EN-ISO-7089 Geomet 500A
+  206 | UN | 0,01 | 0 | 0 | 0
+  207 | 1
+  208 | 4
+  209 | 0
+  210 | No
+  211 | T 100.30.110
+  212 | Arandela 10 | 200HV EN-ISO-7089 Geomet 500A
+  213 | UN | 0,01 | 0 | 0 | 0
+  214 | 1
+  215 | 32
+  216 | 0
+  217 | No
+  218 | T 100.31.105
+  219 | Arandela elástica DIN 128-87-A 5 - FSt Geomet 500A
+  220 | UN | 0,01 | 0 | 0 | 0
+  221 | 1
+  222 | 20
+  223 | 0
+  224 | No
+  225 | T 100.31.108
+  226 | Arandela elástica DIN 128-87-A 8 - FSt Geomet 500A
+  227 | UN | 0,01 | 0 | 0 | 0
+  228 | 1
+  229 | 10
+  230 | 0
+  231 | No
+  232 | T 100.31.110
+  233 | Arandela elastica DIN 128-87-A10 - FSt Geomet 500A
+  234 | UN | 0 | 0 | 0 | 0
+  235 | 1
+  236 | 16
+  237 | 0
+  238 | No
+  239 | T 100.90.004 | Relé de tensión Omron mod. K8AV//K8A
+  240 | K-VS2 100-240 VAC | UN | 0,15 | 0 | 0 | 0
+  241 | 1
+  242 | 1
+  243 | 0
+  244 | Sí
+  245 | T 100.90.015 | Contactor TEE-CAD32 E7
+  246 | UN | 0,58 | 0 | 0 | 0
+  247 | 1
+  248 | 16
+  249 | 0
+  250 | Sí
+  251 | T 100.90.023 | Contactor TEE-LC1-D09 E7
+  252 | UN | 0,32 | 0 | 0 | 0
+  253 | 1
+  254 | 4
+  255 | 0
+  256 | Sí
+  257 | T 100.90.046 | Contactor Schneider 3NO+2NC 220V ref
+  258 | .CAD32P7 | UN | 0 | 0 | 0 | 0
+  259 | 1
+  260 | 1
+  261 | 0
+  262 | Sí
+  263 | .. / ..
+  264 | ----------------Page (0) Break----------------
+  265 | 2
+  266 | Pág.
+  267 | 50073
+  268 | JASO Equipos de Obras y Construcciones, S. L.
+  269 | T14582100 | 18/02/26 | 9:38:51
+  270 | LISTADO DE COMPOSICIONES Y PROCESOS (C/Desg)
+  271 | Rev.
+  272 | F1 | F2 | F3 | F4
+  273 | Niv. | Ref. | Denominación Técnica
+  274 | Ud. | Peso | Peso C. | Longitud | Ancho | Altura | Nº Plano | Norma
+  275 | Rev. procesos
+  276 | Ficticio | Mat.Dep.
+  277 | T 100.90.060 | Rele enchufable TEE RXN4A06B1E7 // M
+  278 | Y4IN-GS-R AC48 | UN | 0,34 | 0 | 0 | 0
+  279 | 1
+  280 | 9
+  281 | 0
+  282 | No
+  283 | T 100.90.061 | Zocalo para Rele TEE RXZE1S114M // P
+  284 | YF 14-ESS | UN | 0,06 | 0 | 0 | 0
+  285 | 1
+  286 | 9
+  287 | 0
+  288 | No
+  289 | T 100.90.062 | Estribo de mantenimiento TEE RXZ-R23
+  290 | 5 // | PYC35B | UN | 0,05 | 0 | 0 | 0
+  291 | 1
+  292 | 9
+  293 | 0
+  294 | No
+  295 | T 100.90.092 | Rele control | fases K8AK-PH1//FANOX
+  296 | S4 3x440V | UN | 0,17 | 0 | 0 | 0
+  297 | 1
+  298 | 1
+  299 | 0
+  300 | Sí
+  301 | T 100.90.181 | Interruptor diferencial | 2P 25A 30mA
+  302 | ref. MGA9R60225 | UN | 0,15 | 0 | 0 | 0
+  303 | 1
+  304 | 1
+  305 | 0
+  306 | Sí
+  307 | T 100.90.231 | Int. automatico C60N 2P 1A curva C r
+  308 | ef. A9F74201 | UN | 0 | 0 | 0 | 0
+  309 | 1
+  310 | 1
+  311 | 0
+  312 | Sí
+  313 | T 100.90.233 | Int. automatico C60N 2P 4A curva C r
+  314 | ef. A9F74204 | UN | 0 | 0 | 0 | 0
+  315 | 1
+  316 | 1
+  317 | 0
+  318 | Sí
+  319 | T 100.90.250 | Cabeza selector llave 455 2 Pos. TEE
+  320 | ZB4BG2
+  321 | UN | 0 | 0 | 0 | 0
+  322 | 1
+  323 | 1
+  324 | 0
+  325 | Sí
+  326 | T 100.90.252
+  327 | Adaptador carril DIN Legrand 004405 LEXIC precortad
+  328 | o 22,5 mm
+  329 | UN | 0 | 0 | 0 | 0
+  330 | 1
+  331 | 1
+  332 | 0
+  333 | Sí
+  334 | T 100.90.370 | Contacto completo para pulsador NA T
+  335 | EE ZB4 BZ101 | UN | 0,02 | 0 | 0 | 0
+  336 | 1
+  337 | 1
+  338 | 0
+  339 | Sí
+  340 | T 100.90.371 | Contacto completo para | pulsador NC
+  341 | TEE ZB4 BZ102 | UN | 0,02 | 0 | 0 | 0
+  342 | 1
+  343 | 1
+  344 | 0
+  345 | Sí
+  346 | T 100.90.372 | Contacto para pulsador NC TEE ZBE 10
+  347 | 2
+  348 | UN | 0,02 | 0 | 0 | 0
+  349 | 1
+  350 | 2
+  351 | 0
+  352 | Sí
+  353 | T 100.90.388 | Disyuntor magnetot. TEE GV2-ME06 (1-
+  354 | 1,6A)
+  355 | UN | 0,28 | 0 | 0 | 0
+  356 | 1
+  357 | 1
+  358 | 0
+  359 | Sí
+  360 | T 100.90.389 | Disyuntor magnetot. TEE GV2-ME07 (1,
+  361 | 6-2,5A) | UN | 0,28 | 0 | 0 | 0
+  362 | 1
+  363 | 1
+  364 | 0
+  365 | Sí
+  366 | T 100.90.512 | Base | 16+T 16A | 400V ( nº 1-16 ) 7
+  367 | 7,5x27 Conex. por muelle | UN | 0,1 | 0 | 0 | 0
+  368 | 1
+  369 | 2
+  370 | 0
+  371 | No
+  372 | T 100.90.515 | Clavija 16+T 16A 400V | ( nº 1-16 ) 7
+  373 | 7,5x27 Conex. por muelle | UN | 0,1 | 0 | 0 | 0
+  374 | 1
+  375 | 1
+  376 | 0
+  377 | No
+  378 | T 100.90.535 | Base | 24+T 16A 400V 104x27 Conex. po
+  379 | r muelle | UN | 0,1 | 0 | 0 | 0
+  380 | 1
+  381 | 3
+  382 | 0
+  383 | No
+  384 | T 100.90.541 | Clavija | 6+T 16A 400V 44x27 Conex. p
+  385 | or muelle | UN | 0,04 | 0 | 0 | 0
+  386 | 1
+  387 | 1
+  388 | 0
+  389 | No
+  390 | T 100.90.588 | Borna de conexion 4/6T de 1E-2S
+  391 | UN | 0,05 | 0 | 0 | 0
+  392 | 1
+  393 | 2
+  394 | 0
+  395 | No
+  396 | T 100.90.598 | Prensa LAP SKINTOP ST 7 POLIAMIDA
+  397 | UN | 0,05 | 0 | 0 | 0
+  398 | 1
+  399 | 1
+  400 | 0
+  401 | No
+  402 | T 100.90.610 | Tapon plastico PG - 9
+  403 | UN | 0,05 | 0 | 0 | 0
+  404 | 1
+  405 | 1
+  406 | 0
+  407 | No
+  408 | T 100.90.615 | Tapon plastico PG-29
+  409 | UN | 0,05 | 0 | 0 | 0
+  410 | 1
+  411 | 1
+  412 | 0
+  413 | No
+  414 | T 100.90.618 | Tuerca LAP SKINTOP GMP-GL 7
+  415 | UN | 0,02 | 0 | 0 | 0
+  416 | 1
+  417 | 1
+  418 | 0
+  419 | No
+  420 | T 100.90.628 | Tuerca LAP SKINTOP GMP-GL | 9
+  421 | UN | 0,02 | 0 | 0 | 0
+  422 | 1
+  423 | 1
+  424 | 0
+  425 | No
+  426 | T 100.90.645 | Embudo de goma Ref. 65SHORE
+  427 | UN | 0 | 0 | 0 | 0
+  428 | 1
+  429 | 3
+  430 | 0
+  431 | Sí
+  432 | T 100.90.714 | Disyuntor magnetot. TEE GV2-RT10 (4-
+  433 | 6,3A)
+  434 | UN | 0,26 | 0 | 0 | 0
+  435 | 1
+  436 | 1
+  437 | 0
+  438 | Sí
+  439 | T 100.90.718 | Interruptor automatico MG 1 polo 2A
+  440 | ref. MGA9F74102 | UN | 0 | 0 | 0 | 0
+  441 | 1
+  442 | 1
+  443 | 0
+  444 | Sí
+  445 | T 100.90.724 | Interruptor automatico MG 1 polo 20A
+  446 | ref. MGA9F79120 | UN | 0,3 | 0 | 0 | 0
+  447 | 1
+  448 | 1
+  449 | 0
+  450 | Sí
+  451 | T 100.90.739 | Bloque de contactos TEE-GV-AE20
+  452 | UN | 0 | 0 | 0 | 0
+  453 | 1
+  454 | 2
+  455 | 0
+  456 | Sí
+  457 | T 100.90.744 | Bloque de contactos TEE-LA1-DN11 | (L
+  458 | A1-D11) | UN | 0,03 | 0 | 0 | 0
+  459 | 1
+  460 | 1
+  461 | 0
+  462 | Sí
+  463 | T 100.90.746 | Bloque de contactos TEE LA1-DN20
+  464 | UN | 0,03 | 0 | 0 | 0
+  465 | 1
+  466 | 6
+  467 | 0
+  468 | Sí
+  469 | T 100.90.747 | Bloque de contactos TEE LA1-DN40 | (T
+  470 | EE LA1-D40) | UN | 0,03 | 0 | 0 | 0
+  471 | 1
+  472 | 1
+  473 | 0
+  474 | Sí
+  475 | T 100.90.814 | Casquillo reductor POWER LOCK para c
+  476 | able de 50 | UN | 0,01 | 0 | 0 | 0
+  477 | 1
+  478 | 2
+  479 | 0
+  480 | Sí
+  481 | T 100.90.817 | Conector panel receptor SPX4PDEGN-LD
+  482 | 120MP (400A) Verde | UN | 0,5 | 0 | 0 | 0
+  483 | 1
+  484 | 1
+  485 | 0
+  486 | Sí
+  487 | T 100.90.827 | Tapón conector 5 p hembra negro ref.
+  488 | Wieland 99.530.0000.7 | UN | 0,05 | 0 | 0 | 0
+  489 | 1
+  490 | 1
+  491 | 0
+  492 | No
+  493 | T 100.90.835 | Zocalo ILME CHI 32 / 093 0032 0301/7
+  494 | 0.320.3228.0 | UN | 0,29 | 0 | 0 | 0
+  495 | 1
+  496 | 1
+  497 | 0
+  498 | No
+  499 | T 100.90.836 | Base | 16+T 16A | 400V ( nº 16-32 ) 77
+  500 | ,5x27 Conex.por muelle | UN | 0,08 | 0 | 0 | 0
+  501 | 1
+  502 | 1
+  503 | 0
+  504 | No
+  505 | T 100.90.840 | Clavija 16+T 16A 400V | ( nº 16-32 )
+  506 | 77,5x27 Conex. | muelle | UN | 0,2 | 0 | 0 | 0
+  507 | 1
+  508 | 1
+  509 | 0
+  510 | No
+  511 | T 100.90.844 | Zocalo | 166406 / 09 30 010 0303 / 7
+  512 | 1.325.1028.0 | UN | 0,15 | 0 | 0 | 0
+  513 | 1
+  514 | 2
+  515 | 0
+  516 | No
+  517 | T 100.90.845 | Base | 10+T 16A 400V 57x27 Conex. po
+  518 | r muelle | UN | 0,1 | 0 | 0 | 0
+  519 | 1
+  520 | 1
+  521 | 0
+  522 | No
+  523 | T 100.90.846 | Clavija | 10+T 16A 400V 57x27 Conex.
+  524 | por muelle | UN | 0,5 | 0 | 0 | 0
+  525 | 1
+  526 | 1
+  527 | 0
+  528 | No
+  529 | T 100.90.863 | Placa cubierta 24 Wieland: 07.416.71
+  530 | 53.0 / Weidm: 1664970000 | UN | 0,2 | 0 | 0 | 0
+  531 | 1
+  532 | 1
+  533 | 0
+  534 | No
+  535 | .. / ..
+  536 | ----------------Page (1) Break----------------
+  537 | 3
+  538 | Pág.
+  539 | 50073
+  540 | JASO Equipos de Obras y Construcciones, S. L.
+  541 | T14582100 | 18/02/26 | 9:38:51
+  542 | LISTADO DE COMPOSICIONES Y PROCESOS (C/Desg)
+  543 | Rev.
+  544 | F1 | F2 | F3 | F4
+  545 | Niv. | Ref. | Denominación Técnica
+  546 | Ud. | Peso | Peso C. | Longitud | Ancho | Altura | Nº Plano | Norma
+  547 | Rev. procesos
+  548 | Ficticio | Mat.Dep.
+  549 | T 100.90.874 | Cubierta ILME CHV32 PG29 / 0930 032
+  550 | 0421/70.352.3228.0 | UN | 0,45 | 0 | 0 | 0
+  551 | 1
+  552 | 1
+  553 | 0
+  554 | No
+  555 | T 100.90.876 | Zocalo | 120250 / 09 30 006 0302 / 7
+  556 | 0.325.0628.0 | UN | 0,15 | 0 | 0 | 0
+  557 | 1
+  558 | 1
+  559 | 0
+  560 | No
+  561 | T 100.90.877 | Zocalo | 1210100000 / 09 30 016 0306
+  562 | / 71.325.1628.0 | UN | 0,2 | 0 | 0 | 0
+  563 | 1
+  564 | 3
+  565 | 0
+  566 | No
+  567 | T 100.90.896 | Zocalo y tapa(24) 09 30 024 0304 / 7
+  568 | 1.325.2428.0 | UN | 0,18 | 0 | 0 | 0
+  569 | 1
+  570 | 3
+  571 | 0
+  572 | No
+  573 | T 100.91.447
+  574 | Ventilador Himel VF 56 // LOTEC FG12CU230BS
+  575 | UN | 0,5 | 0 | 0 | 0
+  576 | 1
+  577 | 2
+  578 | 0
+  579 | Sí
+  580 | T 100.91.463 | Pulsador de seta 60mm con encl. TEE
+  581 | ZB4 BS64 | UN | 0,09 | 0 | 0 | 0
+  582 | 1
+  583 | 1
+  584 | 0
+  585 | Sí
+  586 | T 100.91.467 | Etiqueta Ø60 amarilla "Emergency Sto
+  587 | p" ZBY9330 agujero Ø22 | UN | 0 | 0 | 0 | 0
+  588 | 1
+  589 | 1
+  590 | 0
+  591 | Sí
+  592 | T 100.91.479 | Pletina cobre TEKNOMEGA 25x5 ref. BR
+  593 | P1000
+  594 | UN | 0 | 0 | 0 | 0
+  595 | 1
+  596 | 1
+  597 | 0
+  598 | No
+  599 | T 100.91.480 | Espaciador metálico TEKNOMEGA 40mm r
+  600 | ef.DZM1165 | UN | 0 | 0 | 0 | 0
+  601 | 1
+  602 | 2
+  603 | 0
+  604 | No
+  605 | T 100.91.481 | Pletina cobre TEKNOMEGA para tierras
+  606 | ref.MRS2000 | UN | 0 | 0 | 0 | 0
+  607 | 1
+  608 | 1
+  609 | 0
+  610 | No
+  611 | T 100.91.677 | F.A. OMRON S8VK-G06024 / WEIDMULLER
+  612 | ref. 1469470000 | UN | 0,26 | 0 | 0 | 0
+  613 | 1
+  614 | 1
+  615 | 0
+  616 | Sí
+  617 | T 100.91.792 | Portaplano de Plástico Tipo A4 Prof.
+  618 | 40 | Ref. NSYDPA44 | UN | 0 | 0 | 0 | 0
+  619 | 1
+  620 | 1
+  621 | 0
+  622 | Sí
+  623 | T 100.91.820 | Conector panel emisor Ref. SPX4PSEGN
+  624 | -LS120MP (400A) Verde | UN | 0,44 | 0 | 0 | 0
+  625 | 1
+  626 | 1
+  627 | 0
+  628 | Sí
+  629 | T 100.91.831 | Base wieland 4 polos 82A ref. 72.208
+  630 | .04530
+  631 | UN | 0 | 0 | 0 | 0
+  632 | 1
+  633 | 1
+  634 | 0
+  635 | No
+  636 | T 100.91.872 | Zócalo + base | 5 polos gris ref. Wie
+  637 | land 96.051.5053.0 | UN | 0,2 | 0 | 0 | 0
+  638 | 1
+  639 | 1
+  640 | 0
+  641 | No
+  642 | T 100.91.874 | Zócalo + base | 5 polos marrón ref. W
+  643 | ieland 96.051.5051.4 | UN | 0,2 | 0 | 0 | 0
+  644 | 1
+  645 | 1
+  646 | 0
+  647 | No
+  648 | T 100.91.884 | Tapón conector 5 polos hembra gris r
+  649 | ef.Wieland 99.529.000.7 | UN | 0,05 | 0 | 0 | 0
+  650 | 1
+  651 | 1
+  652 | 0
+  653 | No
+  654 | T 100.91.911 | Lampara Lotec 12W CLG-T2312 \\ Sylva
+  655 | nia 4W ref. 0051376 | UN | 0,36 | 0 | 0 | 0
+  656 | 1
+  657 | 2
+  658 | 0
+  659 | Sí
+  660 | T 100.91.930 | Zócalo ethernet PHOENIX CONTACT ref.
+  661 | 1414397 | UN | 0,2 | 0 | 0 | 0
+  662 | 1
+  663 | 3
+  664 | 0
+  665 | Sí
+  666 | T 100.91.936 | Capuchon ethernet PHOENIX CONTACT re
+  667 | f. 1430899 | UN | 0,01 | 0 | 0 | 0
+  668 | 1
+  669 | 3
+  670 | 0
+  671 | Sí
+  672 | T 100.91.949 | Sonda termica PT1000
+  673 | UN | 0 | 0 | 0 | 0
+  674 | 1
+  675 | 1
+  676 | 0
+  677 | Sí
+  678 | T 100.92.431 | Switch Ethernet WieNET UMS 6-L ref.8
+  679 | 3.040.0000.1 | UN | 0 | 0 | 0 | 0
+  680 | 1
+  681 | 1
+  682 | 0
+  683 | Sí
+  684 | T 100.92.500 | Int. automatico C60N 2P 4A curva D r
+  685 | ef. A9F75204 | UN | 0 | 0 | 0 | 0
+  686 | 1
+  687 | 1
+  688 | 0
+  689 | Sí
+  690 | T 100.92.501 | Int. automatico C60N 2P 6A curva D r
+  691 | ef. A9F75206 | UN | 0 | 0 | 0 | 0
+  692 | 1
+  693 | 2
+  694 | 0
+  695 | Sí
+  696 | T 101.90.712 | Latiguillo Cat.6A S/FTP LS0H 2m DAT
+  697 | WYLER 65351000DY | UN | 0 | 0 | 0 | 0
+  698 | 1
+  699 | 2
+  700 | 0
+  701 | Sí
+  702 | T 101.90.714 | Latiguillo Cat.6A S/FTP LS0H 0,5m D
+  703 | ATWYLER 65350300DY | UN | 0 | 0 | 0 | 0
+  704 | 1
+  705 | 4
+  706 | 0
+  707 | Sí
+  708 | T 101.90.950 | Termostato Stego (1NC+1NO) Ref.STGZR
+  709 | 01172 | UN | 0,3 | 0 | 0 | 0
+  710 | 1
+  711 | 1
+  712 | 0
+  713 | Sí
+  714 | T 101.90.953 | Termostato Stego (-20º + 30º) Ref.ST
+  715 | GFZK01170 | UN | 0,1 | 0 | 0 | 0
+  716 | 1
+  717 | 1
+  718 | 0
+  719 | Sí
+  720 | T 101.90.954 | Termoventilador Stego ref. CSL028-40
+  721 | 0W 230VAC-CLIP | UN | 0,5 | 0 | 0 | 0
+  722 | 1
+  723 | 2
+  724 | 0
+  725 | Sí
+  726 | T 101.91.131 | Bandeja perforada Sendzimir 35x150 r
+  727 | ef. P0315S | UN | 0 | 0 | 0 | 0
+  728 | 1
+  729 | 1
+  730 | 0
+  731 | No
+  732 | T 101.91.132 | Tapa bandeja Sendzimir 150 ref. TB15
+  733 | S
+  734 | UN | 0 | 0 | 0 | 0
+  735 | 1
+  736 | 1
+  737 | 0
+  738 | No
+  739 | T 101.91.234 | Distribuidor de potencial Phoenix Co
+  740 | ntact ref. 3270158 | UN | 0 | 0 | 0 | 0
+  741 | 1
+  742 | 1
+  743 | 0
+  744 | No
+  745 | T 101.91.235 | Distribuidor de potencial Phoenix Co
+  746 | ntact ref. 3270160 | UN | 0 | 0 | 0 | 0
+  747 | 1
+  748 | 2
+  749 | 0
+  750 | No
+  751 | T 101.91.236 | Tapa Phoenix Contact ref.3270155
+  752 | UN | 0 | 0 | 0 | 0
+  753 | 1
+  754 | 1
+  755 | 0
+  756 | No
+  757 | T 101.91.270 | Zócalo hembra 2 polos negro Wieland
+  758 | Mini ref. 46.031.5054.1 | UN | 0 | 0 | 0 | 0
+  759 | 1
+  760 | 1
+  761 | 0
+  762 | No
+  763 | T 101.91.271 | Zócalo hembra 5 polos negro Wieland
+  764 | Mini ref. 46.051.5053.1 | UN | 0 | 0 | 0 | 0
+  765 | 1
+  766 | 1
+  767 | 0
+  768 | No
+  769 | T 101.91.272 | Zócalo hembra 5 polos gris Wieland M
+  770 | ini ref. 46.051.5053.0 | UN | 0 | 0 | 0 | 0
+  771 | 1
+  772 | 2
+  773 | 0
+  774 | No
+  775 | T 101.91.273 | Zócalo hembra 2 polos gris Wieland M
+  776 | ini ref. 46.031.5054.0 | UN | 0 | 0 | 0 | 0
+  777 | 1
+  778 | 1
+  779 | 0
+  780 | No
+  781 | T 101.91.278 | Zócalo hembra 7p negro Wieland Class
+  782 | ic ref.: 96.071.6353.1 | UN | 0 | 0 | 0 | 0
+  783 | 1
+  784 | 1
+  785 | 0
+  786 | No
+  787 | T 101.91.279 | Zócalo hembra 5 polos azul Wieland M
+  788 | ini ref.46.051.5053.9 | UN | 0 | 0 | 0 | 0
+  789 | 1
+  790 | 1
+  791 | 0
+  792 | No
+  793 | T 101.91.280 | Zócalo hembra 2 polos verde Wieland
+  794 | Mini ref.46.031.5056.7 | UN | 0 | 0 | 0 | 0
+  795 | 1
+  796 | 1
+  797 | 0
+  798 | No
+  799 | T 101.91.281 | Zócalo hembra 2 polos azul Wieland M
+  800 | ini ref.46.031.5054.9 | UN | 0 | 0 | 0 | 0
+  801 | 1
+  802 | 1
+  803 | 0
+  804 | No
+  805 | .. / ..
+  806 | ----------------Page (2) Break----------------
+  807 | 4
+  808 | Pág.
+  809 | 50073
+  810 | JASO Equipos de Obras y Construcciones, S. L.
+  811 | T14582100 | 18/02/26 | 9:38:51
+  812 | LISTADO DE COMPOSICIONES Y PROCESOS (C/Desg)
+  813 | Rev.
+  814 | F1 | F2 | F3 | F4
+  815 | Niv. | Ref. | Denominación Técnica
+  816 | Ud. | Peso | Peso C. | Longitud | Ancho | Altura | Nº Plano | Norma
+  817 | Rev. procesos
+  818 | Ficticio | Mat.Dep.
+  819 | T 101.91.287 | Tapón conector 5 p hembra negro Wiel
+  820 | and ref. 06.563.9153.1 | UN | 0 | 0 | 0 | 0
+  821 | 1
+  822 | 4
+  823 | 0
+  824 | No
+  825 | T 101.91.291 | Tapón conector 6 p hembra negro Wiel
+  826 | and ref. 99.589.0000.7 | UN | 0 | 0 | 0 | 0
+  827 | 1
+  828 | 1
+  829 | 0
+  830 | No
+  831 | T 101.91.292 | Tapón conector 2 p hembra negro Wiel
+  832 | and ref. 06.563.8753.1 | UN | 0 | 0 | 0 | 0
+  833 | 1
+  834 | 3
+  835 | 0
+  836 | No
+  837 | T 101.91.293 | Tapón conector 5p hembra gris Wielan
+  838 | d ref. 06.563.9153.0 | UN | 0 | 0 | 0 | 0
+  839 | 1
+  840 | 2
+  841 | 0
+  842 | No
+  843 | T 101.91.336 | Convertidor DC/DC 10V 15W ref. Power
+  844 | DC 15W-10 | UN | 0 | 0 | 0 | 0
+  845 | 1
+  846 | 1
+  847 | 0
+  848 | Sí
+  849 | T 101.91.337 | Módulo antiparasitario Schneider 24-
+  850 | 48 VAC ref. LAD4RCE | UN | 0,02 | 0 | 0 | 0
+  851 | 1
+  852 | 12
+  853 | 0
+  854 | Sí
+  855 | T 101.91.344 | Tapón conector 2 p hembra gris Wiela
+  856 | nd ref. 06.563.8753.0 | UN | 0 | 0 | 0 | 0
+  857 | 1
+  858 | 1
+  859 | 0
+  860 | No
+  861 | T 101.91.385 | Zócalo hembra 4 polos marrón Wieland
+  862 | Mini ref.46.051.5051.4 | UN | 0 | 0 | 0 | 0
+  863 | 1
+  864 | 1
+  865 | 0
+  866 | No
+  867 | T 101.91.394 | Zócalo hembra 5 polos turques Wielan
+  868 | d Mini ref.46.051.5053.6 | UN | 0 | 0 | 0 | 0
+  869 | 1
+  870 | 1
+  871 | 0
+  872 | No
+  873 | T 145.82.010 | PLC MITSUBISHI FX5U Armario Principa
+  874 | l (nº1)
+  875 | UN | 0,5 | 0 | 0 | 0 | 145.82.010
+  876 | 1
+  877 | 1
+  878 | 1,01
+  879 | 0
+  880 | Sí
+  881 | T 100.91.669 | Batería para autómata Mitsubishi
+  882 | ref. FX3U-32BL | UN | 0,01 | 0 | 0 | 0
+  883 | 2
+  884 | 1
+  885 | 0
+  886 | Sí
+  887 | T 100.91.685
+  888 | Autómata programable Mitsubishi, ref. FX5U-32MR/ES
+  889 | UN | 0,6 | 0 | 0 | 0
+  890 | 2
+  891 | 1
+  892 | 0
+  893 | Sí
+  894 | T 100.91.686 | Módulo de entradas analógicas Mit
+  895 | subishi ref. FX5-4AD-ADP | UN | 0,2 | 0 | 0 | 0
+  896 | 2
+  897 | 1
+  898 | 0
+  899 | Sí
+  900 | T 100.91.687 | Módulo de entradas digitales Mits
+  901 | ubishi ref. FX5-16EX | UN | 0,2 | 0 | 0 | 0
+  902 | 2
+  903 | 1
+  904 | 0
+  905 | Sí
+  906 | T 145.82.015 | PLC MITSUBISHI FX5UJ Armario Princip
+  907 | al (nº2) | UN | 0,5 | 0 | 0 | 0 | 145.82.015
+  908 | 1
+  909 | 1
+  910 | 0,2
+  911 | 0
+  912 | Sí
+  913 | T 100.91.687 | Módulo de entradas digitales Mits
+  914 | ubishi ref. FX5-16EX | UN | 0,2 | 0 | 0 | 0
+  915 | 2
+  916 | 1
+  917 | 0
+  918 | Sí
+  919 | T 101.90.956
+  920 | Autómata programable Mitsubishi ref.FX5UJ-24MR/ES
+  921 | UN | 0 | 0 | 0 | 0
+  922 | 2
+  923 | 1
+  924 | 0
+  925 | Sí
+  926 | T 145.82.020 | Conjunto regletero armario principal
+  927 | L2
+  928 | UN | 2 | 0 | 0 | 0 | 145.82.020
+  929 | 1
+  930 | 1
+  931 | 0,64
+  932 | C
+  933 | No
+  934 | T 100.11.152 | Tornillo cilíndrico M5x12 5.8 EN-
+  935 | ISO-1207 Geomet 500A | UN | 0,01 | 0 | 0 | 0
+  936 | 2
+  937 | 9
+  938 | 0
+  939 | No
+  940 | T 100.31.105
+  941 | Arandela elástica DIN 128-87-A 5 - FSt Geomet 500A
+  942 | UN | 0,01 | 0 | 0 | 0
+  943 | 2
+  944 | 9
+  945 | 0
+  946 | No
+  947 | T 100.90.570
+  948 | Apoyo SIEMENS 8WA-746
+  949 | UN | 0,05 | 0 | 0 | 0
+  950 | 2
+  951 | 3
+  952 | 0
+  953 | No
+  954 | T 100.90.581 | Tope final para bornas 2,5/5
+  955 | UN | 0,05 | 0 | 0 | 0
+  956 | 2
+  957 | 2
+  958 | 0
+  959 | No
+  960 | T 101.91.088 | Borna simple Siemens 0,08-2,5 mm²
+  961 | ref. 8WH2000-0AF00 | UN | 0 | 0 | 0 | 0
+  962 | 2
+  963 | 15
+  964 | 0
+  965 | No
+  966 | T 101.91.089 | Borna tierra Siemens 0,08-2,5 mm²
+  967 | ref. 8WH2003-0CF07 | UN | 0 | 0 | 0 | 0
+  968 | 2
+  969 | 7
+  970 | 0
+  971 | No
+  972 | T 101.91.090 | Borna 3 puntos conex Siemens 0,08
+  973 | -2,5 mm² ref. 8WH2003-0AF00 | UN | 0 | 0 | 0 | 0
+  974 | 2
+  975 | 3
+  976 | 0
+  977 | No
+  978 | T 101.91.091 | Borna 2 pisos Siemens 0,08-2,5 mm
+  979 | ² ref. 8WH2020-0AF00 | UN | 0 | 0 | 0 | 0
+  980 | 2
+  981 | 50
+  982 | 0
+  983 | No
+  984 | T 101.91.092 | Borna simple Siemens 0,5-4 mm² re
+  985 | f. 8WH2000-0AG00 | UN | 0 | 0 | 0 | 0
+  986 | 2
+  987 | 2
+  988 | 0
+  989 | No
+  990 | T 101.91.093 | Borna tierra Siemens 0,5-4 mm² re
+  991 | f. 8WH2000-0CG07 | UN | 0 | 0 | 0 | 0
+  992 | 2
+  993 | 1
+  994 | 0
+  995 | No
+  996 | T 101.91.094 | Borna simple Siemens 1,5-10 mm² r
+  997 | ef. 8WH2000-0AJ00 | UN | 0 | 0 | 0 | 0
+  998 | 2
+  999 | 4
+ 1000 | 0
+ 1001 | No
+ 1002 | T 101.91.098 | Tapa final Siemens para 2,5 mm²
+ 1003 | ref. 8WH9000-1VA00 | UN | 0 | 0 | 0 | 0
+ 1004 | 2
+ 1005 | 7
+ 1006 | 0
+ 1007 | No
+ 1008 | T 101.91.136 | Etiqueta Cembre MG-CPM04 5X10mm r
+ 1009 | ef. 41390N | UN | 0 | 0 | 0 | 0
+ 1010 | 2
+ 1011 | 100
+ 1012 | 0
+ 1013 | No
+ 1014 | M 100.07.601 | Perfil simetrico perf. 35x7,5 GOU
+ 1015 | L 45520 -REF. QUIOP- | M | 0,38 | 0 | 0 | 0
+ 1016 | 2
+ 1017 | 0,56
+ 1018 | 0
+ 1019 | No
+ 1020 | T 145.82.025 | Conjunto regletero armario principal
+ 1021 | L3
+ 1022 | UN | 1 | 0 | 0 | 0 | 145.82.025
+ 1023 | 1
+ 1024 | 1
+ 1025 | 0,93
+ 1026 | E
+ 1027 | No
+ 1028 | T 100.90.583 | Etiqueta RC610 ENTRELEC 233 000.0
+ 1029 | 1
+ 1030 | UN | 0,01 | 0 | 0 | 0
+ 1031 | 2
+ 1032 | 75
+ 1033 | 0
+ 1034 | No
+ 1035 | T 101.91.089 | Borna tierra Siemens 0,08-2,5 mm²
+ 1036 | ref. 8WH2003-0CF07 | UN | 0 | 0 | 0 | 0
+ 1037 | 2
+ 1038 | 1
+ 1039 | 0
+ 1040 | No
+ 1041 | T 101.91.090 | Borna 3 puntos conex Siemens 0,08
+ 1042 | -2,5 mm² ref. 8WH2003-0AF00 | UN | 0 | 0 | 0 | 0
+ 1043 | 2
+ 1044 | 17
+ 1045 | 0
+ 1046 | No
+ 1047 | T 101.91.091 | Borna 2 pisos Siemens 0,08-2,5 mm
+ 1048 | ² ref. 8WH2020-0AF00 | UN | 0 | 0 | 0 | 0
+ 1049 | 2
+ 1050 | 20
+ 1051 | 0
+ 1052 | No
+ 1053 | T 101.91.092 | Borna simple Siemens 0,5-4 mm² re
+ 1054 | f. 8WH2000-0AG00 | UN | 0 | 0 | 0 | 0
+ 1055 | 2
+ 1056 | 2
+ 1057 | 0
+ 1058 | No
+ 1059 | T 101.91.094 | Borna simple Siemens 1,5-10 mm² r
+ 1060 | ef. 8WH2000-0AJ00 | UN | 0 | 0 | 0 | 0
+ 1061 | 2
+ 1062 | 4
+ 1063 | 0
+ 1064 | No
+ 1065 | T 101.91.098 | Tapa final Siemens para 2,5 mm²
+ 1066 | ref. 8WH9000-1VA00 | UN | 0 | 0 | 0 | 0
+ 1067 | 2
+ 1068 | 3
+ 1069 | 0
+ 1070 | No
+ 1071 | T 101.91.135 | Borna 4 puntos conex Siemens 0,08
+ 1072 | -2,5 mm² ref. 8WH2004-0AF00 | UN | 0 | 0 | 0 | 0
+ 1073 | 2
+ 1074 | 18
+ 1075 | 0
+ 1076 | No
+ 1077 | .. / ..
+ 1078 | ----------------Page (3) Break----------------
+ 1079 | 5
+ 1080 | Pág.
+ 1081 | 50073
+ 1082 | JASO Equipos de Obras y Construcciones, S. L.
+ 1083 | T14582100 | 18/02/26 | 9:38:51
+ 1084 | LISTADO DE COMPOSICIONES Y PROCESOS (C/Desg)
+ 1085 | Rev.
+ 1086 | F1 | F2 | F3 | F4
+ 1087 | Niv. | Ref. | Denominación Técnica
+ 1088 | Ud. | Peso | Peso C. | Longitud | Ancho | Altura | Nº Plano | Norma
+ 1089 | Rev. procesos
+ 1090 | Ficticio | Mat.Dep.
+ 1091 | T 101.91.260 | Tapa final Siemens para 2,5 mm² 4
+ 1092 | puntos | ref. 8WH9000-4GA00 | UN | 0 | 0 | 0 | 0
+ 1093 | 2
+ 1094 | 3
+ 1095 | 0
+ 1096 | No
+ 1097 | M 100.07.602 | Perfil simetrico perf. 35x15 GOUL
+ 1098 | 45555 /QUIORP | M | 0,49 | 0 | 0 | 0
+ 1099 | 2
+ 1100 | 0,375
+ 1101 | 0
+ 1102 | No
+ 1103 | T 145.82.040 | Conjunto armario galvanizado + Chapa
+ 1104 | s Conexiones | UN | 0 | 0 | 0 | 0 | 145.82.040
+ 1105 | 1
+ 1106 | 1
+ 1107 | 128,23
+ 1108 | 0
+ 1109 | Sí
+ 1110 | T 145.82.050
+ 1111 | Armario Principal 1480x1500x430 Galvanizado
+ 1112 | UN | 127,78 | 0 | 0 | 0 | 145.82.050
+ 1113 | 2
+ 1114 | 1
+ 1115 | 0
+ 1116 | F
+ 1117 | Sí
+ 1118 | T 145.82.041 | Chapa conexiones 450x350 para arm
+ 1119 | ario eléctrico | UN | 0 | 0 | 0 | 0 | 145.82.041
+ 1120 | 2
+ 1121 | 1
+ 1122 | 0
+ 1123 | 0
+ 1124 | Sí
+ 1125 | T 145.82.042 | Chapa conexiones 450x350 para arm
+ 1126 | ario eléctrico | UN | 0 | 0 | 0 | 0 | 145.82.042
+ 1127 | 2
+ 1128 | 1
+ 1129 | 0
+ 1130 | D
+ 1131 | Sí
+ 1132 | T 145.82.043 | Chapa conexiones 450x350 para arm
+ 1133 | ario eléctrico | UN | 0 | 0 | 0 | 0 | 145.82.043
+ 1134 | 2
+ 1135 | 1
+ 1136 | 0
+ 1137 | 0
+ 1138 | Sí
+ 1139 | T 145.82.044 | Chapa conexiones 450x350 para arm
+ 1140 | ario eléctrico | UN | 0 | 0 | 0 | 0 | 145.82.044
+ 1141 | 2
+ 1142 | 1
+ 1143 | 0
+ 1144 | B
+ 1145 | Sí
+ 1146 | T 145.82.045 | Chapa conexiones 450x350 para arm
+ 1147 | ario eléctrico | UN | 0 | 0 | 0 | 0 | 145.82.045
+ 1148 | 2
+ 1149 | 1
+ 1150 | 0
+ 1151 | B
+ 1152 | Sí
+ 1153 | T 145.82.046 | Chapa conexiones 450x350 para arm
+ 1154 | ario eléctrico | UN | 0 | 0 | 0 | 0 | 145.82.046
+ 1155 | 2
+ 1156 | 1
+ 1157 | 0
+ 1158 | 0
+ 1159 | Sí
+ 1160 | T 145.83.508 | Conjunto conector CBL
+ 1161 | UN | 0 | 0 | 0 | 0 | NP 4850
+ 1162 | 1
+ 1163 | 1
+ 1164 | 0,25
+ 1165 | No
+ 1166 | T 100.90.515 | Clavija 16+T 16A 400V | ( nº 1-16
+ 1167 | ) 77,5x27 Conex. por muelle | UN | 0,1 | 0 | 0 | 0
+ 1168 | 2
+ 1169 | 1
+ 1170 | 0
+ 1171 | No
+ 1172 | T 100.90.614 | Tapon plastico PG - 21
+ 1173 | UN | 0,05 | 0 | 0 | 0
+ 1174 | 2
+ 1175 | 1
+ 1176 | 0
+ 1177 | No
+ 1178 | T 100.90.887 | Cubierta 165796 / 09 30 016 1440
+ 1179 | / 71.352.1628.1 | UN | 0,1 | 0 | 0 | 0
+ 1180 | 2
+ 1181 | 1
+ 1182 | 0
+ 1183 | No
+ 1184 | T 145.82.060 | Soporte armario electrico
+ 1185 | UN | 94,71 | 0 | 0 | 0 | 145.82.060
+ 1186 | 1
+ 1187 | 1
+ 1188 | 94,71
+ 1189 | 0
+ 1190 | A
+ 1191 | Sí
+ 1192 | I 145.82.061 | L 100x100x10 | S355J2 | EN-10056 | E
+ 1193 | N-10025
+ 1194 | UN | 28,47 | 0 | 0 | 0
+ 1195 | 2
+ 1196 | 1
+ 1197 | 28,69
+ 1198 | 0 | 0 | No
+ 1199 | M 100.02.160 | L 100x100x10 | S355J2 | EN-10056
+ 1200 | EN-10025
+ 1201 | M | 14,7 | 12,1 | 0 | 0
+ 1202 | 3
+ 1203 | 1,9
+ 1204 | 0
+ 1205 | No
+ 1206 | I 145.82.062 | L 100x100x10 | S355J2 | EN-10056 | E
+ 1207 | N-10025
+ 1208 | UN | 28,47 | 0 | 0 | 0
+ 1209 | 2
+ 1210 | 1
+ 1211 | 28,69
+ 1212 | 0 | 0 | No
+ 1213 | M 100.02.160 | L 100x100x10 | S355J2 | EN-10056
+ 1214 | EN-10025
+ 1215 | M | 14,7 | 12,1 | 0 | 0
+ 1216 | 3
+ 1217 | 1,9
+ 1218 | 0
+ 1219 | No
+ 1220 | I 145.82.063 | L 80x80x8 | S355J2 | EN-10056 | EN-1
+ 1221 | 0025
+ 1222 | UN | 12,27 | 0 | 0 | 0
+ 1223 | 2
+ 1224 | 1
+ 1225 | 12,33
+ 1226 | 0 | 0 | No
+ 1227 | M 100.02.150 | L 80x80x8 | S355J2 | EN-10056 | E
+ 1228 | N-10025
+ 1229 | M | 9,63 | 12,1 | 0 | 0
+ 1230 | 3
+ 1231 | 1,28
+ 1232 | 0
+ 1233 | No
+ 1234 | I 145.82.064 | L 80x80x8 | S355J2 | EN-10056 | EN-1
+ 1235 | 0025
+ 1236 | UN | 12,27 | 0 | 0 | 0
+ 1237 | 2
+ 1238 | 1
+ 1239 | 12,33
+ 1240 | 0 | 0 | No
+ 1241 | M 100.02.150 | L 80x80x8 | S355J2 | EN-10056 | E
+ 1242 | N-10025
+ 1243 | M | 9,63 | 12,1 | 0 | 0
+ 1244 | 3
+ 1245 | 1,28
+ 1246 | 0
+ 1247 | No
+ 1248 | I 145.82.065 | L 100x100x10 | S355J2 | EN-10056 | E
+ 1249 | N-10025
+ 1250 | UN | 5,97 | 0 | 0 | 0
+ 1251 | 2
+ 1252 | 1
+ 1253 | 6,04
+ 1254 | 0 | 0 | No
+ 1255 | M 100.02.160 | L 100x100x10 | S355J2 | EN-10056
+ 1256 | EN-10025
+ 1257 | M | 14,7 | 12,1 | 0 | 0
+ 1258 | 3
+ 1259 | 0,4
+ 1260 | 0
+ 1261 | No
+ 1262 | I 145.82.066 | L 100x100x10 | S355J2 | EN-10056 | E
+ 1263 | N-10025
+ 1264 | UN | 5,97 | 0 | 0 | 0
+ 1265 | 2
+ 1266 | 1
+ 1267 | 6,04
+ 1268 | 0 | 0 | No
+ 1269 | M 100.02.160 | L 100x100x10 | S355J2 | EN-10056
+ 1270 | EN-10025
+ 1271 | M | 14,7 | 12,1 | 0 | 0
+ 1272 | 3
+ 1273 | 0,4
+ 1274 | 0
+ 1275 | No
+ 1276 | I 146.32.102 | Chapa | 15 | EN 10029/91 Mat.:S 355
+ 1277 | J2G3 EN 10025/90 | UN | 0,65 | 0 | 0 | 0
+ 1278 | 2
+ 1279 | 2
+ 1280 | 1,18
+ 1281 | D | No
+ 1282 | M 100.03.115 | Chapa 15 | S355J2 | EN-10029 | EN
+ 1283 | -10025
+ 1284 | M2 | 117,75 | 3,75 | 0 | 0
+ 1285 | 3
+ 1286 | 0,01
+ 1287 | 0
+ 1288 | No
+ 1289 | M 100.07.612 | Canaleta TEHALIT BA7 60060
+ 1290 | M | 0,68 | 0 | 0 | 0
+ 1291 | 1
+ 1292 | 0,6
+ 1293 | 0
+ 1294 | No
+ 1295 | ----------------Page (4) Break----------------

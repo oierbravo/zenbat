@@ -1,0 +1,10340 @@
+{
+  "source": "raw",
+  "lines": [
+    {
+      "lineIndex": 1,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 2,
+      "cells": [
+        "Pág."
+      ],
+      "raw": "Pág."
+    },
+    {
+      "lineIndex": 3,
+      "cells": [
+        "50073"
+      ],
+      "raw": "50073"
+    },
+    {
+      "lineIndex": 4,
+      "cells": [
+        "JASO Equipos de Obras y Construcciones, S. L."
+      ],
+      "raw": "JASO Equipos de Obras y Construcciones, S. L."
+    },
+    {
+      "lineIndex": 5,
+      "cells": [
+        "T14582100",
+        "18/02/26",
+        "9:38:51"
+      ],
+      "raw": "T14582100 | 18/02/26 | 9:38:51"
+    },
+    {
+      "lineIndex": 6,
+      "cells": [
+        "LISTADO DE COMPOSICIONES Y PROCESOS (C/Desg)"
+      ],
+      "raw": "LISTADO DE COMPOSICIONES Y PROCESOS (C/Desg)"
+    },
+    {
+      "lineIndex": 7,
+      "cells": [
+        "T 145.82.100",
+        "Conjunto mando + envolvente 3 motores g"
+      ],
+      "raw": "T 145.82.100 | Conjunto mando + envolvente 3 motores g"
+    },
+    {
+      "lineIndex": 8,
+      "cells": [
+        "iro",
+        "O"
+      ],
+      "raw": "iro | O"
+    },
+    {
+      "lineIndex": 9,
+      "cells": [
+        "Nº"
+      ],
+      "raw": "Nº"
+    },
+    {
+      "lineIndex": 10,
+      "cells": [
+        "210,00",
+        "294,70"
+      ],
+      "raw": "210,00 | 294,70"
+    },
+    {
+      "lineIndex": 11,
+      "cells": [
+        "Denominación Técnica"
+      ],
+      "raw": "Denominación Técnica"
+    },
+    {
+      "lineIndex": 12,
+      "cells": [
+        "Rv",
+        "Peso neto",
+        "Peso Cal."
+      ],
+      "raw": "Rv | Peso neto | Peso Cal."
+    },
+    {
+      "lineIndex": 13,
+      "cells": [
+        "Rev."
+      ],
+      "raw": "Rev."
+    },
+    {
+      "lineIndex": 14,
+      "cells": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "raw": "F1 | F2 | F3 | F4"
+    },
+    {
+      "lineIndex": 15,
+      "cells": [
+        "Niv.",
+        "Ref.",
+        "Denominación Técnica"
+      ],
+      "raw": "Niv. | Ref. | Denominación Técnica"
+    },
+    {
+      "lineIndex": 16,
+      "cells": [
+        "Ud.",
+        "Peso",
+        "Peso C.",
+        "Longitud",
+        "Ancho",
+        "Altura",
+        "Nº Plano",
+        "Norma"
+      ],
+      "raw": "Ud. | Peso | Peso C. | Longitud | Ancho | Altura | Nº Plano | Norma"
+    },
+    {
+      "lineIndex": 17,
+      "cells": [
+        "Rev. procesos"
+      ],
+      "raw": "Rev. procesos"
+    },
+    {
+      "lineIndex": 18,
+      "cells": [
+        "Ficticio",
+        "Mat.Dep."
+      ],
+      "raw": "Ficticio | Mat.Dep."
+    },
+    {
+      "lineIndex": 19,
+      "cells": [
+        "T 145.82.005",
+        "Conjunto canaletas mando + variadore"
+      ],
+      "raw": "T 145.82.005 | Conjunto canaletas mando + variadore"
+    },
+    {
+      "lineIndex": 20,
+      "cells": [
+        "s"
+      ],
+      "raw": "s"
+    },
+    {
+      "lineIndex": 21,
+      "cells": [
+        "UN",
+        "0,5",
+        "0",
+        "0",
+        "0",
+        "145.82.005"
+      ],
+      "raw": "UN | 0,5 | 0 | 0 | 0 | 145.82.005"
+    },
+    {
+      "lineIndex": 22,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 23,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 24,
+      "cells": [
+        "F"
+      ],
+      "raw": "F"
+    },
+    {
+      "lineIndex": 25,
+      "cells": [
+        "3,33"
+      ],
+      "raw": "3,33"
+    },
+    {
+      "lineIndex": 26,
+      "cells": [
+        "A"
+      ],
+      "raw": "A"
+    },
+    {
+      "lineIndex": 27,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 28,
+      "cells": [
+        "M 100.07.613",
+        "Canaleta TEHALIT BA7 80060"
+      ],
+      "raw": "M 100.07.613 | Canaleta TEHALIT BA7 80060"
+    },
+    {
+      "lineIndex": 29,
+      "cells": [
+        "M",
+        "0,75",
+        "10",
+        "0",
+        "0"
+      ],
+      "raw": "M | 0,75 | 10 | 0 | 0"
+    },
+    {
+      "lineIndex": 30,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 31,
+      "cells": [
+        "3,6"
+      ],
+      "raw": "3,6"
+    },
+    {
+      "lineIndex": 32,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 33,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 34,
+      "cells": [
+        "M 100.07.614",
+        "Canaleta TEHALIT BA7 80080"
+      ],
+      "raw": "M 100.07.614 | Canaleta TEHALIT BA7 80080"
+    },
+    {
+      "lineIndex": 35,
+      "cells": [
+        "M",
+        "0,93",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "M | 0,93 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 36,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 37,
+      "cells": [
+        "0,68"
+      ],
+      "raw": "0,68"
+    },
+    {
+      "lineIndex": 38,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 39,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 40,
+      "cells": [
+        "M 100.07.615",
+        "Canaleta TEHALIT BA7 80040"
+      ],
+      "raw": "M 100.07.615 | Canaleta TEHALIT BA7 80040"
+    },
+    {
+      "lineIndex": 41,
+      "cells": [
+        "M",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "M | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 42,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 43,
+      "cells": [
+        "3,48"
+      ],
+      "raw": "3,48"
+    },
+    {
+      "lineIndex": 44,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 45,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 46,
+      "cells": [
+        "T 145.82.075",
+        "Conjunto canaletas"
+      ],
+      "raw": "T 145.82.075 | Conjunto canaletas"
+    },
+    {
+      "lineIndex": 47,
+      "cells": [
+        "UN",
+        "0,5",
+        "0",
+        "0",
+        "0",
+        "145.82.075"
+      ],
+      "raw": "UN | 0,5 | 0 | 0 | 0 | 145.82.075"
+    },
+    {
+      "lineIndex": 48,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 49,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 50,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 51,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 52,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 53,
+      "cells": [
+        "M 100.07.616",
+        "Canaleta TEHALIT BA7 40040"
+      ],
+      "raw": "M 100.07.616 | Canaleta TEHALIT BA7 40040"
+    },
+    {
+      "lineIndex": 54,
+      "cells": [
+        "M",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "M | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 55,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 56,
+      "cells": [
+        "0,8"
+      ],
+      "raw": "0,8"
+    },
+    {
+      "lineIndex": 57,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 58,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 59,
+      "cells": [
+        "T 202.07.162",
+        "Perfil simetrico perf. 35x7,5 GOUL 4"
+      ],
+      "raw": "T 202.07.162 | Perfil simetrico perf. 35x7,5 GOUL 4"
+    },
+    {
+      "lineIndex": 60,
+      "cells": [
+        "5520"
+      ],
+      "raw": "5520"
+    },
+    {
+      "lineIndex": 61,
+      "cells": [
+        "UN",
+        "0",
+        "0,35",
+        "0",
+        "0",
+        "NP 4620"
+      ],
+      "raw": "UN | 0 | 0,35 | 0 | 0 | NP 4620"
+    },
+    {
+      "lineIndex": 62,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 63,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 64,
+      "cells": [
+        "0,13"
+      ],
+      "raw": "0,13"
+    },
+    {
+      "lineIndex": 65,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 66,
+      "cells": [
+        "M 100.07.601",
+        "Perfil simetrico perf. 35x7,5 GOU"
+      ],
+      "raw": "M 100.07.601 | Perfil simetrico perf. 35x7,5 GOU"
+    },
+    {
+      "lineIndex": 67,
+      "cells": [
+        "L 45520 -REF. QUIOP-",
+        "M",
+        "0,38",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "L 45520 -REF. QUIOP- | M | 0,38 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 68,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 69,
+      "cells": [
+        "0,35"
+      ],
+      "raw": "0,35"
+    },
+    {
+      "lineIndex": 70,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 71,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 72,
+      "cells": [
+        "T 202.07.173",
+        "Perfil simetrico perf. 35x7,5 GOUL 4"
+      ],
+      "raw": "T 202.07.173 | Perfil simetrico perf. 35x7,5 GOUL 4"
+    },
+    {
+      "lineIndex": 73,
+      "cells": [
+        "5520"
+      ],
+      "raw": "5520"
+    },
+    {
+      "lineIndex": 74,
+      "cells": [
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0",
+        "NP 4620"
+      ],
+      "raw": "UN | 0 | 0 | 0 | 0 | NP 4620"
+    },
+    {
+      "lineIndex": 75,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 76,
+      "cells": [
+        "5"
+      ],
+      "raw": "5"
+    },
+    {
+      "lineIndex": 77,
+      "cells": [
+        "0,21"
+      ],
+      "raw": "0,21"
+    },
+    {
+      "lineIndex": 78,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 79,
+      "cells": [
+        "M 100.07.601",
+        "Perfil simetrico perf. 35x7,5 GOU"
+      ],
+      "raw": "M 100.07.601 | Perfil simetrico perf. 35x7,5 GOU"
+    },
+    {
+      "lineIndex": 80,
+      "cells": [
+        "L 45520 -REF. QUIOP-",
+        "M",
+        "0,38",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "L 45520 -REF. QUIOP- | M | 0,38 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 81,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 82,
+      "cells": [
+        "0,56"
+      ],
+      "raw": "0,56"
+    },
+    {
+      "lineIndex": 83,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 84,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 85,
+      "cells": [
+        "T 145.15.852",
+        "Transf. 1000+750VA 0-380-415-440 / 0"
+      ],
+      "raw": "T 145.15.852 | Transf. 1000+750VA 0-380-415-440 / 0"
+    },
+    {
+      "lineIndex": 86,
+      "cells": [
+        "-220",
+        "0-48",
+        "UN",
+        "13,5",
+        "0",
+        "0",
+        "0",
+        "145.15.852"
+      ],
+      "raw": "-220 | 0-48 | UN | 13,5 | 0 | 0 | 0 | 145.15.852"
+    },
+    {
+      "lineIndex": 87,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 88,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 89,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 90,
+      "cells": [
+        "D"
+      ],
+      "raw": "D"
+    },
+    {
+      "lineIndex": 91,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 92,
+      "cells": [
+        "T 145.82.035",
+        "Placa montaje mando"
+      ],
+      "raw": "T 145.82.035 | Placa montaje mando"
+    },
+    {
+      "lineIndex": 93,
+      "cells": [
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0",
+        "145.82.035"
+      ],
+      "raw": "UN | 0 | 0 | 0 | 0 | 145.82.035"
+    },
+    {
+      "lineIndex": 94,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 95,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 96,
+      "cells": [
+        "15,04"
+      ],
+      "raw": "15,04"
+    },
+    {
+      "lineIndex": 97,
+      "cells": [
+        "C"
+      ],
+      "raw": "C"
+    },
+    {
+      "lineIndex": 98,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 99,
+      "cells": [
+        "M 100.03.002",
+        "Chapa 2",
+        "S275JR",
+        "EN-10029",
+        "EN-100"
+      ],
+      "raw": "M 100.03.002 | Chapa 2 | S275JR | EN-10029 | EN-100"
+    },
+    {
+      "lineIndex": 100,
+      "cells": [
+        "25"
+      ],
+      "raw": "25"
+    },
+    {
+      "lineIndex": 101,
+      "cells": [
+        "M2",
+        "15,7",
+        "2",
+        "0",
+        "0"
+      ],
+      "raw": "M2 | 15,7 | 2 | 0 | 0"
+    },
+    {
+      "lineIndex": 102,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 103,
+      "cells": [
+        "0,958"
+      ],
+      "raw": "0,958"
+    },
+    {
+      "lineIndex": 104,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 105,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 106,
+      "cells": [
+        "T 145.82.101",
+        "Esquema mando + envolvente"
+      ],
+      "raw": "T 145.82.101 | Esquema mando + envolvente"
+    },
+    {
+      "lineIndex": 107,
+      "cells": [
+        "UN",
+        "0,01",
+        "0",
+        "0",
+        "0",
+        "145.82.101"
+      ],
+      "raw": "UN | 0,01 | 0 | 0 | 0 | 145.82.101"
+    },
+    {
+      "lineIndex": 108,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 109,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 110,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 111,
+      "cells": [
+        "O"
+      ],
+      "raw": "O"
+    },
+    {
+      "lineIndex": 112,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 113,
+      "cells": [
+        "T 145.97.000",
+        "Instrucción puesta a tierra en armar"
+      ],
+      "raw": "T 145.97.000 | Instrucción puesta a tierra en armar"
+    },
+    {
+      "lineIndex": 114,
+      "cells": [
+        "ios eléctricos",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0",
+        "145.97.000"
+      ],
+      "raw": "ios eléctricos | UN | 0 | 0 | 0 | 0 | 145.97.000"
+    },
+    {
+      "lineIndex": 115,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 116,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 117,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 118,
+      "cells": [
+        "B"
+      ],
+      "raw": "B"
+    },
+    {
+      "lineIndex": 119,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 120,
+      "cells": [
+        "T 149.14.050",
+        "Tarjeta ralentizador para gruas con"
+      ],
+      "raw": "T 149.14.050 | Tarjeta ralentizador para gruas con"
+    },
+    {
+      "lineIndex": 121,
+      "cells": [
+        "variador"
+      ],
+      "raw": "variador"
+    },
+    {
+      "lineIndex": 122,
+      "cells": [
+        "UN",
+        "0,15",
+        "0",
+        "0",
+        "0",
+        "149.14.050"
+      ],
+      "raw": "UN | 0,15 | 0 | 0 | 0 | 149.14.050"
+    },
+    {
+      "lineIndex": 123,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 124,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 125,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 126,
+      "cells": [
+        "B"
+      ],
+      "raw": "B"
+    },
+    {
+      "lineIndex": 127,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 128,
+      "cells": [
+        "T 160.82.030",
+        "Placa montaje variadores"
+      ],
+      "raw": "T 160.82.030 | Placa montaje variadores"
+    },
+    {
+      "lineIndex": 129,
+      "cells": [
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0",
+        "160.82.030"
+      ],
+      "raw": "UN | 0 | 0 | 0 | 0 | 160.82.030"
+    },
+    {
+      "lineIndex": 130,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 131,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 132,
+      "cells": [
+        "7,24"
+      ],
+      "raw": "7,24"
+    },
+    {
+      "lineIndex": 133,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 134,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 135,
+      "cells": [
+        "M 100.03.002",
+        "Chapa 2",
+        "S275JR",
+        "EN-10029",
+        "EN-100"
+      ],
+      "raw": "M 100.03.002 | Chapa 2 | S275JR | EN-10029 | EN-100"
+    },
+    {
+      "lineIndex": 136,
+      "cells": [
+        "25"
+      ],
+      "raw": "25"
+    },
+    {
+      "lineIndex": 137,
+      "cells": [
+        "M2",
+        "15,7",
+        "2",
+        "0",
+        "0"
+      ],
+      "raw": "M2 | 15,7 | 2 | 0 | 0"
+    },
+    {
+      "lineIndex": 138,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 139,
+      "cells": [
+        "0,461"
+      ],
+      "raw": "0,461"
+    },
+    {
+      "lineIndex": 140,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 141,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 142,
+      "cells": [
+        "T 204.17.111",
+        "Tarjeta Krenel",
+        "ref. CEL40/REMBERG r"
+      ],
+      "raw": "T 204.17.111 | Tarjeta Krenel | ref. CEL40/REMBERG r"
+    },
+    {
+      "lineIndex": 143,
+      "cells": [
+        "ef. FORCE-ISO-FLEX",
+        "UN",
+        "0,1",
+        "0",
+        "0",
+        "0",
+        "204.17.111"
+      ],
+      "raw": "ef. FORCE-ISO-FLEX | UN | 0,1 | 0 | 0 | 0 | 204.17.111"
+    },
+    {
+      "lineIndex": 144,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 145,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 146,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 147,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 148,
+      "cells": [
+        "T 204.17.112",
+        "Tarjeta Krenel",
+        "Ref. PTMIL40 s/REMBE"
+      ],
+      "raw": "T 204.17.112 | Tarjeta Krenel | Ref. PTMIL40 s/REMBE"
+    },
+    {
+      "lineIndex": 149,
+      "cells": [
+        "RG Ref. TERMO-RTD",
+        "UN",
+        "0,1",
+        "0",
+        "0",
+        "0",
+        "204.17.112"
+      ],
+      "raw": "RG Ref. TERMO-RTD | UN | 0,1 | 0 | 0 | 0 | 204.17.112"
+    },
+    {
+      "lineIndex": 150,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 151,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 152,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 153,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 154,
+      "cells": [
+        "T 100.16.024",
+        "Tornillo hexagonal M5x30 8.8 EN-ISO-"
+      ],
+      "raw": "T 100.16.024 | Tornillo hexagonal M5x30 8.8 EN-ISO-"
+    },
+    {
+      "lineIndex": 155,
+      "cells": [
+        "4017 Geomet 500A",
+        "UN",
+        "0,01",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "4017 Geomet 500A | UN | 0,01 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 156,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 157,
+      "cells": [
+        "20"
+      ],
+      "raw": "20"
+    },
+    {
+      "lineIndex": 158,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 159,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 160,
+      "cells": [
+        "T 100.16.028",
+        "Tornillo hexagonal M8X16 8.8 EN-ISO-"
+      ],
+      "raw": "T 100.16.028 | Tornillo hexagonal M8X16 8.8 EN-ISO-"
+    },
+    {
+      "lineIndex": 161,
+      "cells": [
+        "4017 Geomet 500A",
+        "UN",
+        "0,01",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "4017 Geomet 500A | UN | 0,01 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 162,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 163,
+      "cells": [
+        "4"
+      ],
+      "raw": "4"
+    },
+    {
+      "lineIndex": 164,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 165,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 166,
+      "cells": [
+        "T 100.16.061",
+        "Tornillo hexagonal M10x60 8.8 EN-ISO"
+      ],
+      "raw": "T 100.16.061 | Tornillo hexagonal M10x60 8.8 EN-ISO"
+    },
+    {
+      "lineIndex": 167,
+      "cells": [
+        "-4017 Geomet 500A",
+        "UN",
+        "0,05",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "-4017 Geomet 500A | UN | 0,05 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 168,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 169,
+      "cells": [
+        "8"
+      ],
+      "raw": "8"
+    },
+    {
+      "lineIndex": 170,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 171,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 172,
+      "cells": [
+        "T 100.18.030"
+      ],
+      "raw": "T 100.18.030"
+    },
+    {
+      "lineIndex": 173,
+      "cells": [
+        "Varilla roscada AM 8x40 DIN 913 14.9 Geomet 500A"
+      ],
+      "raw": "Varilla roscada AM 8x40 DIN 913 14.9 Geomet 500A"
+    },
+    {
+      "lineIndex": 174,
+      "cells": [
+        "UN",
+        "0,01",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,01 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 175,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 176,
+      "cells": [
+        "6"
+      ],
+      "raw": "6"
+    },
+    {
+      "lineIndex": 177,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 178,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 179,
+      "cells": [
+        "T 100.20.105",
+        "Tuerca hexagonal M5",
+        "8",
+        "EN-ISO-4032"
+      ],
+      "raw": "T 100.20.105 | Tuerca hexagonal M5 | 8 | EN-ISO-4032"
+    },
+    {
+      "lineIndex": 180,
+      "cells": [
+        "Geomet 500A",
+        "UN",
+        "0,01",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "Geomet 500A | UN | 0,01 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 181,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 182,
+      "cells": [
+        "20"
+      ],
+      "raw": "20"
+    },
+    {
+      "lineIndex": 183,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 184,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 185,
+      "cells": [
+        "T 100.20.108",
+        "Tuerca hexagonal M8",
+        "8",
+        "EN-ISO-4032"
+      ],
+      "raw": "T 100.20.108 | Tuerca hexagonal M8 | 8 | EN-ISO-4032"
+    },
+    {
+      "lineIndex": 186,
+      "cells": [
+        "Geomet 500A",
+        "UN",
+        "0,01",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "Geomet 500A | UN | 0,01 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 187,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 188,
+      "cells": [
+        "10"
+      ],
+      "raw": "10"
+    },
+    {
+      "lineIndex": 189,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 190,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 191,
+      "cells": [
+        "T 100.20.110",
+        "Tuerca hexagonal M10",
+        "8",
+        "EN-ISO-4032"
+      ],
+      "raw": "T 100.20.110 | Tuerca hexagonal M10 | 8 | EN-ISO-4032"
+    },
+    {
+      "lineIndex": 192,
+      "cells": [
+        "Geomet 500A",
+        "UN",
+        "0,01",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "Geomet 500A | UN | 0,01 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 193,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 194,
+      "cells": [
+        "24"
+      ],
+      "raw": "24"
+    },
+    {
+      "lineIndex": 195,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 196,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 197,
+      "cells": [
+        "T 100.30.105"
+      ],
+      "raw": "T 100.30.105"
+    },
+    {
+      "lineIndex": 198,
+      "cells": [
+        "Arandela",
+        "5",
+        "200HV EN-ISO-7089 Geomet 500A"
+      ],
+      "raw": "Arandela | 5 | 200HV EN-ISO-7089 Geomet 500A"
+    },
+    {
+      "lineIndex": 199,
+      "cells": [
+        "UN",
+        "0,01",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,01 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 200,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 201,
+      "cells": [
+        "20"
+      ],
+      "raw": "20"
+    },
+    {
+      "lineIndex": 202,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 203,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 204,
+      "cells": [
+        "T 100.30.108"
+      ],
+      "raw": "T 100.30.108"
+    },
+    {
+      "lineIndex": 205,
+      "cells": [
+        "Arandela",
+        "8",
+        "200HV EN-ISO-7089 Geomet 500A"
+      ],
+      "raw": "Arandela | 8 | 200HV EN-ISO-7089 Geomet 500A"
+    },
+    {
+      "lineIndex": 206,
+      "cells": [
+        "UN",
+        "0,01",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,01 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 207,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 208,
+      "cells": [
+        "4"
+      ],
+      "raw": "4"
+    },
+    {
+      "lineIndex": 209,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 210,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 211,
+      "cells": [
+        "T 100.30.110"
+      ],
+      "raw": "T 100.30.110"
+    },
+    {
+      "lineIndex": 212,
+      "cells": [
+        "Arandela 10",
+        "200HV EN-ISO-7089 Geomet 500A"
+      ],
+      "raw": "Arandela 10 | 200HV EN-ISO-7089 Geomet 500A"
+    },
+    {
+      "lineIndex": 213,
+      "cells": [
+        "UN",
+        "0,01",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,01 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 214,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 215,
+      "cells": [
+        "32"
+      ],
+      "raw": "32"
+    },
+    {
+      "lineIndex": 216,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 217,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 218,
+      "cells": [
+        "T 100.31.105"
+      ],
+      "raw": "T 100.31.105"
+    },
+    {
+      "lineIndex": 219,
+      "cells": [
+        "Arandela elástica DIN 128-87-A 5 - FSt Geomet 500A"
+      ],
+      "raw": "Arandela elástica DIN 128-87-A 5 - FSt Geomet 500A"
+    },
+    {
+      "lineIndex": 220,
+      "cells": [
+        "UN",
+        "0,01",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,01 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 221,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 222,
+      "cells": [
+        "20"
+      ],
+      "raw": "20"
+    },
+    {
+      "lineIndex": 223,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 224,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 225,
+      "cells": [
+        "T 100.31.108"
+      ],
+      "raw": "T 100.31.108"
+    },
+    {
+      "lineIndex": 226,
+      "cells": [
+        "Arandela elástica DIN 128-87-A 8 - FSt Geomet 500A"
+      ],
+      "raw": "Arandela elástica DIN 128-87-A 8 - FSt Geomet 500A"
+    },
+    {
+      "lineIndex": 227,
+      "cells": [
+        "UN",
+        "0,01",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,01 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 228,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 229,
+      "cells": [
+        "10"
+      ],
+      "raw": "10"
+    },
+    {
+      "lineIndex": 230,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 231,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 232,
+      "cells": [
+        "T 100.31.110"
+      ],
+      "raw": "T 100.31.110"
+    },
+    {
+      "lineIndex": 233,
+      "cells": [
+        "Arandela elastica DIN 128-87-A10 - FSt Geomet 500A"
+      ],
+      "raw": "Arandela elastica DIN 128-87-A10 - FSt Geomet 500A"
+    },
+    {
+      "lineIndex": 234,
+      "cells": [
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 235,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 236,
+      "cells": [
+        "16"
+      ],
+      "raw": "16"
+    },
+    {
+      "lineIndex": 237,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 238,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 239,
+      "cells": [
+        "T 100.90.004",
+        "Relé de tensión Omron mod. K8AV//K8A"
+      ],
+      "raw": "T 100.90.004 | Relé de tensión Omron mod. K8AV//K8A"
+    },
+    {
+      "lineIndex": 240,
+      "cells": [
+        "K-VS2 100-240 VAC",
+        "UN",
+        "0,15",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "K-VS2 100-240 VAC | UN | 0,15 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 241,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 242,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 243,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 244,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 245,
+      "cells": [
+        "T 100.90.015",
+        "Contactor TEE-CAD32 E7"
+      ],
+      "raw": "T 100.90.015 | Contactor TEE-CAD32 E7"
+    },
+    {
+      "lineIndex": 246,
+      "cells": [
+        "UN",
+        "0,58",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,58 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 247,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 248,
+      "cells": [
+        "16"
+      ],
+      "raw": "16"
+    },
+    {
+      "lineIndex": 249,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 250,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 251,
+      "cells": [
+        "T 100.90.023",
+        "Contactor TEE-LC1-D09 E7"
+      ],
+      "raw": "T 100.90.023 | Contactor TEE-LC1-D09 E7"
+    },
+    {
+      "lineIndex": 252,
+      "cells": [
+        "UN",
+        "0,32",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,32 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 253,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 254,
+      "cells": [
+        "4"
+      ],
+      "raw": "4"
+    },
+    {
+      "lineIndex": 255,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 256,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 257,
+      "cells": [
+        "T 100.90.046",
+        "Contactor Schneider 3NO+2NC 220V ref"
+      ],
+      "raw": "T 100.90.046 | Contactor Schneider 3NO+2NC 220V ref"
+    },
+    {
+      "lineIndex": 258,
+      "cells": [
+        ".CAD32P7",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": ".CAD32P7 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 259,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 260,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 261,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 262,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 263,
+      "cells": [
+        ".. / .."
+      ],
+      "raw": ".. / .."
+    },
+    {
+      "lineIndex": 264,
+      "cells": [
+        "----------------Page (0) Break----------------"
+      ],
+      "raw": "----------------Page (0) Break----------------"
+    },
+    {
+      "lineIndex": 265,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 266,
+      "cells": [
+        "Pág."
+      ],
+      "raw": "Pág."
+    },
+    {
+      "lineIndex": 267,
+      "cells": [
+        "50073"
+      ],
+      "raw": "50073"
+    },
+    {
+      "lineIndex": 268,
+      "cells": [
+        "JASO Equipos de Obras y Construcciones, S. L."
+      ],
+      "raw": "JASO Equipos de Obras y Construcciones, S. L."
+    },
+    {
+      "lineIndex": 269,
+      "cells": [
+        "T14582100",
+        "18/02/26",
+        "9:38:51"
+      ],
+      "raw": "T14582100 | 18/02/26 | 9:38:51"
+    },
+    {
+      "lineIndex": 270,
+      "cells": [
+        "LISTADO DE COMPOSICIONES Y PROCESOS (C/Desg)"
+      ],
+      "raw": "LISTADO DE COMPOSICIONES Y PROCESOS (C/Desg)"
+    },
+    {
+      "lineIndex": 271,
+      "cells": [
+        "Rev."
+      ],
+      "raw": "Rev."
+    },
+    {
+      "lineIndex": 272,
+      "cells": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "raw": "F1 | F2 | F3 | F4"
+    },
+    {
+      "lineIndex": 273,
+      "cells": [
+        "Niv.",
+        "Ref.",
+        "Denominación Técnica"
+      ],
+      "raw": "Niv. | Ref. | Denominación Técnica"
+    },
+    {
+      "lineIndex": 274,
+      "cells": [
+        "Ud.",
+        "Peso",
+        "Peso C.",
+        "Longitud",
+        "Ancho",
+        "Altura",
+        "Nº Plano",
+        "Norma"
+      ],
+      "raw": "Ud. | Peso | Peso C. | Longitud | Ancho | Altura | Nº Plano | Norma"
+    },
+    {
+      "lineIndex": 275,
+      "cells": [
+        "Rev. procesos"
+      ],
+      "raw": "Rev. procesos"
+    },
+    {
+      "lineIndex": 276,
+      "cells": [
+        "Ficticio",
+        "Mat.Dep."
+      ],
+      "raw": "Ficticio | Mat.Dep."
+    },
+    {
+      "lineIndex": 277,
+      "cells": [
+        "T 100.90.060",
+        "Rele enchufable TEE RXN4A06B1E7 // M"
+      ],
+      "raw": "T 100.90.060 | Rele enchufable TEE RXN4A06B1E7 // M"
+    },
+    {
+      "lineIndex": 278,
+      "cells": [
+        "Y4IN-GS-R AC48",
+        "UN",
+        "0,34",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "Y4IN-GS-R AC48 | UN | 0,34 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 279,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 280,
+      "cells": [
+        "9"
+      ],
+      "raw": "9"
+    },
+    {
+      "lineIndex": 281,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 282,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 283,
+      "cells": [
+        "T 100.90.061",
+        "Zocalo para Rele TEE RXZE1S114M // P"
+      ],
+      "raw": "T 100.90.061 | Zocalo para Rele TEE RXZE1S114M // P"
+    },
+    {
+      "lineIndex": 284,
+      "cells": [
+        "YF 14-ESS",
+        "UN",
+        "0,06",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "YF 14-ESS | UN | 0,06 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 285,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 286,
+      "cells": [
+        "9"
+      ],
+      "raw": "9"
+    },
+    {
+      "lineIndex": 287,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 288,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 289,
+      "cells": [
+        "T 100.90.062",
+        "Estribo de mantenimiento TEE RXZ-R23"
+      ],
+      "raw": "T 100.90.062 | Estribo de mantenimiento TEE RXZ-R23"
+    },
+    {
+      "lineIndex": 290,
+      "cells": [
+        "5 //",
+        "PYC35B",
+        "UN",
+        "0,05",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "5 // | PYC35B | UN | 0,05 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 291,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 292,
+      "cells": [
+        "9"
+      ],
+      "raw": "9"
+    },
+    {
+      "lineIndex": 293,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 294,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 295,
+      "cells": [
+        "T 100.90.092",
+        "Rele control",
+        "fases K8AK-PH1//FANOX"
+      ],
+      "raw": "T 100.90.092 | Rele control | fases K8AK-PH1//FANOX"
+    },
+    {
+      "lineIndex": 296,
+      "cells": [
+        "S4 3x440V",
+        "UN",
+        "0,17",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "S4 3x440V | UN | 0,17 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 297,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 298,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 299,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 300,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 301,
+      "cells": [
+        "T 100.90.181",
+        "Interruptor diferencial",
+        "2P 25A 30mA"
+      ],
+      "raw": "T 100.90.181 | Interruptor diferencial | 2P 25A 30mA"
+    },
+    {
+      "lineIndex": 302,
+      "cells": [
+        "ref. MGA9R60225",
+        "UN",
+        "0,15",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ref. MGA9R60225 | UN | 0,15 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 303,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 304,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 305,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 306,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 307,
+      "cells": [
+        "T 100.90.231",
+        "Int. automatico C60N 2P 1A curva C r"
+      ],
+      "raw": "T 100.90.231 | Int. automatico C60N 2P 1A curva C r"
+    },
+    {
+      "lineIndex": 308,
+      "cells": [
+        "ef. A9F74201",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ef. A9F74201 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 309,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 310,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 311,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 312,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 313,
+      "cells": [
+        "T 100.90.233",
+        "Int. automatico C60N 2P 4A curva C r"
+      ],
+      "raw": "T 100.90.233 | Int. automatico C60N 2P 4A curva C r"
+    },
+    {
+      "lineIndex": 314,
+      "cells": [
+        "ef. A9F74204",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ef. A9F74204 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 315,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 316,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 317,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 318,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 319,
+      "cells": [
+        "T 100.90.250",
+        "Cabeza selector llave 455 2 Pos. TEE"
+      ],
+      "raw": "T 100.90.250 | Cabeza selector llave 455 2 Pos. TEE"
+    },
+    {
+      "lineIndex": 320,
+      "cells": [
+        "ZB4BG2"
+      ],
+      "raw": "ZB4BG2"
+    },
+    {
+      "lineIndex": 321,
+      "cells": [
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 322,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 323,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 324,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 325,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 326,
+      "cells": [
+        "T 100.90.252"
+      ],
+      "raw": "T 100.90.252"
+    },
+    {
+      "lineIndex": 327,
+      "cells": [
+        "Adaptador carril DIN Legrand 004405 LEXIC precortad"
+      ],
+      "raw": "Adaptador carril DIN Legrand 004405 LEXIC precortad"
+    },
+    {
+      "lineIndex": 328,
+      "cells": [
+        "o 22,5 mm"
+      ],
+      "raw": "o 22,5 mm"
+    },
+    {
+      "lineIndex": 329,
+      "cells": [
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 330,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 331,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 332,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 333,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 334,
+      "cells": [
+        "T 100.90.370",
+        "Contacto completo para pulsador NA T"
+      ],
+      "raw": "T 100.90.370 | Contacto completo para pulsador NA T"
+    },
+    {
+      "lineIndex": 335,
+      "cells": [
+        "EE ZB4 BZ101",
+        "UN",
+        "0,02",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "EE ZB4 BZ101 | UN | 0,02 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 336,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 337,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 338,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 339,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 340,
+      "cells": [
+        "T 100.90.371",
+        "Contacto completo para",
+        "pulsador NC"
+      ],
+      "raw": "T 100.90.371 | Contacto completo para | pulsador NC"
+    },
+    {
+      "lineIndex": 341,
+      "cells": [
+        "TEE ZB4 BZ102",
+        "UN",
+        "0,02",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "TEE ZB4 BZ102 | UN | 0,02 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 342,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 343,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 344,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 345,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 346,
+      "cells": [
+        "T 100.90.372",
+        "Contacto para pulsador NC TEE ZBE 10"
+      ],
+      "raw": "T 100.90.372 | Contacto para pulsador NC TEE ZBE 10"
+    },
+    {
+      "lineIndex": 347,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 348,
+      "cells": [
+        "UN",
+        "0,02",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,02 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 349,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 350,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 351,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 352,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 353,
+      "cells": [
+        "T 100.90.388",
+        "Disyuntor magnetot. TEE GV2-ME06 (1-"
+      ],
+      "raw": "T 100.90.388 | Disyuntor magnetot. TEE GV2-ME06 (1-"
+    },
+    {
+      "lineIndex": 354,
+      "cells": [
+        "1,6A)"
+      ],
+      "raw": "1,6A)"
+    },
+    {
+      "lineIndex": 355,
+      "cells": [
+        "UN",
+        "0,28",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,28 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 356,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 357,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 358,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 359,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 360,
+      "cells": [
+        "T 100.90.389",
+        "Disyuntor magnetot. TEE GV2-ME07 (1,"
+      ],
+      "raw": "T 100.90.389 | Disyuntor magnetot. TEE GV2-ME07 (1,"
+    },
+    {
+      "lineIndex": 361,
+      "cells": [
+        "6-2,5A)",
+        "UN",
+        "0,28",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "6-2,5A) | UN | 0,28 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 362,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 363,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 364,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 365,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 366,
+      "cells": [
+        "T 100.90.512",
+        "Base",
+        "16+T 16A",
+        "400V ( nº 1-16 ) 7"
+      ],
+      "raw": "T 100.90.512 | Base | 16+T 16A | 400V ( nº 1-16 ) 7"
+    },
+    {
+      "lineIndex": 367,
+      "cells": [
+        "7,5x27 Conex. por muelle",
+        "UN",
+        "0,1",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "7,5x27 Conex. por muelle | UN | 0,1 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 368,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 369,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 370,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 371,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 372,
+      "cells": [
+        "T 100.90.515",
+        "Clavija 16+T 16A 400V",
+        "( nº 1-16 ) 7"
+      ],
+      "raw": "T 100.90.515 | Clavija 16+T 16A 400V | ( nº 1-16 ) 7"
+    },
+    {
+      "lineIndex": 373,
+      "cells": [
+        "7,5x27 Conex. por muelle",
+        "UN",
+        "0,1",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "7,5x27 Conex. por muelle | UN | 0,1 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 374,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 375,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 376,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 377,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 378,
+      "cells": [
+        "T 100.90.535",
+        "Base",
+        "24+T 16A 400V 104x27 Conex. po"
+      ],
+      "raw": "T 100.90.535 | Base | 24+T 16A 400V 104x27 Conex. po"
+    },
+    {
+      "lineIndex": 379,
+      "cells": [
+        "r muelle",
+        "UN",
+        "0,1",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "r muelle | UN | 0,1 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 380,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 381,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 382,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 383,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 384,
+      "cells": [
+        "T 100.90.541",
+        "Clavija",
+        "6+T 16A 400V 44x27 Conex. p"
+      ],
+      "raw": "T 100.90.541 | Clavija | 6+T 16A 400V 44x27 Conex. p"
+    },
+    {
+      "lineIndex": 385,
+      "cells": [
+        "or muelle",
+        "UN",
+        "0,04",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "or muelle | UN | 0,04 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 386,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 387,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 388,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 389,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 390,
+      "cells": [
+        "T 100.90.588",
+        "Borna de conexion 4/6T de 1E-2S"
+      ],
+      "raw": "T 100.90.588 | Borna de conexion 4/6T de 1E-2S"
+    },
+    {
+      "lineIndex": 391,
+      "cells": [
+        "UN",
+        "0,05",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,05 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 392,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 393,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 394,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 395,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 396,
+      "cells": [
+        "T 100.90.598",
+        "Prensa LAP SKINTOP ST 7 POLIAMIDA"
+      ],
+      "raw": "T 100.90.598 | Prensa LAP SKINTOP ST 7 POLIAMIDA"
+    },
+    {
+      "lineIndex": 397,
+      "cells": [
+        "UN",
+        "0,05",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,05 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 398,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 399,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 400,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 401,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 402,
+      "cells": [
+        "T 100.90.610",
+        "Tapon plastico PG - 9"
+      ],
+      "raw": "T 100.90.610 | Tapon plastico PG - 9"
+    },
+    {
+      "lineIndex": 403,
+      "cells": [
+        "UN",
+        "0,05",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,05 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 404,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 405,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 406,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 407,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 408,
+      "cells": [
+        "T 100.90.615",
+        "Tapon plastico PG-29"
+      ],
+      "raw": "T 100.90.615 | Tapon plastico PG-29"
+    },
+    {
+      "lineIndex": 409,
+      "cells": [
+        "UN",
+        "0,05",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,05 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 410,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 411,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 412,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 413,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 414,
+      "cells": [
+        "T 100.90.618",
+        "Tuerca LAP SKINTOP GMP-GL 7"
+      ],
+      "raw": "T 100.90.618 | Tuerca LAP SKINTOP GMP-GL 7"
+    },
+    {
+      "lineIndex": 415,
+      "cells": [
+        "UN",
+        "0,02",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,02 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 416,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 417,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 418,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 419,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 420,
+      "cells": [
+        "T 100.90.628",
+        "Tuerca LAP SKINTOP GMP-GL",
+        "9"
+      ],
+      "raw": "T 100.90.628 | Tuerca LAP SKINTOP GMP-GL | 9"
+    },
+    {
+      "lineIndex": 421,
+      "cells": [
+        "UN",
+        "0,02",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,02 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 422,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 423,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 424,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 425,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 426,
+      "cells": [
+        "T 100.90.645",
+        "Embudo de goma Ref. 65SHORE"
+      ],
+      "raw": "T 100.90.645 | Embudo de goma Ref. 65SHORE"
+    },
+    {
+      "lineIndex": 427,
+      "cells": [
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 428,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 429,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 430,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 431,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 432,
+      "cells": [
+        "T 100.90.714",
+        "Disyuntor magnetot. TEE GV2-RT10 (4-"
+      ],
+      "raw": "T 100.90.714 | Disyuntor magnetot. TEE GV2-RT10 (4-"
+    },
+    {
+      "lineIndex": 433,
+      "cells": [
+        "6,3A)"
+      ],
+      "raw": "6,3A)"
+    },
+    {
+      "lineIndex": 434,
+      "cells": [
+        "UN",
+        "0,26",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,26 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 435,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 436,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 437,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 438,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 439,
+      "cells": [
+        "T 100.90.718",
+        "Interruptor automatico MG 1 polo 2A"
+      ],
+      "raw": "T 100.90.718 | Interruptor automatico MG 1 polo 2A"
+    },
+    {
+      "lineIndex": 440,
+      "cells": [
+        "ref. MGA9F74102",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ref. MGA9F74102 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 441,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 442,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 443,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 444,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 445,
+      "cells": [
+        "T 100.90.724",
+        "Interruptor automatico MG 1 polo 20A"
+      ],
+      "raw": "T 100.90.724 | Interruptor automatico MG 1 polo 20A"
+    },
+    {
+      "lineIndex": 446,
+      "cells": [
+        "ref. MGA9F79120",
+        "UN",
+        "0,3",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ref. MGA9F79120 | UN | 0,3 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 447,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 448,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 449,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 450,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 451,
+      "cells": [
+        "T 100.90.739",
+        "Bloque de contactos TEE-GV-AE20"
+      ],
+      "raw": "T 100.90.739 | Bloque de contactos TEE-GV-AE20"
+    },
+    {
+      "lineIndex": 452,
+      "cells": [
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 453,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 454,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 455,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 456,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 457,
+      "cells": [
+        "T 100.90.744",
+        "Bloque de contactos TEE-LA1-DN11",
+        "(L"
+      ],
+      "raw": "T 100.90.744 | Bloque de contactos TEE-LA1-DN11 | (L"
+    },
+    {
+      "lineIndex": 458,
+      "cells": [
+        "A1-D11)",
+        "UN",
+        "0,03",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "A1-D11) | UN | 0,03 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 459,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 460,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 461,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 462,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 463,
+      "cells": [
+        "T 100.90.746",
+        "Bloque de contactos TEE LA1-DN20"
+      ],
+      "raw": "T 100.90.746 | Bloque de contactos TEE LA1-DN20"
+    },
+    {
+      "lineIndex": 464,
+      "cells": [
+        "UN",
+        "0,03",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,03 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 465,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 466,
+      "cells": [
+        "6"
+      ],
+      "raw": "6"
+    },
+    {
+      "lineIndex": 467,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 468,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 469,
+      "cells": [
+        "T 100.90.747",
+        "Bloque de contactos TEE LA1-DN40",
+        "(T"
+      ],
+      "raw": "T 100.90.747 | Bloque de contactos TEE LA1-DN40 | (T"
+    },
+    {
+      "lineIndex": 470,
+      "cells": [
+        "EE LA1-D40)",
+        "UN",
+        "0,03",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "EE LA1-D40) | UN | 0,03 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 471,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 472,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 473,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 474,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 475,
+      "cells": [
+        "T 100.90.814",
+        "Casquillo reductor POWER LOCK para c"
+      ],
+      "raw": "T 100.90.814 | Casquillo reductor POWER LOCK para c"
+    },
+    {
+      "lineIndex": 476,
+      "cells": [
+        "able de 50",
+        "UN",
+        "0,01",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "able de 50 | UN | 0,01 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 477,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 478,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 479,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 480,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 481,
+      "cells": [
+        "T 100.90.817",
+        "Conector panel receptor SPX4PDEGN-LD"
+      ],
+      "raw": "T 100.90.817 | Conector panel receptor SPX4PDEGN-LD"
+    },
+    {
+      "lineIndex": 482,
+      "cells": [
+        "120MP (400A) Verde",
+        "UN",
+        "0,5",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "120MP (400A) Verde | UN | 0,5 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 483,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 484,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 485,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 486,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 487,
+      "cells": [
+        "T 100.90.827",
+        "Tapón conector 5 p hembra negro ref."
+      ],
+      "raw": "T 100.90.827 | Tapón conector 5 p hembra negro ref."
+    },
+    {
+      "lineIndex": 488,
+      "cells": [
+        "Wieland 99.530.0000.7",
+        "UN",
+        "0,05",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "Wieland 99.530.0000.7 | UN | 0,05 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 489,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 490,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 491,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 492,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 493,
+      "cells": [
+        "T 100.90.835",
+        "Zocalo ILME CHI 32 / 093 0032 0301/7"
+      ],
+      "raw": "T 100.90.835 | Zocalo ILME CHI 32 / 093 0032 0301/7"
+    },
+    {
+      "lineIndex": 494,
+      "cells": [
+        "0.320.3228.0",
+        "UN",
+        "0,29",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "0.320.3228.0 | UN | 0,29 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 495,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 496,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 497,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 498,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 499,
+      "cells": [
+        "T 100.90.836",
+        "Base",
+        "16+T 16A",
+        "400V ( nº 16-32 ) 77"
+      ],
+      "raw": "T 100.90.836 | Base | 16+T 16A | 400V ( nº 16-32 ) 77"
+    },
+    {
+      "lineIndex": 500,
+      "cells": [
+        ",5x27 Conex.por muelle",
+        "UN",
+        "0,08",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": ",5x27 Conex.por muelle | UN | 0,08 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 501,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 502,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 503,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 504,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 505,
+      "cells": [
+        "T 100.90.840",
+        "Clavija 16+T 16A 400V",
+        "( nº 16-32 )"
+      ],
+      "raw": "T 100.90.840 | Clavija 16+T 16A 400V | ( nº 16-32 )"
+    },
+    {
+      "lineIndex": 506,
+      "cells": [
+        "77,5x27 Conex.",
+        "muelle",
+        "UN",
+        "0,2",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "77,5x27 Conex. | muelle | UN | 0,2 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 507,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 508,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 509,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 510,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 511,
+      "cells": [
+        "T 100.90.844",
+        "Zocalo",
+        "166406 / 09 30 010 0303 / 7"
+      ],
+      "raw": "T 100.90.844 | Zocalo | 166406 / 09 30 010 0303 / 7"
+    },
+    {
+      "lineIndex": 512,
+      "cells": [
+        "1.325.1028.0",
+        "UN",
+        "0,15",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "1.325.1028.0 | UN | 0,15 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 513,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 514,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 515,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 516,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 517,
+      "cells": [
+        "T 100.90.845",
+        "Base",
+        "10+T 16A 400V 57x27 Conex. po"
+      ],
+      "raw": "T 100.90.845 | Base | 10+T 16A 400V 57x27 Conex. po"
+    },
+    {
+      "lineIndex": 518,
+      "cells": [
+        "r muelle",
+        "UN",
+        "0,1",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "r muelle | UN | 0,1 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 519,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 520,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 521,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 522,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 523,
+      "cells": [
+        "T 100.90.846",
+        "Clavija",
+        "10+T 16A 400V 57x27 Conex."
+      ],
+      "raw": "T 100.90.846 | Clavija | 10+T 16A 400V 57x27 Conex."
+    },
+    {
+      "lineIndex": 524,
+      "cells": [
+        "por muelle",
+        "UN",
+        "0,5",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "por muelle | UN | 0,5 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 525,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 526,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 527,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 528,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 529,
+      "cells": [
+        "T 100.90.863",
+        "Placa cubierta 24 Wieland: 07.416.71"
+      ],
+      "raw": "T 100.90.863 | Placa cubierta 24 Wieland: 07.416.71"
+    },
+    {
+      "lineIndex": 530,
+      "cells": [
+        "53.0 / Weidm: 1664970000",
+        "UN",
+        "0,2",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "53.0 / Weidm: 1664970000 | UN | 0,2 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 531,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 532,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 533,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 534,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 535,
+      "cells": [
+        ".. / .."
+      ],
+      "raw": ".. / .."
+    },
+    {
+      "lineIndex": 536,
+      "cells": [
+        "----------------Page (1) Break----------------"
+      ],
+      "raw": "----------------Page (1) Break----------------"
+    },
+    {
+      "lineIndex": 537,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 538,
+      "cells": [
+        "Pág."
+      ],
+      "raw": "Pág."
+    },
+    {
+      "lineIndex": 539,
+      "cells": [
+        "50073"
+      ],
+      "raw": "50073"
+    },
+    {
+      "lineIndex": 540,
+      "cells": [
+        "JASO Equipos de Obras y Construcciones, S. L."
+      ],
+      "raw": "JASO Equipos de Obras y Construcciones, S. L."
+    },
+    {
+      "lineIndex": 541,
+      "cells": [
+        "T14582100",
+        "18/02/26",
+        "9:38:51"
+      ],
+      "raw": "T14582100 | 18/02/26 | 9:38:51"
+    },
+    {
+      "lineIndex": 542,
+      "cells": [
+        "LISTADO DE COMPOSICIONES Y PROCESOS (C/Desg)"
+      ],
+      "raw": "LISTADO DE COMPOSICIONES Y PROCESOS (C/Desg)"
+    },
+    {
+      "lineIndex": 543,
+      "cells": [
+        "Rev."
+      ],
+      "raw": "Rev."
+    },
+    {
+      "lineIndex": 544,
+      "cells": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "raw": "F1 | F2 | F3 | F4"
+    },
+    {
+      "lineIndex": 545,
+      "cells": [
+        "Niv.",
+        "Ref.",
+        "Denominación Técnica"
+      ],
+      "raw": "Niv. | Ref. | Denominación Técnica"
+    },
+    {
+      "lineIndex": 546,
+      "cells": [
+        "Ud.",
+        "Peso",
+        "Peso C.",
+        "Longitud",
+        "Ancho",
+        "Altura",
+        "Nº Plano",
+        "Norma"
+      ],
+      "raw": "Ud. | Peso | Peso C. | Longitud | Ancho | Altura | Nº Plano | Norma"
+    },
+    {
+      "lineIndex": 547,
+      "cells": [
+        "Rev. procesos"
+      ],
+      "raw": "Rev. procesos"
+    },
+    {
+      "lineIndex": 548,
+      "cells": [
+        "Ficticio",
+        "Mat.Dep."
+      ],
+      "raw": "Ficticio | Mat.Dep."
+    },
+    {
+      "lineIndex": 549,
+      "cells": [
+        "T 100.90.874",
+        "Cubierta ILME CHV32 PG29 / 0930 032"
+      ],
+      "raw": "T 100.90.874 | Cubierta ILME CHV32 PG29 / 0930 032"
+    },
+    {
+      "lineIndex": 550,
+      "cells": [
+        "0421/70.352.3228.0",
+        "UN",
+        "0,45",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "0421/70.352.3228.0 | UN | 0,45 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 551,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 552,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 553,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 554,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 555,
+      "cells": [
+        "T 100.90.876",
+        "Zocalo",
+        "120250 / 09 30 006 0302 / 7"
+      ],
+      "raw": "T 100.90.876 | Zocalo | 120250 / 09 30 006 0302 / 7"
+    },
+    {
+      "lineIndex": 556,
+      "cells": [
+        "0.325.0628.0",
+        "UN",
+        "0,15",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "0.325.0628.0 | UN | 0,15 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 557,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 558,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 559,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 560,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 561,
+      "cells": [
+        "T 100.90.877",
+        "Zocalo",
+        "1210100000 / 09 30 016 0306"
+      ],
+      "raw": "T 100.90.877 | Zocalo | 1210100000 / 09 30 016 0306"
+    },
+    {
+      "lineIndex": 562,
+      "cells": [
+        "/ 71.325.1628.0",
+        "UN",
+        "0,2",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "/ 71.325.1628.0 | UN | 0,2 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 563,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 564,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 565,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 566,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 567,
+      "cells": [
+        "T 100.90.896",
+        "Zocalo y tapa(24) 09 30 024 0304 / 7"
+      ],
+      "raw": "T 100.90.896 | Zocalo y tapa(24) 09 30 024 0304 / 7"
+    },
+    {
+      "lineIndex": 568,
+      "cells": [
+        "1.325.2428.0",
+        "UN",
+        "0,18",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "1.325.2428.0 | UN | 0,18 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 569,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 570,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 571,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 572,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 573,
+      "cells": [
+        "T 100.91.447"
+      ],
+      "raw": "T 100.91.447"
+    },
+    {
+      "lineIndex": 574,
+      "cells": [
+        "Ventilador Himel VF 56 // LOTEC FG12CU230BS"
+      ],
+      "raw": "Ventilador Himel VF 56 // LOTEC FG12CU230BS"
+    },
+    {
+      "lineIndex": 575,
+      "cells": [
+        "UN",
+        "0,5",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,5 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 576,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 577,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 578,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 579,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 580,
+      "cells": [
+        "T 100.91.463",
+        "Pulsador de seta 60mm con encl. TEE"
+      ],
+      "raw": "T 100.91.463 | Pulsador de seta 60mm con encl. TEE"
+    },
+    {
+      "lineIndex": 581,
+      "cells": [
+        "ZB4 BS64",
+        "UN",
+        "0,09",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ZB4 BS64 | UN | 0,09 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 582,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 583,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 584,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 585,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 586,
+      "cells": [
+        "T 100.91.467",
+        "Etiqueta Ø60 amarilla \"Emergency Sto"
+      ],
+      "raw": "T 100.91.467 | Etiqueta Ø60 amarilla \"Emergency Sto"
+    },
+    {
+      "lineIndex": 587,
+      "cells": [
+        "p\" ZBY9330 agujero Ø22",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "p\" ZBY9330 agujero Ø22 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 588,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 589,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 590,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 591,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 592,
+      "cells": [
+        "T 100.91.479",
+        "Pletina cobre TEKNOMEGA 25x5 ref. BR"
+      ],
+      "raw": "T 100.91.479 | Pletina cobre TEKNOMEGA 25x5 ref. BR"
+    },
+    {
+      "lineIndex": 593,
+      "cells": [
+        "P1000"
+      ],
+      "raw": "P1000"
+    },
+    {
+      "lineIndex": 594,
+      "cells": [
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 595,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 596,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 597,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 598,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 599,
+      "cells": [
+        "T 100.91.480",
+        "Espaciador metálico TEKNOMEGA 40mm r"
+      ],
+      "raw": "T 100.91.480 | Espaciador metálico TEKNOMEGA 40mm r"
+    },
+    {
+      "lineIndex": 600,
+      "cells": [
+        "ef.DZM1165",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ef.DZM1165 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 601,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 602,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 603,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 604,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 605,
+      "cells": [
+        "T 100.91.481",
+        "Pletina cobre TEKNOMEGA para tierras"
+      ],
+      "raw": "T 100.91.481 | Pletina cobre TEKNOMEGA para tierras"
+    },
+    {
+      "lineIndex": 606,
+      "cells": [
+        "ref.MRS2000",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ref.MRS2000 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 607,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 608,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 609,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 610,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 611,
+      "cells": [
+        "T 100.91.677",
+        "F.A. OMRON S8VK-G06024 / WEIDMULLER"
+      ],
+      "raw": "T 100.91.677 | F.A. OMRON S8VK-G06024 / WEIDMULLER"
+    },
+    {
+      "lineIndex": 612,
+      "cells": [
+        "ref. 1469470000",
+        "UN",
+        "0,26",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ref. 1469470000 | UN | 0,26 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 613,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 614,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 615,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 616,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 617,
+      "cells": [
+        "T 100.91.792",
+        "Portaplano de Plástico Tipo A4 Prof."
+      ],
+      "raw": "T 100.91.792 | Portaplano de Plástico Tipo A4 Prof."
+    },
+    {
+      "lineIndex": 618,
+      "cells": [
+        "40",
+        "Ref. NSYDPA44",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "40 | Ref. NSYDPA44 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 619,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 620,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 621,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 622,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 623,
+      "cells": [
+        "T 100.91.820",
+        "Conector panel emisor Ref. SPX4PSEGN"
+      ],
+      "raw": "T 100.91.820 | Conector panel emisor Ref. SPX4PSEGN"
+    },
+    {
+      "lineIndex": 624,
+      "cells": [
+        "-LS120MP (400A) Verde",
+        "UN",
+        "0,44",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "-LS120MP (400A) Verde | UN | 0,44 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 625,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 626,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 627,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 628,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 629,
+      "cells": [
+        "T 100.91.831",
+        "Base wieland 4 polos 82A ref. 72.208"
+      ],
+      "raw": "T 100.91.831 | Base wieland 4 polos 82A ref. 72.208"
+    },
+    {
+      "lineIndex": 630,
+      "cells": [
+        ".04530"
+      ],
+      "raw": ".04530"
+    },
+    {
+      "lineIndex": 631,
+      "cells": [
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 632,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 633,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 634,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 635,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 636,
+      "cells": [
+        "T 100.91.872",
+        "Zócalo + base",
+        "5 polos gris ref. Wie"
+      ],
+      "raw": "T 100.91.872 | Zócalo + base | 5 polos gris ref. Wie"
+    },
+    {
+      "lineIndex": 637,
+      "cells": [
+        "land 96.051.5053.0",
+        "UN",
+        "0,2",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "land 96.051.5053.0 | UN | 0,2 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 638,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 639,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 640,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 641,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 642,
+      "cells": [
+        "T 100.91.874",
+        "Zócalo + base",
+        "5 polos marrón ref. W"
+      ],
+      "raw": "T 100.91.874 | Zócalo + base | 5 polos marrón ref. W"
+    },
+    {
+      "lineIndex": 643,
+      "cells": [
+        "ieland 96.051.5051.4",
+        "UN",
+        "0,2",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ieland 96.051.5051.4 | UN | 0,2 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 644,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 645,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 646,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 647,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 648,
+      "cells": [
+        "T 100.91.884",
+        "Tapón conector 5 polos hembra gris r"
+      ],
+      "raw": "T 100.91.884 | Tapón conector 5 polos hembra gris r"
+    },
+    {
+      "lineIndex": 649,
+      "cells": [
+        "ef.Wieland 99.529.000.7",
+        "UN",
+        "0,05",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ef.Wieland 99.529.000.7 | UN | 0,05 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 650,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 651,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 652,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 653,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 654,
+      "cells": [
+        "T 100.91.911",
+        "Lampara Lotec 12W CLG-T2312 \\\\ Sylva"
+      ],
+      "raw": "T 100.91.911 | Lampara Lotec 12W CLG-T2312 \\\\ Sylva"
+    },
+    {
+      "lineIndex": 655,
+      "cells": [
+        "nia 4W ref. 0051376",
+        "UN",
+        "0,36",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "nia 4W ref. 0051376 | UN | 0,36 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 656,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 657,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 658,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 659,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 660,
+      "cells": [
+        "T 100.91.930",
+        "Zócalo ethernet PHOENIX CONTACT ref."
+      ],
+      "raw": "T 100.91.930 | Zócalo ethernet PHOENIX CONTACT ref."
+    },
+    {
+      "lineIndex": 661,
+      "cells": [
+        "1414397",
+        "UN",
+        "0,2",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "1414397 | UN | 0,2 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 662,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 663,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 664,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 665,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 666,
+      "cells": [
+        "T 100.91.936",
+        "Capuchon ethernet PHOENIX CONTACT re"
+      ],
+      "raw": "T 100.91.936 | Capuchon ethernet PHOENIX CONTACT re"
+    },
+    {
+      "lineIndex": 667,
+      "cells": [
+        "f. 1430899",
+        "UN",
+        "0,01",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "f. 1430899 | UN | 0,01 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 668,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 669,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 670,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 671,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 672,
+      "cells": [
+        "T 100.91.949",
+        "Sonda termica PT1000"
+      ],
+      "raw": "T 100.91.949 | Sonda termica PT1000"
+    },
+    {
+      "lineIndex": 673,
+      "cells": [
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 674,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 675,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 676,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 677,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 678,
+      "cells": [
+        "T 100.92.431",
+        "Switch Ethernet WieNET UMS 6-L ref.8"
+      ],
+      "raw": "T 100.92.431 | Switch Ethernet WieNET UMS 6-L ref.8"
+    },
+    {
+      "lineIndex": 679,
+      "cells": [
+        "3.040.0000.1",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "3.040.0000.1 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 680,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 681,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 682,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 683,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 684,
+      "cells": [
+        "T 100.92.500",
+        "Int. automatico C60N 2P 4A curva D r"
+      ],
+      "raw": "T 100.92.500 | Int. automatico C60N 2P 4A curva D r"
+    },
+    {
+      "lineIndex": 685,
+      "cells": [
+        "ef. A9F75204",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ef. A9F75204 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 686,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 687,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 688,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 689,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 690,
+      "cells": [
+        "T 100.92.501",
+        "Int. automatico C60N 2P 6A curva D r"
+      ],
+      "raw": "T 100.92.501 | Int. automatico C60N 2P 6A curva D r"
+    },
+    {
+      "lineIndex": 691,
+      "cells": [
+        "ef. A9F75206",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ef. A9F75206 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 692,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 693,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 694,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 695,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 696,
+      "cells": [
+        "T 101.90.712",
+        "Latiguillo Cat.6A S/FTP LS0H 2m DAT"
+      ],
+      "raw": "T 101.90.712 | Latiguillo Cat.6A S/FTP LS0H 2m DAT"
+    },
+    {
+      "lineIndex": 697,
+      "cells": [
+        "WYLER 65351000DY",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "WYLER 65351000DY | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 698,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 699,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 700,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 701,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 702,
+      "cells": [
+        "T 101.90.714",
+        "Latiguillo Cat.6A S/FTP LS0H 0,5m D"
+      ],
+      "raw": "T 101.90.714 | Latiguillo Cat.6A S/FTP LS0H 0,5m D"
+    },
+    {
+      "lineIndex": 703,
+      "cells": [
+        "ATWYLER 65350300DY",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ATWYLER 65350300DY | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 704,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 705,
+      "cells": [
+        "4"
+      ],
+      "raw": "4"
+    },
+    {
+      "lineIndex": 706,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 707,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 708,
+      "cells": [
+        "T 101.90.950",
+        "Termostato Stego (1NC+1NO) Ref.STGZR"
+      ],
+      "raw": "T 101.90.950 | Termostato Stego (1NC+1NO) Ref.STGZR"
+    },
+    {
+      "lineIndex": 709,
+      "cells": [
+        "01172",
+        "UN",
+        "0,3",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "01172 | UN | 0,3 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 710,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 711,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 712,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 713,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 714,
+      "cells": [
+        "T 101.90.953",
+        "Termostato Stego (-20º + 30º) Ref.ST"
+      ],
+      "raw": "T 101.90.953 | Termostato Stego (-20º + 30º) Ref.ST"
+    },
+    {
+      "lineIndex": 715,
+      "cells": [
+        "GFZK01170",
+        "UN",
+        "0,1",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "GFZK01170 | UN | 0,1 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 716,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 717,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 718,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 719,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 720,
+      "cells": [
+        "T 101.90.954",
+        "Termoventilador Stego ref. CSL028-40"
+      ],
+      "raw": "T 101.90.954 | Termoventilador Stego ref. CSL028-40"
+    },
+    {
+      "lineIndex": 721,
+      "cells": [
+        "0W 230VAC-CLIP",
+        "UN",
+        "0,5",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "0W 230VAC-CLIP | UN | 0,5 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 722,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 723,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 724,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 725,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 726,
+      "cells": [
+        "T 101.91.131",
+        "Bandeja perforada Sendzimir 35x150 r"
+      ],
+      "raw": "T 101.91.131 | Bandeja perforada Sendzimir 35x150 r"
+    },
+    {
+      "lineIndex": 727,
+      "cells": [
+        "ef. P0315S",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ef. P0315S | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 728,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 729,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 730,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 731,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 732,
+      "cells": [
+        "T 101.91.132",
+        "Tapa bandeja Sendzimir 150 ref. TB15"
+      ],
+      "raw": "T 101.91.132 | Tapa bandeja Sendzimir 150 ref. TB15"
+    },
+    {
+      "lineIndex": 733,
+      "cells": [
+        "S"
+      ],
+      "raw": "S"
+    },
+    {
+      "lineIndex": 734,
+      "cells": [
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 735,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 736,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 737,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 738,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 739,
+      "cells": [
+        "T 101.91.234",
+        "Distribuidor de potencial Phoenix Co"
+      ],
+      "raw": "T 101.91.234 | Distribuidor de potencial Phoenix Co"
+    },
+    {
+      "lineIndex": 740,
+      "cells": [
+        "ntact ref. 3270158",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ntact ref. 3270158 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 741,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 742,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 743,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 744,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 745,
+      "cells": [
+        "T 101.91.235",
+        "Distribuidor de potencial Phoenix Co"
+      ],
+      "raw": "T 101.91.235 | Distribuidor de potencial Phoenix Co"
+    },
+    {
+      "lineIndex": 746,
+      "cells": [
+        "ntact ref. 3270160",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ntact ref. 3270160 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 747,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 748,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 749,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 750,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 751,
+      "cells": [
+        "T 101.91.236",
+        "Tapa Phoenix Contact ref.3270155"
+      ],
+      "raw": "T 101.91.236 | Tapa Phoenix Contact ref.3270155"
+    },
+    {
+      "lineIndex": 752,
+      "cells": [
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 753,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 754,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 755,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 756,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 757,
+      "cells": [
+        "T 101.91.270",
+        "Zócalo hembra 2 polos negro Wieland"
+      ],
+      "raw": "T 101.91.270 | Zócalo hembra 2 polos negro Wieland"
+    },
+    {
+      "lineIndex": 758,
+      "cells": [
+        "Mini ref. 46.031.5054.1",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "Mini ref. 46.031.5054.1 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 759,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 760,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 761,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 762,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 763,
+      "cells": [
+        "T 101.91.271",
+        "Zócalo hembra 5 polos negro Wieland"
+      ],
+      "raw": "T 101.91.271 | Zócalo hembra 5 polos negro Wieland"
+    },
+    {
+      "lineIndex": 764,
+      "cells": [
+        "Mini ref. 46.051.5053.1",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "Mini ref. 46.051.5053.1 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 765,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 766,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 767,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 768,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 769,
+      "cells": [
+        "T 101.91.272",
+        "Zócalo hembra 5 polos gris Wieland M"
+      ],
+      "raw": "T 101.91.272 | Zócalo hembra 5 polos gris Wieland M"
+    },
+    {
+      "lineIndex": 770,
+      "cells": [
+        "ini ref. 46.051.5053.0",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ini ref. 46.051.5053.0 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 771,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 772,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 773,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 774,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 775,
+      "cells": [
+        "T 101.91.273",
+        "Zócalo hembra 2 polos gris Wieland M"
+      ],
+      "raw": "T 101.91.273 | Zócalo hembra 2 polos gris Wieland M"
+    },
+    {
+      "lineIndex": 776,
+      "cells": [
+        "ini ref. 46.031.5054.0",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ini ref. 46.031.5054.0 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 777,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 778,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 779,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 780,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 781,
+      "cells": [
+        "T 101.91.278",
+        "Zócalo hembra 7p negro Wieland Class"
+      ],
+      "raw": "T 101.91.278 | Zócalo hembra 7p negro Wieland Class"
+    },
+    {
+      "lineIndex": 782,
+      "cells": [
+        "ic ref.: 96.071.6353.1",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ic ref.: 96.071.6353.1 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 783,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 784,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 785,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 786,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 787,
+      "cells": [
+        "T 101.91.279",
+        "Zócalo hembra 5 polos azul Wieland M"
+      ],
+      "raw": "T 101.91.279 | Zócalo hembra 5 polos azul Wieland M"
+    },
+    {
+      "lineIndex": 788,
+      "cells": [
+        "ini ref.46.051.5053.9",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ini ref.46.051.5053.9 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 789,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 790,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 791,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 792,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 793,
+      "cells": [
+        "T 101.91.280",
+        "Zócalo hembra 2 polos verde Wieland"
+      ],
+      "raw": "T 101.91.280 | Zócalo hembra 2 polos verde Wieland"
+    },
+    {
+      "lineIndex": 794,
+      "cells": [
+        "Mini ref.46.031.5056.7",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "Mini ref.46.031.5056.7 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 795,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 796,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 797,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 798,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 799,
+      "cells": [
+        "T 101.91.281",
+        "Zócalo hembra 2 polos azul Wieland M"
+      ],
+      "raw": "T 101.91.281 | Zócalo hembra 2 polos azul Wieland M"
+    },
+    {
+      "lineIndex": 800,
+      "cells": [
+        "ini ref.46.031.5054.9",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ini ref.46.031.5054.9 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 801,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 802,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 803,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 804,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 805,
+      "cells": [
+        ".. / .."
+      ],
+      "raw": ".. / .."
+    },
+    {
+      "lineIndex": 806,
+      "cells": [
+        "----------------Page (2) Break----------------"
+      ],
+      "raw": "----------------Page (2) Break----------------"
+    },
+    {
+      "lineIndex": 807,
+      "cells": [
+        "4"
+      ],
+      "raw": "4"
+    },
+    {
+      "lineIndex": 808,
+      "cells": [
+        "Pág."
+      ],
+      "raw": "Pág."
+    },
+    {
+      "lineIndex": 809,
+      "cells": [
+        "50073"
+      ],
+      "raw": "50073"
+    },
+    {
+      "lineIndex": 810,
+      "cells": [
+        "JASO Equipos de Obras y Construcciones, S. L."
+      ],
+      "raw": "JASO Equipos de Obras y Construcciones, S. L."
+    },
+    {
+      "lineIndex": 811,
+      "cells": [
+        "T14582100",
+        "18/02/26",
+        "9:38:51"
+      ],
+      "raw": "T14582100 | 18/02/26 | 9:38:51"
+    },
+    {
+      "lineIndex": 812,
+      "cells": [
+        "LISTADO DE COMPOSICIONES Y PROCESOS (C/Desg)"
+      ],
+      "raw": "LISTADO DE COMPOSICIONES Y PROCESOS (C/Desg)"
+    },
+    {
+      "lineIndex": 813,
+      "cells": [
+        "Rev."
+      ],
+      "raw": "Rev."
+    },
+    {
+      "lineIndex": 814,
+      "cells": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "raw": "F1 | F2 | F3 | F4"
+    },
+    {
+      "lineIndex": 815,
+      "cells": [
+        "Niv.",
+        "Ref.",
+        "Denominación Técnica"
+      ],
+      "raw": "Niv. | Ref. | Denominación Técnica"
+    },
+    {
+      "lineIndex": 816,
+      "cells": [
+        "Ud.",
+        "Peso",
+        "Peso C.",
+        "Longitud",
+        "Ancho",
+        "Altura",
+        "Nº Plano",
+        "Norma"
+      ],
+      "raw": "Ud. | Peso | Peso C. | Longitud | Ancho | Altura | Nº Plano | Norma"
+    },
+    {
+      "lineIndex": 817,
+      "cells": [
+        "Rev. procesos"
+      ],
+      "raw": "Rev. procesos"
+    },
+    {
+      "lineIndex": 818,
+      "cells": [
+        "Ficticio",
+        "Mat.Dep."
+      ],
+      "raw": "Ficticio | Mat.Dep."
+    },
+    {
+      "lineIndex": 819,
+      "cells": [
+        "T 101.91.287",
+        "Tapón conector 5 p hembra negro Wiel"
+      ],
+      "raw": "T 101.91.287 | Tapón conector 5 p hembra negro Wiel"
+    },
+    {
+      "lineIndex": 820,
+      "cells": [
+        "and ref. 06.563.9153.1",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "and ref. 06.563.9153.1 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 821,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 822,
+      "cells": [
+        "4"
+      ],
+      "raw": "4"
+    },
+    {
+      "lineIndex": 823,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 824,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 825,
+      "cells": [
+        "T 101.91.291",
+        "Tapón conector 6 p hembra negro Wiel"
+      ],
+      "raw": "T 101.91.291 | Tapón conector 6 p hembra negro Wiel"
+    },
+    {
+      "lineIndex": 826,
+      "cells": [
+        "and ref. 99.589.0000.7",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "and ref. 99.589.0000.7 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 827,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 828,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 829,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 830,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 831,
+      "cells": [
+        "T 101.91.292",
+        "Tapón conector 2 p hembra negro Wiel"
+      ],
+      "raw": "T 101.91.292 | Tapón conector 2 p hembra negro Wiel"
+    },
+    {
+      "lineIndex": 832,
+      "cells": [
+        "and ref. 06.563.8753.1",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "and ref. 06.563.8753.1 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 833,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 834,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 835,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 836,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 837,
+      "cells": [
+        "T 101.91.293",
+        "Tapón conector 5p hembra gris Wielan"
+      ],
+      "raw": "T 101.91.293 | Tapón conector 5p hembra gris Wielan"
+    },
+    {
+      "lineIndex": 838,
+      "cells": [
+        "d ref. 06.563.9153.0",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "d ref. 06.563.9153.0 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 839,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 840,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 841,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 842,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 843,
+      "cells": [
+        "T 101.91.336",
+        "Convertidor DC/DC 10V 15W ref. Power"
+      ],
+      "raw": "T 101.91.336 | Convertidor DC/DC 10V 15W ref. Power"
+    },
+    {
+      "lineIndex": 844,
+      "cells": [
+        "DC 15W-10",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "DC 15W-10 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 845,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 846,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 847,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 848,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 849,
+      "cells": [
+        "T 101.91.337",
+        "Módulo antiparasitario Schneider 24-"
+      ],
+      "raw": "T 101.91.337 | Módulo antiparasitario Schneider 24-"
+    },
+    {
+      "lineIndex": 850,
+      "cells": [
+        "48 VAC ref. LAD4RCE",
+        "UN",
+        "0,02",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "48 VAC ref. LAD4RCE | UN | 0,02 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 851,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 852,
+      "cells": [
+        "12"
+      ],
+      "raw": "12"
+    },
+    {
+      "lineIndex": 853,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 854,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 855,
+      "cells": [
+        "T 101.91.344",
+        "Tapón conector 2 p hembra gris Wiela"
+      ],
+      "raw": "T 101.91.344 | Tapón conector 2 p hembra gris Wiela"
+    },
+    {
+      "lineIndex": 856,
+      "cells": [
+        "nd ref. 06.563.8753.0",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "nd ref. 06.563.8753.0 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 857,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 858,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 859,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 860,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 861,
+      "cells": [
+        "T 101.91.385",
+        "Zócalo hembra 4 polos marrón Wieland"
+      ],
+      "raw": "T 101.91.385 | Zócalo hembra 4 polos marrón Wieland"
+    },
+    {
+      "lineIndex": 862,
+      "cells": [
+        "Mini ref.46.051.5051.4",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "Mini ref.46.051.5051.4 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 863,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 864,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 865,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 866,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 867,
+      "cells": [
+        "T 101.91.394",
+        "Zócalo hembra 5 polos turques Wielan"
+      ],
+      "raw": "T 101.91.394 | Zócalo hembra 5 polos turques Wielan"
+    },
+    {
+      "lineIndex": 868,
+      "cells": [
+        "d Mini ref.46.051.5053.6",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "d Mini ref.46.051.5053.6 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 869,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 870,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 871,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 872,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 873,
+      "cells": [
+        "T 145.82.010",
+        "PLC MITSUBISHI FX5U Armario Principa"
+      ],
+      "raw": "T 145.82.010 | PLC MITSUBISHI FX5U Armario Principa"
+    },
+    {
+      "lineIndex": 874,
+      "cells": [
+        "l (nº1)"
+      ],
+      "raw": "l (nº1)"
+    },
+    {
+      "lineIndex": 875,
+      "cells": [
+        "UN",
+        "0,5",
+        "0",
+        "0",
+        "0",
+        "145.82.010"
+      ],
+      "raw": "UN | 0,5 | 0 | 0 | 0 | 145.82.010"
+    },
+    {
+      "lineIndex": 876,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 877,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 878,
+      "cells": [
+        "1,01"
+      ],
+      "raw": "1,01"
+    },
+    {
+      "lineIndex": 879,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 880,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 881,
+      "cells": [
+        "T 100.91.669",
+        "Batería para autómata Mitsubishi"
+      ],
+      "raw": "T 100.91.669 | Batería para autómata Mitsubishi"
+    },
+    {
+      "lineIndex": 882,
+      "cells": [
+        "ref. FX3U-32BL",
+        "UN",
+        "0,01",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ref. FX3U-32BL | UN | 0,01 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 883,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 884,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 885,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 886,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 887,
+      "cells": [
+        "T 100.91.685"
+      ],
+      "raw": "T 100.91.685"
+    },
+    {
+      "lineIndex": 888,
+      "cells": [
+        "Autómata programable Mitsubishi, ref. FX5U-32MR/ES"
+      ],
+      "raw": "Autómata programable Mitsubishi, ref. FX5U-32MR/ES"
+    },
+    {
+      "lineIndex": 889,
+      "cells": [
+        "UN",
+        "0,6",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,6 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 890,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 891,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 892,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 893,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 894,
+      "cells": [
+        "T 100.91.686",
+        "Módulo de entradas analógicas Mit"
+      ],
+      "raw": "T 100.91.686 | Módulo de entradas analógicas Mit"
+    },
+    {
+      "lineIndex": 895,
+      "cells": [
+        "subishi ref. FX5-4AD-ADP",
+        "UN",
+        "0,2",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "subishi ref. FX5-4AD-ADP | UN | 0,2 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 896,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 897,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 898,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 899,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 900,
+      "cells": [
+        "T 100.91.687",
+        "Módulo de entradas digitales Mits"
+      ],
+      "raw": "T 100.91.687 | Módulo de entradas digitales Mits"
+    },
+    {
+      "lineIndex": 901,
+      "cells": [
+        "ubishi ref. FX5-16EX",
+        "UN",
+        "0,2",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ubishi ref. FX5-16EX | UN | 0,2 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 902,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 903,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 904,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 905,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 906,
+      "cells": [
+        "T 145.82.015",
+        "PLC MITSUBISHI FX5UJ Armario Princip"
+      ],
+      "raw": "T 145.82.015 | PLC MITSUBISHI FX5UJ Armario Princip"
+    },
+    {
+      "lineIndex": 907,
+      "cells": [
+        "al (nº2)",
+        "UN",
+        "0,5",
+        "0",
+        "0",
+        "0",
+        "145.82.015"
+      ],
+      "raw": "al (nº2) | UN | 0,5 | 0 | 0 | 0 | 145.82.015"
+    },
+    {
+      "lineIndex": 908,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 909,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 910,
+      "cells": [
+        "0,2"
+      ],
+      "raw": "0,2"
+    },
+    {
+      "lineIndex": 911,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 912,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 913,
+      "cells": [
+        "T 100.91.687",
+        "Módulo de entradas digitales Mits"
+      ],
+      "raw": "T 100.91.687 | Módulo de entradas digitales Mits"
+    },
+    {
+      "lineIndex": 914,
+      "cells": [
+        "ubishi ref. FX5-16EX",
+        "UN",
+        "0,2",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ubishi ref. FX5-16EX | UN | 0,2 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 915,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 916,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 917,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 918,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 919,
+      "cells": [
+        "T 101.90.956"
+      ],
+      "raw": "T 101.90.956"
+    },
+    {
+      "lineIndex": 920,
+      "cells": [
+        "Autómata programable Mitsubishi ref.FX5UJ-24MR/ES"
+      ],
+      "raw": "Autómata programable Mitsubishi ref.FX5UJ-24MR/ES"
+    },
+    {
+      "lineIndex": 921,
+      "cells": [
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 922,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 923,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 924,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 925,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 926,
+      "cells": [
+        "T 145.82.020",
+        "Conjunto regletero armario principal"
+      ],
+      "raw": "T 145.82.020 | Conjunto regletero armario principal"
+    },
+    {
+      "lineIndex": 927,
+      "cells": [
+        "L2"
+      ],
+      "raw": "L2"
+    },
+    {
+      "lineIndex": 928,
+      "cells": [
+        "UN",
+        "2",
+        "0",
+        "0",
+        "0",
+        "145.82.020"
+      ],
+      "raw": "UN | 2 | 0 | 0 | 0 | 145.82.020"
+    },
+    {
+      "lineIndex": 929,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 930,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 931,
+      "cells": [
+        "0,64"
+      ],
+      "raw": "0,64"
+    },
+    {
+      "lineIndex": 932,
+      "cells": [
+        "C"
+      ],
+      "raw": "C"
+    },
+    {
+      "lineIndex": 933,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 934,
+      "cells": [
+        "T 100.11.152",
+        "Tornillo cilíndrico M5x12 5.8 EN-"
+      ],
+      "raw": "T 100.11.152 | Tornillo cilíndrico M5x12 5.8 EN-"
+    },
+    {
+      "lineIndex": 935,
+      "cells": [
+        "ISO-1207 Geomet 500A",
+        "UN",
+        "0,01",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ISO-1207 Geomet 500A | UN | 0,01 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 936,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 937,
+      "cells": [
+        "9"
+      ],
+      "raw": "9"
+    },
+    {
+      "lineIndex": 938,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 939,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 940,
+      "cells": [
+        "T 100.31.105"
+      ],
+      "raw": "T 100.31.105"
+    },
+    {
+      "lineIndex": 941,
+      "cells": [
+        "Arandela elástica DIN 128-87-A 5 - FSt Geomet 500A"
+      ],
+      "raw": "Arandela elástica DIN 128-87-A 5 - FSt Geomet 500A"
+    },
+    {
+      "lineIndex": 942,
+      "cells": [
+        "UN",
+        "0,01",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,01 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 943,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 944,
+      "cells": [
+        "9"
+      ],
+      "raw": "9"
+    },
+    {
+      "lineIndex": 945,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 946,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 947,
+      "cells": [
+        "T 100.90.570"
+      ],
+      "raw": "T 100.90.570"
+    },
+    {
+      "lineIndex": 948,
+      "cells": [
+        "Apoyo SIEMENS 8WA-746"
+      ],
+      "raw": "Apoyo SIEMENS 8WA-746"
+    },
+    {
+      "lineIndex": 949,
+      "cells": [
+        "UN",
+        "0,05",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,05 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 950,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 951,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 952,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 953,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 954,
+      "cells": [
+        "T 100.90.581",
+        "Tope final para bornas 2,5/5"
+      ],
+      "raw": "T 100.90.581 | Tope final para bornas 2,5/5"
+    },
+    {
+      "lineIndex": 955,
+      "cells": [
+        "UN",
+        "0,05",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,05 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 956,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 957,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 958,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 959,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 960,
+      "cells": [
+        "T 101.91.088",
+        "Borna simple Siemens 0,08-2,5 mm²"
+      ],
+      "raw": "T 101.91.088 | Borna simple Siemens 0,08-2,5 mm²"
+    },
+    {
+      "lineIndex": 961,
+      "cells": [
+        "ref. 8WH2000-0AF00",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ref. 8WH2000-0AF00 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 962,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 963,
+      "cells": [
+        "15"
+      ],
+      "raw": "15"
+    },
+    {
+      "lineIndex": 964,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 965,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 966,
+      "cells": [
+        "T 101.91.089",
+        "Borna tierra Siemens 0,08-2,5 mm²"
+      ],
+      "raw": "T 101.91.089 | Borna tierra Siemens 0,08-2,5 mm²"
+    },
+    {
+      "lineIndex": 967,
+      "cells": [
+        "ref. 8WH2003-0CF07",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ref. 8WH2003-0CF07 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 968,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 969,
+      "cells": [
+        "7"
+      ],
+      "raw": "7"
+    },
+    {
+      "lineIndex": 970,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 971,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 972,
+      "cells": [
+        "T 101.91.090",
+        "Borna 3 puntos conex Siemens 0,08"
+      ],
+      "raw": "T 101.91.090 | Borna 3 puntos conex Siemens 0,08"
+    },
+    {
+      "lineIndex": 973,
+      "cells": [
+        "-2,5 mm² ref. 8WH2003-0AF00",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "-2,5 mm² ref. 8WH2003-0AF00 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 974,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 975,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 976,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 977,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 978,
+      "cells": [
+        "T 101.91.091",
+        "Borna 2 pisos Siemens 0,08-2,5 mm"
+      ],
+      "raw": "T 101.91.091 | Borna 2 pisos Siemens 0,08-2,5 mm"
+    },
+    {
+      "lineIndex": 979,
+      "cells": [
+        "² ref. 8WH2020-0AF00",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "² ref. 8WH2020-0AF00 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 980,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 981,
+      "cells": [
+        "50"
+      ],
+      "raw": "50"
+    },
+    {
+      "lineIndex": 982,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 983,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 984,
+      "cells": [
+        "T 101.91.092",
+        "Borna simple Siemens 0,5-4 mm² re"
+      ],
+      "raw": "T 101.91.092 | Borna simple Siemens 0,5-4 mm² re"
+    },
+    {
+      "lineIndex": 985,
+      "cells": [
+        "f. 8WH2000-0AG00",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "f. 8WH2000-0AG00 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 986,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 987,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 988,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 989,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 990,
+      "cells": [
+        "T 101.91.093",
+        "Borna tierra Siemens 0,5-4 mm² re"
+      ],
+      "raw": "T 101.91.093 | Borna tierra Siemens 0,5-4 mm² re"
+    },
+    {
+      "lineIndex": 991,
+      "cells": [
+        "f. 8WH2000-0CG07",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "f. 8WH2000-0CG07 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 992,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 993,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 994,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 995,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 996,
+      "cells": [
+        "T 101.91.094",
+        "Borna simple Siemens 1,5-10 mm² r"
+      ],
+      "raw": "T 101.91.094 | Borna simple Siemens 1,5-10 mm² r"
+    },
+    {
+      "lineIndex": 997,
+      "cells": [
+        "ef. 8WH2000-0AJ00",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ef. 8WH2000-0AJ00 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 998,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 999,
+      "cells": [
+        "4"
+      ],
+      "raw": "4"
+    },
+    {
+      "lineIndex": 1000,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1001,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1002,
+      "cells": [
+        "T 101.91.098",
+        "Tapa final Siemens para 2,5 mm²"
+      ],
+      "raw": "T 101.91.098 | Tapa final Siemens para 2,5 mm²"
+    },
+    {
+      "lineIndex": 1003,
+      "cells": [
+        "ref. 8WH9000-1VA00",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ref. 8WH9000-1VA00 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1004,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1005,
+      "cells": [
+        "7"
+      ],
+      "raw": "7"
+    },
+    {
+      "lineIndex": 1006,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1007,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1008,
+      "cells": [
+        "T 101.91.136",
+        "Etiqueta Cembre MG-CPM04 5X10mm r"
+      ],
+      "raw": "T 101.91.136 | Etiqueta Cembre MG-CPM04 5X10mm r"
+    },
+    {
+      "lineIndex": 1009,
+      "cells": [
+        "ef. 41390N",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ef. 41390N | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1010,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1011,
+      "cells": [
+        "100"
+      ],
+      "raw": "100"
+    },
+    {
+      "lineIndex": 1012,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1013,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1014,
+      "cells": [
+        "M 100.07.601",
+        "Perfil simetrico perf. 35x7,5 GOU"
+      ],
+      "raw": "M 100.07.601 | Perfil simetrico perf. 35x7,5 GOU"
+    },
+    {
+      "lineIndex": 1015,
+      "cells": [
+        "L 45520 -REF. QUIOP-",
+        "M",
+        "0,38",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "L 45520 -REF. QUIOP- | M | 0,38 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1016,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1017,
+      "cells": [
+        "0,56"
+      ],
+      "raw": "0,56"
+    },
+    {
+      "lineIndex": 1018,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1019,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1020,
+      "cells": [
+        "T 145.82.025",
+        "Conjunto regletero armario principal"
+      ],
+      "raw": "T 145.82.025 | Conjunto regletero armario principal"
+    },
+    {
+      "lineIndex": 1021,
+      "cells": [
+        "L3"
+      ],
+      "raw": "L3"
+    },
+    {
+      "lineIndex": 1022,
+      "cells": [
+        "UN",
+        "1",
+        "0",
+        "0",
+        "0",
+        "145.82.025"
+      ],
+      "raw": "UN | 1 | 0 | 0 | 0 | 145.82.025"
+    },
+    {
+      "lineIndex": 1023,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1024,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1025,
+      "cells": [
+        "0,93"
+      ],
+      "raw": "0,93"
+    },
+    {
+      "lineIndex": 1026,
+      "cells": [
+        "E"
+      ],
+      "raw": "E"
+    },
+    {
+      "lineIndex": 1027,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1028,
+      "cells": [
+        "T 100.90.583",
+        "Etiqueta RC610 ENTRELEC 233 000.0"
+      ],
+      "raw": "T 100.90.583 | Etiqueta RC610 ENTRELEC 233 000.0"
+    },
+    {
+      "lineIndex": 1029,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1030,
+      "cells": [
+        "UN",
+        "0,01",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,01 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1031,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1032,
+      "cells": [
+        "75"
+      ],
+      "raw": "75"
+    },
+    {
+      "lineIndex": 1033,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1034,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1035,
+      "cells": [
+        "T 101.91.089",
+        "Borna tierra Siemens 0,08-2,5 mm²"
+      ],
+      "raw": "T 101.91.089 | Borna tierra Siemens 0,08-2,5 mm²"
+    },
+    {
+      "lineIndex": 1036,
+      "cells": [
+        "ref. 8WH2003-0CF07",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ref. 8WH2003-0CF07 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1037,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1038,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1039,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1040,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1041,
+      "cells": [
+        "T 101.91.090",
+        "Borna 3 puntos conex Siemens 0,08"
+      ],
+      "raw": "T 101.91.090 | Borna 3 puntos conex Siemens 0,08"
+    },
+    {
+      "lineIndex": 1042,
+      "cells": [
+        "-2,5 mm² ref. 8WH2003-0AF00",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "-2,5 mm² ref. 8WH2003-0AF00 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1043,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1044,
+      "cells": [
+        "17"
+      ],
+      "raw": "17"
+    },
+    {
+      "lineIndex": 1045,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1046,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1047,
+      "cells": [
+        "T 101.91.091",
+        "Borna 2 pisos Siemens 0,08-2,5 mm"
+      ],
+      "raw": "T 101.91.091 | Borna 2 pisos Siemens 0,08-2,5 mm"
+    },
+    {
+      "lineIndex": 1048,
+      "cells": [
+        "² ref. 8WH2020-0AF00",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "² ref. 8WH2020-0AF00 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1049,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1050,
+      "cells": [
+        "20"
+      ],
+      "raw": "20"
+    },
+    {
+      "lineIndex": 1051,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1052,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1053,
+      "cells": [
+        "T 101.91.092",
+        "Borna simple Siemens 0,5-4 mm² re"
+      ],
+      "raw": "T 101.91.092 | Borna simple Siemens 0,5-4 mm² re"
+    },
+    {
+      "lineIndex": 1054,
+      "cells": [
+        "f. 8WH2000-0AG00",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "f. 8WH2000-0AG00 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1055,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1056,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1057,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1058,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1059,
+      "cells": [
+        "T 101.91.094",
+        "Borna simple Siemens 1,5-10 mm² r"
+      ],
+      "raw": "T 101.91.094 | Borna simple Siemens 1,5-10 mm² r"
+    },
+    {
+      "lineIndex": 1060,
+      "cells": [
+        "ef. 8WH2000-0AJ00",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ef. 8WH2000-0AJ00 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1061,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1062,
+      "cells": [
+        "4"
+      ],
+      "raw": "4"
+    },
+    {
+      "lineIndex": 1063,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1064,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1065,
+      "cells": [
+        "T 101.91.098",
+        "Tapa final Siemens para 2,5 mm²"
+      ],
+      "raw": "T 101.91.098 | Tapa final Siemens para 2,5 mm²"
+    },
+    {
+      "lineIndex": 1066,
+      "cells": [
+        "ref. 8WH9000-1VA00",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "ref. 8WH9000-1VA00 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1067,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1068,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 1069,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1070,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1071,
+      "cells": [
+        "T 101.91.135",
+        "Borna 4 puntos conex Siemens 0,08"
+      ],
+      "raw": "T 101.91.135 | Borna 4 puntos conex Siemens 0,08"
+    },
+    {
+      "lineIndex": 1072,
+      "cells": [
+        "-2,5 mm² ref. 8WH2004-0AF00",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "-2,5 mm² ref. 8WH2004-0AF00 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1073,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1074,
+      "cells": [
+        "18"
+      ],
+      "raw": "18"
+    },
+    {
+      "lineIndex": 1075,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1076,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1077,
+      "cells": [
+        ".. / .."
+      ],
+      "raw": ".. / .."
+    },
+    {
+      "lineIndex": 1078,
+      "cells": [
+        "----------------Page (3) Break----------------"
+      ],
+      "raw": "----------------Page (3) Break----------------"
+    },
+    {
+      "lineIndex": 1079,
+      "cells": [
+        "5"
+      ],
+      "raw": "5"
+    },
+    {
+      "lineIndex": 1080,
+      "cells": [
+        "Pág."
+      ],
+      "raw": "Pág."
+    },
+    {
+      "lineIndex": 1081,
+      "cells": [
+        "50073"
+      ],
+      "raw": "50073"
+    },
+    {
+      "lineIndex": 1082,
+      "cells": [
+        "JASO Equipos de Obras y Construcciones, S. L."
+      ],
+      "raw": "JASO Equipos de Obras y Construcciones, S. L."
+    },
+    {
+      "lineIndex": 1083,
+      "cells": [
+        "T14582100",
+        "18/02/26",
+        "9:38:51"
+      ],
+      "raw": "T14582100 | 18/02/26 | 9:38:51"
+    },
+    {
+      "lineIndex": 1084,
+      "cells": [
+        "LISTADO DE COMPOSICIONES Y PROCESOS (C/Desg)"
+      ],
+      "raw": "LISTADO DE COMPOSICIONES Y PROCESOS (C/Desg)"
+    },
+    {
+      "lineIndex": 1085,
+      "cells": [
+        "Rev."
+      ],
+      "raw": "Rev."
+    },
+    {
+      "lineIndex": 1086,
+      "cells": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "raw": "F1 | F2 | F3 | F4"
+    },
+    {
+      "lineIndex": 1087,
+      "cells": [
+        "Niv.",
+        "Ref.",
+        "Denominación Técnica"
+      ],
+      "raw": "Niv. | Ref. | Denominación Técnica"
+    },
+    {
+      "lineIndex": 1088,
+      "cells": [
+        "Ud.",
+        "Peso",
+        "Peso C.",
+        "Longitud",
+        "Ancho",
+        "Altura",
+        "Nº Plano",
+        "Norma"
+      ],
+      "raw": "Ud. | Peso | Peso C. | Longitud | Ancho | Altura | Nº Plano | Norma"
+    },
+    {
+      "lineIndex": 1089,
+      "cells": [
+        "Rev. procesos"
+      ],
+      "raw": "Rev. procesos"
+    },
+    {
+      "lineIndex": 1090,
+      "cells": [
+        "Ficticio",
+        "Mat.Dep."
+      ],
+      "raw": "Ficticio | Mat.Dep."
+    },
+    {
+      "lineIndex": 1091,
+      "cells": [
+        "T 101.91.260",
+        "Tapa final Siemens para 2,5 mm² 4"
+      ],
+      "raw": "T 101.91.260 | Tapa final Siemens para 2,5 mm² 4"
+    },
+    {
+      "lineIndex": 1092,
+      "cells": [
+        "puntos",
+        "ref. 8WH9000-4GA00",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "puntos | ref. 8WH9000-4GA00 | UN | 0 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1093,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1094,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 1095,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1096,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1097,
+      "cells": [
+        "M 100.07.602",
+        "Perfil simetrico perf. 35x15 GOUL"
+      ],
+      "raw": "M 100.07.602 | Perfil simetrico perf. 35x15 GOUL"
+    },
+    {
+      "lineIndex": 1098,
+      "cells": [
+        "45555 /QUIORP",
+        "M",
+        "0,49",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "45555 /QUIORP | M | 0,49 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1099,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1100,
+      "cells": [
+        "0,375"
+      ],
+      "raw": "0,375"
+    },
+    {
+      "lineIndex": 1101,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1102,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1103,
+      "cells": [
+        "T 145.82.040",
+        "Conjunto armario galvanizado + Chapa"
+      ],
+      "raw": "T 145.82.040 | Conjunto armario galvanizado + Chapa"
+    },
+    {
+      "lineIndex": 1104,
+      "cells": [
+        "s Conexiones",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0",
+        "145.82.040"
+      ],
+      "raw": "s Conexiones | UN | 0 | 0 | 0 | 0 | 145.82.040"
+    },
+    {
+      "lineIndex": 1105,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1106,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1107,
+      "cells": [
+        "128,23"
+      ],
+      "raw": "128,23"
+    },
+    {
+      "lineIndex": 1108,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1109,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 1110,
+      "cells": [
+        "T 145.82.050"
+      ],
+      "raw": "T 145.82.050"
+    },
+    {
+      "lineIndex": 1111,
+      "cells": [
+        "Armario Principal 1480x1500x430 Galvanizado"
+      ],
+      "raw": "Armario Principal 1480x1500x430 Galvanizado"
+    },
+    {
+      "lineIndex": 1112,
+      "cells": [
+        "UN",
+        "127,78",
+        "0",
+        "0",
+        "0",
+        "145.82.050"
+      ],
+      "raw": "UN | 127,78 | 0 | 0 | 0 | 145.82.050"
+    },
+    {
+      "lineIndex": 1113,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1114,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1115,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1116,
+      "cells": [
+        "F"
+      ],
+      "raw": "F"
+    },
+    {
+      "lineIndex": 1117,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 1118,
+      "cells": [
+        "T 145.82.041",
+        "Chapa conexiones 450x350 para arm"
+      ],
+      "raw": "T 145.82.041 | Chapa conexiones 450x350 para arm"
+    },
+    {
+      "lineIndex": 1119,
+      "cells": [
+        "ario eléctrico",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0",
+        "145.82.041"
+      ],
+      "raw": "ario eléctrico | UN | 0 | 0 | 0 | 0 | 145.82.041"
+    },
+    {
+      "lineIndex": 1120,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1121,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1122,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1123,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1124,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 1125,
+      "cells": [
+        "T 145.82.042",
+        "Chapa conexiones 450x350 para arm"
+      ],
+      "raw": "T 145.82.042 | Chapa conexiones 450x350 para arm"
+    },
+    {
+      "lineIndex": 1126,
+      "cells": [
+        "ario eléctrico",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0",
+        "145.82.042"
+      ],
+      "raw": "ario eléctrico | UN | 0 | 0 | 0 | 0 | 145.82.042"
+    },
+    {
+      "lineIndex": 1127,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1128,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1129,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1130,
+      "cells": [
+        "D"
+      ],
+      "raw": "D"
+    },
+    {
+      "lineIndex": 1131,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 1132,
+      "cells": [
+        "T 145.82.043",
+        "Chapa conexiones 450x350 para arm"
+      ],
+      "raw": "T 145.82.043 | Chapa conexiones 450x350 para arm"
+    },
+    {
+      "lineIndex": 1133,
+      "cells": [
+        "ario eléctrico",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0",
+        "145.82.043"
+      ],
+      "raw": "ario eléctrico | UN | 0 | 0 | 0 | 0 | 145.82.043"
+    },
+    {
+      "lineIndex": 1134,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1135,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1136,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1137,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1138,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 1139,
+      "cells": [
+        "T 145.82.044",
+        "Chapa conexiones 450x350 para arm"
+      ],
+      "raw": "T 145.82.044 | Chapa conexiones 450x350 para arm"
+    },
+    {
+      "lineIndex": 1140,
+      "cells": [
+        "ario eléctrico",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0",
+        "145.82.044"
+      ],
+      "raw": "ario eléctrico | UN | 0 | 0 | 0 | 0 | 145.82.044"
+    },
+    {
+      "lineIndex": 1141,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1142,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1143,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1144,
+      "cells": [
+        "B"
+      ],
+      "raw": "B"
+    },
+    {
+      "lineIndex": 1145,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 1146,
+      "cells": [
+        "T 145.82.045",
+        "Chapa conexiones 450x350 para arm"
+      ],
+      "raw": "T 145.82.045 | Chapa conexiones 450x350 para arm"
+    },
+    {
+      "lineIndex": 1147,
+      "cells": [
+        "ario eléctrico",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0",
+        "145.82.045"
+      ],
+      "raw": "ario eléctrico | UN | 0 | 0 | 0 | 0 | 145.82.045"
+    },
+    {
+      "lineIndex": 1148,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1149,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1150,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1151,
+      "cells": [
+        "B"
+      ],
+      "raw": "B"
+    },
+    {
+      "lineIndex": 1152,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 1153,
+      "cells": [
+        "T 145.82.046",
+        "Chapa conexiones 450x350 para arm"
+      ],
+      "raw": "T 145.82.046 | Chapa conexiones 450x350 para arm"
+    },
+    {
+      "lineIndex": 1154,
+      "cells": [
+        "ario eléctrico",
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0",
+        "145.82.046"
+      ],
+      "raw": "ario eléctrico | UN | 0 | 0 | 0 | 0 | 145.82.046"
+    },
+    {
+      "lineIndex": 1155,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1156,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1157,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1158,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1159,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 1160,
+      "cells": [
+        "T 145.83.508",
+        "Conjunto conector CBL"
+      ],
+      "raw": "T 145.83.508 | Conjunto conector CBL"
+    },
+    {
+      "lineIndex": 1161,
+      "cells": [
+        "UN",
+        "0",
+        "0",
+        "0",
+        "0",
+        "NP 4850"
+      ],
+      "raw": "UN | 0 | 0 | 0 | 0 | NP 4850"
+    },
+    {
+      "lineIndex": 1162,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1163,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1164,
+      "cells": [
+        "0,25"
+      ],
+      "raw": "0,25"
+    },
+    {
+      "lineIndex": 1165,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1166,
+      "cells": [
+        "T 100.90.515",
+        "Clavija 16+T 16A 400V",
+        "( nº 1-16"
+      ],
+      "raw": "T 100.90.515 | Clavija 16+T 16A 400V | ( nº 1-16"
+    },
+    {
+      "lineIndex": 1167,
+      "cells": [
+        ") 77,5x27 Conex. por muelle",
+        "UN",
+        "0,1",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": ") 77,5x27 Conex. por muelle | UN | 0,1 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1168,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1169,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1170,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1171,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1172,
+      "cells": [
+        "T 100.90.614",
+        "Tapon plastico PG - 21"
+      ],
+      "raw": "T 100.90.614 | Tapon plastico PG - 21"
+    },
+    {
+      "lineIndex": 1173,
+      "cells": [
+        "UN",
+        "0,05",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 0,05 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1174,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1175,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1176,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1177,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1178,
+      "cells": [
+        "T 100.90.887",
+        "Cubierta 165796 / 09 30 016 1440"
+      ],
+      "raw": "T 100.90.887 | Cubierta 165796 / 09 30 016 1440"
+    },
+    {
+      "lineIndex": 1179,
+      "cells": [
+        "/ 71.352.1628.1",
+        "UN",
+        "0,1",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "/ 71.352.1628.1 | UN | 0,1 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1180,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1181,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1182,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1183,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1184,
+      "cells": [
+        "T 145.82.060",
+        "Soporte armario electrico"
+      ],
+      "raw": "T 145.82.060 | Soporte armario electrico"
+    },
+    {
+      "lineIndex": 1185,
+      "cells": [
+        "UN",
+        "94,71",
+        "0",
+        "0",
+        "0",
+        "145.82.060"
+      ],
+      "raw": "UN | 94,71 | 0 | 0 | 0 | 145.82.060"
+    },
+    {
+      "lineIndex": 1186,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1187,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1188,
+      "cells": [
+        "94,71"
+      ],
+      "raw": "94,71"
+    },
+    {
+      "lineIndex": 1189,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1190,
+      "cells": [
+        "A"
+      ],
+      "raw": "A"
+    },
+    {
+      "lineIndex": 1191,
+      "cells": [
+        "Sí"
+      ],
+      "raw": "Sí"
+    },
+    {
+      "lineIndex": 1192,
+      "cells": [
+        "I 145.82.061",
+        "L 100x100x10",
+        "S355J2",
+        "EN-10056",
+        "E"
+      ],
+      "raw": "I 145.82.061 | L 100x100x10 | S355J2 | EN-10056 | E"
+    },
+    {
+      "lineIndex": 1193,
+      "cells": [
+        "N-10025"
+      ],
+      "raw": "N-10025"
+    },
+    {
+      "lineIndex": 1194,
+      "cells": [
+        "UN",
+        "28,47",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 28,47 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1195,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1196,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1197,
+      "cells": [
+        "28,69"
+      ],
+      "raw": "28,69"
+    },
+    {
+      "lineIndex": 1198,
+      "cells": [
+        "0",
+        "0",
+        "No"
+      ],
+      "raw": "0 | 0 | No"
+    },
+    {
+      "lineIndex": 1199,
+      "cells": [
+        "M 100.02.160",
+        "L 100x100x10",
+        "S355J2",
+        "EN-10056"
+      ],
+      "raw": "M 100.02.160 | L 100x100x10 | S355J2 | EN-10056"
+    },
+    {
+      "lineIndex": 1200,
+      "cells": [
+        "EN-10025"
+      ],
+      "raw": "EN-10025"
+    },
+    {
+      "lineIndex": 1201,
+      "cells": [
+        "M",
+        "14,7",
+        "12,1",
+        "0",
+        "0"
+      ],
+      "raw": "M | 14,7 | 12,1 | 0 | 0"
+    },
+    {
+      "lineIndex": 1202,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 1203,
+      "cells": [
+        "1,9"
+      ],
+      "raw": "1,9"
+    },
+    {
+      "lineIndex": 1204,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1205,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1206,
+      "cells": [
+        "I 145.82.062",
+        "L 100x100x10",
+        "S355J2",
+        "EN-10056",
+        "E"
+      ],
+      "raw": "I 145.82.062 | L 100x100x10 | S355J2 | EN-10056 | E"
+    },
+    {
+      "lineIndex": 1207,
+      "cells": [
+        "N-10025"
+      ],
+      "raw": "N-10025"
+    },
+    {
+      "lineIndex": 1208,
+      "cells": [
+        "UN",
+        "28,47",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 28,47 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1209,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1210,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1211,
+      "cells": [
+        "28,69"
+      ],
+      "raw": "28,69"
+    },
+    {
+      "lineIndex": 1212,
+      "cells": [
+        "0",
+        "0",
+        "No"
+      ],
+      "raw": "0 | 0 | No"
+    },
+    {
+      "lineIndex": 1213,
+      "cells": [
+        "M 100.02.160",
+        "L 100x100x10",
+        "S355J2",
+        "EN-10056"
+      ],
+      "raw": "M 100.02.160 | L 100x100x10 | S355J2 | EN-10056"
+    },
+    {
+      "lineIndex": 1214,
+      "cells": [
+        "EN-10025"
+      ],
+      "raw": "EN-10025"
+    },
+    {
+      "lineIndex": 1215,
+      "cells": [
+        "M",
+        "14,7",
+        "12,1",
+        "0",
+        "0"
+      ],
+      "raw": "M | 14,7 | 12,1 | 0 | 0"
+    },
+    {
+      "lineIndex": 1216,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 1217,
+      "cells": [
+        "1,9"
+      ],
+      "raw": "1,9"
+    },
+    {
+      "lineIndex": 1218,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1219,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1220,
+      "cells": [
+        "I 145.82.063",
+        "L 80x80x8",
+        "S355J2",
+        "EN-10056",
+        "EN-1"
+      ],
+      "raw": "I 145.82.063 | L 80x80x8 | S355J2 | EN-10056 | EN-1"
+    },
+    {
+      "lineIndex": 1221,
+      "cells": [
+        "0025"
+      ],
+      "raw": "0025"
+    },
+    {
+      "lineIndex": 1222,
+      "cells": [
+        "UN",
+        "12,27",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 12,27 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1223,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1224,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1225,
+      "cells": [
+        "12,33"
+      ],
+      "raw": "12,33"
+    },
+    {
+      "lineIndex": 1226,
+      "cells": [
+        "0",
+        "0",
+        "No"
+      ],
+      "raw": "0 | 0 | No"
+    },
+    {
+      "lineIndex": 1227,
+      "cells": [
+        "M 100.02.150",
+        "L 80x80x8",
+        "S355J2",
+        "EN-10056",
+        "E"
+      ],
+      "raw": "M 100.02.150 | L 80x80x8 | S355J2 | EN-10056 | E"
+    },
+    {
+      "lineIndex": 1228,
+      "cells": [
+        "N-10025"
+      ],
+      "raw": "N-10025"
+    },
+    {
+      "lineIndex": 1229,
+      "cells": [
+        "M",
+        "9,63",
+        "12,1",
+        "0",
+        "0"
+      ],
+      "raw": "M | 9,63 | 12,1 | 0 | 0"
+    },
+    {
+      "lineIndex": 1230,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 1231,
+      "cells": [
+        "1,28"
+      ],
+      "raw": "1,28"
+    },
+    {
+      "lineIndex": 1232,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1233,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1234,
+      "cells": [
+        "I 145.82.064",
+        "L 80x80x8",
+        "S355J2",
+        "EN-10056",
+        "EN-1"
+      ],
+      "raw": "I 145.82.064 | L 80x80x8 | S355J2 | EN-10056 | EN-1"
+    },
+    {
+      "lineIndex": 1235,
+      "cells": [
+        "0025"
+      ],
+      "raw": "0025"
+    },
+    {
+      "lineIndex": 1236,
+      "cells": [
+        "UN",
+        "12,27",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 12,27 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1237,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1238,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1239,
+      "cells": [
+        "12,33"
+      ],
+      "raw": "12,33"
+    },
+    {
+      "lineIndex": 1240,
+      "cells": [
+        "0",
+        "0",
+        "No"
+      ],
+      "raw": "0 | 0 | No"
+    },
+    {
+      "lineIndex": 1241,
+      "cells": [
+        "M 100.02.150",
+        "L 80x80x8",
+        "S355J2",
+        "EN-10056",
+        "E"
+      ],
+      "raw": "M 100.02.150 | L 80x80x8 | S355J2 | EN-10056 | E"
+    },
+    {
+      "lineIndex": 1242,
+      "cells": [
+        "N-10025"
+      ],
+      "raw": "N-10025"
+    },
+    {
+      "lineIndex": 1243,
+      "cells": [
+        "M",
+        "9,63",
+        "12,1",
+        "0",
+        "0"
+      ],
+      "raw": "M | 9,63 | 12,1 | 0 | 0"
+    },
+    {
+      "lineIndex": 1244,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 1245,
+      "cells": [
+        "1,28"
+      ],
+      "raw": "1,28"
+    },
+    {
+      "lineIndex": 1246,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1247,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1248,
+      "cells": [
+        "I 145.82.065",
+        "L 100x100x10",
+        "S355J2",
+        "EN-10056",
+        "E"
+      ],
+      "raw": "I 145.82.065 | L 100x100x10 | S355J2 | EN-10056 | E"
+    },
+    {
+      "lineIndex": 1249,
+      "cells": [
+        "N-10025"
+      ],
+      "raw": "N-10025"
+    },
+    {
+      "lineIndex": 1250,
+      "cells": [
+        "UN",
+        "5,97",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 5,97 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1251,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1252,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1253,
+      "cells": [
+        "6,04"
+      ],
+      "raw": "6,04"
+    },
+    {
+      "lineIndex": 1254,
+      "cells": [
+        "0",
+        "0",
+        "No"
+      ],
+      "raw": "0 | 0 | No"
+    },
+    {
+      "lineIndex": 1255,
+      "cells": [
+        "M 100.02.160",
+        "L 100x100x10",
+        "S355J2",
+        "EN-10056"
+      ],
+      "raw": "M 100.02.160 | L 100x100x10 | S355J2 | EN-10056"
+    },
+    {
+      "lineIndex": 1256,
+      "cells": [
+        "EN-10025"
+      ],
+      "raw": "EN-10025"
+    },
+    {
+      "lineIndex": 1257,
+      "cells": [
+        "M",
+        "14,7",
+        "12,1",
+        "0",
+        "0"
+      ],
+      "raw": "M | 14,7 | 12,1 | 0 | 0"
+    },
+    {
+      "lineIndex": 1258,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 1259,
+      "cells": [
+        "0,4"
+      ],
+      "raw": "0,4"
+    },
+    {
+      "lineIndex": 1260,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1261,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1262,
+      "cells": [
+        "I 145.82.066",
+        "L 100x100x10",
+        "S355J2",
+        "EN-10056",
+        "E"
+      ],
+      "raw": "I 145.82.066 | L 100x100x10 | S355J2 | EN-10056 | E"
+    },
+    {
+      "lineIndex": 1263,
+      "cells": [
+        "N-10025"
+      ],
+      "raw": "N-10025"
+    },
+    {
+      "lineIndex": 1264,
+      "cells": [
+        "UN",
+        "5,97",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "UN | 5,97 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1265,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1266,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1267,
+      "cells": [
+        "6,04"
+      ],
+      "raw": "6,04"
+    },
+    {
+      "lineIndex": 1268,
+      "cells": [
+        "0",
+        "0",
+        "No"
+      ],
+      "raw": "0 | 0 | No"
+    },
+    {
+      "lineIndex": 1269,
+      "cells": [
+        "M 100.02.160",
+        "L 100x100x10",
+        "S355J2",
+        "EN-10056"
+      ],
+      "raw": "M 100.02.160 | L 100x100x10 | S355J2 | EN-10056"
+    },
+    {
+      "lineIndex": 1270,
+      "cells": [
+        "EN-10025"
+      ],
+      "raw": "EN-10025"
+    },
+    {
+      "lineIndex": 1271,
+      "cells": [
+        "M",
+        "14,7",
+        "12,1",
+        "0",
+        "0"
+      ],
+      "raw": "M | 14,7 | 12,1 | 0 | 0"
+    },
+    {
+      "lineIndex": 1272,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 1273,
+      "cells": [
+        "0,4"
+      ],
+      "raw": "0,4"
+    },
+    {
+      "lineIndex": 1274,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1275,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1276,
+      "cells": [
+        "I 146.32.102",
+        "Chapa",
+        "15",
+        "EN 10029/91 Mat.:S 355"
+      ],
+      "raw": "I 146.32.102 | Chapa | 15 | EN 10029/91 Mat.:S 355"
+    },
+    {
+      "lineIndex": 1277,
+      "cells": [
+        "J2G3 EN 10025/90",
+        "UN",
+        "0,65",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "J2G3 EN 10025/90 | UN | 0,65 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1278,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1279,
+      "cells": [
+        "2"
+      ],
+      "raw": "2"
+    },
+    {
+      "lineIndex": 1280,
+      "cells": [
+        "1,18"
+      ],
+      "raw": "1,18"
+    },
+    {
+      "lineIndex": 1281,
+      "cells": [
+        "D",
+        "No"
+      ],
+      "raw": "D | No"
+    },
+    {
+      "lineIndex": 1282,
+      "cells": [
+        "M 100.03.115",
+        "Chapa 15",
+        "S355J2",
+        "EN-10029",
+        "EN"
+      ],
+      "raw": "M 100.03.115 | Chapa 15 | S355J2 | EN-10029 | EN"
+    },
+    {
+      "lineIndex": 1283,
+      "cells": [
+        "-10025"
+      ],
+      "raw": "-10025"
+    },
+    {
+      "lineIndex": 1284,
+      "cells": [
+        "M2",
+        "117,75",
+        "3,75",
+        "0",
+        "0"
+      ],
+      "raw": "M2 | 117,75 | 3,75 | 0 | 0"
+    },
+    {
+      "lineIndex": 1285,
+      "cells": [
+        "3"
+      ],
+      "raw": "3"
+    },
+    {
+      "lineIndex": 1286,
+      "cells": [
+        "0,01"
+      ],
+      "raw": "0,01"
+    },
+    {
+      "lineIndex": 1287,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1288,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1289,
+      "cells": [
+        "M 100.07.612",
+        "Canaleta TEHALIT BA7 60060"
+      ],
+      "raw": "M 100.07.612 | Canaleta TEHALIT BA7 60060"
+    },
+    {
+      "lineIndex": 1290,
+      "cells": [
+        "M",
+        "0,68",
+        "0",
+        "0",
+        "0"
+      ],
+      "raw": "M | 0,68 | 0 | 0 | 0"
+    },
+    {
+      "lineIndex": 1291,
+      "cells": [
+        "1"
+      ],
+      "raw": "1"
+    },
+    {
+      "lineIndex": 1292,
+      "cells": [
+        "0,6"
+      ],
+      "raw": "0,6"
+    },
+    {
+      "lineIndex": 1293,
+      "cells": [
+        "0"
+      ],
+      "raw": "0"
+    },
+    {
+      "lineIndex": 1294,
+      "cells": [
+        "No"
+      ],
+      "raw": "No"
+    },
+    {
+      "lineIndex": 1295,
+      "cells": [
+        "----------------Page (4) Break----------------"
+      ],
+      "raw": "----------------Page (4) Break----------------"
+    }
+  ]
+}

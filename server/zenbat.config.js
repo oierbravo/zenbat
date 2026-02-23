@@ -1,6 +1,7 @@
 'use strict';
 
 var path = require('path');
+var zenbatXlsx = require(path.join(__dirname, '..', 'lib', 'zenbat-xlsx.cjs'));
 var basePath = process.env.ZENBAT_DATA_PATH || path.join(__dirname, 'data');
 if (!basePath.endsWith(path.sep)) basePath += path.sep;
 
@@ -17,7 +18,7 @@ module.exports = {
 	}
 	,armarios: {
 		folder: 'armarios',
-		header: ['Codigo','Denominacion','PrecioUnitario','Cantidad','PrecioTotal']
+		header: zenbatXlsx.ARMARIO_HEADER
 	}
 	,pedidos: {
 		file:'pedidos.xlsx',

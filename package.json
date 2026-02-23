@@ -24,6 +24,7 @@
     "build:legacy": "grunt build & pkg .",
     "test": "grunt test",
     "test:e2e": "node scripts/e2e-test.mjs",
+    "test:e2e:server": "node scripts/e2e-server-modes.mjs",
     "zenbat": "node bin/zenbat.mjs",
     "install-windows-service": "winser -i",
     "uninstall-windows-service": "winser -r"

@@ -9,37 +9,27 @@ var zenbatConfig = require('../../zenbat.config.js');
 
 var walk    = require('walk');
 var fs      = require('fs');
-var XLSX = require('xlsx');
+var zenbatXlsx = require('../../../lib/zenbat-xlsx.cjs');
 var moment = require('moment');
 var Componentes = require( './componentes.server.controller.js');
 var json2xls = require('json2xls');
 var _ = require('lodash');
-var path = require('path');
 var cache = require('memory-cache');
 
 function getArmarioold(id){
-	var filepath = path.normalize(zenbatConfig.basePath + zenbatConfig.armarios.folder + '\\' + id + '.xlsx');
-    if (fs.existsSync(filepath)) {
-  //  console.log('Found file',filepath);
-    var workbook = XLSX.readFileSync(filepath);
-
- 	var componentesRaw = XLSX.utils.sheet_to_json(workbook.Sheets.componentes,{header:zenbatConfig.armarios.header,range:3});
-    var componentes = componentesRaw.filter(function(element,index){
-  		return (element.Cantidad)?true: false;
-  	});
-  	componentes.forEach(function(element,index){
-  		
-  	element.faltaID = !Componentes.verificarId(element.Codigo);
-  	
-    });
- console.log('arm-comps',componentes);
-    return {
-  		id: id,
-  		componentes:componentes
-    };
-	} else {
+	var filepath = path.join(zenbatConfig.basePath, zenbatConfig.armarios.folder, id + '.xlsx');
+	if (!fs.existsSync(filepath)) {
 		return false;
 	}
+	var result = zenbatXlsx.readArmarioXlsx(filepath, { header: zenbatConfig.armarios.header });
+	var componentes = result.componentes;
+	componentes.forEach(function(element, index){
+		element.faltaID = !Componentes.verificarId(element.Codigo);
+	});
+	return {
+		id: id,
+		componentes: componentes
+	};
 }
 
 
@@ -59,31 +49,25 @@ exports.read = function(req, res) {
  * List of Armarios
  */
 exports.list = function(req, res) {
-   	var result = [];
-	var walker  = walk.walk(path.normalize(zenbatConfig.basePath + zenbatConfig.armarios.folder), { followLinks: false });
+	var result = [];
+	var armariosDir = path.join(zenbatConfig.basePath, zenbatConfig.armarios.folder);
+	var walker = walk.walk(armariosDir, { followLinks: false });
 	walker.on('file', function(root, fileStat, next){
-
 		var filename = fileStat.name;
-		
-			
-		if(filename.charAt(0) !== '~'){
-			if (fs.existsSync(path.normalize(zenbatConfig.basePath + zenbatConfig.armarios.folder + "\\" + fileStat.name))) {
-				console.log(fileStat);
-				var armarioWorkbook = XLSX.readFileSync(zenbatConfig.basePath + zenbatConfig.armarios.folder + "\\" + fileStat.name);
-		 		var componentesRaw = XLSX.utils.sheet_to_json(armarioWorkbook.Sheets.componentes,{header:zenbatConfig.armarios.header,range:3});
-		   		var componentes = componentesRaw.filter(function(element,index){
-		  			return (element.Cantidad)?true: false;
-		  		});
+		if (filename.charAt(0) !== '~') {
+			var filepath = path.join(armariosDir, fileStat.name);
+			if (fs.existsSync(filepath)) {
+				var readResult = zenbatXlsx.readArmarioXlsx(filepath, { header: zenbatConfig.armarios.header });
 				var armario = {
-					id: fileStat.name.replace('.xlsx',''),
+					id: fileStat.name.replace('.xlsx', ''),
 					filename: fileStat.name,
-					componente:componentes
+					componente: readResult.componentes
 				};
-		   	   result.push(armario);
-		   	}
-	   	}
-   	next();
-    });
+				result.push(armario);
+			}
+		}
+		next();
+	});
 
     walker.on('end', function(){
 		exports.armarios = result;
